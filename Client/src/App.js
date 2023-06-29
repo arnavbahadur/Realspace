@@ -3,12 +3,17 @@ import './App.css';
 
 import Header from './Universal/Header';
 import Footer from './Universal/Footer';
-
+import HouseBox from './Components/HouseBox/HouseBox';
+import Partners from './Pages/Ourpartners/Partner';
+import Dropdown from './Pages/Home/Filter';
 function App() {
   return (
     <div className="App">
-      <Header/>
+      {/* <Header/>
+      <HouseBox/>
+      <Partners/> */}
       <Footer/>
+      <Dropdown placeHolder="Select..." />
     </div>
   );
 }
