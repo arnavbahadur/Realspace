@@ -1,17 +1,11 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-}
-a,
+
+/* a,
 a:hover,
 a:focus,
 a:active {
   text-decoration: none;
   outline: none;
-}
+} */
 
 a,
 a:active,
@@ -43,11 +37,11 @@ section {
   padding: 60px 0;
   /* min-height: 100vh; */
 }
-.row{
+.row-realfoot{
 	display: flex;
+	flex-wrap: nowrap;
 	justify-content:space-between;
 	padding-right: 55px;
-	padding-left: 40px;
 }
 .footer {
   background: linear-gradient(105deg, #6e99e6, #093c94);
@@ -141,7 +135,7 @@ section {
   /* padding: 0 150px 0 20px; */
   text-align: center;
   text-transform: capitalize;
-  width: 90%;
+  width: 100%;
 }
 @media only screen and (max-width: 768px) {
   .subscribe__input {

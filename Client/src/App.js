@@ -13,7 +13,7 @@ function App() {
       <HouseBox/>
       <Partners/> */}
       <Footer/>
-      <Dropdown placeHolder="Select..." />
+      {/* <Dropdown placeHolder="Select..." /> */}
     </div>
   );
 }
