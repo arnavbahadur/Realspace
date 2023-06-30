@@ -3,66 +3,77 @@ import './Contact.css'
 
 const Contact = () => {
   return (
-    <div>
+    // <div>
+            <div className="container">
+        <div className="contactInfo"> 
+          <div>
+            <h2>Contact Info</h2>
+            <ul className="info">
+              <li>
+                <span><img src="./Images/location.png" /></span>
+                <span>505 shreeji hights<br />
+                  Indore<br />
+                  11472</span>
+              </li>
+              <li>
+                <span><img src="./Images/mail.png" /></span>
+                {/* <span>nassosanagn@gmail.com</span> */}
+                <span><a href="mailto: nassosanagn@gmail.com">parmarsinghbhanu@gmail.com</a></span>
+              </li>
+              <li>
+                <span><img src="./Images/call.png" /></span>
+                <span>9174912843</span>
+              </li>
+            </ul>
+          </div>
+          <ul className="sci">
+            <li><a href="https://www.facebook.com/nassosanagn/"><img src="./Images/fb.png" /></a></li>
+            <li><a href="https://www.instagram.com/nassosanagn_/?hl=el"><img src="/./Images/insta.png" /></a></li>
+            <li><a href="https://twitter.com/nassosanagn"><img src="./Images/twiter.png" /></a></li>
+            <li><a href="https://www.linkedin.com/in/realspace-group-8aba1021a/"><img src="./Images/linkdin.png" /></a></li>
+          </ul>
 
-<div className="background">
-  <div className="container">
-    <div className="screen">
-      <div className="screen-header">
-        <div className="screen-header-left">
-          <div className="screen-header-button close"></div>
-          <div className="screen-header-button maximize"></div>
-          <div className="screen-header-button minimize"></div>
+
         </div>
-        <div className="screen-header-right">
-          <div className="screen-header-ellipsis"></div>
-          <div className="screen-header-ellipsis"></div>
-          <div className="screen-header-ellipsis"></div>
+        <div className="contactForm">
+          <h2>Send a Message</h2>
+          <div className="formBox">
+            <div className="inputBox w50">
+              <input type="text" name required />
+              <span>First Name</span>
+            </div>
+            <div className="inputBox w50">
+              <input type="text" required />
+              <span>Last Name</span>
+            </div>
+            <div className="inputBox w50">
+              <input type="email" required />
+              <span>Email Address</span>
+            </div>
+            <div className="inputBox w50">
+              <input type="text" required />
+              <span>Mobile Number</span>
+            </div>
+            <div className="inputBox w50">
+              <input type="email" required />
+              <span>Requirement</span>
+            </div>
+            <div className="inputBox w50">
+              <input type="email" required />
+              <span>Flat Type</span>
+            </div>
+            <div className="inputBox w100">
+              <textarea required defaultValue={""} />
+              <span>Write your message here...</span>
+            </div>
+            <div className="inputBox w100">
+              <input type="submit" defaultValue="Send" />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="screen-body">
-        <div className="screen-body-item left">
-          <div className="app-title">
-            <span>CONTACT</span>
-            <span>US</span>
-          </div>
-          {/* <div className="app-contact">CONTACT INFO : +91 9174912843</div> */}
-        </div>
-        <div className="screen-body-item">
-          <div className="app-form">
-            <div className="app-form-group">
-              <input className="app-form-control" placeholder="NAME" />
-            </div>
-            <div className="app-form-group">
-              <input className="app-form-control" placeholder="EMAIL"/>
-            </div>
-            <div className="app-form-group">
-              <input className="app-form-control" placeholder="CONTACT NO"/>
-            </div>
-            <div className="app-form-group">
-              <input className="app-form-control" placeholder="BUDGETE" />
-            </div>
-            <div className="app-form-group">
-              <input className="app-form-control" placeholder="PROPERTY TYPE" />
-            </div>
-
-            <div className="app-form-group message">
-              <input className="app-form-control" placeholder="ANY MESSAGE"/>
-            </div>
-            <div className="app-form-group buttons">
-              {/* <button className="app-form-button">CANCEL</button> */}
-              <button className="app-form-button">SEND</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-   
-
-    </div>
+    
   )
 }
 
-export default Contact
+export default Contact;

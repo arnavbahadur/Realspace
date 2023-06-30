@@ -8,6 +8,7 @@ import Partner from './Pages/Ourpartners/Partner';
 import Carousel from './Pages/Home/Carousel';
 import Contact from './Pages/Contact/Contact';
 import Faq from './Components/Faq/Faq';
+import Team from './Pages/Ourteam/Team';
 
 function App() {
   return (
@@ -15,9 +16,12 @@ function App() {
        {/* <Routes> */}
        <Header/>
        <Carousel/>
-      <HouseBox/>
+       <HouseBox/>
+       
+      
       <Partner/>
       <Contact/>
+      {/* <Team/> */}
        <Faq/>
       <Footer/>
     </div>
