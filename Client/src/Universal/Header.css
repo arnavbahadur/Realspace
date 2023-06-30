@@ -10,9 +10,9 @@
     opacity: 90px;
     display: flex;
     justify-content: space-between;
-    /* box-sizing: border-box; */
-    padding: 2vh;
-    /* border: 2px solid black; */
+    box-sizing: border-box;
+    /* padding: 2vh; */
+    border: 2px solid black;
     /* border-bottom-left-radius: 222px;
     border-bottom-right-radius: 222px; */
 } */

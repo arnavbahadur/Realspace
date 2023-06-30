@@ -14,12 +14,9 @@ function App() {
        <Header/>
        <Carousel/>
       <HouseBox/>
-      <Partners/>
-      <Contact/>
-      {/* <Route path="/contact" element={<Contact/>}/> */}
-       {/* </Routes> */}
-       <Footer/>
-       
+      {/* <Partners/> */}
+      <Faq/>
+      {/* <Footer/> */}
     </div>
   );
 }
