@@ -4,10 +4,10 @@ import './App.css';
 import Header from './Universal/Header';
 import Footer from './Universal/Footer';
 import HouseBox from './Components/HouseBox/HouseBox';
-import Partners from './Pages/Ourpartners/Partner';
+import Partner from './Pages/Ourpartners/Partner';
 import Carousel from './Pages/Home/Carousel';
-// import Contact from './Pages/Contact/Contact';
-// import Faq from './Components/Faq';
+import Contact from './Pages/Contact/Contact';
+import Faq from './Components/Faq/Faq';
 
 function App() {
   return (
@@ -16,8 +16,9 @@ function App() {
        <Header/>
        <Carousel/>
       <HouseBox/>
-      <Partners/>
-    {/* <Faq/> */}
+      <Partner/>
+      <Contact/>
+       <Faq/>
       <Footer/>
     </div>
   );
