@@ -31,6 +31,20 @@ function Carousel() {
               alt="..."
             />
           </div>
+          <div className="carousel-item">
+            <img
+              src="./Images/house-4.jpg"
+              className="carousel-img d-block w-100 "
+              alt="..."
+            />
+          </div>
+          <div className="carousel-item">
+            <img
+              src="./Images/house-5.jpg"
+              className="carousel-img d-block w-100 "
+              alt="..."
+            />
+          </div>
         </div>
         <button
           className="carousel-control-prev"

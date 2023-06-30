@@ -1,9 +1,13 @@
-
-.navbar{
+*{
     margin: 0;
     padding: 0;
+}
+ .navbar{
+    /* background-color: #0005; */
+    background: transparent;
     /* min-height: 10vh; */
     /* min-height: 30vh; */
+    opacity: 90px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -11,7 +15,7 @@
     border: 2px solid black;
     /* border-bottom-left-radius: 222px;
     border-bottom-right-radius: 222px; */
-}
+} */
 .nav-left{
     /* logo css */
     cursor: pointer;
@@ -59,6 +63,9 @@
 }
 .nav-right-searchBtn i{
     margin-left: 30px;
+}
+.footer-box{
+    width: 25%;
 }
 
 .nav-right-user{
