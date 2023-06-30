@@ -5,15 +5,18 @@ import Header from './Universal/Header';
 import Footer from './Universal/Footer';
 import HouseBox from './Components/HouseBox/HouseBox';
 import Partners from './Pages/Ourpartners/Partner';
-import Dropdown from './Pages/Home/Filter';
+import Carousel from './Pages/Home/Carousel';
+import Contact from './Pages/Contact/Contact';
 function App() {
   return (
-    <div className="App">
-      {/* <Header/>
+   <div className="app">
+      
+       <Header/>
+       <Carousel/>
       <HouseBox/>
-      <Partners/> */}
+      <Partners/>
+      <Contact/>
       <Footer/>
-      {/* <Dropdown placeHolder="Select..." /> */}
     </div>
   );
 }

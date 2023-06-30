@@ -39,9 +39,9 @@ section {
 }
 .row-realfoot{
 	display: flex;
-	flex-wrap: nowrap;
-	justify-content:space-between;
-	padding-right: 55px;
+	/* flex-wrap: nowrap; */
+	/* justify-content:space-between; */
+	/* padding-right: 280px; */
 }
 .footer {
   background: linear-gradient(105deg, #6e99e6, #093c94);

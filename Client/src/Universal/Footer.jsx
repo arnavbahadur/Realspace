@@ -3,7 +3,7 @@ import './Footer.css'
 function Footer() {
   return (
     <div className="footer">
-  <div className="container">
+   <div className="container">
     <div className="row-realfoot">
       <div className="col-lg-4 col-sm-4 col-xs-12">
         <div className="single_footer">
@@ -75,7 +75,6 @@ function Footer() {
                 className="subscribe__input"
                 placeholder="Enter Email Address"
               />
-              
               <button type="button" className="subscribe__btn">
                 <i className="fas fa-paper-plane" />
               </button>
