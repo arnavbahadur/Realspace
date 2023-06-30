@@ -3,9 +3,9 @@ import './Footer.css'
 function Footer() {
   return (
     <div className="footer">
-   <div className="container">
+   <div className="containerbaby">
     <div className="row-realfoot">
-      <div className="col-lg-4 col-sm-4 col-xs-12">
+      <div className="footer-box">
         <div className="single_footer">
         <h4>Services</h4>
           <ul>
@@ -16,7 +16,7 @@ function Footer() {
         </div>
       </div>
       {/*- END COL */}
-      <div className="col-lg-4 col-sm-4 col-xs-12">
+      <div className="footer-box">
         <div className="single_footer">
           <h4>Services</h4>
           <ul>
@@ -42,7 +42,7 @@ function Footer() {
         </div>
       </div>
       {/*- END COL */}
-      <div className="col-md-4 col-sm-4 col-xs-12">
+      <div className="footer-box">
         <div className="single_footer single_footer_address">
           <h4>Page Link</h4>
           <ul>
@@ -65,7 +65,7 @@ function Footer() {
         </div>
       </div>
       {/*- END COL */}
-      <div className="col-md-4 col-sm-4 col-xs-12">
+      <div className="footer-box">
         <div className="single_footer single_footer_address">
           <h4>Subscribe today</h4>
           <div className="signup_form">
