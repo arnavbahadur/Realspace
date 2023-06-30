@@ -47,7 +47,7 @@ img {
 .footer {
   background: linear-gradient(105deg, #6e99e6, #093c94);
   padding-top: 80px;
-  padding-bottom: 40px;
+  padding-bottom: .5%;
  
 
 }
@@ -226,8 +226,8 @@ button {
 }
 /*END SOCIAL PROFILE CSS*/
 .copyright {
-  margin-top: 70px;
-  padding-top: 40px;
+  margin-top: 1%;
+  padding-top: 1%;
   color: #fff;
   font-size: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.4);
