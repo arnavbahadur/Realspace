@@ -7,6 +7,7 @@ import HouseBox from './Components/HouseBox/HouseBox';
 import Partners from './Pages/Ourpartners/Partner';
 import Carousel from './Pages/Home/Carousel';
 import Contact from './Pages/Contact/Contact';
+import Faq from "./Components/Faq/Faq"
 function App() {
   return (
    <div className="app">
@@ -15,8 +16,8 @@ function App() {
        <Carousel/>
       <HouseBox/>
       {/* <Partners/> */}
-      <Faq/>
-      {/* <Footer/> */}
+     <Faq/>
+      <Footer/>
     </div>
   );
 }
