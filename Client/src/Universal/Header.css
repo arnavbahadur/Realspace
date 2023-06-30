@@ -6,6 +6,7 @@
 .navbar{
     /* min-height: 10vh; */
     /* min-height: 30vh; */
+    opacity: 90px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;

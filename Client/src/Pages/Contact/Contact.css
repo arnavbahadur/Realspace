@@ -27,7 +27,7 @@
   
   .screen {
     position: relative;
-    background: #3e3e3e;
+    background: #87a6e3;
     border-radius: 15px;
   }
   
@@ -67,7 +67,7 @@
   }
   
   .screen-header-button.close {
-    background: #ed1c6f;
+    background: #0306a3;
   }
   
   .screen-header-button.maximize {
@@ -108,7 +108,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    color: #ea1d6f;
+    color: #000000;
     font-size: 26px;
   }
   
@@ -122,15 +122,21 @@
     height: 4px;
   }
   
-  .app-contact {
+  /* .app-contact {
     margin-top: auto;
     font-size: 8px;
-    color: #888;
-  }
+    color: #af0404;
+  } */
   
   .app-form-group {
     margin-bottom: 15px;
+    color: #000000;
   }
+
+  /* .app-form-group {
+    color: white;
+  } */
+  
   
   .app-form-group.message {
     margin-top: 40px;
@@ -146,8 +152,8 @@
     padding: 10px 0;
     background: none;
     border: none;
-    border-bottom: 1px solid #666;
-    color: #ddd;
+    border-bottom: 1px solid #080808;
+    color: #000000;
     font-size: 14px;
     text-transform: uppercase;
     outline: none;
@@ -155,25 +161,25 @@
   }
   
   .app-form-control::placeholder {
-    color: #666;
+    color: #080808;
   }
   
   .app-form-control:focus {
-    border-bottom-color: #ddd;
+    border-bottom-color: #da1915;
   }
   
   .app-form-button {
     background: none;
-    border: none;
-    color: #ea1d6f;
+    border: 5px;
+    color: #000000;
     font-size: 14px;
     cursor: pointer;
     outline: none;
   }
   
-  .app-form-button:hover {
+  /* .app-form-button:hover {
     color: #b9134f;
-  }
+  } */
   
   .credits {
     display: flex;

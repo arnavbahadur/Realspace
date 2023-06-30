@@ -1,4 +1,5 @@
 import React from 'react'
+// import NavLink  from "react-router-dom";
 import './Header.css'
 
 const Header = () => {
@@ -14,20 +15,18 @@ const Header = () => {
         <div className="nav-center-navigation-box">
           <p>Home</p>
         </div>
-        <div className="nav-center-navigation-box">
-          <p>Team</p>
-        </div>
-        <div className="nav-center-navigation-box">
-          <p>Features</p>
-        </div>
+            {/* <li className="Nav-list">
+              < NavLink to="/team"><i className="nav-center-navigation-box" aria-hidden="true"></i> team</NavLink>
+            </li> */}
+        
         <div className="nav-center-navigation-box">
           <p>Partner</p>
         </div>
         <div className="nav-center-navigation-box">
-          <p>Developers</p>
+          <p>Contact</p>
         </div>
         <div className="nav-center-navigation-box">
-          <p>Contact</p>
+          <p>FAQ</p>
         </div>
       </div>
       <div className="nav-right">

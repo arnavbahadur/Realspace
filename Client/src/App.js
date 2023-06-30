@@ -1,5 +1,5 @@
 import './App.css';
-// import { Route, Routes, useLocation } from "react-router-dom";
+// import { Route, Routes} from "react-router-dom";
 
 import Header from './Universal/Header';
 import Footer from './Universal/Footer';
@@ -10,13 +10,16 @@ import Contact from './Pages/Contact/Contact';
 function App() {
   return (
    <div className="app">
-      
+       {/* <Routes> */}
        <Header/>
        <Carousel/>
       <HouseBox/>
       <Partners/>
       <Contact/>
-      <Footer/>
+      {/* <Route path="/contact" element={<Contact/>}/> */}
+       {/* </Routes> */}
+       <Footer/>
+       
     </div>
   );
 }
