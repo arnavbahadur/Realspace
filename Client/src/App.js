@@ -6,6 +6,7 @@ import Header from './Universal/Header';
 import HouseBox from './Components/HouseBox/HouseBox';
 import Partners from './Pages/Ourpartners/Partner';
 import Carousel from './Pages/Home/Carousel';
+import Contact from './Pages/Contact/Contact';
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       <Carousel/>
       <HouseBox/>
       <Partners/>
+      <Contact/>
       {/* <Footer/> */}
     </div>
   );
