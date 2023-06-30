@@ -15,7 +15,7 @@ function App() {
        <Header/>
        <Carousel/>
       <HouseBox/>
-      {/* <Partners/> */}
+      <Partners/> 
      <Faq/>
       <Footer/>
     </div>
