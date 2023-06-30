@@ -6,7 +6,9 @@ import Footer from './Universal/Footer';
 import HouseBox from './Components/HouseBox/HouseBox';
 import Partners from './Pages/Ourpartners/Partner';
 import Carousel from './Pages/Home/Carousel';
-import Contact from './Pages/Contact/Contact';
+// import Contact from './Pages/Contact/Contact';
+// import Faq from './Components/Faq';
+
 function App() {
   return (
    <div className="app">
@@ -14,9 +16,9 @@ function App() {
        <Header/>
        <Carousel/>
       <HouseBox/>
-      {/* <Partners/> */}
-      <Faq/>
-      {/* <Footer/> */}
+      <Partners/>
+    {/* <Faq/> */}
+      <Footer/>
     </div>
   );
 }
