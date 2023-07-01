@@ -4,6 +4,8 @@ import './App.css';
 import Header from './Universal/Header';
 import Footer from './Universal/Footer';
 import HouseBox from './Components/HouseBox/HouseBox';
+import HousePreview from './Pages/HousePreview/HousePreview';
+import Compare from './Pages/Compare/Compare';
 import Partner from './Pages/Ourpartners/Partner';
 import Carousel from './Pages/Home/Carousel';
 import Contact from './Pages/Contact/Contact';
@@ -18,7 +20,8 @@ function App() {
        <Carousel/>
        <HouseBox/>
        
-      
+      <HousePreview/>
+      <Compare/>
       <Partner/>
       <Contact/>
       {/* <Team/> */}

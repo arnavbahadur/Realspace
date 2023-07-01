@@ -1,0 +1,58 @@
+.compare-section2{
+    margin: 3vh 10vw;
+}
+.compare-container{
+    background-color: cornsilk;
+}
+.compare-container-top{
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    background-color: aliceblue;
+    /* min-height: 20vh; */
+}
+.compare-headings-section{
+    width: 20%;
+    padding: 5px 10px;
+    text-align: left;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+.compare-headings-section img{
+    height: auto;
+    max-width: 100%;
+    /* width: 14vw; */
+}
+.compare-headings-section p{
+    padding: 5px;
+}
+.copare-container-detailsSection{
+    
+    display: flex;
+}
+.compare-itemsContainer,.compare-titles-container{
+    min-width: 20%;
+}
+.compareItemDetail ,.compareTitle{
+    /* width: 15vw; */
+    /* margin-right: 5vw ; */
+    text-align: left;
+}
+.compareTitle p{
+    padding: 5px;
+    font-weight: 500;
+}
+.compareItemDetail p{
+    padding: 5px;
+}
+.compareTitle:nth-child(2n + 1),.compareItemDetail:nth-child(2n + 1){ 
+    background-color: grey;
+}
+.compare-item-name{
+    font-size: 1.7rem;
+}
+.compare-item-amount{
+    color: green;
+    font-size: 1.7rem;
+}
