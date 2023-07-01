@@ -1,5 +1,5 @@
 import React from 'react'
-// import NavLink  from "react-router-dom";
+import { NavLink }  from "react-router-dom";
 import './Header.css'
 
 const Header = () => {
@@ -11,22 +11,35 @@ const Header = () => {
         <img src="" alt="" />
       </div>
       <div className="nav-center">
-        {/* navigation menu */}
+          
         <div className="nav-center-navigation-box">
+        <NavLink to="/">
           <p className='nav-center-navigation-box-text'>Home</p>
+          </NavLink>
         </div>
-            {/* <li className="Nav-list">
-              < NavLink to="/team"><i className="nav-center-navigation-box" aria-hidden="true"></i> team</NavLink>
-            </li> */}
-        
+            
+
         <div className="nav-center-navigation-box">
+        < NavLink to="/Partner">
           <p className='nav-center-navigation-box-text'>Partner</p>
+          </NavLink>
+        </div>
+
+        <div className="nav-center-navigation-box">
+      <NavLink to="/Contact">
+      <p className='nav-center-navigation-box-text'>Contact</p>
+      </NavLink> 
+        </div>
+
+        <div className="nav-center-navigation-box">
+        <NavLink to="/About">
+          <p className='nav-center-navigation-box-text'>About</p>
+          </NavLink>
         </div>
         <div className="nav-center-navigation-box">
-          <p className='nav-center-navigation-box-text'>Contact</p>
-        </div>
-        <div className="nav-center-navigation-box">
+        <NavLink to="/Faq">
           <p className='nav-center-navigation-box-text'>FAQ</p>
+          </NavLink>
         </div>
       </div>
       <div className="nav-right">
