@@ -11,7 +11,7 @@ import Carousel from './Pages/Home/Carousel';
 import Contact from './Pages/Contact/Contact';
 import Faq from './Components/Faq/Faq';
 import Team from './Pages/Ourteam/Team';
-
+import Projectbox from './Components/Projectbox/Projectbox';
 function App() {
   return (
    <div className="app">
@@ -25,7 +25,8 @@ function App() {
       <Partner/>
       <Contact/>
       {/* <Team/> */}
-       <Faq/>
+       {/* <Faq/> */}
+       <Projectbox/>
       <Footer/>
     </div>
   );

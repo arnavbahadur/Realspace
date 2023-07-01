@@ -7,26 +7,26 @@ const Header = () => {
     <div className='navbar'>
       <div className="nav-left logo">
         {/* LOgo */}
-        <img src=".\image\logo.jpg" alt="logo" />
+        <img src=".\Images\house" alt="logo" />
         <img src="" alt="" />
       </div>
       <div className="nav-center">
         {/* navigation menu */}
         <div className="nav-center-navigation-box">
-          <p>Home</p>
+          <p className='nav-center-navigation-box-text'>Home</p>
         </div>
             {/* <li className="Nav-list">
               < NavLink to="/team"><i className="nav-center-navigation-box" aria-hidden="true"></i> team</NavLink>
             </li> */}
         
         <div className="nav-center-navigation-box">
-          <p>Partner</p>
+          <p className='nav-center-navigation-box-text'>Partner</p>
         </div>
         <div className="nav-center-navigation-box">
-          <p>Contact</p>
+          <p className='nav-center-navigation-box-text'>Contact</p>
         </div>
         <div className="nav-center-navigation-box">
-          <p>FAQ</p>
+          <p className='nav-center-navigation-box-text'>FAQ</p>
         </div>
       </div>
       <div className="nav-right">
