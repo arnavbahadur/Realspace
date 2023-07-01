@@ -7,7 +7,9 @@
 .compare-container-top{
     padding: 10px;
     position: sticky;
+    top: 0px;
     display: flex;
+    background-color: aliceblue;
     /* min-height: 20vh; */
 }
 .compare-headings-section{

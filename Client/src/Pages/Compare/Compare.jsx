@@ -26,11 +26,11 @@ const Compare = () => {
         {
             img:"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
             features:['all the features'],
-            propretyId:"id1",
-            location:"loaction1",
-            name:"name1",
+            propretyId:"id3",
+            location:"loaction3",
+            name:"name3",
             amount:"56,000",
-            forSale:true,
+            forSale:false,
         },
 
     ]

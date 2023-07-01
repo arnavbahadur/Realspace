@@ -1,0 +1,23 @@
+.hero-section-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-img{
+    height: 900px;;
+    object-fit: cover;
+}
+.hero-section-container{
+    /* border: 2px solid black; */
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:544px) {
+    .carousel-img{
+        height: 228px;
+    }
+}
