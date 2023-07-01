@@ -1,0 +1,152 @@
+.housePreview-topSection{
+    /* margin: 0 5vw; */
+}
+.housePreview-topSection img{
+    width: 100%;
+    height: 40vh;
+    /* image-rendering: crisp-edges; */
+}
+.housePreview-section{
+    padding: 20px;
+    text-align: left;
+}
+.housePreview-section-1{
+    /* background-color: antiquewhite; */
+    /* background-color: linear-gradient(20%, #63a4ff 0%, #83eaf1 74%); */
+    margin: 0 5vw;
+}
+.housePreview-section-2{
+    /* background-color: aliceblue; */
+    margin: 0 5vw
+}
+.housePreview-top{
+    /* margin: 10px 5vw; */
+    display: flex;
+    justify-content: space-between;
+}
+.housePreview-name{
+    font-size: 30px;
+    font-weight: 500;
+}
+.housePreview-price{
+    display: flex;
+    flex-direction: column;
+}
+.housePreview-price-amount{
+    font-size: 25px;
+    font-weight: 500;
+    color: green;;
+}
+.housePreview-discription{
+    /* background-color: whitesmoke; */
+    background-color: aliceblue;
+    margin: 0 50px;
+    padding: 10px ;
+}
+.housePreview-discription-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+.housePreview-discription-top-right{
+    padding-right: 20px;
+}
+.housePreview-propertyid{
+    margin: 20px 10px;
+}
+.housePreview-propertyid span{
+    margin-right: 10px;
+}
+.housePreview-propertyid i{
+    font-size: 22px;
+    margin-left: 10px;
+    color: blue;
+    cursor: pointer;
+}
+.housePreview-propertyid i:active{
+    transform: all 3s;
+    transform: scale(1.2,1.2);
+}
+.housePreview-discription-top-right i{
+    margin: 0 10px;
+    margin-top: 15px;
+    font-size: 22px;
+    color: #aaadb1;
+}
+.housePreview-discription hr{
+    margin: 2vw;
+}
+.housePreview-discription-houseDetailIcon{
+    margin: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.housePreview-discription-houseDetailIcon div p{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #1a1a1a;
+}
+.housePreview-discription-houseDetailIcon div div i{
+    color: green;
+    /* color: #1a1a1a; */
+    font-size: 18px;
+    margin-right: 10px;
+}
+.housediscription-textArea{
+    padding: 20px;
+}
+.housediscription-textArea h3{
+    color:green;
+    margin: 10px 10px 15px;
+} 
+.housediscription-textArea p{
+    margin: 10px;
+    text-align: left;
+}
+.housediscription-features{
+    margin: 30px ;
+}
+.housediscription-features h3{
+    color: green;
+    margin: 20px 0;
+}
+.housediscription-features ul{
+    list-style: none;
+}
+.housediscription-features ul li{
+    padding: 7px 10px;
+}
+.housediscription-features ul li:nth-child(2n){
+    background-color: blueviolet;
+}
+.housediscription-features ul li:nth-child(2n + 1){
+    background-color: goldenrod;
+}
+.housePreview-iframe-section{
+    text-align: center;
+    margin: 20px 7vw 40px;
+}
+.housePreview-iframe-section h3{
+    margin: 40px 0 20px;
+    text-align: left;
+    color: green;
+}
+.housePreview-iframeContainer{
+    margin: 20px ;
+    position: relative;
+    padding-bottom: 50.20%;
+    overflow: hidden;
+}
+.housePreview-iframeContainer iframe{
+    position:absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+}

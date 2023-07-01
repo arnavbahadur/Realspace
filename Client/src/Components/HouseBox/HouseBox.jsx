@@ -2,8 +2,13 @@ import React, { useEffect, useRef, useState } from 'react'
 import './HouseBox.css'
 const HouseBox = () => {
     const likedRef = useRef();
-    const [liked,setliked] = useState('false');
-    // useEffect()
+    const [liked,setliked] = useState(false);
+    useEffect(()=>{
+        likedRef.onClick={
+            // style={{color:'blue'}}
+        }
+        console.log(liked);
+    })
   return (
     <div>
       <div className="houseBox">
@@ -22,7 +27,7 @@ const HouseBox = () => {
                 <p> {`Home\\Villa`} in { 'name of near location'}</p>
             </div>
             <div className="houseBox-address">                
-                <p><span><i class="fa-solid fa-location-dot"/></span>{`Address link`}</p>
+                <p><span><i className="fa-solid fa-location-dot"/></span>{`Address link`}</p>
             </div>
             <div className="houseBox-areaMeasure">
                 <div className="houseBox-areaMeasure-container">
@@ -35,14 +40,14 @@ const HouseBox = () => {
                 <div className="houseBox-areaMeasure-container">
                     <p>Bathrooms</p>
                     <div className="houseBox-areaMeasure-icon">
-                        <i class="fa-solid fa-shower"/>
+                        <i className="fa-solid fa-shower"/>
                         <span>No.</span>
                     </div>
                 </div>
                 <div className="houseBox-areaMeasure-container">
                     <p>Area</p>
                     <div className="houseBox-areaMeasure-icon">                        
-                        <i class="fa-regular fa-square"/>
+                        <i className="fa-regular fa-square"/>
                         <span>No.</span>
                     </div>
                 </div>
@@ -50,11 +55,11 @@ const HouseBox = () => {
             <div className="houseBox-bottomSection">
                 <div className="houseBox-bottomSection-left">
                     <p>For {` sale/rent`}</p>
-                    <span className="houseBox-bottomSection-left-price">$40,000</span>
+                    <span className="houseBox-bottomSection-left-price">{`$40,000`}</span>
                 </div>   
                 <div className="houseBox-bottomSection-right">
-                    <i ref={likedRef} class="fa-solid fa-heart"/>
-                    <i class="fa-solid fa-arrows-turn-to-dots"/>
+                    <i ref={likedRef} className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
+                    <i className="fa-solid fa-arrows-turn-to-dots"/>
                 </div>                     
             </div>
         </div>
