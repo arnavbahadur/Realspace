@@ -7,16 +7,18 @@ import HouseBox from './Components/HouseBox/HouseBox';
 import Partners from './Pages/Ourpartners/Partner';
 import Carousel from './Pages/Home/Carousel';
 import Contact from './Pages/Contact/Contact';
+import Filter from './Pages/Home/Filter';
 function App() {
   return (
    <div className="app">
       
-       <Header/>
+       {/* <Header/>
        <Carousel/>
       <HouseBox/>
       <Partners/>
       <Contact/>
-      <Footer/>
+      <Footer/> */}
+      <Filter/>
     </div>
   );
 }

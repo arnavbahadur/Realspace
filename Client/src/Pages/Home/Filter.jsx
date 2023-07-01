@@ -14,16 +14,28 @@ const Icon = () => {
     };
   
     return (
-      <div className="dropdown-container">
+      <div className="filter">
         <div className="dropdown-input">
-          <div className="dropdown-selected-value">{getDisplay()}</div>
-          <div className="dropdown-tools">
+          <div className="col-filter">
+           <p>property</p>
+          </div>
+          <div className="col-filter">
+          <p>location</p>
+          
+            </div>
+            <div className="col-filter">
+            <p>price</p>
+            </div>
+            <div className="col-filter1">
+           <button>search</button>
+            </div>
+             </div>
             <div className="dropdown-tool">
               <Icon />
+              <Icon />
             </div>
-          </div>
-        </div>
-      </div>
+         
+       </div>
     );
   };
 export default Dropdown
