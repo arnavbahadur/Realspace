@@ -17,7 +17,7 @@ const Icon = () => {
       <div className="filter">
         <div className="dropdown-input">
           <div className="col-filter">
-          <p>Property type </p>
+          <p className="pfilter-color">Property type  <Icon /></p>
  {/* <span className="bottom-filter">all types</span> */}
   <div class="dropdown-content">
   <p>Flat</p>
@@ -27,17 +27,17 @@ const Icon = () => {
   </div>
           </div>
           <div className="col-filter">
-            <p>Location </p>
+            <p className="pfilter-color">Location  <Icon /></p>
         {/* <span className="bottom-filter">all types</span> */}
           <div class="dropdown-content">
-  <p>Hello World!</p>
-  <p>Hello World!</p>
-  <p>Hello World!</p>
-  <p>Hello World!</p>
+  <p>Vijay nagar</p>
+  <p>Nipania</p>
+  <p>Kanadiya</p>
+  <p>CAT-Road</p>
   </div>
             </div>
             <div className="col-filter">
-              <p>Price </p>
+              <p className="pfilter-color">Price  <Icon /></p>
               {/* <span className="bottom-filter">all types</span> */}
             <div class="dropdown-content">
               
@@ -47,13 +47,10 @@ const Icon = () => {
   <p>Hello World!</p>
   </div>   </div>
             <div className="col-filter1">
-           <button>search</button>
+           <button className="butt-color">Search</button>
             </div>
              </div>
-            <div className="dropdown-tool">
-              <Icon />
-              <Icon />
-            </div>
+           
          
        </div>
     );
