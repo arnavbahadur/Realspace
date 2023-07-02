@@ -17,15 +17,35 @@ const Icon = () => {
       <div className="filter">
         <div className="dropdown-input">
           <div className="col-filter">
-           <p>property</p>
+          <p>Property type </p>
+ {/* <span className="bottom-filter">all types</span> */}
+  <div class="dropdown-content">
+  <p>Flat</p>
+  <p>Plot</p>
+  <p>psp</p>
+  <p>Cold storage</p>
+  </div>
           </div>
           <div className="col-filter">
-          <p>location</p>
-          
+            <p>Location </p>
+        {/* <span className="bottom-filter">all types</span> */}
+          <div class="dropdown-content">
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  </div>
             </div>
             <div className="col-filter">
-            <p>price</p>
-            </div>
+              <p>Price </p>
+              {/* <span className="bottom-filter">all types</span> */}
+            <div class="dropdown-content">
+              
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  </div>   </div>
             <div className="col-filter1">
            <button>search</button>
             </div>

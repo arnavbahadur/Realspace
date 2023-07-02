@@ -1,0 +1,123 @@
+.Appointment{
+    height: 40%;
+    width: 80%;
+    border: 4px solid;
+}
+
+.detail-appointment
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.detail-appointment .inputBox
+{
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.Appointment .detail-appointment{
+    width: 40%;
+    border: 2px solid;
+}
+/* .detail-appointment .inputBox.w50
+{
+    width: 4%;
+} */
+
+.detail-appointment .inputBox.w100
+{
+    width: 100%;
+}
+
+.detail-appointment .inputBox input
+{
+    /* width: 40%; */
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+
+.detail-appointment .inputBox textarea 
+{
+    height: 120px;
+}
+
+.detail-appointment .inputBox span 
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+
+
+/* Css for the submit button */
+.detail-appointment .inputBox input[type="submit"]         
+{
+    position: relative;
+    cursor: pointer;
+    background: #095a55;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+
+}
+
+.detail-appointment .inputBox input[type="submit"]:hover{
+    background: #0d9480;
+}
+
+/* make the form responsive */
+@media (max-width: 1200px)
+{
+    .container
+    {
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+
+    .container .contactInfo
+    {
+        top: 0;
+        height: 550px;
+        position: relative;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+    .container .contactForm
+    {
+        position: relative;
+        width: calc(100% - 350px);
+        padding-left: 0;
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+}
+
+
+
+    .detail-appointment .inputBox.w50
+    {
+        width: 40%;
+    }

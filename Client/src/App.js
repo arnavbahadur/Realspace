@@ -13,7 +13,8 @@ import Faq from './Components/Faq/Faq';
 import Team from './Pages/Ourteam/Team';
 import Home from './Pages/Home/Home';
 import Projectbox from './Components/Projectbox/Projectbox';
-
+import Filter from './Pages/Home/Filter.jsx';
+import Appointment from './Pages/Appointment/Appointment';
 function App() {
   return (
    <div className="app">
@@ -28,6 +29,9 @@ function App() {
             <Route path="/faq" element={<Faq/>}/>
             <Route path="/team" element={<Team/>}/>
             <Route path="/projectbox" element={<Projectbox/>}/>
+            <Route path="/filter" element={<Filter/>}/>
+            <Route path="/appointment" element={<Appointment/>}/>
+      
         </Routes>
         <Footer/>
         
