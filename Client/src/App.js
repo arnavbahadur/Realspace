@@ -22,6 +22,7 @@ function App() {
        <Header/>
          <Routes>
             <Route path="/" element={<Home/>}/>
+            
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/compare" element={<Compare/>}/>
             <Route path="/partner" element={<Partner/>}/>
@@ -36,6 +37,7 @@ function App() {
           
         </Routes>
         <Footer/>
+       
         
     </div>
   );
