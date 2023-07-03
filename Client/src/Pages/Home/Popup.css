@@ -1,0 +1,43 @@
+/* .popup-style{
+    height: 60%;
+    width: 60%;
+    background-color: aqua;
+}
+.popup-button{
+    border: 2px solid;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45%;
+} */
+.modal-wrapper{
+    display: flex;
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+background-color: rgba(116, 157, 213, 0.9);
+}
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 30rem;
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    background-color: rgb(217, 240, 235);
+}
+.model-btn{
+    border: 1px solid;
+    border-radius: 8px;
+    
+}
+.latest-offer{
+    align-items: center;
+    justify-content: center;
+   padding-left: 25%;
+}

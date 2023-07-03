@@ -15,6 +15,7 @@ import Home from './Pages/Home/Home';
 import Projectbox from './Components/Projectbox/Projectbox';
 import Filter from './Pages/Home/Filter.jsx';
 import Appointment from './Pages/Appointment/Appointment';
+import MyModal from './Pages/Home/MyModal';
 function App() {
   return (
    <div className="app">
@@ -31,7 +32,8 @@ function App() {
             <Route path="/projectbox" element={<Projectbox/>}/>
             <Route path="/filter" element={<Filter/>}/>
             <Route path="/appointment" element={<Appointment/>}/>
-      
+            <Route path="/mymodal" element={<MyModal/>}/>
+          
         </Routes>
         <Footer/>
         
