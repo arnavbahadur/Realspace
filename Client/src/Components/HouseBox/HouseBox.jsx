@@ -2,8 +2,13 @@ import React, { useEffect, useRef, useState } from 'react'
 import './HouseBox.css'
 const HouseBox = () => {
     const likedRef = useRef();
-    const [liked,setliked] = useState('false');
-    // useEffect()
+    const [liked,setliked] = useState(false);
+    useEffect(()=>{
+        likedRef.onClick={
+            // style={{color:'blue'}}
+        }
+        console.log(liked);
+    })
   return (
     <div>
       <div className="houseBox">
@@ -50,10 +55,10 @@ const HouseBox = () => {
             <div className="houseBox-bottomSection">
                 <div className="houseBox-bottomSection-left">
                     <p>For {` sale/rent`}</p>
-                    <span className="houseBox-bottomSection-left-price">$40,000</span>
+                    <span className="houseBox-bottomSection-left-price">{`$40,000`}</span>
                 </div>   
                 <div className="houseBox-bottomSection-right">
-                    <i ref={likedRef} class="fa-solid fa-heart"/>
+                    <i ref={likedRef} className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
                     <i className="fa-solid fa-arrows-turn-to-dots"/>
                 </div>                     
             </div>

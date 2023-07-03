@@ -8,7 +8,10 @@ const Faq = () => {
         <div className="faq-text">Frequently Asked Questions</div>
 
         <div className="group-faq">
-          
+          <button> <h1>General</h1> </button>
+          <button> <h1>Fees and Charges</h1> </button>
+          <button> <h1>Managing your Account</h1> </button>
+          <button> <h1>Services and Fulfillment by Flipkart (FBF)</h1> </button>
         </div>
 
         <div className="accordion" id="accordionExample">
