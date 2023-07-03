@@ -59,12 +59,12 @@ const HousePreview = () => {
             <div>
               <p>Bedrooms</p>
               <div>
-                <i>bed icon</i>
+                <i className="fa-solid fa-bed"/>
                 <span>{`no`}</span>
               </div>              
             </div>
             <div>
-              <p>shower</p>
+              <p>Bathrooms</p>
               <div>
                 <i className="fa-solid fa-shower"/>
                 <span>{`no`}</span>

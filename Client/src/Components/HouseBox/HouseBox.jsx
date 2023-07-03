@@ -33,7 +33,7 @@ const HouseBox = () => {
                 <div className="houseBox-areaMeasure-container">
                     <p>Bedrooms</p>
                     <div className="houseBox-areaMeasure-icon">
-                        <i>icon</i>
+                        <i class="fa-solid fa-bed"/>
                         <span>No.</span>
                     </div>
                 </div>

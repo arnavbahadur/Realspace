@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <Header/>
       <HouseBox/>
+      {/* <HouseBox/> */}
       <HousePreview/>
       <Compare/>
       <Footer/>
