@@ -59,7 +59,7 @@ const HouseBox = () => {
                 </div>   
                 <div className="houseBox-bottomSection-right">
                     <i ref={likedRef} className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
-                    <i className="fa-solid fa-arrows-turn-to-dots"/>
+                    <i className="fa-solid fa-arrows-turn-to-dots"/>                    
                 </div>                     
             </div>
         </div>

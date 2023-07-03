@@ -14,7 +14,7 @@ const HousePreview = () => {
       <div className="housePreview-topSection">
           <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="house" />
             <div className="filter">
-                filterComponent
+                {/* filterComponent */}
             </div>
       </div>
       <div className="housePreview-section-1 housePreview-section">        
@@ -35,7 +35,7 @@ const HousePreview = () => {
           </div>          
         </div>        
         <div className="housePreview-pics">
-          pic component
+          {/* pic component */}
         </div>
       </div>
       <div className="housePreview-section-2 housePreview-section">

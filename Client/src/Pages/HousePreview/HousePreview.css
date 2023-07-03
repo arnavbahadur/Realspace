@@ -65,7 +65,10 @@
     color: blue;
     cursor: pointer;
 }
-.housePreview-propertyid i:active{
+.housePreview-discription-top i{
+    cursor: pointer;
+}
+.housePreview-discription-top i:active{
     transform: all 3s;
     transform: scale(1.2,1.2);
 }
