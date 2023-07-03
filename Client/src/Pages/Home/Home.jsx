@@ -2,6 +2,7 @@
 import Carousel from './Carousel'
 import Popup from './MyModal'
 import React, { useEffect } from 'react';
+import MyModal from './MyModal';
 
 setTimeout(() => {
   <Popup/>
@@ -16,7 +17,7 @@ const Home = () => {
   return (
     <div>
     <Carousel/>
-    <Popup/>
+    <MyModal/>
     </div>
   )
 }

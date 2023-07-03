@@ -21,7 +21,7 @@ const Modal = () => {
       <h2 className="latest-offer">Latest offers</h2>
       <HouseBox/>
       
-     <p>complete loan facility</p>
+     {/* <p>complete loan facility</p> */}
     </MyModal>
     
   );
@@ -29,7 +29,7 @@ const Modal = () => {
     const timer = setTimeout(() => {
       setShowModal(true)
   //  <HouseBox/>
-    }, 1000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
   return (

@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 
 const MyModal = ({ closeModal, children, handleCloseButton }) => {
   useEffect(() => {
-    // document.body.style.overflowY = "hidden";
+    document.body.style.overflowY = "hidden";
     return () => {
       document.body.style.overflowY = "scroll";
     };
