@@ -6,7 +6,7 @@
 
 .faq-text{
    padding: 40px;
-   margin: 10px;
+   margin: 5px;
    border: 2px solid red;
    font-size: 24px;
    text-align: center;
@@ -51,16 +51,16 @@
 }
 .accordion{
     margin: 10px;
-    padding: 15px;
+    padding: 10px;
 }
 .accordion-button strong{
    font-size: 20px;
 }
 .accordion-button{
-   height: 10vh;
+   height: 5vh;
 }
 .accordion-header{
-   height: 10vh;
+   height: 5vh;
 }
 .accordion-collapse collapse{
    height: 8vh;

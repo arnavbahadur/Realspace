@@ -1,25 +1,15 @@
-import React from "react";
-import "./Faq.css";
-
-// const [myStyle, setmyStyle] = useState({
-//       color: "black",
-//   backgroundColor: "white",
-//   border: "1px solid black",
-// });
+import React from 'react'
+import './Faq.css';
 
 const Faq = () => {
-  // let myStyle ={
-  //     color: props.mode === 'dark'?'white':'#396179',
-  //     backgroundColor: props.mode === 'dark'?'#396179':'white',
-  //     border: '1px solid',
-  //     borderColor: props.mode === 'dark'?'white':'black',
-  //   }
   return (
     <div>
       <div className="container-faq">
         <div className="faq-text">Frequently Asked Questions</div>
 
-        <div className="group-faq"></div>
+        <div className="group-faq">
+          
+        </div>
 
         <div className="accordion" id="accordionExample">
         
