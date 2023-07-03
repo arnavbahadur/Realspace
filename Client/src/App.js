@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { Route, Routes} from "react-router-dom";
 import Header from './Universal/Header';
@@ -11,8 +12,10 @@ import Contact from './Pages/Contact/Contact';
 import Faq from './Components/Faq/Faq';
 import Team from './Pages/Ourteam/Team';
 import Home from './Pages/Home/Home';
-
-
+import Projectbox from './Components/Projectbox/Projectbox';
+import Filter from './Pages/Home/Filter.jsx';
+import Appointment from './Pages/Appointment/Appointment';
+import MyModal from './Pages/Home/MyModal';
 function App() {
   return (
    <div className="app">
@@ -27,6 +30,11 @@ function App() {
             <Route path="/housePreview" element={<HousePreview/>}/>
             <Route path="/faq" element={<Faq/>}/>
             <Route path="/team" element={<Team/>}/>
+            <Route path="/projectbox" element={<Projectbox/>}/>
+            <Route path="/filter" element={<Filter/>}/>
+            <Route path="/appointment" element={<Appointment/>}/>
+            <Route path="/mymodal" element={<MyModal/>}/>
+          
         </Routes>
         <Footer/>
        
