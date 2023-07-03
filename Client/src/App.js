@@ -19,6 +19,7 @@ function App() {
        <Header/>
          <Routes>
             <Route path="/" element={<Home/>}/>
+            
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/compare" element={<Compare/>}/>
             <Route path="/partner" element={<Partner/>}/>
@@ -28,6 +29,7 @@ function App() {
             <Route path="/team" element={<Team/>}/>
         </Routes>
         <Footer/>
+       
         
     </div>
   );
