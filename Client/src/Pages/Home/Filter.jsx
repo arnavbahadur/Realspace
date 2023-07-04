@@ -14,16 +14,45 @@ const Icon = () => {
     };
   
     return (
-      <div className="dropdown-container">
+      <div className="filter">
         <div className="dropdown-input">
-          <div className="dropdown-selected-value">{getDisplay()}</div>
-          <div className="dropdown-tools">
-            <div className="dropdown-tool">
-              <Icon />
-            </div>
+          <div className="col-filter">
+          <p className="pfilter-color">Property type  <Icon /></p>
+ {/* <span className="bottom-filter">all types</span> */}
+  <div class="dropdown-content">
+  <p>Flat</p>
+  <p>Plot</p>
+  <p>psp</p>
+  <p>Cold storage</p>
+  </div>
           </div>
-        </div>
-      </div>
+          <div className="col-filter">
+            <p className="pfilter-color">Location  <Icon /></p>
+        {/* <span className="bottom-filter">all types</span> */}
+          <div class="dropdown-content">
+  <p>Vijay nagar</p>
+  <p>Nipania</p>
+  <p>Kanadiya</p>
+  <p>CAT-Road</p>
+  </div>
+            </div>
+            <div className="col-filter">
+              <p className="pfilter-color">Price  <Icon /></p>
+              {/* <span className="bottom-filter">all types</span> */}
+            <div class="dropdown-content">
+              
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  </div>   </div>
+            <div className="col-filter1">
+           <button className="butt-color">Search</button>
+            </div>
+             </div>
+           
+         
+       </div>
     );
   };
 export default Dropdown

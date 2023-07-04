@@ -5,15 +5,16 @@
 
  .navbar{
     /* background-color: #0005; */
-    background: transparent;
+    /* background: transparent; */
     /* min-height: 10vh; */
     /* min-height: 30vh; */
     opacity: 90px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    height: 70px;
     /* padding: 2vh; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
     /* border-bottom-left-radius: 222px;
     border-bottom-right-radius: 222px; */
 } 
@@ -24,9 +25,11 @@
     align-items: center;
     /* box-sizing: border-box; */
     width: 10%;
+    /* height:30%; */
 }
 .nav-left img{
     width: 100%;
+    height: 50%;
 }
 .nav-center{
     display: flex;
@@ -43,20 +46,24 @@
 .nav-center-navigation-box{
     /* margin: 2vw ; */
     padding: 2vh;
-    min-width: 5vh;
+    min-width: 3vh;
     /* border: 1px solid black; */
     border-radius: 2px;
+}
+.nav-center-navigation-box-text:hover{
+    color: rgb(4, 28, 207);
 }
 
 .nav-center-navigation-box:hover{
     cursor: pointer;
-    background-color:  rgb(19 108 186);
+    /* background-color:  rgb(19 108 186); */
 }
 
 .nav-center-navigation-box:active{
-    /* cursor: pointer; */
-    background-color: rgb(255, 102, 0);
+    cursor: pointer;
+    /* background-color: rgb(255, 102, 0); */
 }
+/* .nav-right-searchBtn{
 /* .nav-right-searchBtn{
     cursor: pointer;
     margin: 2vw ;
@@ -77,6 +84,7 @@
 .footer-box{
     width: 25%;
 }
+
 
 .nav-right-user{
     cursor: pointer;
