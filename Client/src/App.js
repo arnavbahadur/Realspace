@@ -16,6 +16,7 @@ import Projectbox from './Components/Projectbox/Projectbox';
 import Filter from './Pages/Home/Filter.jsx';
 import Appointment from './Pages/Appointment/Appointment';
 import MyModal from './Pages/Home/MyModal';
+import Project from './Pages/Project/Project';
 function App() {
   return (
    <div className="app">
@@ -30,6 +31,7 @@ function App() {
             <Route path="/housePreview" element={<HousePreview/>}/>
             <Route path="/faq" element={<Faq/>}/>
             <Route path="/team" element={<Team/>}/>
+            <Route path="/project" element={<Project/>}/>
             <Route path="/projectbox" element={<Projectbox/>}/>
             <Route path="/filter" element={<Filter/>}/>
             <Route path="/appointment" element={<Appointment/>}/>
