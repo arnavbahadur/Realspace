@@ -3,6 +3,7 @@ import MyModal from "./ShowModal";
 // import HousePreview from "../HousePreview/HousePreview";
 import HouseBox from "../../Components/HouseBox/HouseBox";
 import './Popup.css'
+import {Scrollbars} from 'react-custom-scrollbars';
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -16,12 +17,15 @@ const Modal = () => {
   );
 
   const mainModal = (
+   
+   
     <MyModal  handleCloseButton={handleCloseButton}>
-     
-      <h2 className="latest-offer">Latest offers</h2>
-      <HouseBox/>
-      
-     {/* <p>complete loan facility</p> */}
+        
+   
+        <h2 className="latest-offer">Latest offers</h2>
+       <HouseBox/>
+       <HouseBox/>
+       {/* <p>complete loan facility</p> */}
     </MyModal>
     
   );
@@ -34,7 +38,8 @@ const Modal = () => {
   }, []);
   return (
     <>
-      {showModal && mainModal}
+       {showModal && mainModal}
+     
     </>
   );
 };
