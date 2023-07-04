@@ -1,10 +1,156 @@
-.Appointment{
-    height: 40%;
-    width: 80%;
-    border: 4px solid;
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
 }
 
-.detail-appointment
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #095a55;
+
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff38e;
+}
+
+.container
+{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+    /* border-radius: 22px; */
+    /* background-color: #fff; */
+
+}
+
+.container .contactInfo
+{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #095a55;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15); 
+    border-radius: 22px;
+}
+
+.container .contactInfo h2
+{
+    color: #fff;
+    font-size:24px;
+    font-weight: 500;
+}
+
+.container .contactInfo ul.info 
+{
+   position: relative;
+   margin: 20px 0; 
+}
+
+.container .contactInfo ul.info li
+{
+   position: relative;
+   list-style: none;
+   display: flex;
+   margin: 20px 0;
+   cursor: pointer;
+   align-items: flex-start;
+}
+
+.container .contactInfo ul.info li span:nth-child(1)
+{
+    width: 30px;
+    min-width: 30px;
+}
+
+/* for gmail */
+.container .contactInfo ul.info li span a
+{
+    color: #fff;
+    text-decoration: none;
+    width: 30px;
+    min-width: 30px;
+    
+}
+
+.container .contactInfo ul.info li span:nth-child(1) img
+{
+    max-width: 100%;
+    filter: invert(1);
+}
+
+.container .contactInfo ul.info li span:nth-child(2)
+{
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.container .contactInfo ul.sci
+{
+    position: relative;
+    display: flex;
+}
+
+.container .contactInfo ul.sci li
+{
+   list-style: none;  
+   margin-right: 15px;
+}
+
+.container .contactInfo ul.sci li a
+{
+   text-decoration: none;
+}
+
+.container .contactInfo ul.sci li a img
+{
+   filter: invert(1);
+}
+
+.container .contactForm
+{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: #fff; 
+    box-shadow: 0 50px 50px rgba(0,0,0,0.25);
+    border-radius: 22px;
+}
+
+.container .contactForm h2
+{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container .contactForm .formBox
 {
     position: relative;
     display: flex;
@@ -13,29 +159,26 @@
     padding-top: 30px;
 }
 
-.detail-appointment .inputBox
+.container .contactForm .formBox .inputBox
 {
     position: relative;
     margin-bottom: 35px;
 }
 
-.Appointment .detail-appointment{
-    width: 40%;
-    border: 2px solid;
-}
-/* .detail-appointment .inputBox.w50
+.container .contactForm .formBox .inputBox.w50
 {
-    width: 4%;
-} */
+    width: 47%;
+}
 
-.detail-appointment .inputBox.w100
+.container .contactForm .formBox .inputBox.w100
 {
     width: 100%;
 }
 
-.detail-appointment .inputBox input
+.container .contactForm .formBox .inputBox input,
+.container .contactForm .formBox .inputBox textarea 
 {
-    /* width: 40%; */
+    width: 100%;
     resize: none;
     padding: 5px 0;
     font-size: 18px;
@@ -46,12 +189,12 @@
     border-bottom: 1px solid #777;
 }
 
-.detail-appointment .inputBox textarea 
+.container .contactForm .formBox .inputBox textarea 
 {
     height: 120px;
 }
 
-.detail-appointment .inputBox span 
+.container .contactForm .formBox .inputBox span 
 {
     position: absolute;
     left: 0;
@@ -62,10 +205,21 @@
     transition: 0.3s;
 }
 
-
+.container .contactForm .formBox .inputBox input:focus ~ span,
+.container .contactForm .formBox .inputBox input:valid ~ span,
+.container .contactForm .formBox .inputBox textarea:focus ~ span, 
+.container .contactForm .formBox .inputBox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size:  12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #095a55;
+    font-weight: 500;
+} 
 
 /* Css for the submit button */
-.detail-appointment .inputBox input[type="submit"]         
+.container .contactForm .formBox .inputBox input[type="submit"]         
 {
     position: relative;
     cursor: pointer;
@@ -78,7 +232,7 @@
 
 }
 
-.detail-appointment .inputBox input[type="submit"]:hover{
+.container .contactForm .formBox .inputBox input[type="submit"]:hover{
     background: #0d9480;
 }
 
@@ -115,9 +269,71 @@
     }
 }
 
-
-
-    .detail-appointment .inputBox.w50
+@media (max-width: 991px)
+{
+    section
     {
-        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #fff38e;
     }
+
+    section::before
+    {
+        display: none;
+    }
+
+    .container
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .container .contactForm
+    {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+    }
+
+    .container .contactInfo
+    {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        border-radius: 0px;
+    }
+    .container .contactInfo ul.sci
+    {
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .container .contactForm
+    {
+        padding: 25px;
+    }
+
+    .container .contactInfo{
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container .contactInfo ul.sci
+    {
+        margin-top: 40px;
+    }
+
+    .container .contactForm .formBox .inputBox.w50
+    {
+        width: 100%;
+    }
+}
