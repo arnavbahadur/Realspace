@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap');
+
+/* Single-Event full page access */
+.single-event-main-container {
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 58px;
+}
+
+.partner-text{
+    text-align: center;
+    /* text-shadow: 5px; */
+    
+}
+.single-event-section-4-container{
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 40px;
+}
+
+.section-4-single-event-heading{
+    text-align: center;
+    margin: 8px;
+    padding: 8px;
+    margin-bottom: 40px;
+}
+
+.section-4-single-event-heading h5{
+    margin: 4px;
+    padding: 4px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 400;
+}
+.section-4-single-event-heading p{
+    margin: 4px;
+    padding: 4px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.single-event-memories{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 2px; */
+    justify-content: center;
+}
+
+.memories-album-single-event{
+    width: 190px;
+    height: 200px;
+    margin: 2px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.memories-album-single-event:hover{
+    transform: scale(1.5);
+}

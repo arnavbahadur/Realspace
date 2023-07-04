@@ -2,8 +2,8 @@
 import Carousel from './Carousel'
 import Popup from './MyModal'
 import React, { useEffect } from 'react';
-import MyModal from './MyModal';
-
+// import MyModal from './MyModal';
+import Ourpartners from './Ourpartners/Partner'
 setTimeout(() => {
   <Popup/>
 }, 3000);
@@ -17,7 +17,8 @@ const Home = () => {
   return (
     <div>
     <Carousel/>
-    <MyModal/>
+    {/* <MyModal/> */}
+    <Ourpartners/>
     </div>
   )
 }
