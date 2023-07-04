@@ -11,22 +11,22 @@ export default function Partner() {
     </div>
       <div className="single-event-section-4-container">
         <div className="single-event-memories">
-          <div className="memories-album-single-event">
+          <div className="partner-image-home">
             <img src="./Images/house-1.jpg" alt="Loading Error" />
           </div>
-          <div className="memories-album-single-event">
+          <div className="partner-image-home">
             <img src="./Images/house-2.jpg" alt="Loading Error" />
           </div>
-          <div className="memories-album-single-event">
+          <div className="partner-image-home">
             <img src="./Images/house-3.jpg" alt="Loading Error" />
           </div>
-          <div className="memories-album-single-event">
+          <div className="partner-image-home">
             <img src="./Images/house-4.jpg" alt="Loading Error" />
           </div>
-          <div className="memories-album-single-event">
+          <div className="partner-image-home">
             <img src="./Images/house-1.jpg" alt="Loading Error" />
           </div>
-          <div className="memories-album-single-event">
+          <div className="partner-image-home">
             <img src="./Images/house-1.jpg" alt="Loading Error" />
           </div>
         </div>

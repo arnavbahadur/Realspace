@@ -12,6 +12,9 @@
 
 .partner-text{
     text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
     /* text-shadow: 5px; */
     
 }
@@ -50,13 +53,13 @@
     justify-content: center;
 }
 
-.memories-album-single-event{
+.partner-image-home{
     width: 190px;
     height: 200px;
     margin: 2px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
-.memories-album-single-event:hover{
+.partner-image-home:hover{
     transform: scale(1.5);
 }
