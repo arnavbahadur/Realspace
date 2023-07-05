@@ -1,37 +1,56 @@
 import React from 'react'
 import './Feature.css'
+
 const Feature = () => {
-  return (      
-      <div className="event-container">       
-        <div className="todays-event">
-               <div className="today-event-box">
-               <div className="event-box-container">
-                <h3 className='event-box-header'>
-                Commersial
-                </h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dolor deserunt, saepe similique tempora sunt ad sed aliquam laboriosam minima, itaque distinctio. Id distinctio exercitationem consequuntur est eaque doloribus pariatur!
-               </div>
+  return (
+    <div>
 
 
-               <div className="event-box-container">
-                <h3 className='event-box-header'>
-               Resedentil
-                </h3> 
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit animi recusandae neque eos. Perspiciatis, laboriosam ipsum impedit magni repellat possimus consectetur asperiores quia animi, amet doloremque debitis eligendi aperiam facere!
-               </div>
 
-               <div className="event-box-container">
-                <h3 className='event-box-header'>
-               Other
-                </h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat cumque numquam nemo nam fugiat veniam minima, sunt, facere voluptatum explicabo fugit dolorum consequuntur hic soluta. Corrupti maxime natus illum nesciunt!
-               </div>
-        </div>
-        </div>
-      </div>
-    
+<main className="page-content">
+  <div className="card">
+    <div className="content">
+      <h2 className="title">Mountain View</h2>
+      <p className="copy">
+        Check out all of these gorgeous mountain trips with beautiful views of,
+        you guessed it, the mountains
+      </p>
+      <button className="btn">View Trips</button>
+    </div>
+  </div>
+  <div className="card">
+    <div className="content">
+      <h2 className="title">To The Beach</h2>
+      <p className="copy">
+        Plan your next beach trip with these fabulous destinations
+      </p>
+      <button className="btn">View Trips</button>
+    </div>
+  </div>
+  <div className="card">
+    <div className="content">
+      <h2 className="title">Desert Destinations</h2>
+      <p className="copy">It's the desert you've always dreamed of</p>
+      <button className="btn">Book Now</button>
+    </div>
+  </div>
+  <div className="card">
+    <div className="content">
+      <h2 className="title">Explore The Galaxy</h2>
+      <p className="copy">
+        Seriously, straight up, just blast off into outer space today
+      </p>
+      <button className="btn">Book Now</button>
+    </div>
+  </div>
+</main>
 
-   
+
+
+
+
+
+    </div>
   )
 }
 
