@@ -1,7 +1,7 @@
 import { Children } from "react";
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
-// import {Scrollbars} from 'react-custom-scrollbars';
+import {Scrollbars} from 'react-custom-scrollbars';
 
 const MyModal = ({ closeModal, children, handleCloseButton }) => {
   useEffect(() => {
