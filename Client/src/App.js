@@ -35,10 +35,11 @@ function App() {
             <Route path="/filter" element={<Filter/>}/>
             <Route path="/appointment" element={<Appointment/>}/>
             <Route path="/mymodal" element={<MyModal/>}/>
+        
           
         </Routes>
         <Footer/>
-       
+       <Project/>
         
     </div>
   );
