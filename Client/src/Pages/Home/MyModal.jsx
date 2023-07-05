@@ -3,7 +3,7 @@ import MyModal from "./ShowModal";
 // import HousePreview from "../HousePreview/HousePreview";
 import HouseBox from "../../Components/HouseBox/HouseBox";
 import './Popup.css'
-import {Scrollbars} from 'react-custom-scrollbars';
+// import {Scrollbars} from 'react-custom-scrollbars';
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
