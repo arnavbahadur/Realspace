@@ -15,8 +15,12 @@ import Home from './Pages/Home/Home';
 import Projectbox from './Components/Projectbox/Projectbox';
 import Filter from './Pages/Home/Filter.jsx';
 import Appointment from './Pages/Appointment/Appointment';
+
+import CompareSideBtn from './Components/CompareSideBtn/CompareSideBtn'
+
 import MyModal from './Pages/Home/MyModal';
 import Project from './Pages/Project/Project';
+
 function App() {
   return (
    <div className="app">
@@ -38,6 +42,7 @@ function App() {
         
           
         </Routes>
+        <CompareSideBtn/>
         <Footer/>
        <Project/>
         

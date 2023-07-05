@@ -40,6 +40,7 @@
     border-radius: 0;
     box-shadow: none;
     z-index: 0;
+    cursor: pointer;
 }
 
 /* .houseBox-imgSection img:hover{
@@ -120,4 +121,9 @@
     margin-top: 15px;
     font-size: 30px;
     color: #aaadb1;
+    cursor: pointer;
+}
+.houseBox-bottomSection-right i:active{
+    transform: all 3s;
+    transform: scale(1.2,1.2);
 }

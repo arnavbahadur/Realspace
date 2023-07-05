@@ -65,7 +65,10 @@
     color: blue;
     cursor: pointer;
 }
-.housePreview-propertyid i:active{
+.housePreview-discription-top i{
+    cursor: pointer;
+}
+.housePreview-discription-top i:active{
     transform: all 3s;
     transform: scale(1.2,1.2);
 }
@@ -123,10 +126,10 @@
     padding: 7px 10px;
 }
 .housediscription-features ul li:nth-child(2n){
-    background-color: blueviolet;
+    background-color: white;
 }
 .housediscription-features ul li:nth-child(2n + 1){
-    background-color: goldenrod;
+    background-color: lightblue;
 }
 .housePreview-iframe-section{
     text-align: center;
