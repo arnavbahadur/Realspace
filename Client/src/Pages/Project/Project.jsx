@@ -1,5 +1,6 @@
 import React from "react";
 import "./Project.css";
+import Gallery from "../Gallery/Gallery";
 
 const Project = () => {
      const [checked, setChecked] = React.useState(false); 
@@ -379,6 +380,7 @@ const Project = () => {
         </div>
       </div>
       
+      <Gallery/>
       </div>
     </div>
   );
