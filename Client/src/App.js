@@ -16,7 +16,7 @@ import Projectbox from './Components/Projectbox/Projectbox';
 import Filter from './Pages/Home/Filter.jsx';
 import Appointment from './Pages/Appointment/Appointment';
 import MyModal from './Pages/Home/MyModal';
-import Project from './Pages/Projects/Project';
+import Project from './Pages/Project/Project';
 function App() {
   return (
    <div className="app">
