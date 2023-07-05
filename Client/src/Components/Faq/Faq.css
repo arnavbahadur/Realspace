@@ -5,39 +5,61 @@
 }
 
 .faq-text{
-   padding: 40px;
+   padding: 25px;
    margin: 5px;
-   border: 2px solid red;
+   /* border: 2px solid red; */
    font-size: 24px;
    text-align: center;
    justify-content: center;
+   background-color: aliceblue;
+   font-weight: bolder;
 }
 
-.container{
+.groups{
+   border: 2px solid black;
+   padding: 10px;
+   margin: 10px;
+   margin-left: 10px;
+   display: flex;
+   flex-wrap: wrap;
+   flex: 15px;
+   justify-content: space-around;
+   background-color: black;
+    
+}
+.groups-bttn{
+   padding: 10px;
+   border: 1px solid blue;
+   color: white;
+   font-weight: bold;
+}
+
+
+/* .container{
     width:100vh;
     height: 70vh; 
      margin: 100px auto; 
      border-radius: 7px; 
      box-shadow: 1px 2px 4px rgba(0,0,0,.3); 
- }
+ } */
 
- .container-header{
+ /* .container-header{
     height: 10vh;
     margin-top: 2%;
     margin-bottom: 2%;
     background: #7800CF;
     /* border-radius: 7px 7px 0px 0px; */
-    padding: 10px;
+    /* padding: 10px;
     color: #fff;
     text-align: center;
     font-family: "Rubik";
- }
- 
+ } */
+/*  
 .container-header .h1{
     text-align: center;
     justify-content: center;
     font-size: medium;
-}
+} */
 .accordion-item{
    /* border: 1.5px solid black; */
    padding: 10px;
