@@ -1,0 +1,73 @@
+.container-project{
+    height: 100%;
+    padding: 0 60px;
+    margin: 15px 60px;
+    
+}
+.row{
+    padding-bottom: 20px
+    ;
+}
+ .img-box {
+    width: 850px;
+    height: 560px;
+
+} 
+.samar-slider  {
+    height: 500px;
+    min-height: 500px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: 1px solid black;
+}
+.col-lg-4 {
+    flex: 0 0 auto;
+    width: 28.333333%;
+}
+
+.card-img-top{
+    padding: 20px;
+    height: 390px;
+    width: 290px;
+}
+
+
+.list-icon{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.video-map-container{
+    padding-top: 20px;
+    border: 2px solid red;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+
+}
+.video-container{
+    flex: 50px;
+    /* border: 1px solid black; */
+}
+.map-container{
+    flex: 50px;
+    /* border: 1px solid green; */
+}
+.video-h3 {
+
+ border-left: 5px solid black ;
+ margin-left: 25px;
+ padding-left: 25px;
+ font-size: 30px;
+}
+.map-h3{
+border-left: 5px solid black ;
+margin-left: 25px;
+padding-left: 25px;
+font-size: 30px;
+}

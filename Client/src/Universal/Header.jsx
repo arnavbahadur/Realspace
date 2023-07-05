@@ -2,6 +2,8 @@ import React from 'react'
 import { NavLink }  from "react-router-dom";
 import './Header.css'
 
+
+
 const Header = () => {
   return (
     <div className='navbar'>
@@ -20,8 +22,8 @@ const Header = () => {
             
 
         <div className="nav-center-navigation-box">
-        < NavLink to="/Partner">
-          <p className='nav-center-navigation-box-text'>Partner</p>
+        < NavLink to="/Project">
+          <p className='nav-center-navigation-box-text'>Projects</p>
           </NavLink>
         </div>
 
