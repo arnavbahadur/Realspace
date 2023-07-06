@@ -20,14 +20,15 @@ import CompareSideBtn from './Components/CompareSideBtn/CompareSideBtn'
 
 import MyModal from './Pages/Home/MyModal';
 import Project from './Pages/Project/Project';
+import HouseSale from './Pages/Home/HouseSale/HouseSale';
 
 function App() {
   return (
    <div className="app">
        <Header/>
+       
          <Routes>
-            <Route path="/" element={<Home/>}/>
-            
+            <Route path="/" element={<Home/>}/> 
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/compare" element={<Compare/>}/>
             <Route path="/project" element={<Project/>}/>
@@ -38,9 +39,7 @@ function App() {
             <Route path="/projectbox" element={<Projectbox/>}/>
             <Route path="/filter" element={<Filter/>}/>
             <Route path="/appointment" element={<Appointment/>}/>
-            <Route path="/mymodal" element={<MyModal/>}/>
-        
-          
+            <Route path="/mymodal" element={<MyModal/>}/>     
         </Routes>
         <CompareSideBtn/>
         <Footer/>
