@@ -9,8 +9,10 @@ const Header = () => {
     <div className='navbar'>
       <div className="nav-left">
         {/* LOgo */}
-        <img src=".\image\logo.jpg" alt="logo" />
-        {/* <img src="..\Images\house-1.jpg" alt="logo" /> */}
+        <NavLink to='/'>
+          <img src=".\image\logo.jpg" alt="logo" />
+          {/* <img src="..\Images\house-1.jpg" alt="logo" /> */}
+        </NavLink>
       </div>
       <div className="nav-center">
           
