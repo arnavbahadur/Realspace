@@ -27,6 +27,19 @@ const Header = () => {
           </NavLink>
         </div>
 
+       {/* <div className="dropdown">
+       <button className="btn toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Projects
+       </button>
+        <ul className="dropdown-menu">
+          <li><a className="dropdown-item" href="#">past</a></li>
+          <li><a className="dropdown-item" href="#">present</a></li>
+          <li><a className="dropdown-item" href="#">future</a></li>
+        </ul>
+      </div> */}
+
+
+
         <div className="nav-center-navigation-box">
       <NavLink to="/Contact">
       <p className='nav-center-navigation-box-text'>Contact</p>
@@ -47,7 +60,7 @@ const Header = () => {
         <div className="nav-center-navigation-box">
         <NavLink to="/Appointment">
           <p className='nav-center-navigation-box-text'>Appointment</p>
-          </NavLink>
+        </NavLink>
           
         </div>
       </div>

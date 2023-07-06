@@ -18,7 +18,6 @@ import Appointment from './Pages/Contact/Appointment/Appointment';
 import CompareSideBtn from './Components/CompareSideBtn/CompareSideBtn'
 import MyModal from './Pages/Home/MyModal';
 import Project from './Pages/Project/Project';
-import HouseSale from './Pages/Home/HouseSale/HouseSale';
 
 function App() {
   return (
