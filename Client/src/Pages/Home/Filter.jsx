@@ -50,9 +50,8 @@ const Icon = () => {
            <button className="butt-color">Search</button>
             </div>
              </div>
-           
-         
        </div>
     );
   };
 export default Dropdown
+
