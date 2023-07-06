@@ -9,8 +9,10 @@ const Header = () => {
     <div className='navbar'>
       <div className="nav-left">
         {/* LOgo */}
-        <img src=".\image\logo.jpg" alt="logo" />
-        {/* <img src="..\Images\house-1.jpg" alt="logo" /> */}
+        <NavLink to='/'>
+          <img src=".\image\logo.jpg" alt="logo" />
+          {/* <img src="..\Images\house-1.jpg" alt="logo" /> */}
+        </NavLink>
       </div>
       <div className="nav-center">
           
@@ -64,15 +66,11 @@ const Header = () => {
           
         </div>
       </div>
-      <div className="nav-right">
-        {/* search,login/out */}
-        {/* <div className="nav-right-searchBtn">
-          <p>Search <i className="fa-solid fa-magnifying-glass"/></p>
-        </div> */}
+      {/* <div className="nav-right">
         <div className="nav-right-user">
           <i className="fa-solid fa-user"/>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
