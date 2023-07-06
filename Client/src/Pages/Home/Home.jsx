@@ -23,8 +23,8 @@ const Home = () => {
     <div>
     <Carousel/>
     <Filter/>
-    {/* <Feature/> */}
-    <Featured/>
+    <Feature/>
+    {/* <Featured/> */}
     {/* <MyModal/> */}
     <HouseSale/>
     <HouseRent/>

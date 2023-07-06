@@ -14,10 +14,8 @@ import Team from './Pages/Ourteam/Team';
 import Home from './Pages/Home/Home';
 import Projectbox from './Components/Projectbox/Projectbox';
 import Filter from './Pages/Home/Filter.jsx';
-import Appointment from './Pages/Appointment/Appointment';
-
+import Appointment from './Pages/Contact/Appointment/Appointment';
 import CompareSideBtn from './Components/CompareSideBtn/CompareSideBtn'
-
 import MyModal from './Pages/Home/MyModal';
 import Project from './Pages/Project/Project';
 import HouseSale from './Pages/Home/HouseSale/HouseSale';
@@ -25,8 +23,8 @@ import HouseSale from './Pages/Home/HouseSale/HouseSale';
 function App() {
   return (
    <div className="app">
-       <Header/>
-       
+       <Header/> 
+       <CompareSideBtn/>   
          <Routes>
             <Route path="/" element={<Home/>}/> 
             <Route path="/contact" element={<Contact/>}/>
@@ -41,10 +39,8 @@ function App() {
             <Route path="/appointment" element={<Appointment/>}/>
             <Route path="/mymodal" element={<MyModal/>}/>     
         </Routes>
-        <CompareSideBtn/>
-        <Footer/>
-       <Project/>
         
+        <Footer/>  
     </div>
   );
 }

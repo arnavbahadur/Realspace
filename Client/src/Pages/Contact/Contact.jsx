@@ -1,5 +1,6 @@
 import React from 'react'
 import './Contact.css'
+import Appointment from './Appointment/Appointment'
 
 const Contact = () => {
   return (
@@ -69,8 +70,11 @@ const Contact = () => {
             <div className="inputBox w100">
               <input type="submit" defaultValue="Send" />
             </div>
+           
           </div>
+         
         </div>
+      
       </div>
     
   )
