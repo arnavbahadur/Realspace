@@ -11,17 +11,17 @@ const Feature = () => {
     </div>
     <div className='feature-container-top'>
       <div className="feature-container">
-      <img src="./Images/house-1.jpg" alt="" />
+      <img src="./Images/comm.jpg " alt="" />
       <p className='feature-container-text'>commersial</p>
     
       </div>
       <div className="feature-container">
-      <img src="./Images/house-1.jpg" alt="" />
+      <img src="./Images/rese.jpg" alt="" />
       <p className='feature-container-text'>resenditial</p>
       
       </div>
       <div className="feature-container">
-      <img src="./Images/house-1.jpg" alt="" />
+      <img src="./Images/rese.jpg" alt="" />
       <p className='feature-container-text'>othrr</p>
       
       </div>
