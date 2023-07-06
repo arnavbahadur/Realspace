@@ -42,6 +42,13 @@ const Header = () => {
         <NavLink to="/Faq">
           <p className='nav-center-navigation-box-text'>FAQ</p>
           </NavLink>
+          
+        </div>
+        <div className="nav-center-navigation-box">
+        <NavLink to="/Appointment">
+          <p className='nav-center-navigation-box-text'>Appointment</p>
+          </NavLink>
+          
         </div>
       </div>
       <div className="nav-right">

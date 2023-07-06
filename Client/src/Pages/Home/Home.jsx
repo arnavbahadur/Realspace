@@ -21,7 +21,7 @@ const Home = () => {
     <div>
     <Carousel/>
     <Filter/>
-    <Feature/>
+    {/* <Feature/> */}
     <Featured/>
     {/* <MyModal/> */}
     <Ourpartners/>
