@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './HouseBox.css'
+import { NavLink } from 'react-router-dom';
 const HouseBox = () => {
     const likedRef = useRef();
     const [liked,setliked] = useState(false);
@@ -17,7 +18,9 @@ const HouseBox = () => {
             <div className="houseBox-top-tag-box">
                 tags
             </div>
-            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="house" />
+            <NavLink to={`/HousePreview`}>
+                <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="house" />
+            </NavLink>
             <div className="houseBox-imgsection-textArea">
                 <p> For{` sale`}</p>
             </div>
@@ -33,7 +36,7 @@ const HouseBox = () => {
                 <div className="houseBox-areaMeasure-container">
                     <p>Bedrooms</p>
                     <div className="houseBox-areaMeasure-icon">
-                        <i>icon</i>
+                        <i class="fa-solid fa-bed"/>
                         <span>No.</span>
                     </div>
                 </div>
@@ -59,7 +62,7 @@ const HouseBox = () => {
                 </div>   
                 <div className="houseBox-bottomSection-right">
                     <i ref={likedRef} className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
-                    <i className="fa-solid fa-arrows-turn-to-dots"/>
+                    <i className="fa-solid fa-arrows-turn-to-dots"/>                    
                 </div>                     
             </div>
         </div>

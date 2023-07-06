@@ -1,0 +1,14 @@
+.compare-fixed-btn{
+    padding: 10px 20px;
+    margin: 10px;
+    position: fixed;
+    top: 56%;
+    right: 0;
+    background-color: black;
+    color: grey;
+    cursor: pointer;
+}
+.compare-fixed-btn:active{
+    transform: all 3s;
+    transform: scale(1.2,1.2);
+}

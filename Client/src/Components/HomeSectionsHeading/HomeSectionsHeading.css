@@ -1,0 +1,13 @@
+.homeSectionsHeading{
+    text-align: center;
+}
+.headingSection-title{
+    font-size: 13px;
+    color: green;
+}
+.headingSection-purpose{
+    font-size: 18px;
+}
+.headingSection-comment{
+    color: grey;
+}

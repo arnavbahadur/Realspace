@@ -7,10 +7,10 @@ import './Header.css'
 const Header = () => {
   return (
     <div className='navbar'>
-      <div className="nav-left logo">
+      <div className="nav-left">
         {/* LOgo */}
-        <img src=".\Images\house" alt="logo" />
-        <img src="" alt="" />
+        <img src=".\image\logo.jpg" alt="logo" />
+        {/* <img src="..\Images\house-1.jpg" alt="logo" /> */}
       </div>
       <div className="nav-center">
           
