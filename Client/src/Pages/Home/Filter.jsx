@@ -17,7 +17,9 @@ const Icon = () => {
       <div className="filter">
         <div className="dropdown-input">
           <div className="col-filter">
-          <p className="pfilter-color">Property type  <Icon /></p>
+            <div className="row-filter">
+            <p>Property Type</p>
+          <p className="pfilter-color">All Property   <Icon /></p>
  {/* <span className="bottom-filter">all types</span> */}
   <div class="dropdown-content">
   <p>Flat</p>
@@ -26,8 +28,11 @@ const Icon = () => {
   <p>Cold storage</p>
   </div>
           </div>
+          </div>
           <div className="col-filter">
-            <p className="pfilter-color">Location  <Icon /></p>
+          <div className="row-filter">
+            <p>Location</p>
+            <p className="pfilter-color">All Location  <Icon /></p>
         {/* <span className="bottom-filter">all types</span> */}
           <div class="dropdown-content">
   <p>Vijay nagar</p>
@@ -36,8 +41,12 @@ const Icon = () => {
   <p>CAT-Road</p>
   </div>
             </div>
+            </div>
             <div className="col-filter">
-              <p className="pfilter-color">Price  <Icon /></p>
+            <div className="row-filter">
+            <p>Price</p>
+        
+              <p className="pfilter-color">All  <Icon /></p>
               {/* <span className="bottom-filter">all types</span> */}
             <div class="dropdown-content">
               
@@ -45,7 +54,9 @@ const Icon = () => {
   <p>Hello World!</p>
   <p>Hello World!</p>
   <p>Hello World!</p>
-  </div>   </div>
+  </div> 
+    </div>
+    </div>
             <div className="col-filter1">
            <button className="butt-color">Search</button>
             </div>

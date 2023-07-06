@@ -3,12 +3,12 @@
  flex-direction: row; 
  flex-wrap: wrap;
  /* border: 2px solid; */
- border-radius: 10px;
+ /* border-radius: 10px; */
  width: 70%;
-
+background-color: #dce5f7;
  justify-content: center ;
 margin-left: 15%;
-padding-bottom: 1%;
+/* padding-bottom: 1%; */
 }
 .col-filter{
  
@@ -26,10 +26,11 @@ padding-bottom: 1%;
   font-size: 16px;
   /* margin: 4px 2px; */
   cursor: pointer;
-  border: 2px solid;
+  /* border: 2px solid; */
   /* margin-right: 0px; */
   margin-top: 0%;
-  
+  border-right: 1px outset;
+
   
 }
 
@@ -42,23 +43,18 @@ padding-bottom: 1%;
 
   
   width: 25%;
-  /* padding: 5px 40px; */
   text-align: center;
   justify-content: center;
   background: linear-gradient(105deg, #659afb, #2668db);
-  /* text-decoration: black; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   font-size: 16px;
-  /* margin: 4px 2px; */
   cursor: pointer;
-  /* border-radius: 10px; */
-  border: 2px solid;
-  /* margin-right: 0px; */
   margin-top: 0%;
   margin-bottom: 0%;
- 
+  border-right: 1px solid;
+
 }
 .butt-color{
   color: white;
