@@ -11,8 +11,8 @@ const HouseBox = () => {
         console.log(liked);
     })
   return (
-    <div>
-      <div className="houseBox">
+    <div className='houseBox'>
+      <div className="houseBox-body">
         <div className="houseBox-imgSection">
             {/* img */}
             <div className="houseBox-top-tag-box">

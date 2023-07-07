@@ -24,29 +24,40 @@ const Header = () => {
             
 
         <div className="nav-center-navigation-box">
-        < NavLink to="/Project">
-          <p className='nav-center-navigation-box-text'>Projects</p>
-          </NavLink>
+          <div>          
+            < NavLink to="/Project">
+              <p className='nav-center-navigation-box-text'>Projects <i class="fa-solid fa-angle-down"/></p>          
+            </NavLink>
+          </div>
+          <div className="header-dropdown projectPage-dropdown ">
+            <div className="header-dropdown-menu">
+              {/* <NavLink to="/Project"> */}
+                <p className='nav-center-navigation-box-text'>Present</p>
+              {/* </NavLink> */}
+                <p className='nav-center-navigation-box-text'>Past</p>
+                <p className='nav-center-navigation-box-text'>Future</p>
+            </div>
+          </div>
         </div>
-
-       {/* <div className="dropdown">
-       <button className="btn toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Projects
-       </button>
-        <ul className="dropdown-menu">
-          <li><a className="dropdown-item" href="#">past</a></li>
-          <li><a className="dropdown-item" href="#">present</a></li>
-          <li><a className="dropdown-item" href="#">future</a></li>
-        </ul>
-      </div> */}
 
 
 
         <div className="nav-center-navigation-box">
-      <NavLink to="/Contact">
-      <p className='nav-center-navigation-box-text'>Contact</p>
-      </NavLink> 
+          <div>
+
+            <NavLink to="/Contact">
+              <p className='nav-center-navigation-box-text'>Contact <i class="fa-solid fa-angle-down"/></p>
+            </NavLink> 
+          </div>
+          <div className="header-dropdown projectPage-dropdown ">
+            <div className="header-dropdown-menu">
+              <NavLink to="/Project">
+                <p className='nav-center-navigation-box-text'>Appointment</p>
+              </NavLink>
+                <p className='nav-center-navigation-box-text'>Contact us</p>
+            </div>
         </div>
+      </div>
 
         <div className="nav-center-navigation-box">
         <NavLink to="/About">

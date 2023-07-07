@@ -1,10 +1,11 @@
 .cardSection{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* media query at 977px and 503px */
-@media screen and (max-width: 977px){
+/* @media screen and (max-width: 977px){
     .cardSection{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -16,4 +17,4 @@
         flex-direction: column;
         justify-content: space-evenly;
     }
-}
+} */
