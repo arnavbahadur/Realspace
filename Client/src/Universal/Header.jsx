@@ -32,10 +32,10 @@ const Header = () => {
           <div className="header-dropdown projectPage-dropdown ">
             <div className="header-dropdown-menu">
               {/* <NavLink to="/Project"> */}
-                <p>Present</p>
+                <p className='nav-center-navigation-box-text'>Present</p>
               {/* </NavLink> */}
-                <p>Past</p>
-                <p>Future</p>
+                <p className='nav-center-navigation-box-text'>Past</p>
+                <p className='nav-center-navigation-box-text'>Future</p>
             </div>
           </div>
         </div>
@@ -43,10 +43,21 @@ const Header = () => {
 
 
         <div className="nav-center-navigation-box">
-      <NavLink to="/Contact">
-      <p className='nav-center-navigation-box-text'>Contact</p>
-      </NavLink> 
+          <div>
+
+            <NavLink to="/Contact">
+              <p className='nav-center-navigation-box-text'>Contact <i class="fa-solid fa-angle-down"/></p>
+            </NavLink> 
+          </div>
+          <div className="header-dropdown projectPage-dropdown ">
+            <div className="header-dropdown-menu">
+              <NavLink to="/Project">
+                <p className='nav-center-navigation-box-text'>Appointment</p>
+              </NavLink>
+                <p className='nav-center-navigation-box-text'>Contact us</p>
+            </div>
         </div>
+      </div>
 
         <div className="nav-center-navigation-box">
         <NavLink to="/About">
