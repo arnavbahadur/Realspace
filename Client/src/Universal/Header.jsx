@@ -74,12 +74,11 @@ const Header = () => {
           </NavLink>
           
         </div>
-        <div className="nav-center-navigation-box">
+        {/* <div className="nav-center-navigation-box">
         <NavLink to="/Appointment">
           <p className='nav-center-navigation-box-text'>Appointment</p>
         </NavLink>
-          
-        </div>
+        </div> */}
       </div>
       {/* <div className="nav-right">
         <div className="nav-right-user">
