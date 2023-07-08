@@ -2,15 +2,15 @@ import React from 'react'
 import { NavLink }  from "react-router-dom";
 import './Header.css'
 
-
-
 const Header = () => {
   return (
     <div className='navbar'>
       <div className="nav-left">
         {/* LOgo */}
-        <img src=".\image\logo.jpg" alt="logo" />
-        {/* <img src="..\Images\house-1.jpg" alt="logo" /> */}
+        <NavLink to='/'>
+          <img src="./Images/logo.png" alt="logo" />
+          {/* <img src={<LOgo/>} alt="logo" /> */}
+        </NavLink>
       </div>
       <div className="nav-center">
           
@@ -21,17 +21,47 @@ const Header = () => {
         </div>
             
 
-        <div className="nav-center-navigation-box">
-        < NavLink to="/Project">
-          <p className='nav-center-navigation-box-text'>Projects</p>
-          </NavLink>
+        <div className="nav-center-navigation-box"  >
+          <div>          
+            {/* < NavLink to="/Project"> */}
+              <p className='nav-center-navigation-box-text'>Projects <i class="fa-solid fa-angle-down"/></p>          
+            {/* </NavLink> */}
+          </div>
+          <div className="header-dropdown projectPage-dropdown ">
+            <div className="header-dropdown-menu">
+              <NavLink to="/Compare">
+                <p className='nav-center-navigation-box-text'>Present</p>
+              </NavLink>
+              <NavLink to="/Project">
+                <p className='nav-center-navigation-box-text'>Past</p>
+              </NavLink>
+              <NavLink to="/HousePreview">
+                <p className='nav-center-navigation-box-text'>Future</p>
+              </NavLink>
+            </div>
+          </div>
         </div>
 
+
+
         <div className="nav-center-navigation-box">
-      <NavLink to="/Contact">
-      <p className='nav-center-navigation-box-text'>Contact</p>
-      </NavLink> 
+          <div>
+
+            {/* <NavLink to="/Contact"> */}
+              <p className='nav-center-navigation-box-text'>Contact <i class="fa-solid fa-angle-down"/></p>
+            {/* </NavLink>  */}
+          </div>
+          <div className="header-dropdown">
+            <div className="header-dropdown-menu">
+              <NavLink to="/Appointment">
+                <p className='nav-center-navigation-box-text'>Appointment</p>
+              </NavLink>
+              <NavLink to="/Contact">
+                <p className='nav-center-navigation-box-text'>Contact us</p>
+              </NavLink>
+            </div>
         </div>
+      </div>
 
         <div className="nav-center-navigation-box">
         <NavLink to="/About">
@@ -42,19 +72,23 @@ const Header = () => {
         <NavLink to="/Faq">
           <p className='nav-center-navigation-box-text'>FAQ</p>
           </NavLink>
+          
         </div>
-      </div>
-      <div className="nav-right">
-        {/* search,login/out */}
-        {/* <div className="nav-right-searchBtn">
-          <p>Search <i className="fa-solid fa-magnifying-glass"/></p>
+        {/* <div className="nav-center-navigation-box">
+        <NavLink to="/Appointment">
+          <p className='nav-center-navigation-box-text'>Appointment</p>
+        </NavLink>
         </div> */}
+      </div>
+      {/* <div className="nav-right">
         <div className="nav-right-user">
           <i className="fa-solid fa-user"/>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
+
+
 
 export default Header

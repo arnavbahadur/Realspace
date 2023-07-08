@@ -1,8 +1,8 @@
 import React from 'react'
-import './Contact.css'
-import Appointment from './Appointment/Appointment'
+import './Appointment.css'
 
 const Contact = () => {
+  // $('.input-group.date').datepicker({format: "dd.mm.yyyy"}); 
   return (
     // <div>
             <div className="container">
@@ -37,7 +37,7 @@ const Contact = () => {
 
         </div>
         <div className="contactForm">
-          <h2>Send a Message</h2>
+          <h2>Appointment</h2>
           <div className="formBox">
             <div className="inputBox w50">
               <input type="text" name required />
@@ -47,22 +47,18 @@ const Contact = () => {
               <input type="text" required />
               <span>Last Name</span>
             </div>
-            <div className="inputBox w50">
-              <input type="email" required />
-              <span>Email Address</span>
-            </div>
+         
             <div className="inputBox w50">
               <input type="text" required />
               <span>Mobile Number</span>
             </div>
             <div className="inputBox w50">
-              <input type="email" required />
-              <span>Requirement</span>
+              <input type="date" required />
+              {/* <span className="inputBox w51">Date</span> */}
             </div>
-            <div className="inputBox w50">
-              <input type="email" required />
-              <span>Flat Type</span>
-            </div>
+           
+             
+           
             <div className="inputBox w100">
               <textarea required defaultValue={""} />
               <span>Write your message here...</span>
@@ -70,14 +66,16 @@ const Contact = () => {
             <div className="inputBox w100">
               <input type="submit" defaultValue="Send" />
             </div>
-           
           </div>
-         
         </div>
-      
       </div>
     
   )
 }
 
 export default Contact;
+
+
+
+
+
