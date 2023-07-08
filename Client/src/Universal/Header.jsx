@@ -23,19 +23,19 @@ const Header = () => {
 
         <div className="nav-center-navigation-box"  >
           <div>          
-            < NavLink to="/Project">
+            {/* < NavLink to="/Project"> */}
               <p className='nav-center-navigation-box-text'>Projects <i class="fa-solid fa-angle-down"/></p>          
-            </NavLink>
+            {/* </NavLink> */}
           </div>
           <div className="header-dropdown projectPage-dropdown ">
             <div className="header-dropdown-menu">
               <NavLink to="/Compare">
                 <p className='nav-center-navigation-box-text'>Present</p>
               </NavLink>
-              <NavLink to="">
+              <NavLink to="/Project">
                 <p className='nav-center-navigation-box-text'>Past</p>
               </NavLink>
-              <NavLink to="">
+              <NavLink to="/HousePreview">
                 <p className='nav-center-navigation-box-text'>Future</p>
               </NavLink>
             </div>
@@ -47,9 +47,9 @@ const Header = () => {
         <div className="nav-center-navigation-box">
           <div>
 
-            <NavLink to="/Contact">
+            {/* <NavLink to="/Contact"> */}
               <p className='nav-center-navigation-box-text'>Contact <i class="fa-solid fa-angle-down"/></p>
-            </NavLink> 
+            {/* </NavLink>  */}
           </div>
           <div className="header-dropdown">
             <div className="header-dropdown-menu">
