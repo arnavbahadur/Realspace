@@ -1,4 +1,3 @@
-// import React from 'react'
 import Carousel from './Carousel'
 import Popup from './MyModal'
 import React, { useEffect } from 'react';
