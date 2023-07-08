@@ -3,7 +3,7 @@ import './Feature.css'
 // import { NavLink } from 'react-router-dom';
 const Feature = () => {
     
-   
+
   return (
    <div>
      <div className='feature-container-heading'>
