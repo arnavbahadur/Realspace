@@ -10,7 +10,7 @@ const Header = () => {
       <div className="nav-left">
         {/* LOgo */}
         <NavLink to='/'>
-          <img src=".\image\logo.jpg" alt="logo" />
+          <img src="./Images/logo.png" alt="logo" />
           {/* <img src="..\Images\house-1.jpg" alt="logo" /> */}
         </NavLink>
       </div>
