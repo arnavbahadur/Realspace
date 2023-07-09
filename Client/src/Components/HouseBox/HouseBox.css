@@ -1,15 +1,18 @@
 .houseBox{
-    margin: 5vh 2vw;
+    /* height: 56vh; */
+
+    margin: 15vh 2vw;
     /* border:2px solid black;
     padding-left: 15px;
     padding-right: 15px; */
-    padding-bottom: 30px;
-    width: 33.3333%;
+    /* padding-bottom: 30px; */
+    width: 27%;
     /* width: 50%; */
     min-width: 310px;
     box-sizing: border-box;
     z-index: 1;
     box-shadow: 2px 2px 5px grey;
+    overflow: hidden;
 }
 .houseBox-imgSection{
     position: relative;
@@ -65,8 +68,13 @@
 }
 
 .houseBox-descripstion-container{
-    margin: 20px;
+    margin: 10px 20px;
     text-align: left;
+}
+.houseBox-descripstion-container p{
+
+    padding: 0;
+    margin: 0;
 }
 .houseBox-name{
     padding: 10px;
@@ -116,14 +124,48 @@
     color: green;
     font-weight: 600;
 }
+.houseBox-bottomSection-right{
+    display: flex;
+}
 .houseBox-bottomSection-right i{
     margin: 8px;
     margin-top: 15px;
-    font-size: 30px;
+    font-size: 25px;
     color: #aaadb1;
     cursor: pointer;
 }
 .houseBox-bottomSection-right i:active{
     transform: all 3s;
     transform: scale(1.2,1.2);
+}
+.iLabel{
+    position: relative;
+    background-color: rgb(242, 190, 190);
+    width: 60px;
+    height: 25px;
+    padding: 2px;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+}
+.iLabel-up-arrow{
+    position: absolute;
+    background-color: rgb(242, 190, 190);
+    width: 10px;
+    height: 17px;
+    transform: rotate(45deg);
+    top: -6px;
+    left: 11px;
+    /* border: 2px solid black; */
+    border-bottom: none;
+    border-right  : none;
+    z-index: 0;
+}
+.iLabel-text{
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    z-index: 1;
+}
+.compare-icon-container:hover .iLabel{
+    opacity: 1;
 }

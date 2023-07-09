@@ -53,11 +53,11 @@ const Header = () => {
           </div>
           <div className="header-dropdown">
             <div className="header-dropdown-menu">
-              <NavLink to="/Appointment">
-                <p className='nav-center-navigation-box-text'>Appointment</p>
-              </NavLink>
               <NavLink to="/Contact">
                 <p className='nav-center-navigation-box-text'>Contact us</p>
+              </NavLink>
+              <NavLink to="/Appointment">
+                <p className='nav-center-navigation-box-text'>Appointment</p>
               </NavLink>
             </div>
         </div>

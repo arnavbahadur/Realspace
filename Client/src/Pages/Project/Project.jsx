@@ -1,6 +1,7 @@
 import React from "react";
 import "./Project.css";
 import Gallery from "../Gallery/Gallery";
+import CompareSideBtn from "../../Components/CompareSideBtn/CompareSideBtn";
 
 const Project = () => {
      const [checked, setChecked] = React.useState(false); 
@@ -9,6 +10,7 @@ const Project = () => {
    }
   return (
     <div>
+      <CompareSideBtn/>
       <div class="container-project">
         <div class="row">
           <div class="col-lg-8 col-md-8">
