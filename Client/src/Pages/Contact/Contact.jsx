@@ -61,8 +61,27 @@ const Contact = () => {
             </div>
             <div className="inputBox w50">
               <input type="email" required />
-              <span>Flat Type</span>
+              <span>Budget</span>
             </div>
+            {/* <div className="inputBox w50">
+            <div className="nav-center-navigation-box"  >
+          <div>          
+              <p className='nav-center-navigation-box-text'>Budget <i class="fa-solid fa-angle-down"/></p>          
+          </div>
+          <div className="header-dropdown projectPage-dropdown ">
+            <div className="header-dropdown-menu">
+            
+               <p >2-3lakh</p>
+                <p >4-9lakh</p>
+                <p >10+lakh</p>
+             
+            </div>
+          </div>
+        </div>
+        </div> */}
+
+
+
             <div className="inputBox w100">
               <textarea required defaultValue={""} />
               <span>Write your message here...</span>
