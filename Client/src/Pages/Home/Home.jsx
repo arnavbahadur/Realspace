@@ -8,6 +8,7 @@ import Feature from './HomeProjects/Feature';
 // import Featured from './Featured/featured';
 import HouseSale from './HouseSale/HouseSale';
 import HouseRent from './HouseRent/HouseRent';
+import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn';
 setTimeout(() => {
   <Popup/>
 }, 3000);
@@ -20,6 +21,7 @@ const Home = () => {
 }, []);
   return (
     <div>
+      <CompareSideBtn/>
     <Carousel/>
     <Filter/>
     <Feature/>

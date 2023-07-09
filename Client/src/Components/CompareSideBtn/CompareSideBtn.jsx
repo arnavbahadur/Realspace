@@ -9,6 +9,9 @@ const CompareSideBtn = () => {
           <i className="fa-solid fa-arrows-turn-to-dots"/>
         </div>
       </NavLink>
+      <div className="compare-fixed-btn-dropdown">
+        {/* compare drop down items */}
+      </div>
     </div>
   )
 }

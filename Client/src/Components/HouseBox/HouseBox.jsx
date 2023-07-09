@@ -3,6 +3,7 @@ import './HouseBox.css'
 import { NavLink } from 'react-router-dom';
 const HouseBox = () => {
     const likedRef = useRef();
+    const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
     useEffect(()=>{
         likedRef.onClick={
@@ -61,8 +62,18 @@ const HouseBox = () => {
                     <span className="houseBox-bottomSection-left-price">{`$40,000`}</span>
                 </div>   
                 <div className="houseBox-bottomSection-right">
-                    <i ref={likedRef} className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
-                    <i className="fa-solid fa-arrows-turn-to-dots"/>                    
+                    <div>
+                        <i ref={likedRef} className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
+                    </div>
+                    <div className='compare-icon-container'>
+                        <i className="fa-solid fa-arrows-turn-to-dots" onClick={()=>{setCompared(!compared)}} style={{color:`${compared?'black':'#aaadb1'}`}}/>                    
+                        <div className="iLabel">
+                            <div className="iLabel-up-arrow"></div>
+                            <div className="iLabel-text">
+                                <p>Compare</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>                     
             </div>
         </div>
