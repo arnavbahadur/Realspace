@@ -75,6 +75,7 @@ const Contact = () => {
                 <p >4-9lakh</p>
                 <p >10+lakh</p>
              
+                
             </div>
           </div>
         </div>
