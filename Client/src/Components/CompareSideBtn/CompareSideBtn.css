@@ -1,5 +1,5 @@
 .compare-fixed-btn{
-    padding: 10px 20px;
+    padding: 10px 10px;
     margin: 10px;
     position: fixed;
     top: 56%;
@@ -7,9 +7,45 @@
     background-color: black;
     color: grey;
     cursor: pointer;
+    font-size: 16px;
     /* z-index: -1; */
 }
 .compare-fixed-btn:active{
-    transform: all 3s;
     transform: scale(1.2,1.2);
+    transform: all 3s;
+}
+.compare-fixed-btn-dropdown{
+    opacity: 0;
+    position: absolute;
+    /* top: 105%; */
+    right: 0;
+    width: 160px;
+    height: 50px;
+    /* background-color: #c4daff70; */
+    background-color: wheat;
+    transform: translateY(-190%);
+    transition: opacity  150ms ease-in-out;
+    /* pointer-events: none; */
+}
+.compare-fixed-btn:hover .compare-fixed-btn-dropdown{
+    opacity: 1;
+    /* transform: translateY(10%); */
+    pointer-events: auto;
+}
+.compare-dropdown-downward-pointer{
+    background-color: wheat;
+    position: absolute;
+    width: 10px;
+    height: 12px;
+    border: 1px solid wheat;
+    transform: rotate(45deg);
+    bottom: -4px;
+    right: 3%;
+}
+.compare-dropdown-text p{
+    padding-top: 10px;
+    text-align: center;
+    /* color: white; */
+    /* cursor: pointer; */
+    transition: color 150ms ease;
 }
