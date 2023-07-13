@@ -11,7 +11,7 @@ import Faq from './Components/Faq/Faq';
 import Home from './Pages/Home/Home';
 import Projectbox from './Components/Projectbox/Projectbox';
 import Appointment from './Pages/Contact/Appointment/Appointment';
-// import CompareSideBtn from './Components/CompareSideBtn/CompareSideBtn'
+import CompareSideBtn from './Components/CompareSideBtn/CompareSideBtn'
 import MyModal from './Pages/Home/MyModal';
 import Project from './Pages/Project/Project';
 import About from './Pages/About/Ourteam/About';
@@ -20,7 +20,7 @@ function App() {
   return (
    <div className="app">
        <Header/> 
-       {/* <CompareSideBtn/> */}
+       <CompareSideBtn/>
          <Routes>
             <Route path="/" element={<Home/>}/> 
             <Route path="/contact" element={<Contact/>}/>
