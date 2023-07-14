@@ -11,16 +11,15 @@ import Faq from './Components/Faq/Faq';
 import Home from './Pages/Home/Home';
 import Projectbox from './Components/Projectbox/Projectbox';
 import Appointment from './Pages/Contact/Appointment/Appointment';
-import CompareSideBtn from './Components/CompareSideBtn/CompareSideBtn'
 import MyModal from './Pages/Home/MyModal';
 import Project from './Pages/Project/Project';
 import About from './Pages/About/Ourteam/About';
+import House from './Pages/House/House';
 
 function App() {
   return (
    <div className="app">
        <Header/> 
-       <CompareSideBtn/>
          <Routes>
             <Route path="/" element={<Home/>}/> 
             <Route path="/contact" element={<Contact/>}/>
@@ -32,7 +31,8 @@ function App() {
             <Route path="/faq" element={<Faq/>}/>
             <Route path="/projectbox" element={<Projectbox/>}/>
             <Route path="/appointment" element={<Appointment/>}/>
-            <Route path="/mymodal" element={<MyModal/>}/>     
+            <Route path="/mymodal" element={<MyModal/>}/>
+            <Route path='/house' element={<House/>}/>     
         </Routes> 
         <Footer/>  
     </div>

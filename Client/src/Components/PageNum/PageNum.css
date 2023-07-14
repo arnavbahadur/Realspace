@@ -1,0 +1,17 @@
+.pageNum-section{
+    display: flex;
+    justify-content: center;
+}
+.pageNum-individual{
+    text-align: center;
+    width: 25px;
+    padding: 5px;
+    background-color: whitesmoke;
+    box-shadow: 3px 2px 9px 0px;
+    margin: 5px;
+    cursor: pointer;
+}
+.pageNum-individual:active {
+    background-color: blanchedalmond;
+
+}
