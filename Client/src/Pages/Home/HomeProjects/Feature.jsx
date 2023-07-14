@@ -14,6 +14,7 @@ const Feature = () => {
       <img src="./Images/comm.jpg " alt="" />
       <p className='feature-container-text'>commersial</p>
     
+    
       </div>
       <div className="feature-container">
       <img src="./Images/rese.jpg" alt="" />
