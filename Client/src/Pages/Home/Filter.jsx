@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Filter.css'
 const Icon = () => {
     return (
@@ -12,49 +12,58 @@ const Icon = () => {
     const getDisplay = () => {
       return placeHolder;
     };
-  
+  const [isActive, setIsActive]= useState(false)
+
+  const [open,setOpen]= useState(false);
     return (
       <div className="filter">
         <div className="dropdown-input">
+         
           <div className="col-filter">
             <div className="row-filter">
             <p>Property Type</p>
-          <p className="pfilter-color">All Property   <Icon /></p>
+          
+          <p onClick={()=>setOpen(!open)} className="pfilter-color">All Property   <Icon /></p>
+         
  {/* <span className="bottom-filter">all types</span> */}
-  <div class="dropdown-content">
+   {
+            open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
   <p>Flat</p>
   <p>Plot</p>
   <p>psp</p>
   <p>Cold storage</p>
-  </div>
+  </div>)
+          }
+         
           </div>
           </div>
           <div className="col-filter">
           <div className="row-filter">
             <p>Location</p>
-            <p className="pfilter-color">All Location  <Icon /></p>
+            <p onClick={()=>setOpen(!open)} className="pfilter-color">All Location  <Icon /></p>
         {/* <span className="bottom-filter">all types</span> */}
-          <div class="dropdown-content">
-  <p>Vijay nagar</p>
+         {open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
+        <p>Vijay nagar</p>
   <p>Nipania</p>
   <p>Kanadiya</p>
   <p>CAT-Road</p>
-  </div>
+  </div> )  } 
             </div>
             </div>
             <div className="col-filter">
             <div className="row-filter">
             <p>Price</p>
         
-              <p className="pfilter-color">All  <Icon /></p>
+              <p onClick={()=>setOpen(!open)} className="pfilter-color">All  <Icon /></p>
               {/* <span className="bottom-filter">all types</span> */}
-            <div class="dropdown-content">
+           {open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
+             <p>Hello World!</p>
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  <p>Hello World!</p>
+  </div> )}
               
-  <p>Hello World!</p>
-  <p>Hello World!</p>
-  <p>Hello World!</p>
-  <p>Hello World!</p>
-  </div> 
+ 
     </div>
     </div>
             <div className="col-filter1">

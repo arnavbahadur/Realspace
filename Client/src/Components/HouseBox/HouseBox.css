@@ -13,6 +13,7 @@
     z-index: 1;
     box-shadow: 2px 2px 5px grey;
     overflow: hidden;
+    background-color: white;
 }
 .houseBox-imgSection{
     position: relative;

@@ -23,7 +23,7 @@ const Home = () => {
     <div>
       <CompareSideBtn/>
     <Carousel/>
-    <Filter/>
+    {/* <Filter/> */}
     <Feature/>
     {/* <Featured/> */}
     {/* <MyModal/> */}

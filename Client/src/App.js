@@ -15,7 +15,7 @@ import CompareSideBtn from './Components/CompareSideBtn/CompareSideBtn'
 import MyModal from './Pages/Home/MyModal';
 import Project from './Pages/Project/Project';
 import About from './Pages/About/Ourteam/About';
-
+import Dropapp from './Pages/Home/Dropapp.jsx';
 function App() {
   return (
    <div className="app">
@@ -35,6 +35,7 @@ function App() {
             <Route path="/mymodal" element={<MyModal/>}/>     
         </Routes> 
         <Footer/>  
+        {/* <Dropapp/> */}
     </div>
   );
 }
