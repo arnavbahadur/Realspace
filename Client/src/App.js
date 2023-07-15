@@ -32,7 +32,8 @@ function App() {
             <Route path="/projectbox" element={<Projectbox/>}/>
             <Route path="/appointment" element={<Appointment/>}/>
             <Route path="/mymodal" element={<MyModal/>}/>
-            <Route path='/house' element={<House/>}/>     
+            <Route path='/housesale' element={<House purpose={`For Sale`}/>}/>     
+            <Route path='/houserent' element={<House purpose={`For Rent`}/>}/>     
         </Routes> 
         <Footer/>  
     </div>

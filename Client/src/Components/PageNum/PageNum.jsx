@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './PageNum.css'
 const PageNum = ({totalPost,PostPerPage,currentPage,setCurrentPage}) => {
     const pageNumber = [];

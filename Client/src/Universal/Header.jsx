@@ -42,7 +42,21 @@ const Header = () => {
           </div>
         </div>
 
-
+        <div className="nav-center-navigation-box">
+          <div>
+              <p className='nav-center-navigation-box-text'>House <i class="fa-solid fa-angle-down"/></p>
+          </div>
+          <div className="header-dropdown">
+            <div className="header-dropdown-menu">
+              <NavLink to="/housesale">
+                <p className='nav-center-navigation-box-text'>For Sale</p>
+              </NavLink>
+              <NavLink to="/houserent">
+                <p className='nav-center-navigation-box-text'>For rent</p>
+              </NavLink>
+            </div>
+          </div>
+        </div>
 
         <div className="nav-center-navigation-box">
           <div>
@@ -60,8 +74,8 @@ const Header = () => {
                 <p className='nav-center-navigation-box-text'>Appointment</p>
               </NavLink>
             </div>
+          </div>
         </div>
-      </div>
 
         <div className="nav-center-navigation-box">
         <NavLink to="/About">
