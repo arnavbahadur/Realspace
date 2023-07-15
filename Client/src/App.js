@@ -14,6 +14,7 @@ import Appointment from './Pages/Contact/Appointment/Appointment';
 import MyModal from './Pages/Home/MyModal';
 import Project from './Pages/Project/Project';
 import About from './Pages/About/Ourteam/About';
+import Morefloor from './Pages/Project/Morefloor';
 import House from './Pages/House/House';
 
 function App() {
@@ -34,6 +35,8 @@ function App() {
             <Route path="/mymodal" element={<MyModal/>}/>
             <Route path='/housesale' element={<House purpose={`For Sale`}/>}/>     
             <Route path='/houserent' element={<House purpose={`For Rent`}/>}/>     
+            <Route path="/mymodal" element={<MyModal/>}/>  
+            <Route path="/viewmore" element={<Morefloor/>}/>   
         </Routes> 
         <Footer/>  
     </div>

@@ -1,0 +1,26 @@
+ .floor{
+    padding: 2vh;
+    margin: 2vh;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    box-shadow: 2px 2px 2px 2px grey;
+    
+}
+.floor h2{
+    padding: 1vh;
+    border-left: 5px solid black;
+    text-decoration: solid;
+}
+.plan h3{
+text-align: center;
+}
+.floor-many{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.floor-img img{
+    width: 35vh;
+    height: 55vh;
+}

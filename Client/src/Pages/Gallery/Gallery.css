@@ -1,0 +1,10 @@
+.row{
+    padding: 2vh;
+    margin: 2vh;
+}
+.col-lg-4 {
+    padding: 1vh;
+    margin: 1vh;
+    box-shadow: 1px 1px 1px 1px grey;
+    border-radius: 2vh;
+}
