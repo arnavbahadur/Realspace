@@ -15,6 +15,7 @@ import MyModal from './Pages/Home/MyModal';
 import Project from './Pages/Project/Project';
 import About from './Pages/About/Ourteam/About';
 import Morefloor from './Pages/Project/Morefloor';
+import House from './Pages/House/House';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             <Route path="/faq" element={<Faq/>}/>
             <Route path="/projectbox" element={<Projectbox/>}/>
             <Route path="/appointment" element={<Appointment/>}/>
+            <Route path="/mymodal" element={<MyModal/>}/>
+            <Route path='/housesale' element={<House purpose={`For Sale`}/>}/>     
+            <Route path='/houserent' element={<House purpose={`For Rent`}/>}/>     
             <Route path="/mymodal" element={<MyModal/>}/>  
             <Route path="/viewmore" element={<Morefloor/>}/>   
         </Routes> 
