@@ -28,11 +28,19 @@
     
 }
 .groups-bttn{
-   padding: 10px;
-   border: 1px solid blue;
+   padding:1vh;
+   /* border: 1px solid blue; */
    color: white;
-   font-weight: bold;
+   font-weight: bold;    
+  
+  
 }
+.groups-bttn:hover {
+   /* background-color: rgb(46, 71, 81); */
+   /* height: 11px; */
+   padding: 0.9vh;
+  border-bottom: 2px solid ;
+ }
 
 
 /* .container{
@@ -85,8 +93,48 @@
 .accordion-body{
 font-size: 20px;
 }
- 
 
+.gerneral {
+   /* border: 1px solid red; */
+   padding: 2vh;
+   margin: 3vh;
+   margin-top: 3vh;
+   box-shadow: 2px 2px 2px 2px grey;
+   border-radius: 1vh;
+} 
+.fees{
+   padding: 2vh;
+   margin: 3vh;
+   margin-top: 3vh;
+   box-shadow: 2px 2px 2px 2px grey;
+   border-radius: 1vh;
+}
+.managing{
+   padding: 2vh;
+   margin: 3vh;
+   margin-top: 3vh;
+   box-shadow: 2px 2px 2px 2px grey;
+   border-radius: 1vh;
+}
+.service{
+   padding: 2vh;
+   margin: 3vh;
+   margin-top: 3vh;
+   box-shadow: 2px 2px 2px 2px grey;
+   border-radius: 1vh;
+}
+.gerneral h2{
+   text-align: center;
+}
+.fees h2{
+   text-align: center;
+}
+.managing h2{
+   text-align: center;
+}
+.service h2{
+  text-align: center;  
+}
 
 
  /* @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
