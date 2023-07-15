@@ -14,7 +14,6 @@
 
 } 
 .samar-slider  {
-    height: 500px;
     min-height: 500px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
@@ -29,7 +28,6 @@
 }
 
 .card-img-top{
-    padding: 20px;
     height: 390px;
     width: 290px;
 }
@@ -43,19 +41,26 @@
 
 .video-map-container{
     padding-top: 20px;
-    border: 2px solid red;
     height: max-content;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-
+    
 }
 .video-container{
     flex: 50px;
+    padding: 2vh;
+    margin: 2vh;
+    box-shadow: 2px 2px 2px 2px grey;
+    border-radius: 1vh;
     /* border: 1px solid black; */
 }
 .map-container{
     flex: 50px;
+    padding: 2vh;
+    margin: 2vh;
+    box-shadow: 2px 2px 2px 2px grey;
+    border-radius: 1vh;
     /* border: 1px solid green; */
 }
 .video-h3 {
@@ -70,4 +75,17 @@ border-left: 5px solid black ;
 margin-left: 25px;
 padding-left: 25px;
 font-size: 30px;
+}
+
+.view-more-floor{
+    padding: 0.5vh;
+    margin: 1vh;
+    border: 2px solid black;
+    border-radius: 6px;
+    text-align: center;
+}
+.view-more-floor:hover{
+    background-color: grey;
+    opacity: 0.6;
+    transition: 0.3s;
 }
