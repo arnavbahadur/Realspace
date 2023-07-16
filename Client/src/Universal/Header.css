@@ -18,6 +18,7 @@
     /* border: 2px solid black; */
     /* border-bottom-left-radius: 222px;
     border-bottom-right-radius: 222px; */
+    
 } 
 .nav-left{
     /* display: inline-block; */
@@ -37,6 +38,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-inline-end: 40px;
+    gap: 10px;
 }
 .nav-right{
     /* login symbol and search btn css */

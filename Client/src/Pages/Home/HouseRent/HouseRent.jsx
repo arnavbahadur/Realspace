@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import HomeSectionsHeading from '../../../Components/HomeSectionsHeading/HomeSectionsHeading'
-import HomeCardSection from '../../../Components/HomePageCard/HomeCardSection'
 import axios from "axios";
 import HouseBox from '../../../Components/HouseBox/HouseBox';
 
@@ -11,9 +10,10 @@ const HouseRent = (props) => {
   const callapi = async () => {
     await axios.get(`/propertyrentapi/`).then((res) => {
       setContent(res.data);
-      // console.log(res.data)
+      console.log(res.data)
     });
   };
+  const cureentContent = content.slice(0,3);
   useEffect(() => {
     callapi();
   }, []);
@@ -27,7 +27,7 @@ const HouseRent = (props) => {
         </div>
         <div className="home-houseRent-cardSection">
         <div className="cardSection">
-         {content.map(item=>{
+         {cureentContent.map(item=>{
           return <HouseBox title={item.title} location={item.location} price={item.price} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
          })}
          

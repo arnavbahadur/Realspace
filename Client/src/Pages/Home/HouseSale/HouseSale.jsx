@@ -17,6 +17,7 @@ const HouseSale = (props) => {
         // console.log(res.data)
       });
     };
+    const currentContent = content.slice(0,3);
     useEffect(() => {
       callapi();
     }, []);
@@ -29,7 +30,7 @@ const HouseSale = (props) => {
         </div>
         <div className="home-houseSale-cardSection">
         <div className="cardSection">
-         {content.map(item=>{
+         {currentContent.map(item=>{
           return <HouseBox title={item.title} location={item.location} price={item.price} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
          })}
       </div>

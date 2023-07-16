@@ -53,7 +53,7 @@ const Compare = () => {
   return (
     <div>
       <div className="compare-headSection">
-        pic and filter
+        <h2>Compare</h2>
       </div>
       <div className="compare-section2">
         <div className="compare-container">
@@ -84,6 +84,7 @@ const Compare = () => {
             </div>
             
         </div>
+        
       </div>
     </div>
   )
