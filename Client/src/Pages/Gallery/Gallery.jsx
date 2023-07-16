@@ -13,7 +13,7 @@ const Gallery = () => {
                          <div class="card card-list">
                              <a href="#">
                                  <div class="card-img">
-                                    <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" />
+                                    <img src="./Images/house-1.jpg" alt="images" />
                              
                                  </div>
                                  <div class="card-body">
@@ -30,7 +30,7 @@ const Gallery = () => {
                          <div class="card card-list">
                              <a href="#">
                                  <div class="card-img">
-                                    <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" />
+                                    <img src="./Images/house-1.jpg" alt="images" />
                                   
                                  </div>
                                  <div class="card-body">
@@ -46,7 +46,7 @@ const Gallery = () => {
                          <div class="card card-list">
                              <a href="#">
                                  <div class="card-img">
-                                    <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" />
+                                    <img src="./Images/house-1.jpg" alt="images" />
                                      
                                  </div>
                                  <div class="card-body">
@@ -63,7 +63,7 @@ const Gallery = () => {
                          <div class="card card-list">
                              <a href="#">
                                  <div class="card-img">
-                                    <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" />
+                                    <img src="./Images/house-1.jpg" alt="images" />
                                      
                                  </div>
                                  <div class="card-body">
@@ -79,7 +79,7 @@ const Gallery = () => {
                          <div class="card card-list">
                              <a href="#">
                                  <div class="card-img">
-                                    <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" />
+                                    <img src="./Images/house-1.jpg" alt="images" />
                                      
                                  </div>
                                  <div class="card-body">
@@ -95,7 +95,7 @@ const Gallery = () => {
                          <div class="card card-list">
                              <a href="#">
                                  <div class="card-img">
-                                    <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" />
+                                    <img src="./Images/house-1.jpg" alt="images" />
                                     
                                  </div>
                                  <div class="card-body">
@@ -113,7 +113,7 @@ const Gallery = () => {
                          <div class="card card-list">
                              <a href="#">
                                  <div class="card-img">
-                                   <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" /> 
+                                   <img src="./Images/house-1.jpg" alt="images" /> 
                                      
                                  </div>
                                  <div class="card-body">
@@ -129,7 +129,7 @@ const Gallery = () => {
                          <div class="card card-list">
                              <a href="#">
                                  <div class="card-img">
-                                    <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" />
+                                    <img src="./Images/house-1.jpg" alt="images" />
                                     
                                  </div>
                                  <div class="card-body">
@@ -146,7 +146,7 @@ const Gallery = () => {
                          <div class="card card-list">
                              <a href="#">
                                  <div class="card-img">
-                                    <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" />
+                                    <img src="./Images/house-1.jpg" alt="images" />
                                     
                                  </div>
                                  <div class="card-body">
@@ -163,7 +163,7 @@ const Gallery = () => {
                          <div class="card card-list">
                              <a href="#">
                                  <div class="card-img">
-                                   <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" /> 
+                                   <img src="./Images/house-1.jpg" alt="images" /> 
                                      
                                  </div>
                                  <div class="card-body">
@@ -184,7 +184,7 @@ const Gallery = () => {
                                  <div class="card-img">
                                      {/* <!-- <div class="badge images-badge"><i class="mdi mdi-image-filter"></i> 12</div> --> */}
                                      {/* <!-- <span class="badge badge-primary">For Sale</span> --> */}
-                                   <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" />
+                                   <img src="./Images/house-1.jpg" alt="images" />
                                  </div>
                                  <div class="card-body">
                                      {/*  */}
@@ -201,7 +201,7 @@ const Gallery = () => {
                                  <div class="card-img">
                                      {/* <!-- <div class="badge images-badge"><i class="mdi mdi-image-filter"></i> 12</div> --> */}
                                      {/* <!-- <span class="badge badge-primary">For Sale</span> --> */}
-                                   <img src="https://verticalhomes.in/img/clifftonpark/3.jpg" alt="images" />
+                                   <img src="./Images/house-1.jpg" alt="images" />
                                  </div>
                                  <div class="card-body">
                                      {/*  */}

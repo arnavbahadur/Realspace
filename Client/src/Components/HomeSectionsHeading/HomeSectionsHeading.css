@@ -1,5 +1,12 @@
 .homeSectionsHeading{
     text-align: center;
+    
+    /* background-image: linear-gradient(to right,#cdffd8,#94b9ff); */
+    
+    /* background-image: linear-gradient(to right,rgb(51, 129, 245),rgb(50, 101, 254),rgb(36, 68, 212)); */
+    
+  /* background-image: linear-gradient(to right, #659afb, #2668db); */
+    margin-bottom: -20px;
 }
 .headingSection-title{
     font-size: 13px;

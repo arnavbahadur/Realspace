@@ -1,8 +1,8 @@
 import React from 'react'
 import './PageNum.css'
-const PageNum = ({totalPost,PostPerPage,currentPage,setCurrentPage}) => {
+const PageNum = ({totalContent,contentPerPage,setCurrentPage}) => {
     const pageNumber = [];
-    for(let i = 1; i <= Math.ceil(totalPost/PostPerPage);i++){      // dynamically counting and adding number of page in array
+    for(let i = 1; i <= Math.ceil(totalContent/contentPerPage);i++){      // dynamically counting and adding number of page in array
         pageNumber.push(i);
     }
     

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Filter.css'
 const Icon = () => {
     return (
@@ -12,49 +12,76 @@ const Icon = () => {
     const getDisplay = () => {
       return placeHolder;
     };
-  
+      const [Propertytype,setPropertytype ]= useState("All Property")
+    const value=["All Property","Flat","Plot","Psp"  ];
+    const [locationvalue,setlocationvalue ]= useState("All Location")
+    const location=["Vijay nagar","nipaniya","LIG"    ];
+    
+    const [budjetvalue,setbudjetvalue ]= useState("Budget")
+    const Budjet=["Budget","2000000 Rs","3000000 Rs","4000000 Rs","5000000 Rs"];
+
+  const [open,setOpen]= useState(false);
+ 
     return (
       <div className="filter">
         <div className="dropdown-input">
+         
           <div className="col-filter">
             <div className="row-filter">
             <p>Property Type</p>
-          <p className="pfilter-color">All Property   <Icon /></p>
- {/* <span className="bottom-filter">all types</span> */}
-  <div class="dropdown-content">
-  <p>Flat</p>
-  <p>Plot</p>
-  <p>psp</p>
-  <p>Cold storage</p>
-  </div>
+          
+          <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}   <Icon /></p>
+         
+
+   {
+            open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
+
+    {/* for calling all property with js */}                                                    
+  {value.map(item =>{
+    return(
+  <div className="dropdownnew" onClick={()=>setPropertytype(item)}>{item}</div> )
+ } )}
+  </div>)
+          }
+         
           </div>
           </div>
           <div className="col-filter">
           <div className="row-filter">
             <p>Location</p>
-            <p className="pfilter-color">All Location  <Icon /></p>
+            <p onClick={()=>setOpen(!open)} className="pfilter-color">{locationvalue}  <Icon /></p>
         {/* <span className="bottom-filter">all types</span> */}
-          <div class="dropdown-content">
-  <p>Vijay nagar</p>
-  <p>Nipania</p>
-  <p>Kanadiya</p>
-  <p>CAT-Road</p>
-  </div>
+         {open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
+
+  {/* <Select
+  class="dropdown-content"
+ options={location}
+ placeholder="Select color" 
+ value={selectedOptions}
+//  onChange={handleSelect}
+ isSearchable={true}/> */}
+    {/* for calling all Location with js */}   
+    {location.map(item =>{
+    return(
+  <div  className="dropdownnew" onClick={()=>setlocationvalue(item)}>{item}</div> )
+ } )}
+  </div> )  } 
             </div>
             </div>
             <div className="col-filter">
             <div className="row-filter">
             <p>Price</p>
         
-              <p className="pfilter-color">All  <Icon /></p>
+              <p onClick={()=>setOpen(!open)} className="pfilter-color">{budjetvalue}  <Icon /></p>
               {/* <span className="bottom-filter">all types</span> */}
-            <div class="dropdown-content">
+           {open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
+           {Budjet.map(item =>{
+    return(
+  <div  className="dropdownnew" onClick={()=>setbudjetvalue(item)}>{item}</div> )
+ } )} 
+  </div> )}
               
-  <p>Hello World!</p>
-  <p>Hello World!</p>
-  <p>Hello World!</p>
-  <p>Hello World!</p>
-  </div> 
+ 
     </div>
     </div>
             <div className="col-filter1">

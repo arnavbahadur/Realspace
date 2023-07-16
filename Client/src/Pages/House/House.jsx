@@ -1,33 +1,49 @@
 import React, { useEffect, useState } from 'react'
 import HomeSectionsHeading from '../../Components/HomeSectionsHeading/HomeSectionsHeading'
-import HomeCardSection from '../../Components/HomePageCard/HomeCardSection'
 import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn'
 import PageNum from '../../Components/PageNum/PageNum'
+import HouseBox from '../../Components/HouseBox/HouseBox'
+import axios from "axios";
+import './House.css'
 
-const House = ({purpose}) => {
+const House = ({purpose,}) => {
     const[currentPage,setCurrentPage]=useState(1);
-    const[PostPerPage,setPostPerPage] = useState(9);
-    const[posts,setPosts] = useState([])    //fetch data from api and
+    const[contentPerPage,setPontentPerPage] = useState(9);
+    const[content,setContent] = useState([])    //fetch data from api and
     
     // useEffect(()=>{
     //   fetch("https://jsonplaceholder.typicode.com/posts").then()
     // })
 
-    const lastIndex = currentPage * PostPerPage;
-    const startIndex = lastIndex - PostPerPage
-    const currentPost = posts.slice(startIndex,lastIndex);
-    const totalPost=100;// posts.length is actuall 100 is for test
+    
+    const callapi = async () => {
+      await axios.get(`/propertyrentapi/`).then((res) => {
+        setContent(res.data);
+        // console.log(res.data)
+      });
+    };
+
+    const lastIndex = currentPage * contentPerPage;
+    const startIndex = lastIndex - contentPerPage
+    const currentContent =  content.slice(startIndex,lastIndex);
+    const totalContent=content.length;// posts.length is actuall 100 is for test
+      useEffect(() => {
+        callapi();
+      }, []);
   return (
     <div>
         <CompareSideBtn/>
-      <div className="pic-filter">pic & filter</div>
+      {/* <div className="pic-filter">pic & filter</div> */}
       <div className="house-header">
         <HomeSectionsHeading purpose={purpose} title='House'/>
       </div>
-      <HomeCardSection totalPost={totalPost} currentPost={currentPost}/>
+      <div className="house-card-section">
+        {currentContent.map(item=>{
+          return <HouseBox title={item.title} location={item.location} price={item.price} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
+        })}
+      </div>
       <div className="house-pageNumber">
-        page number scroll
-        <PageNum currentPage={currentPage} setCurrentPage={setCurrentPage} totalPost={totalPost} PostPerPage={PostPerPage}/>
+        <PageNum setCurrentPage={setCurrentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
       </div>
     </div>
   )

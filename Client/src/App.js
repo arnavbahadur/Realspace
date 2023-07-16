@@ -17,6 +17,7 @@ import About from './Pages/About/Ourteam/About';
 import Morefloor from './Pages/Project/Morefloor';
 import House from './Pages/House/House';
 
+import Dropapp from './Pages/Home/Dropapp.jsx';
 function App() {
   return (
    <div className="app">
@@ -37,8 +38,10 @@ function App() {
             <Route path='/houserent' element={<House purpose={`For Rent`}/>}/>     
             <Route path="/mymodal" element={<MyModal/>}/>  
             <Route path="/viewmore" element={<Morefloor/>}/>   
+            
         </Routes> 
         <Footer/>  
+        {/* <Dropapp/> */}
     </div>
   );
 }

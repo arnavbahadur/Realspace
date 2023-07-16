@@ -12,6 +12,9 @@ margin-top: -3.5%;
 z-index: 1;
 position: absolute;
 }
+.dropdownnew{
+  padding: 5px;
+}
 .col-filter{
  
   /* z-index: 5; */
@@ -95,4 +98,15 @@ text-align: center;
 } */
 .row-filter{
   font-weight: bold;
+}
+.show {display: block;}
+.apple {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.dropdown-container {
+  width: 300px;
 }
