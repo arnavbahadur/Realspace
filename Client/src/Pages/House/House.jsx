@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import HomeSectionsHeading from '../../Components/HomeSectionsHeading/HomeSectionsHeading'
 import HomeCardSection from '../../Components/HomePageCard/HomeCardSection'
 import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn'
 import PageNum from '../../Components/PageNum/PageNum'
 
-const House = () => {
+const House = ({purpose}) => {
     const[currentPage,setCurrentPage]=useState(1);
     const[PostPerPage,setPostPerPage] = useState(9);
     const[posts,setPosts] = useState([])    //fetch data from api and
     
+    // useEffect(()=>{
+    //   fetch("https://jsonplaceholder.typicode.com/posts").then()
+    // })
+
     const lastIndex = currentPage * PostPerPage;
     const startIndex = lastIndex - PostPerPage
     const currentPost = posts.slice(startIndex,lastIndex);
@@ -18,7 +22,7 @@ const House = () => {
         <CompareSideBtn/>
       <div className="pic-filter">pic & filter</div>
       <div className="house-header">
-        <HomeSectionsHeading purpose={'For Sale'} title='House' comment="comment"/>
+        <HomeSectionsHeading purpose={purpose} title='House'/>
       </div>
       <HomeCardSection totalPost={totalPost} currentPost={currentPost}/>
       <div className="house-pageNumber">
