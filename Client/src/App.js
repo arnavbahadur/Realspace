@@ -16,6 +16,9 @@ import Project from './Pages/Project/Project';
 import About from './Pages/About/Ourteam/About';
 import Morefloor from './Pages/Project/Morefloor';
 import House from './Pages/House/House';
+import CurrentProject from './Pages/Current/CurrentProject';
+import PreviousProject from './Pages/Previous/PreviousProject';
+
 
 import Dropapp from './Pages/Home/Dropapp.jsx';
 function App() {
@@ -38,6 +41,8 @@ function App() {
             <Route path='/houserent' element={<House purpose={`For Rent`}/>}/>     
             <Route path="/mymodal" element={<MyModal/>}/>  
             <Route path="/viewmore" element={<Morefloor/>}/>   
+            <Route path="/currentproject" element={<CurrentProject/>}/>   
+            <Route path="/previousproject" element={<PreviousProject/>}/>   
             
         </Routes> 
         <Footer/>  

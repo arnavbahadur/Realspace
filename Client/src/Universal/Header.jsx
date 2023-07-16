@@ -29,15 +29,13 @@ const Header = () => {
           </div>
           <div className="header-dropdown projectPage-dropdown ">
             <div className="header-dropdown-menu">
-              <NavLink to="/Compare">
-                <p className='nav-center-navigation-box-text'>Present</p>
+              <NavLink to="/currentproject">
+                <p className='nav-center-navigation-box-text'>Current</p>
               </NavLink>
-              <NavLink to="/Project">
-                <p className='nav-center-navigation-box-text'>Past</p>
+              <NavLink to="/previousproject">
+                <p className='nav-center-navigation-box-text'>Prevoius</p>
               </NavLink>
-              <NavLink to="/HousePreview">
-                <p className='nav-center-navigation-box-text'>Future</p>
-              </NavLink>
+              
             </div>
           </div>
         </div>
