@@ -19,6 +19,7 @@ const HouseRent = (props) => {
   }, []);
 
 
+  
   return (
     <div>
       <div className="home-houseRent-section">
