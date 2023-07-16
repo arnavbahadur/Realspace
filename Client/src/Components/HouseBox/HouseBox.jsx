@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './HouseBox.css'
 import { NavLink } from 'react-router-dom';
-const HouseBox = () => {
+const HouseBox = ({post}) => {
     const likedRef = useRef();
     const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
