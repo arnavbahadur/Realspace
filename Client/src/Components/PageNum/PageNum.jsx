@@ -2,15 +2,15 @@ import React from 'react'
 import './PageNum.css'
 const PageNum = ({totalPost,PostPerPage,currentPage,setCurrentPage}) => {
     const pageNumber = [];
-    for(let i = 1; i <= Math.ceil(totalPost/PostPerPage);i++){
+    for(let i = 1; i <= Math.ceil(totalPost/PostPerPage);i++){      // dynamically counting and adding number of page in array
         pageNumber.push(i);
     }
     
     return (
         <div className='pageNum-section'>
-            {pageNumber.map(e=>{
+            {pageNumber.map(item=>{
                 return(
-                    <div className="pageNum-individual" onClick={()=>{setCurrentPage(e)}}>{e}</div>
+                    <div className="pageNum-individual" onClick={()=>{setCurrentPage(item)}}>{item}</div>
                 )
             })}
         </div>
