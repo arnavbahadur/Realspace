@@ -100,3 +100,13 @@ text-align: center;
   font-weight: bold;
 }
 .show {display: block;}
+.apple {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.dropdown-container {
+  width: 300px;
+}

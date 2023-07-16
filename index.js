@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
 app.use(express.json());
 app.use(cookieParser());
-const auth=require("./Middleware/authMiddleware")
+// const auth=require("./Middleware/authMiddleware")
 app.use(cors({
   origin: [
     "http://localhost:5000",
@@ -24,7 +24,16 @@ mongoose.connect(process.env.MDB_CONNECT)
 .then(()=>{console.log('Mongodb connected')})
 .catch((err)=>{console.log("Error in connection",err)});
 
-app.use("/adminapi",auth, require("./Routes/AdminRouter"));
+
+
+
+app.use("/adminapi", require("./Routes/AdminRouter"));
+app.use("/propertyrentapi", require("./Routes/PropertyrentRouter"));
+// app.use("/propertysellapi", require("./Routes/PropertysellRouter"));
+app.use("/projectapi", require("./Routes/ProjectRouter"));
+
+
+
 
 const path=require("path");
 app.use(express.static('client/build'));

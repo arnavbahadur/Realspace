@@ -4,11 +4,12 @@ const Property=require("../Models/Property")
 
 router.get("/",(req, res) => {
     try {
+      // console.log("dfjifgdf")
         Property.find()
         .then((property) => res.json(property))
         .catch((err) => res.status(400).json("Error: " + err));
     } catch (err) {
-      res.json(false);
+      res.status(400).json("could not restrryt");
     }
 });
 
