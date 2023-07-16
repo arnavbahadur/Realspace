@@ -18,7 +18,7 @@ const Project = () => {
         <div class="row">
           <div class="col-lg-8 col-md-8">
             <div class="car property-single-slider">
-              <div class="card-body samar-slider pl-0 pr-0 pt-0 pb-0">
+              <div class="samar-slider ">
                 <div
                   id="samarsliderz"
                   class="carousel slide"
@@ -70,42 +70,42 @@ const Project = () => {
                     <ul class="sidebar-card-list">
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           Grand Entrance Gate
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           Jogging Track
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           Indoor Games
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           24x7 Security
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           Street Lights
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           Birds Park
                         </a>
@@ -116,33 +116,33 @@ const Project = () => {
                     <ul class="sidebar-card-list">
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           Gazebo
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           Elevators{" "}
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                           <input value = "test" type = "checkbox" onChange = {handleChange} />
+                           
                           Car Wash Area
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                           <input value = "test" type = "checkbox" onChange = {handleChange} />
+                           
                           Drivers Lounge
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                           <input value = "test" type = "checkbox" onChange = {handleChange} />
+                           
                           Senior Citizen Area
                         </a>
                       </li>
@@ -152,35 +152,35 @@ const Project = () => {
                     <ul class="sidebar-card-list">
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           Ample Parking Space
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           CCTV Cameras
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           Generator Backup
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           Adequate Water Supply
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                            <input value = "test" type = "checkbox" onChange = {handleChange} />
+                            
    
                           Underground Drainage
                         </a>
@@ -313,7 +313,7 @@ const Project = () => {
                           {/* <!-- <span class="badge badge-primary">For Sale</span> --> */}
                           <img
                             class="card-img-top"
-                            src="https://verticalhomes.in/img/clifftonpark/4.jpg"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJFggSqWZU_5OxKu65jcuuOqUlEJ9nQXfBmeWunTLejBerdDOR3grYytP4R5ZnB9ilJs4&usqp=CAU"
                             alt="Card image cap"
                           />
                         </div>
@@ -341,7 +341,7 @@ const Project = () => {
                           {/* <!-- <span class="badge badge-primary">For Sale</span> --> */}
                           <img
                             class="card-img-top"
-                            src="https://verticalhomes.in/img/clifftonpark/5.jpg"
+                            src="https://i.pinimg.com/originals/02/d9/2c/02d92c3c6859a9fe9c07e0cc5af75513.jpg"
                             alt="Card image cap"
                           />
                         </div>
