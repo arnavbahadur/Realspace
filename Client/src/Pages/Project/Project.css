@@ -8,19 +8,26 @@
     padding-bottom: 20px
     ;
 }
+.car{
+    border-radius: 3vh;
+}
+.property-single-slider{
+    border-radius: 3vh;
+}
  .img-box {
     width: 850px;
-    height: 560px;
-
+    height: 498px;
+    border-radius: 3vh;
 } 
 .samar-slider  {
-    min-height: 500px;
+    max-height: 500px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     border: 1px solid black;
+    border-radius: 3vh;
 }
 .col-lg-4 {
     flex: 0 0 auto;
@@ -79,9 +86,9 @@ font-size: 30px;
 
 .view-more-floor{
     padding: 0.5vh;
-    margin: 1vh;
+    margin: 2vh;
     border: 2px solid black;
-    border-radius: 6px;
+    border-radius: 3vh;
     text-align: center;
 }
 .view-more-floor:hover{

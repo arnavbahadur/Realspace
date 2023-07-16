@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Filter.css'
-import Select from "react-select";
+//import Select from "react-select";
 const Icon = () => {
     return (
       <svg height="20" width="20" viewBox="0 0 20 20">
@@ -69,13 +69,13 @@ const Icon = () => {
         {/* <span className="bottom-filter">all types</span> */}
          {open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
 
-  <Select
+  {/* <Select
   class="dropdown-content"
  options={location}
  placeholder="Select color" 
  value={selectedOptions}
 //  onChange={handleSelect}
- isSearchable={true}/>
+ isSearchable={true}/> */}
     {/* for calling all Location with js */}   
     {/* {location.map(item =>{
     return(
