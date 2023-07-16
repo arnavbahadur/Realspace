@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import HomeSectionsHeading from '../../../Components/HomeSectionsHeading/HomeSectionsHeading'
-import HomeCardSection from '../../../Components/HomePageCard/HomeCardSection'
 import axios from "axios";
 import HouseBox from '../../../Components/HouseBox/HouseBox';
 

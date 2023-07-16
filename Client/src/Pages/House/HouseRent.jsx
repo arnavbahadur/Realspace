@@ -6,10 +6,10 @@ import HouseBox from '../../Components/HouseBox/HouseBox'
 import axios from "axios";
 import './House.css'
 
-const House = ({purpose,}) => {
+const HouseRent = () => {
     const[currentPage,setCurrentPage]=useState(1);
-    const[contentPerPage,setPontentPerPage] = useState(9);
     const[content,setContent] = useState([])    //fetch data from api and
+    const contentPerPage = 9;
     
     // useEffect(()=>{
     //   fetch("https://jsonplaceholder.typicode.com/posts").then()
@@ -35,7 +35,7 @@ const House = ({purpose,}) => {
         <CompareSideBtn/>
       {/* <div className="pic-filter">pic & filter</div> */}
       <div className="house-header">
-        <HomeSectionsHeading purpose={purpose} title='House'/>
+        <HomeSectionsHeading purpose={`For Rent`} title='House'/>
       </div>
       <div className="house-card-section">
         {currentContent.map(item=>{
@@ -49,4 +49,4 @@ const House = ({purpose,}) => {
   )
 }
 
-export default House
+export default HouseRent
