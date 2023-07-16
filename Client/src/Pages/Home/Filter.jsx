@@ -63,6 +63,13 @@ const Icon = () => {
         {/* <span className="bottom-filter">all types</span> */}
          {open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
 
+  {/* <Select
+  class="dropdown-content"
+ options={location}
+ placeholder="Select color" 
+ value={selectedOptions}
+//  onChange={handleSelect}
+ isSearchable={true}/> */}
     {/* for calling all Location with js */}   
     {location.map(item =>{
     return(
