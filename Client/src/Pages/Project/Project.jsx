@@ -1,16 +1,32 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./Project.css";
 import Gallery from "../Gallery/Gallery";
 import { NavLink }  from "react-router-dom";
-
+import axios from "axios";
 import CompareSideBtn from "../../Components/CompareSideBtn/CompareSideBtn";
 
-const Project = () => {
+const Project = (props) => {
   
   const [checked, setChecked] = React.useState(false); 
    function handleChange(e) {
       setChecked(e.target.checked);
    }
+
+   const [content,setContent]=useState([]);
+   const projectapi = async () => {
+     await axios.get('/projectapi').then((pro) => {
+       setContent(pro.data);
+       console.log(pro.data)
+     });
+   };
+   
+useEffect(() => {
+ projectapi();
+}, []);
+
+
+
+
   return (
     <div>
       <CompareSideBtn/>
@@ -35,12 +51,14 @@ const Project = () => {
               <div class="card-body">
                 <h5 class="card-title mb-3">Definition by Stature</h5>
                 <p>
-                  You are known by where you live. An address like Cliffton Park
+                  
+                  {props.description}
+                  {/* You are known by where you live. An address like Cliffton Park
                   will for sure elevate your status and you'll take pride in
                   being here. Luxuriously built, Cliffton Park defines
                   sophistication in the best way. Grand and classy apartments,
                   loads of amenities and wide stretches of greens promise a
-                  lifestyle matching your high stature.
+                  lifestyle matching your high stature. */}
                 </p>
                 <h5 class="card-title mb-3">Definition by Luxury</h5>
 
@@ -258,7 +276,7 @@ const Project = () => {
                         height={"50px"}
                       />
                       <strong>Area:</strong>
-                      <p class="mb-0">1270 aq ft</p>
+                      <p class="mb-0">  sq ft</p>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6">
@@ -400,3 +418,17 @@ const Project = () => {
 };
 
 export default Project;
+
+// {
+//   "title":"bhanu teacher",
+//   "description":"hhhluiya",
+//   "imageContainer":"mata",
+//   "Photos":[],
+//   "addMoreDetails":[],
+//   "Feature":[],
+//   "Featured":"hiya",
+//   "location":"lapata",
+//   "location_url":"google",
+//   "Note":"jsj",
+//   "CurrentStatus":"status"
+// }

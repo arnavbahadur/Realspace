@@ -1,0 +1,4 @@
+.house-card-section{
+    display: flex;
+    flex-wrap: wrap;
+}

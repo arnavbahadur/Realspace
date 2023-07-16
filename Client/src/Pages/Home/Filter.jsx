@@ -15,13 +15,14 @@ const Icon = () => {
       const [Propertytype,setPropertytype ]= useState("All Property")
     const value=["All Property","Flat","Plot","Psp"  ];
     const [locationvalue,setlocationvalue ]= useState("All Location")
-    const location=["Vijay nagar","nipaniya","LIG"    ];
+    const location=["All Location","Vijay nagar","nipaniya","LIG" ,"Vijay nagar"   ];
     
     const [budjetvalue,setbudjetvalue ]= useState("Budget")
-    const Budjet=["Budget","2000000 Rs","3000000 Rs","4000000 Rs","5000000 Rs"];
+    const budjet=["Budget","2000000 Rs - 3000000 Rs","3000000 Rs - 4000000 Rs","4000000 Rs - 5000000 Rs","5000000 Rs - 6000000 Rs"];
 
   const [open,setOpen]= useState(false);
- 
+  const [searchTerm,setSearchTerm] =useState('')
+   
     return (
       <div className="filter">
         <div className="dropdown-input">
@@ -29,18 +30,35 @@ const Icon = () => {
           <div className="col-filter">
             <div className="row-filter">
             <p>Property Type</p>
-          
-          <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}   <Icon /></p>
          
-
+          <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}      <Icon /> </p>
+         
+         {/* <i className="gg-search"/> */}
    {
-            open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
+            open &&(
+            <div className="dropdown-content">
+             
+              <form action="search">
+              <input placeholder="search..." 
+              onChange={event => {setSearchTerm(event.target.value)}}
+              name="search_criteria"  id="inputsize" type="text" />
+               </form>
+               
+             <div onClick={()=>setOpen(false)}  >
 
     {/* for calling all property with js */}                                                    
-  {value.map(item =>{
+  {value.filter((item)=>{
+   if(searchTerm==""){
+    return item
+
+   }else if(item.toLowerCase().includes(searchTerm.toLowerCase())){
+    return item
+   }
+  }).map(item =>{
     return(
   <div className="dropdownnew" onClick={()=>setPropertytype(item)}>{item}</div> )
  } )}
+  </div>
   </div>)
           }
          
@@ -51,20 +69,29 @@ const Icon = () => {
             <p>Location</p>
             <p onClick={()=>setOpen(!open)} className="pfilter-color">{locationvalue}  <Icon /></p>
         {/* <span className="bottom-filter">all types</span> */}
-         {open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
+         {open &&(
+           <div className="dropdown-content">
+            <form action="search">
+              <input placeholder="search..." 
+              onChange={event => {setSearchTerm(event.target.value)}}
+              name="search_criteria"  type="text" />
+            </form>
+             <div onClick={()=>setOpen(false)} >
 
-  {/* <Select
-  class="dropdown-content"
- options={location}
- placeholder="Select color" 
- value={selectedOptions}
-//  onChange={handleSelect}
- isSearchable={true}/> */}
+  
     {/* for calling all Location with js */}   
-    {location.map(item =>{
+    {location.filter((item)=>{
+   if(searchTerm==""){
+    return item
+
+   }else if(item.toLowerCase().includes(searchTerm.toLowerCase())){
+    return item
+   }
+  }).map(item =>{
     return(
   <div  className="dropdownnew" onClick={()=>setlocationvalue(item)}>{item}</div> )
  } )}
+  </div> 
   </div> )  } 
             </div>
             </div>
@@ -74,11 +101,26 @@ const Icon = () => {
         
               <p onClick={()=>setOpen(!open)} className="pfilter-color">{budjetvalue}  <Icon /></p>
               {/* <span className="bottom-filter">all types</span> */}
-           {open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
-           {Budjet.map(item =>{
+           {open &&( 
+            <div className="dropdown-content">
+            <form action="search">
+              <input placeholder="search..." 
+              onChange={event => {setSearchTerm(event.target.value)}}
+              name="search_criteria"  type="text" />
+            </form>
+           <div onClick={()=>setOpen(false)} >
+      {budjet.filter((item)=>{
+   if(searchTerm==""){
+    return item
+
+   }else if(item.toLowerCase().includes(searchTerm.toLowerCase())){
+    return item
+   }
+  }).map(item =>{
     return(
   <div  className="dropdownnew" onClick={()=>setbudjetvalue(item)}>{item}</div> )
  } )} 
+  </div>
   </div> )}
               
  
