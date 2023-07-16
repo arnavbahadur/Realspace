@@ -21,7 +21,8 @@ const Icon = () => {
     const Budjet=["Budget","2000000 Rs","3000000 Rs","4000000 Rs","5000000 Rs"];
 
   const [open,setOpen]= useState(false);
- 
+  const [searchTerm,setSearchTerm] =useState('')
+   
     return (
       <div className="filter">
         <div className="dropdown-input">
@@ -32,15 +33,24 @@ const Icon = () => {
           
           <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}   <Icon /></p>
          
-
    {
-            open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
+            open &&(
+            <div className="dropdown-content">
+            <form action="search">
+              <input placeholder="search..." 
+              onChange={event => {setSearchTerm(event.target.value)}}
+              name="search_criteria"  type="text" />
+            </form>
+             <div onClick={()=>setOpen(false)}  >
 
     {/* for calling all property with js */}                                                    
-  {value.map(item =>{
+  {value.filter((item)=>{
+    return
+  }).map(item =>{
     return(
   <div className="dropdownnew" onClick={()=>setPropertytype(item)}>{item}</div> )
  } )}
+  </div>
   </div>)
           }
          
