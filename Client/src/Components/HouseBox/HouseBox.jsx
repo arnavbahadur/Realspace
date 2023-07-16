@@ -1,17 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './HouseBox.css'
 import { NavLink } from 'react-router-dom';
 const HouseBox = (props) => {
     const likedRef = useRef();
     const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
-    useEffect(()=>{
-        likedRef.onClick={
-            // style={{color:'blue'}}
-        }
-        console.log(liked);
-    })
-//   console.log(props.title)
+    
   return (
     <div className='houseBox'>
       <div className="houseBox-body">
@@ -77,6 +71,9 @@ const HouseBox = (props) => {
                     </div>
                 </div>                     
             </div>
+        </div>
+        <div className="compare-warning-msg" >
+            <p>Compare item limit is 4, Remove an item to add new</p>
         </div>
       </div>
     </div>

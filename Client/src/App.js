@@ -15,12 +15,13 @@ import MyModal from './Pages/Home/MyModal';
 import Project from './Pages/Project/Project';
 import About from './Pages/About/Ourteam/About';
 import Morefloor from './Pages/Project/Morefloor';
-import House from './Pages/House/House';
 import CurrentProject from './Pages/Current/CurrentProject';
 import PreviousProject from './Pages/Previous/PreviousProject';
 
 
 import Dropapp from './Pages/Home/Dropapp.jsx';
+import HouseSale from './Pages/House/HouseSale';
+import HouseRent from './Pages/House/HouseRent';
 function App() {
   return (
    <div className="app">
@@ -37,8 +38,8 @@ function App() {
             <Route path="/projectbox" element={<Projectbox/>}/>
             <Route path="/appointment" element={<Appointment/>}/>
             <Route path="/mymodal" element={<MyModal/>}/>
-            <Route path='/housesale' element={<House purpose={`For Sale`}/>}/>     
-            <Route path='/houserent' element={<House purpose={`For Rent`}/>}/>     
+            <Route path='/housesale' element={<HouseSale/>}/>     
+            <Route path='/houserent' element={<HouseRent/>}/>     
             <Route path="/mymodal" element={<MyModal/>}/>  
             <Route path="/viewmore" element={<Morefloor/>}/>   
             <Route path="/currentproject" element={<CurrentProject/>}/>   
