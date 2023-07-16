@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Filter.css'
+import Select from "react-select";
 const Icon = () => {
     return (
       <svg height="20" width="20" viewBox="0 0 20 20">
@@ -12,9 +13,25 @@ const Icon = () => {
     const getDisplay = () => {
       return placeHolder;
     };
+      const [Propertytype,setPropertytype ]= useState("All Property")
+    // const value=["All Property","Flat","Plot","Psp"  ];
+    const [locationvalue,setlocationvalue ]= useState("All Location")
+    const location=[
+      {value : "vijaynagar", label:"Vijaynagar"},
+      {value : "nipaniya",label:"Nipaniya"},
+      {value : "lig",label:"LIG"}
+    ];
+    
+    const [budjetvalue,setbudjetvalue ]= useState("Budjet")
+    const Budjet=["Budjet","2000000 Rs","3000000 Rs","4000000 Rs","5000000 Rs"];
+    const [selectedOptions, setSelectedOptions] = useState();
+
   const [isActive, setIsActive]= useState(false)
 
   const [open,setOpen]= useState(false);
+  // function handleSelect(data) {
+  //   setSelectedOptions(data);
+  // }
     return (
       <div className="filter">
         <div className="dropdown-input">
@@ -23,15 +40,23 @@ const Icon = () => {
             <div className="row-filter">
             <p>Property Type</p>
           
-          <p onClick={()=>setOpen(!open)} className="pfilter-color">All Property   <Icon /></p>
+          <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}   <Icon /></p>
          
  {/* <span className="bottom-filter">all types</span> */}
    {
             open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
-  <p>Flat</p>
-  <p>Plot</p>
+  {/* <p onClick={()=>setPropertytype("flat")}> Flat</p>
+  <p onClick={()=>setPropertytype("Plot")}>Plot</p>
   <p>psp</p>
-  <p>Cold storage</p>
+  <p>Cold storage</p> */}
+
+
+
+    {/* for calling all property with js */}                                                    
+  {/* {value.map(item =>{
+    return(
+  <div className="dropdownnew" onClick={()=>setPropertytype(item)}>{item}</div> )
+ } )} */}
   </div>)
           }
          
@@ -40,13 +65,22 @@ const Icon = () => {
           <div className="col-filter">
           <div className="row-filter">
             <p>Location</p>
-            <p onClick={()=>setOpen(!open)} className="pfilter-color">All Location  <Icon /></p>
+            <p onClick={()=>setOpen(!open)} className="pfilter-color">{locationvalue}  <Icon /></p>
         {/* <span className="bottom-filter">all types</span> */}
          {open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
-        <p>Vijay nagar</p>
-  <p>Nipania</p>
-  <p>Kanadiya</p>
-  <p>CAT-Road</p>
+
+  <Select
+  class="dropdown-content"
+ options={location}
+ placeholder="Select color" 
+ value={selectedOptions}
+//  onChange={handleSelect}
+ isSearchable={true}/>
+    {/* for calling all Location with js */}   
+    {/* {location.map(item =>{
+    return(
+  <div  className="dropdownnew" onClick={()=>setlocationvalue(item)}>{item}</div> )
+ } )} */}
   </div> )  } 
             </div>
             </div>
@@ -54,13 +88,13 @@ const Icon = () => {
             <div className="row-filter">
             <p>Price</p>
         
-              <p onClick={()=>setOpen(!open)} className="pfilter-color">All  <Icon /></p>
+              <p onClick={()=>setOpen(!open)} className="pfilter-color">{budjetvalue}  <Icon /></p>
               {/* <span className="bottom-filter">all types</span> */}
            {open &&( <div onClick={()=>setOpen(false)}  class="dropdown-content">
-             <p>Hello World!</p>
-  <p>Hello World!</p>
-  <p>Hello World!</p>
-  <p>Hello World!</p>
+           {Budjet.map(item =>{
+    return(
+  <div  className="dropdownnew" onClick={()=>setbudjetvalue(item)}>{item}</div> )
+ } )} 
   </div> )}
               
  
