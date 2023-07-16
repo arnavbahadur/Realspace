@@ -15,10 +15,10 @@ const Icon = () => {
       const [Propertytype,setPropertytype ]= useState("All Property")
     const value=["All Property","Flat","Plot","Psp"  ];
     const [locationvalue,setlocationvalue ]= useState("All Location")
-    const location=["Vijay nagar","nipaniya","LIG"    ];
+    const location=["All Location","Vijay nagar","nipaniya","LIG" ,"Vijay nagar"   ];
     
     const [budjetvalue,setbudjetvalue ]= useState("Budget")
-    const budjet=["Budget","2000000 Rs","3000000 Rs","4000000 Rs","5000000 Rs"];
+    const budjet=["Budget","2000000 Rs - 3000000 Rs","3000000 Rs - 4000000 Rs","4000000 Rs - 5000000 Rs","5000000 Rs - 6000000 Rs"];
 
   const [open,setOpen]= useState(false);
   const [searchTerm,setSearchTerm] =useState('')
@@ -30,17 +30,20 @@ const Icon = () => {
           <div className="col-filter">
             <div className="row-filter">
             <p>Property Type</p>
-          
-          <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}   <Icon /></p>
          
+          <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}      <Icon /> </p>
+         
+         {/* <i className="gg-search"/> */}
    {
             open &&(
             <div className="dropdown-content">
-            <form action="search">
+             
+              <form action="search">
               <input placeholder="search..." 
               onChange={event => {setSearchTerm(event.target.value)}}
-              name="search_criteria"  type="text" />
-            </form>
+              name="search_criteria"  id="inputsize" type="text" />
+               </form>
+               
              <div onClick={()=>setOpen(false)}  >
 
     {/* for calling all property with js */}                                                    
