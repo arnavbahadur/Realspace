@@ -1,7 +1,7 @@
 import Carousel from './Carousel'
 import Popup from './MyModal'
 import React, { useEffect } from 'react';
-// import MyModal from './MyModal';
+import MyModal from './MyModal';
 import Ourpartners from './Ourpartners/Partner'
 import Filter from './Filter';
 import Feature from './HomeProjects/Feature';
@@ -26,7 +26,7 @@ const Home = () => {
     <Filter/>
     <Feature/>
     {/* <Featured/> */}
-    {/* <MyModal/> */}
+    <MyModal/>
     <HouseSale/>
     <HouseRent/>
     <Ourpartners/>
