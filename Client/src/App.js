@@ -21,6 +21,9 @@ import PreviousProject from './Pages/Previous/PreviousProject';
 import Dropapp from './Pages/Home/Dropapp.jsx';
 import HouseSale from './Pages/House/HouseSale';
 import HouseRent from './Pages/House/HouseRent';
+import Commercial from './Pages/Home/Featured/Commercial/Commercial';
+import Residential from './Pages/Home/Featured/Residential/Residential';
+import { Other } from './Pages/Home/Featured/Others/Other';
 function App() {
   return (
    <div className="app">
@@ -43,7 +46,10 @@ function App() {
             <Route path="/viewmore" element={<Morefloor/>}/>   
             <Route path="/currentproject" element={<CurrentProject/>}/>   
             <Route path="/previousproject" element={<PreviousProject/>}/>   
-             
+            <Route path="/commercial" element={<Commercial/>}/>   
+            <Route path="/residential" element={<Residential/>}/>   
+            <Route path="/others" element={<Other/>}/>   
+            
         </Routes> 
         <Footer/>  
         {/* <Dropapp/> */}
