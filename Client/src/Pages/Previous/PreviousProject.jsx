@@ -4,8 +4,11 @@ import HomeCardSection from '../../Components/HomePageCard/HomeCardSection'
 import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn'
 import PageNum from '../../Components/PageNum/PageNum'
 import Projectbox from '../../Components/Projectbox/Projectbox'
+import axios from 'axios'
+
 
 const House = ({purpose}) => {
+  // const House = (props) => {
     const[currentPage,setCurrentPage]=useState(1);
     const[PostPerPage,setPostPerPage] = useState(9);
     const[posts,setPosts] = useState([])    //fetch data from api and
@@ -18,16 +21,18 @@ const House = ({purpose}) => {
     const startIndex = lastIndex - PostPerPage
     const currentPost = posts.slice(startIndex,lastIndex);
     const totalPost=100;// posts.length is actuall 100 is for test
-  return (
+ 
+       
+    return (
     <div>
         <CompareSideBtn/>
       <div className="pic-filter">pic & filter</div>
       <div className="house-header">
         <HomeSectionsHeading purpose={purpose} title='House'/>
       </div>
-      <Projectbox />
+     
       <div className="house-pageNumber">
-        page number scroll
+    <Projectbox/>
         <PageNum currentPage={currentPage} setCurrentPage={setCurrentPage} totalPost={totalPost} PostPerPage={PostPerPage}/>
       </div>
     </div>
@@ -35,3 +40,4 @@ const House = ({purpose}) => {
 }
 
 export default House
+
