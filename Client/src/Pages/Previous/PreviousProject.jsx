@@ -5,39 +5,52 @@ import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn'
 import PageNum from '../../Components/PageNum/PageNum'
 import Projectbox from '../../Components/Projectbox/Projectbox'
 import axios from 'axios'
+import Singleprojectbox from '../../Components/Projectbox/Singleprojectbox'
 
 
-const House = ({purpose}) => {
+
+const PreviousProject = ({purpose}) => {
   // const House = (props) => {
     const[currentPage,setCurrentPage]=useState(1);
-    const[PostPerPage,setPostPerPage] = useState(9);
-    const[posts,setPosts] = useState([])    //fetch data from api and
+    const[content,setContent] = useState([])    //fetch data from api and
+    const ContentPerPage = 9;
     
     // useEffect(()=>{
-    //   fetch("https://jsonplaceholder.typicode.com/posts").then()
+    //   fetch("https://jsonplaceholder.typicode.com/content").then()
     // })
+    const callapi = async ()=>{
+      await axios.get('/projectapi').then((pro)=>{
+        setContent(pro.data);
+        console.log(pro.data)
+      });
+    };
 
-    const lastIndex = currentPage * PostPerPage;
-    const startIndex = lastIndex - PostPerPage
-    const currentPost = posts.slice(startIndex,lastIndex);
-    const totalPost=100;// posts.length is actuall 100 is for test
+    const lastIndex = currentPage * ContentPerPage;
+    const startIndex = lastIndex - ContentPerPage
+    const currentContent = content.slice(startIndex,lastIndex);
+    const totalContent = content.length;// content.length is actuall 100 is for test
  
-       
+    useEffect(()=>{
+      callapi();
+    },[])
     return (
     <div>
         <CompareSideBtn/>
-      <div className="pic-filter">pic & filter</div>
       <div className="house-header">
         <HomeSectionsHeading purpose={purpose} title='House'/>
       </div>
-     
+      {/* <Projectbox currentContent={currentContent}/> */}
+      <div className="house-card-section">
+        {currentContent.map(item=>{
+          return <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id} />
+        })}
+      </div>
       <div className="house-pageNumber">
-    <Projectbox/>
-        <PageNum currentPage={currentPage} setCurrentPage={setCurrentPage} totalPost={totalPost} PostPerPage={PostPerPage}/>
+        <PageNum setCurrentPage={setCurrentPage} totalContent={totalContent} ContentPerPage={ContentPerPage}/>
       </div>
     </div>
   )
 }
 
-export default House
+export default PreviousProject
 
