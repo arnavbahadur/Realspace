@@ -4,17 +4,19 @@ import Gallery from "../Gallery/Gallery";
 import { NavLink }  from "react-router-dom";
 import axios from "axios";
 import CompareSideBtn from "../../Components/CompareSideBtn/CompareSideBtn";
+import { useParams} from "react-router-dom";
 
 const Project = (props) => {
-  
+  let { id } = useParams();
   const [checked, setChecked] = React.useState(false); 
    function handleChange(e) {
       setChecked(e.target.checked);
    }
 
+
    const [content,setContent]=useState([]);
    const projectapi = async () => {
-     await axios.get('/projectapi').then((pro) => {
+     await axios.get(`/projectapi/${id}`).then((pro) => {
        setContent(pro.data);
        console.log(pro.data)
      });
@@ -28,6 +30,7 @@ useEffect(() => {
 
 
   return (
+   
     <div>
       <CompareSideBtn/>
       <div class="container-project">
@@ -49,33 +52,21 @@ useEffect(() => {
 
             <div class="card padding-card property-single-slider">
               <div class="card-body">
-                <h5 class="card-title mb-3">Definition by Stature</h5>
+                <h5 class="card-title mb-3"> {content.title}</h5>
                 <p>
                   
-                  {props.description}
-                  {/* You are known by where you live. An address like Cliffton Park
-                  will for sure elevate your status and you'll take pride in
-                  being here. Luxuriously built, Cliffton Park defines
-                  sophistication in the best way. Grand and classy apartments,
-                  loads of amenities and wide stretches of greens promise a
-                  lifestyle matching your high stature. */}
+                  {content.description}
+                  
                 </p>
-                <h5 class="card-title mb-3">Definition by Luxury</h5>
+                <h5 class="card-title mb-3"> {content.title}</h5>
 
                 <p>
-                  Cliffton Park is a promising statement of luxury and class.
-                  This well equipped township offers a lifestyle of your wishes.
-                  The hi-end design and loads of state-of-the-art amenities
-                  bring in style, sophistication, superiority and satisfaction.
+                {content.description}
                 </p>
 
-                <h5 class="card-title mb-3">Definition by Beauty</h5>
+                <h5 class="card-title mb-3">{content.Note}</h5>
                 <p class="mb-0">
-                  Life at Chilton Park is beautiful in totality. The mesmerizing
-                  interiors will make life heavenly and cherished for a
-                  lifetime. Living room, bedrooms, bathrooms, kitchen or the
-                  balcony, every space of your apartment just matches your
-                  thoughts and likings. Its exactly what you always aspired for.
+                {content.CurrentStatus}
                 </p>
               </div>
             </div>
@@ -215,7 +206,7 @@ useEffect(() => {
                 <div class="row mb-3">
                   <div class="col-lg-6 col-md-6">
                     <p>
-                      <strong class="text-dark">Cliffton Park </strong> Scheme
+                      <strong class="text-dark"> {content.location} </strong> Scheme
                       No 78-II
                     </p>
                     <p>
@@ -419,16 +410,3 @@ useEffect(() => {
 
 export default Project;
 
-// {
-//   "title":"bhanu teacher",
-//   "description":"hhhluiya",
-//   "imageContainer":"mata",
-//   "Photos":[],
-//   "addMoreDetails":[],
-//   "Feature":[],
-//   "Featured":"hiya",
-//   "location":"lapata",
-//   "location_url":"google",
-//   "Note":"jsj",
-//   "CurrentStatus":"status"
-// }

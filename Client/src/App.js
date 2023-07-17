@@ -30,7 +30,7 @@ function App() {
             <Route path="/" element={<Home/>}/> 
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/compare" element={<Compare/>}/>
-            <Route path="/project" element={<Project/>}/>
+            <Route path="/project/:id" element={<Project/>}/>
             <Route path="/about" element={<About/>}/>
             {/* <Route path="/houseBox" element={<HouseBox/>}/> */}
             <Route path="/housePreview" element={<HousePreview/>}/>
