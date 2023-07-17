@@ -14,24 +14,27 @@ const Contact = () => {
                 <span><img src="./Images/location.png" /></span>
                 <span>505 shreeji hights<br />
                   Indore<br />
-                  11472</span>
+                  452001</span>
               </li>
               <li>
                 <span><img src="./Images/mail.png" /></span>
                 {/* <span>nassosanagn@gmail.com</span> */}
-                <span><a href="mailto: nassosanagn@gmail.com">parmarsinghbhanu@gmail.com</a></span>
+                <span><a href="mailto: realspacegroups@gmail.com">realspacegroups@gmail.com</a></span>
               </li>
               <li>
                 <span><img src="./Images/call.png" /></span>
-                <span>9174912843</span>
+                <span>9589533998</span>
               </li>
             </ul>
           </div>
           <ul className="sci">
-            <li><a href="https://www.facebook.com/nassosanagn/"><img src="./Images/fb.png" /></a></li>
-            <li><a href="https://www.instagram.com/nassosanagn_/?hl=el"><img src="/./Images/insta.png" /></a></li>
-            <li><a href="https://twitter.com/nassosanagn"><img src="./Images/twiter.png" /></a></li>
-            <li><a href="https://www.linkedin.com/in/realspace-group-8aba1021a/"><img src="./Images/linkdin.png" /></a></li>
+            <li><a href="https://www.facebook.com/RealSpaceGroup"><img src="./Images/fb.png" /></a></li>
+            <li><a href="https://www.instagram.com/realspacegroups/"><img src="/./Images/insta.png" /></a></li>
+            <a href="mailto: realspacegroups@gmail.com">
+              <img className="appointmentgmail" src="/Images/gmail.png" alt="" />
+             
+              </a>
+            <li><a href="https://www.linkedin.com/company/realspace-group/"><img src="./Images/linkdin.png" /></a></li>
           </ul>
 
 

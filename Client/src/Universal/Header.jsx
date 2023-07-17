@@ -8,7 +8,7 @@ const Header = () => {
       <div className="nav-left">
         {/* LOgo */}
         <NavLink to='/'>
-          <img src="./Images/logo.png" alt="logo" />
+          <img className="headerlogo" src="./Images/logo.png" alt="logo" />
           {/* <img src={<LOgo/>} alt="logo" /> */}
         </NavLink>
       </div>

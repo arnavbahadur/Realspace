@@ -1,12 +1,4 @@
 
-/* a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  outline: none;
-} */
-
 a,
 a:active,
 a:focus {
@@ -22,6 +14,11 @@ a:focus {
   -moz-transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
+}
+.footerlogo{
+  height: 150px;
+  width: 200px;
+  margin-top: 10px;
 }
 
 ul {
@@ -221,6 +218,23 @@ button {
     line-height: 40px;
   }
 }
+.footerlinkedin{
+   color: white;
+   filter: invert(1);
+
+    width: 20px;
+    height: 20px;
+    margin-bottom: 7px;
+}
+.footergmail{
+  color: white;
+  filter: invert(1);
+
+   width: 25px;
+   height: 25px;
+   margin-bottom: 7px;
+}
+
 .social_profile ul li a:hover {
   background: #ff3666;
   border: 1px solid #ff3666;
