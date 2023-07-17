@@ -18,7 +18,6 @@ import Morefloor from './Pages/Project/Morefloor';
 import CurrentProject from './Pages/Current/CurrentProject';
 import PreviousProject from './Pages/Previous/PreviousProject';
 
-
 import Dropapp from './Pages/Home/Dropapp.jsx';
 import HouseSale from './Pages/House/HouseSale';
 import HouseRent from './Pages/House/HouseRent';
@@ -44,7 +43,7 @@ function App() {
             <Route path="/viewmore" element={<Morefloor/>}/>   
             <Route path="/currentproject" element={<CurrentProject/>}/>   
             <Route path="/previousproject" element={<PreviousProject/>}/>   
-            
+             
         </Routes> 
         <Footer/>  
         {/* <Dropapp/> */}
