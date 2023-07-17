@@ -21,7 +21,7 @@ const projectSchema = new Schema({
         {
             imgUrl: {
                 type: String,
-                required: true
+                required: false
             }
         }
     ],
