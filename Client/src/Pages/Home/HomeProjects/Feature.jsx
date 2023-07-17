@@ -1,37 +1,45 @@
+//./Images/comm.jpg 
 import React from 'react'
 import './Feature.css'
-// import { NavLink } from 'react-router-dom';
 const Feature = () => {
-    
-
   return (
-   <div>
-     <div className='feature-container-heading'>
-      Projects
+    <div>
+      <>
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:400,700"
+    rel="stylesheet"
+  />
+  <div className="containerfeaturee">
+  <div className="cardbackfeature">
+ <div className="cardfeature">
+      <img className="imgfeature" src="./Images/comm.jpg " />
+      <h3 className="h3feature">Commercial</h3>
+      <p className="pfeature">View more</p>
     </div>
-    <div className='feature-container-top'>
-      <div className="feature-container">
-      <img className="feature-container-img"  src="./Images/comm.jpg " alt="" />
-      <p className='feature-container-text'>commersial</p>
-      </div>
+<div className="blob"></div>
+</div>
+<div className="cardbackfeature">
+    <div className="cardfeature">
+      <img className="imgfeature" src="./Images/rese.jpg " />
+      <h3 className="h3feature">Residential</h3>
+      <p className="pfeature">View more</p>
       
-      <div className="feature-container">
-      <img className="feature-container-img" src="./Images/rese.jpg" alt="" />
-      <p className='feature-container-text'>resenditial</p>
-      
-      </div>
-      <div className="feature-container">
-      <img className="feature-container-img" src="./Images/rese.jpg" alt="" />
-      <p className='feature-container-text'>othrr</p>
-      
-      </div>
-
     </div>
-
-    {/* <div class="card">
-  <div class="bg"></div>
-  <div class="blob"></div>
-</div> */}
+    <div className="blob"></div>
+    </div>
+    <div className="cardbackfeature">
+        <div className="cardfeature">
+            <img className="imgfeature" src="./Images/others.jpg " />
+            <h3 className="h3feature">Others</h3>
+            <p className="pfeature">View more</p>
+          </div>
+      
+  <div className="blob"></div>
+</div>
+   
+  
+  </div>
+</>
 
     </div>
   )
