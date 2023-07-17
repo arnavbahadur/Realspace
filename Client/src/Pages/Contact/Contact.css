@@ -13,7 +13,7 @@ section
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #095a55;
+    background-color: #ADD8E6;
 
 }
 section::before
@@ -45,7 +45,7 @@ section::before
     top: 40px;
     width: 350px;
     height: calc(100% - 80px);
-    background: #095a55;
+    background: #add8e6;
     z-index: 1;
     padding: 40px;
     display: flex;

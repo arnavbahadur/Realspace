@@ -1,5 +1,7 @@
 import React from 'react'
 import './Footer.css'
+
+import { NavLink } from 'react-router-dom';
 function Footer() {
   return (
     <div className="footer">
@@ -7,36 +9,44 @@ function Footer() {
     <div className="row-realfoot">
       <div className="footer-box">
         <div className="single_footer">
-        <h4>Services</h4>
+        <h4>Realspace group</h4>
           <ul>
-            <li>
-              <a href="#">Realspace group</a>
-            </li>
+            
+              <NavLink to={"/"}>
+            <img src="./Images/logo.png" alt="realspace logo" className="footerlogo" />
+            </NavLink>
           </ul>
         </div>
       </div>
       {/*- END COL */}
       <div className="footer-box">
         <div className="single_footer">
-          <h4>Services</h4>
+          <h4>Page Link</h4>
           <ul>
             <li>
-              <a href="#">Filter</a>
-            </li>
-            <li>
+            <NavLink to={"/About"}>
               <a href="#">Team</a>
+              </NavLink>
             </li>
             <li>
+            <NavLink to={"/Mymodal"}>
               <a href="#">Latest offers </a>
+              </NavLink>
             </li>
             <li>
+            <NavLink to={"/Contact"}>
               <a href="#">Contact us</a>
+              </NavLink>
             </li>
             <li>
+            <NavLink to={"/Appointment"}>
               <a href="#"> book appointment</a>
+              </NavLink>
             </li>
             <li>
+            <NavLink to={"/faq"}>
               <a href="#"> FAQ'S</a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -44,22 +54,37 @@ function Footer() {
       {/*- END COL */}
       <div className="footer-box">
         <div className="single_footer single_footer_address">
-          <h4>Page Link</h4>
+          <h4>Services</h4>
           <ul>
             <li>
-              <a href="#">Lorem Ipsum</a>
+            <NavLink to={"/housesale"}>
+              <a href="#"> Sale</a>
+              </NavLink>
             </li>
             <li>
-              <a href="#">Simply dummy text</a>
+            <NavLink to={"/houserent"}>
+              <a href="#"> Rent</a>
+              </NavLink>
+               </li>
+            <li>
+            <NavLink to={"/faq"}>
+              <a href="#"> Commericial Project</a>
+              </NavLink>
+                </li>
+            <li>
+            <NavLink to={"/faq"}>
+              <a href="#"> Residential Project</a>
+              </NavLink>
             </li>
             <li>
-              <a href="#">The printing and typesetting </a>
+            <NavLink to={"/faq"}>
+              <a href="#"> Other Project</a>
+              </NavLink>
             </li>
             <li>
-              <a href="#">Standard dummy text</a>
-            </li>
-            <li>
-              <a href="#">Type specimen book</a>
+            <NavLink to={"/previousproject"}>
+              <a href="#"> Previous Glories</a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -84,22 +109,23 @@ function Footer() {
         <div className="social_profile">
           <ul>
             <li>
-              <a href="#">
+              <a href="https://www.facebook.com/RealSpaceGroup">
                 <i className="fab fa-facebook-f" />
               </a>
             </li>
             <li>
-              <a href="#">
-                <i className="fab fa-twitter" />
+              <a href="mailto: realspacegroups@gmail.com">
+              <img className="footergmail" src="/Images/gmail.png" alt="" />
+             
               </a>
             </li>
             <li>
-              <a href="#">
-                <i className="fab fa-google-plus-g" />
+              <a href="https://www.linkedin.com/company/realspace-group/">
+               <img className="footerlinkedin" src="/Images/linkdin.png" alt="" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.instagram.com/realspacegroups/">
                 <i className="fab fa-instagram" />
               </a>
             </li>

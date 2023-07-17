@@ -100,7 +100,7 @@
   background-color: #ff0000;
   opacity: 1;
   filter: blur(12px);
-  animation: blob-bounce 2s infinite ease;
+  animation: blob-bounce 4s infinite ease;
 }
 
 @keyframes blob-bounce {
