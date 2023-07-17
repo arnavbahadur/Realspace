@@ -4,20 +4,17 @@
     margin: 15px 60px;
     
 }
-.row{
-    padding-bottom: 20px
-    ;
-}
-.car{
+
+/* .car{
     border-radius: 3vh;
 }
 .property-single-slider{
     border-radius: 3vh;
-}
+} */
  .img-box {
     width: 850px;
     height: 498px;
-    border-radius: 3vh;
+    /* border-radius: 3vh; */
 } 
 .samar-slider  {
     max-height: 500px;
@@ -27,7 +24,7 @@
     -o-background-size: cover;
     background-size: cover;
     border: 1px solid black;
-    border-radius: 3vh;
+    /* border-radius: 3vh; */
 }
 .col-lg-4 {
     flex: 0 0 auto;
@@ -46,6 +43,10 @@
 
 }
 
+.floor-plan{
+margin: 2vh;
+border: 2px solid black;
+}
 .video-map-container{
     padding-top: 20px;
     height: max-content;

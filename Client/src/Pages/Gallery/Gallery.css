@@ -1,8 +1,11 @@
-.row{
-    padding: 2vh;
-    margin: 2vh;
+.gallery-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-.col-lg-4 {
+.gallery-container {
     padding: 1vh;
     margin: 1vh;
     box-shadow: 1px 1px 1px 1px grey;

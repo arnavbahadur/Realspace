@@ -242,7 +242,7 @@ const Project = (props) => {
                 {/* <!--<div class="about-agent">
                            <div class="carousel-inner">
                               <div class="carousel-item active">
-                                 <div class="card card-list">
+                                 <div className="floor-plan">
                                     <a href="#">
                                        <img class="card-img-top" src="img/agent.jpg" alt="Card image cap">
                                        <div class="card-body pb-0 about-agent-info">
@@ -315,7 +315,7 @@ const Project = (props) => {
                 <h5 class="card-title mb-4">Floor Plans</h5>
                 <div class="row">
                   <div class="col-lg-12 col-md-12">
-                    <div class="card card-list">
+                    <div className="floor-plan">
                       <a href="#">
                         <div class="card-img">
                           {/* <!-- <div class="badge images-badge"><i class="mdi mdi-image-filter"></i> 12</div> --> */}
@@ -343,7 +343,7 @@ const Project = (props) => {
 
                 <div class="row">
                   <div class="col-lg-12 col-md-12">
-                    <div class="card card-list">
+                    <div className="floor-plan">
                       <a href="#">
                         <div class="card-img">
                           {/* <!-- <div class="badge images-badge"><i class="mdi mdi-image-filter"></i> 12</div> --> */}

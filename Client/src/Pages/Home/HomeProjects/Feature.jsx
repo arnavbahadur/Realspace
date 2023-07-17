@@ -16,8 +16,9 @@ const Feature = () => {
   <NavLink to="/commercial">
       <img className="imgfeature" src="./Images/comm.jpg " />
       <h3 className="h3feature">Commercial</h3>
-      <p className="pfeature">View more</p>
-  </NavLink>
+      </NavLink>
+       <p className="pfeature">View more</p>
+
   </div>
 <div className="blob"></div>
 </div>
@@ -27,8 +28,9 @@ const Feature = () => {
     <NavLink to="/residential">
       <img className="imgfeature" src="./Images/rese.jpg " />
       <h3 className="h3feature">Residential</h3>
-      <p className="pfeature">View more</p>
       </NavLink>
+        <p className="pfeature">View more</p>
+     
     </div>
     <div className="blob"></div>
     </div>
@@ -37,8 +39,9 @@ const Feature = () => {
           <NavLink to="/others"> 
             <img className="imgfeature" src="./Images/others.jpg " />
             <h3 className="h3feature">Others</h3>
-            <p className="pfeature">View more</p>
             </NavLink>
+            <p className="pfeature">View more</p>
+            
           </div>
       
   <div className="blob"></div>
