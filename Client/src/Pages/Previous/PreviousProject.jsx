@@ -32,7 +32,7 @@ const House = ({purpose}) => {
       </div>
      
       <div className="house-pageNumber">
-        page number scroll
+    <Projectbox/>
         <PageNum currentPage={currentPage} setCurrentPage={setCurrentPage} totalPost={totalPost} PostPerPage={PostPerPage}/>
       </div>
     </div>

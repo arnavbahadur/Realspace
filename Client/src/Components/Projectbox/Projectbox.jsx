@@ -6,6 +6,7 @@ import { useEffect,useState } from 'react';
 
 
 function Projectbox() {
+  
 
 
   const [content,setContent]=useState([]);
@@ -15,7 +16,7 @@ function Projectbox() {
       console.log(pro.data)
     });
   };
-  
+  const cureentContent = content.slice(0,3);
 useEffect(() => {
 projectapi();
 }, []);
@@ -27,7 +28,7 @@ projectapi();
       <>
   <div className="section over-hide">
     <div className="container">
-    {content.map(item=>{
+    {cureentContent.map(item=>{
           return   <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id}  />
          })}
    
