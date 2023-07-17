@@ -5,21 +5,21 @@ import axios from 'axios';
 import { useEffect,useState } from 'react';
 
 
-function Projectbox() {
+function Projectbox({currentContent}) {
   
 
 
-  const [content,setContent]=useState([]);
-  const projectapi = async () => {
-    await axios.get('/projectapi').then((pro) => {
-      setContent(pro.data);
-      console.log(pro.data)
-    });
-  };
-  const cureentContent = content.slice(0,3);
-useEffect(() => {
-projectapi();
-}, []);
+//   const [content,setContent]=useState([]);
+//   const projectapi = async () => {
+//     await axios.get('/projectapi').then((pro) => {
+//       setContent(pro.data);
+//       console.log(pro.data)
+//     });
+//   };
+//   const cureentContent = content.slice(0,3);
+// useEffect(() => {
+// projectapi();
+// }, []);
 
 
 
@@ -28,9 +28,10 @@ projectapi();
       <>
   <div className="section over-hide">
     <div className="container">
-    {cureentContent.map(item=>{
-          return   <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id}  />
-         })}
+    {currentContent.map(item=>{
+    // return   <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id}  />
+    return   <Singleprojectbox content={item} />
+    })}
    
      
     </div>
