@@ -7,24 +7,24 @@ import CompareSideBtn from "../../Components/CompareSideBtn/CompareSideBtn";
 import { useParams} from "react-router-dom";
 
 const Project = (props) => {
-  let { id } = useParams();
-  const [checked, setChecked] = React.useState(false); 
-   function handleChange(e) {
-      setChecked(e.target.checked);
-   }
+//   let { id } = useParams();
+//   const [checked, setChecked] = React.useState(false); 
+//    function handleChange(e) {
+//       setChecked(e.target.checked);
+//    }
 
 
-   const [content,setContent]=useState([]);
-   const projectapi = async () => {
-     await axios.get(`/projectapi/${id}`).then((pro) => {
-       setContent(pro.data);
-       console.log(pro.data)
-     });
-   };
+//    const [content,setContent]=useState([]);
+//    const projectapi = async () => {
+//      await axios.get(`/projectapi/${id}`).then((pro) => {
+//        setContent(pro.data);
+//        console.log(pro.data)
+//      });
+//    };
    
-useEffect(() => {
- projectapi();
-}, []);
+// useEffect(() => {
+//  projectapi();
+// }, []);
 
 
 
@@ -52,21 +52,21 @@ useEffect(() => {
 
             <div class="card padding-card property-single-slider">
               <div class="card-body">
-                <h5 class="card-title mb-3"> {content.title}</h5>
+                <h5 class="card-title mb-3"> {props.title}</h5>
                 <p>
                   
-                  {content.description}
+                  {props.description}
                   
                 </p>
-                <h5 class="card-title mb-3"> {content.title}</h5>
+                <h5 class="card-title mb-3"> {props.title}</h5>
 
                 <p>
-                {content.description}
+                {props.description}
                 </p>
 
-                <h5 class="card-title mb-3">{content.Note}</h5>
+                <h5 class="card-title mb-3">{props.Note}</h5>
                 <p class="mb-0">
-                {content.CurrentStatus}
+                {props.CurrentStatus}
                 </p>
               </div>
             </div>
@@ -206,7 +206,7 @@ useEffect(() => {
                 <div class="row mb-3">
                   <div class="col-lg-6 col-md-6">
                     <p>
-                      <strong class="text-dark"> {content.location} </strong> Scheme
+                      <strong class="text-dark"> {props.location} </strong> Scheme
                       No 78-II
                     </p>
                     <p>

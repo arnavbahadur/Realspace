@@ -5,7 +5,13 @@ const HouseBox = (props) => {
     const likedRef = useRef();
     const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
-    
+    // const canCompare = () =>{
+    //     if(JSON.parse(localStorage.compareItem))
+    // }
+    const compareBtn = () =>{
+        // compare list length 
+        // compared?
+    }
   return (
     <div className='houseBox'>
       <div className="houseBox-body">
@@ -64,7 +70,7 @@ const HouseBox = (props) => {
                         <i className="fa-solid fa-arrows-turn-to-dots" onClick={()=>{setCompared(!compared)}} style={{color:`${compared?'black':'#aaadb1'}`}}/>                    
                         <div className="iLabel">
                             <div className="iLabel-up-arrow"></div>
-                            <div className="iLabel-text">
+                            <div className="iLabel-text ">
                                 <p>Compare</p>
                             </div>
                         </div>
@@ -72,7 +78,7 @@ const HouseBox = (props) => {
                 </div>                     
             </div>
         </div>
-        <div className="compare-warning-msg" >
+        <div className="compare-warning-msg " >
             <p>Compare item limit is 4, Remove an item to add new</p>
         </div>
       </div>
