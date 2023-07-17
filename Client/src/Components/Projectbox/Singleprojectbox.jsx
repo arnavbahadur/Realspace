@@ -17,8 +17,6 @@ function Singleprojectbox(props) {
               <div className="card-3d-wrapper">
                 <div className="card-front">
                 <NavLink to={`/project`}>
-                
-            
                     <div className="img-wrap img-1">
                       <img
                         src={props.Photos[0].imgUrl}

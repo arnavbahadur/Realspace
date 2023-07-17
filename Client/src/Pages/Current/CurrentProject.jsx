@@ -14,6 +14,12 @@ const CurrentProject = ({purpose}) => {
   // useEffect(()=>{
   //   fetch("https://jsonplaceholder.typicode.com/content").then()
   // })
+  const lastIndex = currentPage * ContentPerPage;
+  const startIndex = lastIndex - ContentPerPage
+  const currentContent = content.slice(startIndex,lastIndex);
+  const totalContent = content.length;// content.length is actuall 100 is for test
+  console.log('currentContent in currentProject ',currentContent)
+
   const callapi = async ()=>{
     await axios.get('/projectapi').then((pro)=>{
       setContent(pro.data);
@@ -21,11 +27,7 @@ const CurrentProject = ({purpose}) => {
     });
   };
 
-  const lastIndex = currentPage * ContentPerPage;
-  const startIndex = lastIndex - ContentPerPage
-  const currentContent = content.slice(startIndex,lastIndex);
-  const totalContent = content.length;// content.length is actuall 100 is for test
-  console.log('currentContent in currentProject ',currentContent)
+
   useEffect(()=>{
     callapi();
   },[])

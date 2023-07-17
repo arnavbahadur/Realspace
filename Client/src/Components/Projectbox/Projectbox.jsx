@@ -9,17 +9,17 @@ function Projectbox({currentContent}) {
   
 
 
-//   const [content,setContent]=useState([]);
-//   const projectapi = async () => {
-//     await axios.get('/projectapi').then((pro) => {
-//       setContent(pro.data);
-//       console.log(pro.data)
-//     });
-//   };
-//   const cureentContent = content.slice(0,3);
-// useEffect(() => {
-// projectapi();
-// }, []);
+  const [content,setContent]=useState([]);
+  const projectapi = async () => {
+    await axios.get('/projectapi').then((pro) => {
+      setContent(pro.data);
+      console.log(pro.data)
+    });
+  };
+  // const cureentContent = content.slice(0,3);
+useEffect(() => {
+projectapi();
+}, []);
 
 
 
