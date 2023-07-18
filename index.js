@@ -18,12 +18,6 @@ app.use(cors({
   credentials: true,
 })
 );
-if(localStorage.compareItem == undefined){
-  let temp = {
-    itemids : []
-  }
-  localStorage.setItem("compareItem",JSON.stringify(temp));
-}
 mongoose.set('strictQuery', false)
 mongoose.connect(process.env.MDB_CONNECT) 
 .then(()=>{console.log('Mongodb connected')})

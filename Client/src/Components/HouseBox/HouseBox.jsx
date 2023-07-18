@@ -2,32 +2,40 @@ import React, { useRef, useState } from 'react'
 import './HouseBox.css'
 import { NavLink, useNavigate } from 'react-router-dom';
 const HouseBox = (props) => {
+    let id = 1;//id = props.id
     const warnRef = useRef();
     const navigate = useNavigate();
     const likedRef = useRef();
     const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
     const compareBtn = () =>{
-        let compareItem = JSON.parse(localStorage.getItem('compareItem'))
-        if(!compared && compareItem.itemIds.length === 4){
-            warnRef.classlist.add('.active')
-            setTimeout(() => {
-                warnRef.classlist.remove('.active')                
-            }, 5000);
+        try{
+            let compareItem = JSON.parse(localStorage.getItem('compareItem'))
+            if(!compared && compareItem.itemsId.length === 4){
+                warnRef.classlist.add('.active')
+                setTimeout(() => {
+                    warnRef.classlist.remove('.active')                
+                }, 5000);
+            }
+            else{
+                if(compared){
+                    for(let i = 0; i < 4|| i < compareItem.itemsId.length;i++){      //to remove the item
+                        compareItem.itemsId[i]===id?compareItem.itemsId.splice(i,1):console.log("compare id is not removed,some error is there");
+                    }    
+                    console.log(compareItem.itemsId)
+                }
+                else{       // to add the item
+                    compareItem.itemsId.push(id)
+                }
+                localStorage.setItem("compareItem",JSON.stringify(compareItem))
+                setCompared(!compared)
+            }
         }
-        else{
-            if(compared){
-                for(let i = 0; i < 4;i++){      //to remove the item
-                    compareItem.itemsId[i]==props.id?compareItem.itemsId.splice(i,1):console.log("compare id is not removed,some error is there");
-                }    
-            }
-            else{       // to add the item
-                compareItem.itemIds.push(props.id)
-            }
-            setCompared(!compared)
+        catch(err){
+            console.warn(err)
         }
     }
-  return (
+    return (
     <div className='houseBox' >
       <div className="houseBox-body">
         <div className="houseBox-imgSection">
@@ -35,8 +43,8 @@ const HouseBox = (props) => {
             <div className="houseBox-top-tag-box">
                 {props.title}
             </div>
-            <NavLink to={`/housepreview/${props.id}`} >
-                <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview`,{state:{id:props.id}})}}/>
+            <NavLink to={`/housepreview/${id}`} >
+                <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview`,{state:{id:id}})}}/>
             </NavLink>
             <div className="houseBox-imgsection-textArea">
                 <p> { props.Purpose}</p>

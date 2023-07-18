@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import "./CompareSideBtn.css"
 import { NavLink } from 'react-router-dom'
 const CompareSideBtn = () => {
-  const Total = 4;
   let Count = 0;
+  useEffect(()=>{
+    Count =   JSON.parse(localStorage.getItem("compareItem")).itemsId.length;
+
+  })
+  const Total = 4;
   return (
     <div className='compareSideBtn-container'>
       <NavLink to={`/Compare`}>
