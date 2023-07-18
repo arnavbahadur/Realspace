@@ -2,17 +2,30 @@ import React, { useRef, useState } from 'react'
 import './HouseBox.css'
 import { NavLink, useNavigate } from 'react-router-dom';
 const HouseBox = (props) => {
+    const warnRef = useRef();
     const navigate = useNavigate();
     const likedRef = useRef();
     const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
-    // const canCompare = () =>{
-    //     if(JSON.parse(localStorage.compareItem))
-    // }
-    // console.log('house box' ,props);
     const compareBtn = () =>{
-        // compare list length 
-        // compared?
+        let compareItem = JSON.parse(localStorage.getItem('compareItem'))
+        if(!compared && compareItem.itemIds.length === 4){
+            warnRef.classlist.add('.active')
+            setTimeout(() => {
+                warnRef.classlist.remove('.active')                
+            }, 5000);
+        }
+        else{
+            if(compared){
+                for(let i = 0; i < 4;i++){      //to remove the item
+                    compareItem.itemsId[i]==props.id?compareItem.itemsId.splice(i,1):console.log("compare id is not removed,some error is there");
+                }    
+            }
+            else{       // to add the item
+                compareItem.itemIds.push(props.id)
+            }
+            setCompared(!compared)
+        }
     }
   return (
     <div className='houseBox' >
@@ -69,7 +82,7 @@ const HouseBox = (props) => {
                         <i ref={likedRef} className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
                     </div>
                     <div className='compare-icon-container'>
-                        <i className="fa-solid fa-arrows-turn-to-dots" onClick={()=>{setCompared(!compared)}} style={{color:`${compared?'black':'#aaadb1'}`}}/>                    
+                        <i className="fa-solid fa-arrows-turn-to-dots" onClick={compareBtn} style={{color:`${compared?'black':'#aaadb1'}`}}/>                    
                         <div className="iLabel">
                             <div className="iLabel-up-arrow"></div>
                             <div className="iLabel-text ">
@@ -80,7 +93,7 @@ const HouseBox = (props) => {
                 </div>                     
             </div>
         </div>
-        <div className="compare-warning-msg " >
+        <div ref={warnRef} className="compare-warning-msg " >
             <p>Compare item limit is 4, Remove an item to add new</p>
         </div>
       </div>
