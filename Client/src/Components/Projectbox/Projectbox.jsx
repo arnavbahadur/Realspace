@@ -29,8 +29,8 @@ projectapi();
   <div className="section over-hide">
     <div className="container">
     {currentContent.map(item=>{
-     return   <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id}  />
-    {/* return   <Singleprojectbox content={item} /> */}
+    return   <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id}  />
+    // return   <Singleprojectbox content={item} />
     })}
    
      

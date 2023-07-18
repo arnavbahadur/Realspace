@@ -10,7 +10,7 @@
     /* width: 50%; */
     min-width: 310px;
     box-sizing: border-box;
-    z-index: 1;
+    /* z-index: 1; */
     box-shadow: 2px 2px 5px grey;
     overflow: hidden;
     background-color: white;
@@ -140,13 +140,14 @@
     transform: scale(1.2,1.2);
 }
 .iLabel{
-    position: relative;
+    position: absolute;
     background-color: rgb(242, 190, 190);
-    width: 60px;
+    width: fit-content;
     height: 25px;
     padding: 2px;
     opacity: 0;
     transition: opacity 150ms ease-in;
+    pointer-events: none;
 }
 .iLabel-up-arrow{
     position: absolute;
