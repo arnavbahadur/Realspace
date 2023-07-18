@@ -2,11 +2,6 @@
     margin: 0;
     padding: 0;
 }
-.headerlogo{
-    max-width: 120px;
-    height: 95%;
-   margin-left: 10%;
-}
  .navbar{
     /* background-color: #0005; */
     /* background: transparent; */
@@ -34,6 +29,12 @@
     width: 15%;
     
     height:100%;
+}
+
+.headerlogo{
+    max-width: 120px;
+    height: 95%;
+   margin-left: 10%;
 }
 /* .nav-left img{
     width: 100%;
