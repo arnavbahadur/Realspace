@@ -16,6 +16,7 @@ const MyModal = ({ closeModal, children, handleCloseButton }) => {
      <>
    
       <div className="modal-wrapper" onClick={closeModal}></div>
+      
            <div className="modal-container">
        
         {children}

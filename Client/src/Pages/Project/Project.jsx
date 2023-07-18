@@ -7,24 +7,24 @@ import CompareSideBtn from "../../Components/CompareSideBtn/CompareSideBtn";
 import { useParams} from "react-router-dom";
 
 const Project = (props) => {
-//   let { id } = useParams();
+  let { id } = useParams();
 //   const [checked, setChecked] = React.useState(false); 
 //    function handleChange(e) {
 //       setChecked(e.target.checked);
 //    }
 
 
-//    const [content,setContent]=useState([]);
-//    const projectapi = async () => {
-//      await axios.get(`/projectapi/${id}`).then((pro) => {
-//        setContent(pro.data);
-//        console.log(pro.data)
-//      });
-//    };
-   
-// useEffect(() => {
-//  projectapi();
-// }, []);
+   const [content,setContent]=useState([]);
+   const projectapi = async () => {
+     await axios.get(`/projectapi/${id}`).then((pro) => {
+       setContent(pro.data);
+       console.log(pro.data)
+     });
+   };   
+
+useEffect(() => {
+ projectapi();
+}, []);
 
 
 
@@ -52,21 +52,21 @@ const Project = (props) => {
 
             <div class="card padding-card property-single-slider">
               <div class="card-body">
-                <h5 class="card-title mb-3"> {props.title}</h5>
+                <h5 class="card-title mb-3"> {content.title}</h5>
                 <p>
                   
-                  {props.description}
+                  {content.description}
                   
                 </p>
-                <h5 class="card-title mb-3"> {props.title}</h5>
+                <h5 class="card-title mb-3"> {content.title}</h5>
 
                 <p>
-                {props.description}
+                {content.description}
                 </p>
 
-                <h5 class="card-title mb-3">{props.Note}</h5>
+                <h5 class="card-title mb-3">{content.Note}</h5>
                 <p class="mb-0">
-                {props.CurrentStatus}
+                {content.CurrentStatus}
                 </p>
               </div>
             </div>
@@ -206,7 +206,7 @@ const Project = (props) => {
                 <div class="row mb-3">
                   <div class="col-lg-6 col-md-6">
                     <p>
-                      <strong class="text-dark"> {props.location} </strong> Scheme
+                      <strong class="text-dark"> {content.location} </strong> Scheme
                       No 78-II
                     </p>
                     <p>
@@ -242,7 +242,7 @@ const Project = (props) => {
                 {/* <!--<div class="about-agent">
                            <div class="carousel-inner">
                               <div class="carousel-item active">
-                                 <div class="card card-list">
+                                 <div className="floor-plan">
                                     <a href="#">
                                        <img class="card-img-top" src="img/agent.jpg" alt="Card image cap">
                                        <div class="card-body pb-0 about-agent-info">
@@ -315,7 +315,7 @@ const Project = (props) => {
                 <h5 class="card-title mb-4">Floor Plans</h5>
                 <div class="row">
                   <div class="col-lg-12 col-md-12">
-                    <div class="card card-list">
+                    <div className="floor-plan">
                       <a href="#">
                         <div class="card-img">
                           {/* <!-- <div class="badge images-badge"><i class="mdi mdi-image-filter"></i> 12</div> --> */}
@@ -343,7 +343,7 @@ const Project = (props) => {
 
                 <div class="row">
                   <div class="col-lg-12 col-md-12">
-                    <div class="card card-list">
+                    <div className="floor-plan">
                       <a href="#">
                         <div class="card-img">
                           {/* <!-- <div class="badge images-badge"><i class="mdi mdi-image-filter"></i> 12</div> --> */}
