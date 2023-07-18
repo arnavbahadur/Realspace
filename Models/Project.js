@@ -17,7 +17,19 @@ const projectSchema = new Schema({
         type: String,
         required: true
     },
+    Rooms: {
+        type: String,
+        required: true
+    },
     Photos: [
+        {
+            imgUrl: {
+                type: String,
+                required: false
+            }
+        }
+    ],
+    Floorplan: [
         {
             imgUrl: {
                 type: String,

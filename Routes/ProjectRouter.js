@@ -22,10 +22,10 @@ router.route("/:id").get((req, res) => {
 
 router.route("/addproject").post((req, res) => {
     //Retrieve data for post
-    const { title,description,imageContainer,Photos,addMoreDetails, Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus} = req.body;
+    const { title,description,imageContainer,Photos, Floorplan,Rooms,addMoreDetails, Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus} = req.body;
     //Create a new Post and save it to DB
     // console.log(req.body);
-    const newProject = new Project({ title,description,imageContainer,Photos,addMoreDetails, Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus, created_at:new Date()});
+    const newProject = new Project({ title,description,Rooms, Floorplan,imageContainer,Photos,addMoreDetails, Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus, created_at:new Date()});
     // Save the new post
     newProject
         .save()
@@ -51,8 +51,8 @@ router.get("/deleteProject/:id", async (req, res) => {
   router.post("/editproject/:id", async (req, res) => {
     const ProjectId= req.params.id;
     try {
-        const { title,description,imageContainer,Photos,addMoreDetails, Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus} = req.body;
-        let Projectsaved=await Project.findOneAndUpdate({_id:ProjectId},{ title,description,imageContainer,Photos,addMoreDetails, Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus});
+        const { title,description,imageContainer,Photos,addMoreDetails,Rooms, Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Floorplan, Note,CurrentStatus} = req.body;
+        let Projectsaved=await Project.findOneAndUpdate({_id:ProjectId},{ title,description,Rooms,imageContainer,Photos,addMoreDetails, Feature,Featured,Area,Floors,location,Address, Floorplan,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus});
         res.status(200).send(Projectsaved);
     } catch (err) {
       res.status(200).send(err);
