@@ -267,7 +267,7 @@ useEffect(() => {
                         height={"50px"}
                       />
                       <strong>Area:</strong>
-                      <p class="mb-0">  sq ft</p>
+                      <p class="mb-0"> {content.Area} sq ft</p>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6">
@@ -279,7 +279,7 @@ useEffect(() => {
                         height={"50px"}
                       />
                       <strong>Rooms</strong>
-                      <p class="mb-0">2/3 Bedrooms</p>
+                      <p class="mb-0"> {content.Rooms} Bedrooms</p>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6">
@@ -291,7 +291,7 @@ useEffect(() => {
                         height={"50px"}
                       />
                       <strong>Floors:</strong>
-                      <p class="mb-0">8 Floors</p>
+                      <p class="mb-0"> {content.Floors} Floors</p>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6">
@@ -303,7 +303,7 @@ useEffect(() => {
                         height={"50px"}
                       />
                       <strong>Parking:</strong>
-                      <p class="mb-0">Covered Parking</p>
+                      <p class="mb-0"> {content.Parking}</p>
                     </div>
                   </div>
                 </div>
@@ -322,7 +322,7 @@ useEffect(() => {
                           {/* <!-- <span class="badge badge-primary">For Sale</span> --> */}
                           <img
                             class="card-img-top"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJFggSqWZU_5OxKu65jcuuOqUlEJ9nQXfBmeWunTLejBerdDOR3grYytP4R5ZnB9ilJs4&usqp=CAU"
+                            // src= {content.Floorplan[0].imgUrl}
                             alt="Card image cap"
                           />
                         </div>
@@ -350,7 +350,7 @@ useEffect(() => {
                           {/* <!-- <span class="badge badge-primary">For Sale</span> --> */}
                           <img
                             class="card-img-top"
-                            src="https://i.pinimg.com/originals/02/d9/2c/02d92c3c6859a9fe9c07e0cc5af75513.jpg"
+                            // src={content.Floorplan[1].imgUrl}
                             alt="Card image cap"
                           />
                         </div>
@@ -388,7 +388,7 @@ useEffect(() => {
           <div className="housePreview-video housePreview-iframeContainer">
             {/* <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="house" />
             <div><p>Video Tour</p></div> */}
-            <iframe src="https://www.youtube.com/embed/QP4CxBlbD7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen/>
+            <iframe src={content.Video_url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen/>
           </div>
         </div>
         </div>
@@ -396,7 +396,7 @@ useEffect(() => {
         <div className='map-mapSection map-iframe-section'>
           <h3 className="map-h3">Map</h3>
           <div className="housePreview-map housePreview-iframeContainer">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117852.10298046564!2d75.65939514335936!3d22.62102239999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f958dcb7169d%3A0xd877c12078e50f0f!2sMedi-Caps%20University!5e0!3m2!1sen!2sin!4v1688136971443!5m2!1sen!2sin" width="800" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
+            <iframe src={content.location_url} width="800" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
           </div>
         </div>
         </div>

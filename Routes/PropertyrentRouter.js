@@ -22,11 +22,11 @@ router.route("/:id").get((req, res) => {
 //Route to add a new post
 router.route("/addproperty").post((req, res) => {
     //Retrieve data for post
-    const { title,location, location_url, price, areaSqFt, hall, bedRoom, bathRoom,imageContainer,Photos,Description,Featured,addMoreDetails,Feature,Note,Rating,CurrentStatus} = req.body;
+    const { title,location,  Purpose,location_url, price, areaSqFt, hall, bedRoom, bathRoom,Listingyear,imageContainer,Photos,Description,Featured,addMoreDetails,Feature,Note,Rating,CurrentStatus} = req.body;
     //Create a new Post and save it to DB
     // console.log(req.body);
     const newProperty = new Property({
-        title,location, location_url, created_at:new Date(), price, areaSqFt, hall, bedRoom, bathRoom,imageContainer,Photos,Description,Featured,addMoreDetails,Feature,Note,Rating,CurrentStatus
+        title,location, location_url, created_at:new Date(), price, areaSqFt, Purpose, hall, bedRoom, Listingyear,bathRoom,imageContainer,Photos,Description,Featured,addMoreDetails,Feature,Note,Rating,CurrentStatus
         });
     // Save the new post
     newProperty
@@ -51,8 +51,8 @@ router.get("/deleteproperty/:id", async (req, res) => {
   router.post("/editproperty/:id", async (req, res) => {
     const PropertywId= req.params.id;
     try {
-        const { title,description,imageContainer,Photos,addMoreDetails, Feature,Featured,location,location_url, Note,CurrentStatus} = req.body;
-        let Propertywsaved=await Propertyw.findOneAndUpdate({_id:PropertywId},{title,description,imageContainer,Photos,addMoreDetails, Feature,Featured,location,location_url, Note,CurrentStatus});
+        const { title,description,imageContainer,Photos,addMoreDetails,  Purpose,Feature,Featured,Listingyear,location,location_url, Note,CurrentStatus} = req.body;
+        let Propertywsaved=await Propertyw.findOneAndUpdate({_id:PropertywId},{title,description, Purpose,imageContainer,Photos,addMoreDetails,Listingyear, Feature,Featured,location,location_url, Note,CurrentStatus});
         res.status(200).send(Propertywsaved);
     } catch (err) {
       res.status(200).send(err);
