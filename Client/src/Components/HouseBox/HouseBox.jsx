@@ -1,27 +1,29 @@
 import React, { useRef, useState } from 'react'
 import './HouseBox.css'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 const HouseBox = (props) => {
+    const navigate = useNavigate();
     const likedRef = useRef();
     const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
     // const canCompare = () =>{
     //     if(JSON.parse(localStorage.compareItem))
     // }
+    // console.log('house box' ,props);
     const compareBtn = () =>{
         // compare list length 
         // compared?
     }
   return (
-    <div className='houseBox'>
+    <div className='houseBox' >
       <div className="houseBox-body">
         <div className="houseBox-imgSection">
             {/* img */}
             <div className="houseBox-top-tag-box">
                 {props.title}
             </div>
-            <NavLink to={`/HousePreview`}>
-                <img src="./Images/house-1.jpg" alt="house" />
+            <NavLink to={`/housepreview/${props.id}`} >
+                <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview`,{state:{id:props.id}})}}/>
             </NavLink>
             <div className="houseBox-imgsection-textArea">
                 <p> {  `iska bacnend ni he`}</p>

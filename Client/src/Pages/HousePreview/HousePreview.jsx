@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
 import './HousePreview.css'
 import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn';
+import { useLocation } from 'react-router-dom';
+
 const HousePreview = () => {
   const [liked,setliked] = useState(false);
+  const location = useLocation();
+  const id = location.state?.id;
+  // console.log('location.state.id ', location.state.id)
   const features = ["swimming pool","gym","Tenis court","Elivator"];
   const featuresElem = features.map((item)=>{
     return(
@@ -10,6 +15,7 @@ const HousePreview = () => {
     )
 
   })
+
   return (
     <div className='housePreivew-page'> 
     <CompareSideBtn/>
