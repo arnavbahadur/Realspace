@@ -26,7 +26,7 @@ const HouseBox = (props) => {
                 <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview`,{state:{id:props.id}})}}/>
             </NavLink>
             <div className="houseBox-imgsection-textArea">
-                <p> {  `iska bacnend ni he`}</p>
+                <p> { props.Purpose}</p>
             </div>
         </div>
         <div className="houseBox-descripstion-container">
@@ -45,7 +45,7 @@ const HouseBox = (props) => {
                     </div>
                 </div>
                 <div className="houseBox-areaMeasure-container">
-                    <p>Bathrooms</p>
+                    <p>Bathrooms </p>
                     <div className="houseBox-areaMeasure-icon">
                         <i className="fa-solid fa-shower"/>
                         <span>{props.bathRoom}</span>
@@ -54,8 +54,8 @@ const HouseBox = (props) => {
                 <div className="houseBox-areaMeasure-container">
                     <p>Area</p>
                     <div className="houseBox-areaMeasure-icon">                        
-                        <i className="fa-regular fa-square"/>
-                        <span>{props.areaSqFt}</span>
+                        {/* <i className="fa-regular fa-square"/> */}
+                        <span>{props.areaSqFt} SqFt</span>
                     </div>
                 </div>
             </div>
@@ -90,3 +90,9 @@ const HouseBox = (props) => {
 
 
 export default HouseBox
+
+
+
+
+// title,description,imageContainer,Photos,addMoreDetails, Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus
+// title,location, location_url, price, areaSqFt, hall, bedRoom, bathRoom,Listingyear,imageContainer,Photos,Description,Featured,addMoreDetails,Feature,Note,Rating,CurrentStatus

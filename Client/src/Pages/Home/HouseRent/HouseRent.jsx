@@ -29,7 +29,7 @@ const HouseRent = (props) => {
         <div className="home-houseRent-cardSection">
         <div className="cardSection">
          {cureentContent.map(item=>{
-          return <HouseBox title={item.title} location={item.location} price={item.price} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
+          return <HouseBox title={item.title} location={item.location} price={item.price} location_url={item.location_url} img={item.img} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
          })}
          
      
