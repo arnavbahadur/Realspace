@@ -9,7 +9,7 @@ import Singleprojectbox from '../../Components/Projectbox/Singleprojectbox'
 
 
 
-const PreviousProject = ({purpose}) => {
+const PreviousProject = (props) => {
   // const House = (props) => {
     const[currentPage,setCurrentPage]=useState(1);
     const[content,setContent] = useState([])    //fetch data from api and
@@ -37,7 +37,7 @@ const PreviousProject = ({purpose}) => {
     <div>
         <CompareSideBtn/>
       <div className="house-header">
-        <HomeSectionsHeading purpose={purpose} title='House'/>
+        <HomeSectionsHeading purpose={props.purpose} title='House'/>
       </div>
       {/* <Projectbox currentContent={currentContent}/> */}
       <div className="house-card-section">

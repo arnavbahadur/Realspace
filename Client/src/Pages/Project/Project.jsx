@@ -7,6 +7,7 @@ import CompareSideBtn from "../../Components/CompareSideBtn/CompareSideBtn";
 import { useParams} from "react-router-dom";
 
 const Project = (props) => {
+  
   let { id } = useParams();
 //   const [checked, setChecked] = React.useState(false); 
 //    function handleChange(e) {
@@ -32,7 +33,7 @@ useEffect(() => {
   return (
    
     <div>
-      <CompareSideBtn/>
+      <CompareSideBtn />
       <div class="container-project">
         <div class="row">
           <div class="col-lg-8 col-md-8">

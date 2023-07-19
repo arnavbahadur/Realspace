@@ -1,12 +1,13 @@
-import React, { useEffect, useLayoutEffect } from 'react'
+import React, { useContext} from 'react'
 import "./CompareSideBtn.css"
 import { NavLink } from 'react-router-dom'
-const CompareSideBtn = () => {
-  let Count = 0;
-  useEffect(()=>{
-    Count =   JSON.parse(localStorage.getItem("compareItem")).itemsId.length;
+import CompareContext from '../../CompareContext';
 
-  })
+
+//  let a =   JSON.parse(localStorage.getItem("compareItem"))
+const CompareSideBtn = (props) => {
+  // let Count = 0;
+  const { Count,setCount } = useContext(CompareContext);
   const Total = 4;
   return (
     <div className='compareSideBtn-container'>

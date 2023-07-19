@@ -32,7 +32,7 @@ const HouseRent = () => {
       }, []);
   return (
     <div>
-        <CompareSideBtn/>
+        <CompareSideBtn />
       {/* <div className="pic-filter">pic & filter</div> */}
       <div className="house-header">
         <HomeSectionsHeading purpose={`For Rent`} title='House'/>
