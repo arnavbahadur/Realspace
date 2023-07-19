@@ -20,25 +20,18 @@ function Projectbox({currentContent}) {
 useEffect(() => {
 projectapi();
 }, []);
-
-
-
-  return (
-    <div>
+  return ( 
       <>
   <div className="section over-hide">
     <div className="container">
     {currentContent.map(item=>{
     return   <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id}  />
     // return   <Singleprojectbox content={item} />
-    })}
-   
-     
+    })}  
     </div>
   </div>
 </>
 
-    </div>
   )
 }
 

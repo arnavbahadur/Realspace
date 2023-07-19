@@ -79,10 +79,10 @@ const HousePreview = (props) => {
               </div>              
             </div>
           </div>
-          <hr />
           <div className={`compare-warning-msg ${warned?'active':''}`} >
             <p>Compare item limit is 4, Remove an item to add new</p>
         </div>
+          <hr />
           <div className="housePreview-discription-houseDetailIcon">
             <div>
               <p>Bedrooms</p>

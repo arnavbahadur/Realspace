@@ -23,6 +23,7 @@ import HouseRent from './Pages/House/HouseRent';
 import Commercial from './Pages/Home/Featured/Commercial/Commercial';
 import Residential from './Pages/Home/Featured/Residential/Residential';
 import { Other } from './Pages/Home/Featured/Others/Other';
+import Adminlogin from './Adminpanel/Adminlogin/Adminlogin';
 function App() {
 if(localStorage.compareItem == undefined){
   let temp = {
@@ -55,6 +56,7 @@ if(localStorage.compareItem == undefined){
             <Route path="/commercial" element={<Commercial/>}/>   
             <Route path="/residential" element={<Residential/>}/>   
             <Route path="/others" element={<Other/>}/>   
+            <Route path="/login" element={<Adminlogin/>}></Route>
             
         </Routes> 
         <Footer/>  
