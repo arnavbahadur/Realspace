@@ -10,10 +10,10 @@ const HouseBox = (props) => {
     //     if(JSON.parse(localStorage.compareItem))
     // }
     // console.log('house box' ,props);
-    const compareBtn = () =>{
+    // const compareBtn = () =>{
         // compare list length 
         // compared?
-    }
+    // }
   return (
     <div className='houseBox' >
       <div className="houseBox-body">
@@ -61,8 +61,8 @@ const HouseBox = (props) => {
             </div>
             <div className="houseBox-bottomSection">
                 <div className="houseBox-bottomSection-left">
-                    <p>For {` sale/rent`}</p>
-                    <span className="houseBox-bottomSection-left-price">{props.price}</span>
+                    <p>Price </p>
+                    <span className="houseBox-bottomSection-left-price">{props.price} 💰</span>
                 </div>   
                 <div className="houseBox-bottomSection-right">
                     <div>

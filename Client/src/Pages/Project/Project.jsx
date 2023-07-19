@@ -6,14 +6,15 @@ import axios from "axios";
 import CompareSideBtn from "../../Components/CompareSideBtn/CompareSideBtn";
 import { useParams} from "react-router-dom";
 
-const Project = (props) => {
+
+const Project = ({Content}) => {
   let { id } = useParams();
 //   const [checked, setChecked] = React.useState(false); 
 //    function handleChange(e) {
 //       setChecked(e.target.checked);
 //    }
 
-
+// to bypass the erroe i have put the data which will automatically change as it get a new id
    const [content,setContent]=useState({
     "_id": "64b684475dc905ac06d46dde",
     "title": "mahanvhjjjjjjjjjjjjjjj",
@@ -41,6 +42,7 @@ const Project = (props) => {
             "_id": "64b684475dc905ac06d46de2"
         }
     ],
+    "Gallery": [],
     "addMoreDetails": [],
     "Feature": [],
     "Featured": "bojhyylo",
@@ -55,8 +57,8 @@ const Project = (props) => {
     "location_url": "siyauhi",
     "Note": "ram",
     "CurrentStatus": "ki",
-    "__v": 0,
-    "Gallery": []
+    "__v": 0
+    
 });
    const projectapi = async () => {
      await axios.get(`/projectapi/${id}`).then((pro) => {
@@ -101,11 +103,7 @@ useEffect(() => {
                   {content.description}
                   
                 </p>
-                <h5 class="card-title mb-3"> {content.title}</h5>
-
-                <p>
-                {content.description}
-                </p>
+                
 
                 <h5 class="card-title mb-3">{content.Note}</h5>
                 <p class="mb-0">
@@ -391,11 +389,7 @@ useEffect(() => {
                         <div class="card-img">
                           {/* <!-- <div class="badge images-badge"><i class="mdi mdi-image-filter"></i> 12</div> --> */}
                           {/* <!-- <span class="badge badge-primary">For Sale</span> --> */}
-                          <img
-                            class="card-img-top"
-                            src={content.Floorplan[1].imgUrl}
-                            alt="Card image cap"
-                          />
+                          <img class="card-img-top" src={content.Floorplan[1].imgUrl} alt="Card image cap" />
                         </div>
                         <div class="card-body">
                           {/* <!-- <h2 class="text-primary mb-2 mt-0">$130,000 <small>/Month</small></h2> --> */}
@@ -445,7 +439,10 @@ useEffect(() => {
         </div>
       </div>
       
-      <Gallery/>
+      <Gallery gallery={content.Gallery}/>
+      {/* {content.Gallery.map(item=>{
+          return <Gallery imgUrl={item}  />
+         })} */}
       </div>
     </div>
   );
@@ -453,3 +450,7 @@ useEffect(() => {
 
 export default Project;
 
+
+// {cureentContent.map(item=>{
+//   return <HouseBox title={item.title} location={item.location} price={item.price} location_url={item.location_url} img={item.img} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
+//  })}

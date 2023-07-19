@@ -1,0 +1,187 @@
+gallery wale ka extra
+
+
+<div class="col-lg-4 col-md-4">
+                    <div className="gallery  gallery-container">
+                             <a href="#">
+                                 <div class="card-img">
+                                 {/* thois */}
+                                  {/* <img src={props.Gallery[1].imgUrl} alt="" /> */}
+                                 </div>
+                                 <div class="gallery-name">
+                                     
+                                     <h5 class="gallery-name-title">Fire Place</h5>
+                                     
+                                 </div>
+                                
+                             </a>
+                         </div>
+                     </div>
+                     <div class="col-lg-4 col-md-4">
+                    <div className="gallery  gallery-container">
+                             <a href="#">
+                                 <div class="card-img">
+                                 
+                                   {/* <img src={props.Gallery[2].imgUrl}alt="" />   */}
+                                 </div>
+                                 <div class="gallery-name">
+                                     
+                                     <h5 class="gallery-name-title">Living Room</h5>
+                                     
+                                 </div>
+                                
+                             </a>
+                         </div>
+                     </div>
+
+                     <div class="col-lg-4 col-md-4">
+                    <div className="gallery  gallery-container">
+                             <a href="#">
+                                 <div class="card-img">
+                                 
+                                    {/* <img src={props.Gallery[3].imgUrl} alt="" />  */}
+                                 </div>
+                                 <div class="gallery-name">
+                                     
+                                     <h5 class="gallery-name-title">Ground Floor Lobby</h5>
+                                     
+                                 </div>
+                                
+                             </a>
+                         </div>
+                     </div>
+                     <div class="col-lg-4 col-md-4">
+                    <div className="gallery  gallery-container">
+                             <a href="#">
+                                 <div class="card-img">
+                                 
+                                   {/* <img src={props.Gallery[4].imgUrl} alt="" />   */}
+                                 </div>
+                                 <div class="gallery-name">
+                                     
+                                     <h5 class="gallery-name-title">Garden</h5>
+                                     
+                                 </div>
+                                
+                             </a>
+                         </div>
+                     </div>
+                     <div class="col-lg-4 col-md-4">
+                    <div className="gallery  gallery-container">
+                             <a href="#">
+                                 <div class="card-img">
+                                 
+                                   {/* <img src={props.Gallery[5].imgUrl}alt="" />  */}
+                                 </div>
+                                 <div class="gallery-name">
+                                     
+                                     <h5 class="gallery-name-title">Garden</h5>
+                                     
+                                 </div>
+                                
+                             </a>
+                         </div>
+                     </div>
+
+
+                     <div class="col-lg-4 col-md-4">
+                    <div className="gallery  gallery-container">
+                             <a href="#">
+                                 <div class="card-img">
+                                 
+                                  {/* <img src={props.Gallery[6].imgUrl} alt="" />    */}
+                                 </div>
+                                 <div class="gallery-name">
+                                     
+                                     <h5 class="gallery-name-title">Gym</h5>
+                                     
+                                 </div>
+                                
+                             </a>
+                         </div>
+                     </div>
+                     <div class="col-lg-4 col-md-4">
+                    <div className="gallery  gallery-container">
+                             <a href="#">
+                                 <div class="card-img">
+                                 
+                                  {/* <img src={props.Gallery[7].imgUrl} alt="" />   */}
+                                 </div>
+                                 <div class="gallery-name">
+                                     
+                                     <h5 class="gallery-name-title">Banquet Hall</h5>
+                                     
+                                 </div>
+                                
+                             </a>
+                         </div>
+                     </div>
+
+                     <div class="col-lg-4 col-md-4">
+                    <div className="gallery  gallery-container">
+                             <a href="#">
+                                 <div class="card-img">
+                                 
+                                    {/* <img src={props.Gallery[8].imgUrl} alt="" /> */}
+                                 </div>
+                                 <div class="gallery-name">
+                                     
+                                     <h5 class="gallery-name-title">Jacuzzi</h5>
+                                     
+                                 </div>
+                                
+                             </a>
+                         </div>
+                     </div>
+
+                     <div class="col-lg-4 col-md-4">
+                    <div className="gallery  gallery-container">
+                             <a href="#">
+                                 <div class="card-img">
+                                 
+                                  {/* <img src={props.Gallery[9].imgUrl}alt="" />    */}
+                                 </div>
+                                 <div class="gallery-name">
+                                     
+                                     <h5 class="gallery-name-title">Kitchen</h5>
+                                     
+                                 </div>
+                                
+                             </a>
+                         </div>
+                     </div>
+
+
+
+                     <div class="col-lg-4 col-md-4">
+                    <div className="gallery  gallery-container">
+                             <a href="#">
+                                 <div class="card-img">
+                                 
+                                    {/* <img src={props.Gallery[10].imgUrl} alt="" /> */}
+                                 </div>
+                                 <div class="gallery-name">
+                                     {/*  */}
+                                     <h5 class="gallery-name-title">Lobby</h5>
+                                     {/*  */}
+                                 </div>
+                                 {/* */}
+                             </a>
+                         </div>
+                     </div>
+                     <div class="col-lg-4 col-md-4">
+                    <div className="gallery  gallery-container">
+                             <a href="#">
+                                 <div class="card-img">
+                                    {/* <img src={props.Gallery[11].imgUrl} alt="" /> */}
+                                 </div>
+                                 <div class="gallery-name">
+                                
+                                     <h5 class="gallery-name-title">Bedroom</h5>
+                                    
+                                 </div>
+                                 
+                             </a>
+                         </div>
+                     </div>
+                 </div>

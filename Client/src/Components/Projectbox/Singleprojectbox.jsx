@@ -33,7 +33,7 @@ function Singleprojectbox(props) {
               </div>
             </div>
             
-     </div>
+          </div>
         </div>
       </div>
     </div>

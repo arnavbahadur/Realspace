@@ -22,10 +22,10 @@ router.route("/:id").get((req, res) => {
 
 router.route("/addproject").post((req, res) => {
     //Retrieve data for post
-    const { title,description,imageContainer,    Gallery,addMoreDetails,Photos, Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus} = req.body;
+    const { title,description,imageContainer,Gallery,addMoreDetails,Photos,Floorplan,Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus} = req.body;
     //Create a new Post and save it to DB
     // console.log(req.body);
-    const newProject = new Project({ title,description,imageContainer,   Photos, Gallery,addMoreDetails, Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus, created_at:new Date()});
+    const newProject = new Project({ title,description,imageContainer,Photos,Floorplan, Gallery,addMoreDetails, Feature,Featured,Area,Floors,location,Address,City,Postalcode, Parking,Video_url,location_url, Note,CurrentStatus, created_at:new Date()});
     // Save the new post
     newProject
         .save()
