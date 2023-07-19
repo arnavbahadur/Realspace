@@ -7,8 +7,6 @@ import { useEffect,useState } from 'react';
 
 function Projectbox({currentContent}) {
   
-
-
   const [content,setContent]=useState([]);
   const projectapi = async () => {
     await axios.get('/projectapi').then((pro) => {
@@ -37,17 +35,3 @@ projectapi();
 
 export default Projectbox
 
-
-// {
-//   "title":"bhanu teacher",
-//   "description":"hhhluiya",
-//   "imageContainer":"mata",
-//   "Photos":[],
-//   "addMoreDetails":[],
-//   "Feature":[],
-//   "Featured":"hiya",
-//   "location":"lapata",
-//   "location_url":"google",
-//   "Note":"jsj",
-//   "CurrentStatus":"status"
-// }

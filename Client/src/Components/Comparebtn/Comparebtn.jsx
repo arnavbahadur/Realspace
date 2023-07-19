@@ -1,13 +1,12 @@
-import React, { useContext, useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useContext,  useState } from 'react'
 import CompareContext from '../../CompareContext';
 
 const Comparebtn = (props) => {
     let id = 1 // id = props.id;
-    const [compared,setCompared] = useState(false);
     const { setCount } = useContext(CompareContext);
-
-    const compareBtn = () =>{
+    const [compared,setCompared] = useState(false);
+    const compareBtn = (props) =>{
+        console.log("props" ,props)
         try{
             
             if(localStorage.compareItem === undefined){
@@ -17,7 +16,7 @@ const Comparebtn = (props) => {
                 localStorage.setItem("compareItem",JSON.stringify(temp));
             }
             let compareItem = JSON.parse(localStorage.getItem('compareItem'))
-            if(!compared && compareItem.itemsId.length === 4){
+            if(!props.compared && compareItem.itemsId.length === 4){
                 // warnRef.classlist.add('.active')
                 props.setWarned(true)
                 setTimeout(() => {

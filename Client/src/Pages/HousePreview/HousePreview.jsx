@@ -1,16 +1,15 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import './HousePreview.css'
 import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn';
-import { useLocation, useNavigate } from 'react-router-dom';
 import Comparebtn from '../../Components/Comparebtn/Comparebtn';
 
 const HousePreview = (props) => {
 
-  const [compared,setCompared] = useState(false);
-  const [liked,setliked] = useState(false);
   // const id = location.state?.id;
   let id = 1 // id = props.id;
-  const [warned,setWarned] = useState(false);
+  const [compared,setCompared] = useState(false);
+    const [liked,setliked] = useState(false);
+    const [warned,setWarned] = useState(false);
 
   // console.log('location.state.id ', location.state.id)
   const features = ["swimming pool","gym","Tenis court","Elivator"];
@@ -72,10 +71,10 @@ const HousePreview = (props) => {
                       </div>
                   </div>
               </div>
-              <i className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
+              <i className="fa-solid fa-heart" onClick={()=>props.setliked(!props.liked)} style={{color:`${props.liked?"red":"#aaadb1"}`}}/>
               {/* <i className="fa-solid fa-arrows-turn-to-dots"/> */}
               <div className='compare-icon-container'>
-                <Comparebtn id={props.id} warned={warned} setWarned={setWarned}/>
+                <Comparebtn id={props.id} warned={warned} setWarned={setWarned} />
               </div>              
             </div>
           </div>

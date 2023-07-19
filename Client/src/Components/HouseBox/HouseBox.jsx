@@ -65,7 +65,7 @@ const HouseBox = (props) => {
                         <i className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
                     </div>
                     <div className='compare-icon-container'>                
-                        <Comparebtn id={props.id} warned={warned} setWarned={setWarned}/>
+                        <Comparebtn id={props.id} warned={warned} setWarned={setWarned} />
                     </div>
                 </div>                     
             </div>
