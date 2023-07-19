@@ -6,26 +6,19 @@ const Header = () => {
   return (
     <div className='navbar'>
       <div className="nav-left">
-        {/* LOgo */}
         <NavLink to='/'>
           <img className="headerlogo" src="./Images/logo.png" alt="logo" />
-          {/* <img src={<LOgo/>} alt="logo" /> */}
         </NavLink>
       </div>
-      <div className="nav-center">
-          
+      <div className="nav-center">   
         <div className="nav-center-navigation-box">
         <NavLink to="/">
           <p className='nav-center-navigation-box-text'>Home</p>
           </NavLink>
         </div>
-            
-
         <div className="nav-center-navigation-box"  >
           <div>          
-            {/* < NavLink to="/Project"> */}
               <p className='nav-center-navigation-box-text'>Projects <i class="fa-solid fa-angle-down"/></p>          
-            {/* </NavLink> */}
           </div>
           <div className="header-dropdown projectPage-dropdown ">
             <div className="header-dropdown-menu">
@@ -34,12 +27,10 @@ const Header = () => {
               </NavLink>
               <NavLink to="/previousproject">
                 <p className='nav-center-navigation-box-text'>Prevoius</p>
-              </NavLink>
-              
+              </NavLink>    
             </div>
           </div>
         </div>
-
         <div className="nav-center-navigation-box">
           <div>
               <p className='nav-center-navigation-box-text'>House <i class="fa-solid fa-angle-down"/></p>
@@ -55,10 +46,8 @@ const Header = () => {
             </div>
           </div>
         </div>
-
         <div className="nav-center-navigation-box">
           <div>
-
             {/* <NavLink to="/Contact"> */}
               <p className='nav-center-navigation-box-text'>Contact <i class="fa-solid fa-angle-down"/></p>
             {/* </NavLink>  */}
@@ -74,7 +63,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-
         <div className="nav-center-navigation-box">
         <NavLink to="/About">
           <p className='nav-center-navigation-box-text'>About</p>
@@ -84,19 +72,8 @@ const Header = () => {
         <NavLink to="/Faq">
           <p className='nav-center-navigation-box-text'>FAQ</p>
           </NavLink>
-          
         </div>
-        {/* <div className="nav-center-navigation-box">
-        <NavLink to="/Appointment">
-          <p className='nav-center-navigation-box-text'>Appointment</p>
-        </NavLink>
-        </div> */}
       </div>
-      {/* <div className="nav-right">
-        <div className="nav-right-user">
-          <i className="fa-solid fa-user"/>
-        </div>
-      </div> */}
     </div>
   )
 }

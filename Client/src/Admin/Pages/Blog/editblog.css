@@ -1,0 +1,17 @@
+.edit-box{
+    height: 1%;
+     border: 2px solid black;
+   margin: 10px 20px;
+   /* padding: 20px ; */
+    border-radius: 10px;
+   display: flex; 
+   justify-content: space-between;   
+}
+
+.edit-content{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

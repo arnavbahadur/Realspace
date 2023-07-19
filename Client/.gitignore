@@ -4,7 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-
+.fokat.txt
+/fokat.txt
 # testing
 /coverage
 

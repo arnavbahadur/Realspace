@@ -1,0 +1,101 @@
+.blog-component{
+    max-height: fit-content;
+    max-width: fit-content;
+    padding: 5px;
+}
+
+.blog-component > p{
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+/* add-icon & add-area css in event.css  */
+
+.add-area input,.add-area textarea{
+    display: block;
+    width: 87%;
+    padding: 10px;
+    margin: 20PX;
+    
+    /* background-color: rgba(135, 199, 210, 0.274); */
+}
+
+/* add-area button css is in event.css */
+.blogs{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .blogs > p::before{
+    content: "";
+    position: relative;
+    width: 10px;
+    top: 0;
+    left: 0;
+    border: 2px solid black;
+} */
+
+.blog-box{
+     height: 1%;
+      border: 2px solid black;
+    margin: 10px 20px;
+    /* padding: 20px ; */
+     border-radius: 10px;
+    display: flex; 
+    justify-content: space-between;
+  
+    
+}
+
+.blog-img{
+    /* width: 40%; */
+    /* border: 2px solid grey; */
+    /* margin-right: 15px;
+    border-radius: 8px;
+     */
+     display: flex;
+     position: relative;
+     
+
+}
+.blog-img>img{
+    border-radius: 8px;
+    max-width: 80%;
+    min-height: 80%;
+    
+}
+.blog-img img{
+    width: 3000px;
+    height: 250px;
+}
+.blog-content{
+    padding: 20px;
+}
+.row-1{
+    margin: 10px;
+}
+.row-2{
+    display: flex;
+    padding-right: 30px;
+    justify-content: space-between;
+}
+.row-3{
+    margin-top: 15px;
+    text-align: right;
+}
+
+.delete-btn{
+    border-radius: 20px;
+    padding: 5px 35px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.delete-btn:active{
+    /* font-size: large; */
+    color: #09000a;
+}  
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

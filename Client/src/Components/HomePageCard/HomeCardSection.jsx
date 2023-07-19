@@ -9,10 +9,7 @@ const HomeCardSection = () => {
         <HouseBox/>
         <HouseBox/>
         <HouseBox/>
-        {/* <HouseBox/>
-        <HouseBox/> */}
-
-      </div>
+       </div>
     </div>
   )
 }
