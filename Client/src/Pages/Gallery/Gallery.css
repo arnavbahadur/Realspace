@@ -5,9 +5,23 @@
     justify-content: center;
     align-items: center;
 }
+.gallery{
+    height: max-content;
+}
 .gallery-container {
     padding: 1vh;
     margin: 1vh;
-    box-shadow: 1px 1px 1px 1px grey;
+    box-shadow: 0 5px 7px #e0e5e8;
     border-radius: 2vh;
+}
+.card-img img{ 
+    height: inherit;
+    width: inherit;
+    border-radius: 2vh;
+}
+.gallery-name{
+    padding: 1.5vh;
+}
+.gallery-name-title{
+    text-align: center;
 }

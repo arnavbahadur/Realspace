@@ -14,7 +14,50 @@ const Project = (props) => {
 //    }
 
 
-   const [content,setContent]=useState([]);
+   const [content,setContent]=useState({
+    "_id": "64b684475dc905ac06d46dde",
+    "title": "mahanvhjjjjjjjjjjjjjjj",
+    "description": "afjjjjjjjtaa na jata ",
+    "created_at": "2023-07-18T12:23:35.567Z",
+    "imageContainer": "bharathjkg mata",
+    "Rooms": "xvsdsdf",
+    "Photos": [
+        {
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDAwyRWo5hmiqv3TvuIptNcDrfulFlamWdguolqMTrCXqme39w56lCBNHviD9irxJwiuw&usqp=CAU",
+            "_id": "64b684475dc905ac06d46ddf"
+        },
+        {
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXynVMaQc0zP51HkZhebM97xrFeyLWxaXQGzj5GnzGQwBZ_d0wZm5Hqbh3S2iI3fWnVs&usqp=CAU",
+            "_id": "64b684475dc905ac06d46de0"
+        }
+    ],
+    "Floorplan": [
+        {
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDAwyRWo5hmiqv3TvuIptNcDrfulFlamWdguolqMTrCXqme39w56lCBNHviD9irxJwiuw&usqp=CAU",
+            "_id": "64b684475dc905ac06d46de1"
+        },
+        {
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXynVMaQc0zP51HkZhebM97xrFeyLWxaXQGzj5GnzGQwBZ_d0wZm5Hqbh3S2iI3fWnVs&usqp=CAU",
+            "_id": "64b684475dc905ac06d46de2"
+        }
+    ],
+    "addMoreDetails": [],
+    "Feature": [],
+    "Featured": "bojhyylo",
+    "Parking": "sfdsffd",
+    "Floors": "kbkjk",
+    "location": "jakjbbbbby",
+    "Address": "sdfsd",
+    "Area": "sdfsewf",
+    "City": "dsfsa",
+    "Postalcode": "vsssdfds",
+    "Video_url": "fdsdsff",
+    "location_url": "siyauhi",
+    "Note": "ram",
+    "CurrentStatus": "ki",
+    "__v": 0,
+    "Gallery": []
+});
    const projectapi = async () => {
      await axios.get(`/projectapi/${id}`).then((pro) => {
        setContent(pro.data);
@@ -206,20 +249,20 @@ useEffect(() => {
                 <div class="row mb-3">
                   <div class="col-lg-6 col-md-6">
                     <p>
-                      <strong class="text-dark"> {content.location} </strong> Scheme
-                      No 78-II
+                      <strong class="text-dark">Address:</strong> 
+                      {content.location}
                     </p>
                     <p>
-                      <strong class="text-dark">City :</strong> Indore, MP
+                      <strong class="text-dark">City :</strong> {content.City}
                     </p>
                   </div>
                   <div class="col-lg-6 col-md-6">
                     <p>
-                      <strong class="text-dark">City :</strong> Vijay Nagar
+                      <strong class="text-dark">Area:</strong> {content.Area}
                     </p>
                     <p>
-                      <strong class="text-dark">Zip/Postal Code :</strong>{" "}
-                      452001
+                      <strong class="text-dark">Zip/Postal Code :</strong> {content.Postalcode}
+                      
                     </p>
                   </div>
                 </div>
@@ -322,7 +365,7 @@ useEffect(() => {
                           {/* <!-- <span class="badge badge-primary">For Sale</span> --> */}
                           <img
                             class="card-img-top"
-                            // src= {content.Floorplan[0].imgUrl}
+                            src= {content.Floorplan[0].imgUrl}
                             alt="Card image cap"
                           />
                         </div>
@@ -350,7 +393,7 @@ useEffect(() => {
                           {/* <!-- <span class="badge badge-primary">For Sale</span> --> */}
                           <img
                             class="card-img-top"
-                            // src={content.Floorplan[1].imgUrl}
+                            src={content.Floorplan[1].imgUrl}
                             alt="Card image cap"
                           />
                         </div>
@@ -384,7 +427,7 @@ useEffect(() => {
       <div className="video-map-container">
         <div className="video-container">
         <div className='video-videoSection video-iframe-section'>
-          <h3 className="video-h3">Property video</h3>
+          <h3 className="video-h3">Project Video</h3>
           <div className="housePreview-video housePreview-iframeContainer">
             {/* <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="house" />
             <div><p>Video Tour</p></div> */}
@@ -394,7 +437,7 @@ useEffect(() => {
         </div>
         <div className="map-container">
         <div className='map-mapSection map-iframe-section'>
-          <h3 className="map-h3">Map</h3>
+          <h3 className="map-h3">Project Location</h3>
           <div className="housePreview-map housePreview-iframeContainer">
             <iframe src={content.location_url} width="800" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
           </div>
