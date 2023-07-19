@@ -14,7 +14,50 @@ const Project = (props) => {
 //    }
 
 
-   const [content,setContent]=useState([]);
+   const [content,setContent]=useState({
+    "_id": "64b684475dc905ac06d46dde",
+    "title": "mahanvhjjjjjjjjjjjjjjj",
+    "description": "afjjjjjjjtaa na jata ",
+    "created_at": "2023-07-18T12:23:35.567Z",
+    "imageContainer": "bharathjkg mata",
+    "Rooms": "xvsdsdf",
+    "Photos": [
+        {
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDAwyRWo5hmiqv3TvuIptNcDrfulFlamWdguolqMTrCXqme39w56lCBNHviD9irxJwiuw&usqp=CAU",
+            "_id": "64b684475dc905ac06d46ddf"
+        },
+        {
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXynVMaQc0zP51HkZhebM97xrFeyLWxaXQGzj5GnzGQwBZ_d0wZm5Hqbh3S2iI3fWnVs&usqp=CAU",
+            "_id": "64b684475dc905ac06d46de0"
+        }
+    ],
+    "Floorplan": [
+        {
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDAwyRWo5hmiqv3TvuIptNcDrfulFlamWdguolqMTrCXqme39w56lCBNHviD9irxJwiuw&usqp=CAU",
+            "_id": "64b684475dc905ac06d46de1"
+        },
+        {
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXynVMaQc0zP51HkZhebM97xrFeyLWxaXQGzj5GnzGQwBZ_d0wZm5Hqbh3S2iI3fWnVs&usqp=CAU",
+            "_id": "64b684475dc905ac06d46de2"
+        }
+    ],
+    "addMoreDetails": [],
+    "Feature": [],
+    "Featured": "bojhyylo",
+    "Parking": "sfdsffd",
+    "Floors": "kbkjk",
+    "location": "jakjbbbbby",
+    "Address": "sdfsd",
+    "Area": "sdfsewf",
+    "City": "dsfsa",
+    "Postalcode": "vsssdfds",
+    "Video_url": "fdsdsff",
+    "location_url": "siyauhi",
+    "Note": "ram",
+    "CurrentStatus": "ki",
+    "__v": 0,
+    "Gallery": []
+});
    const projectapi = async () => {
      await axios.get(`/projectapi/${id}`).then((pro) => {
        setContent(pro.data);
@@ -322,7 +365,7 @@ useEffect(() => {
                           {/* <!-- <span class="badge badge-primary">For Sale</span> --> */}
                           <img
                             class="card-img-top"
-                            // src= {content.Floorplan[0].imgUrl}
+                            src= {content.Floorplan[0].imgUrl}
                             alt="Card image cap"
                           />
                         </div>
@@ -350,7 +393,7 @@ useEffect(() => {
                           {/* <!-- <span class="badge badge-primary">For Sale</span> --> */}
                           <img
                             class="card-img-top"
-                            // src={content.Floorplan[1].imgUrl}
+                            src={content.Floorplan[1].imgUrl}
                             alt="Card image cap"
                           />
                         </div>
