@@ -26,7 +26,7 @@ const Home = () => {
     <Filter/>
     <Feature/>
     {/* <Featured/> */}
-    {/* <MyModal/> */}
+    <MyModal/>
     <HouseSale/>
     <HouseRent/>
     <Ourpartners/>
