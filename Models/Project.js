@@ -21,8 +21,19 @@ const projectSchema = new Schema({
         type: String,
         required: true
     },
+    Gallery: [
+        {   
+            imgUrl: {
+                type: String,
+                required: false
+            },
+            imgname: {
+                type: String
+            }
+        }
+    ],
     Photos: [
-        {
+        {   
             imgUrl: {
                 type: String,
                 required: false
@@ -34,6 +45,9 @@ const projectSchema = new Schema({
             imgUrl: {
                 type: String,
                 required: false
+            },
+            imgname: {
+                type: String
             }
         }
     ],
