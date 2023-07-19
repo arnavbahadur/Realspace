@@ -4,13 +4,16 @@ import './index.css';
 import App from './App'; 
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import  { CompareContextProvider } from './CompareContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+    <CompareContextProvider>
      <React.StrictMode>
        <App />
      </React.StrictMode>
+     </CompareContextProvider>
   </BrowserRouter>
 );
 

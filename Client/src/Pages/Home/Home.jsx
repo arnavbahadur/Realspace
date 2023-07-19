@@ -1,6 +1,6 @@
 import Carousel from './Carousel'
 import Popup from './MyModal'
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import MyModal from './MyModal';
 import Ourpartners from './Ourpartners/Partner'
 import Filter from './Filter';
@@ -12,7 +12,8 @@ import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn';
 setTimeout(() => {
   <Popup/>
 }, 3000);
-const Home = () => {
+const Home = (props) => {
+
   useEffect(() => {
   const timer = setTimeout(() => {
     <Popup/>
@@ -21,7 +22,7 @@ const Home = () => {
 }, []);
   return (
     <div>
-      <CompareSideBtn/>
+      <CompareSideBtn Count={props.Count} setCount={props.setCount}/>
     <Carousel/>
     <Filter/>
     <Feature/>

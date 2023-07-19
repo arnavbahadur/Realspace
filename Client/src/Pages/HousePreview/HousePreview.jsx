@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import './HousePreview.css'
 import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn';
-import { useLocation } from 'react-router-dom';
+import Comparebtn from '../../Components/Comparebtn/Comparebtn';
 
-const HousePreview = () => {
+const HousePreview = (props) => {
+
+  // const id = location.state?.id;
+  let id = 1 // id = props.id;
   const [compared,setCompared] = useState(false);
-  const [liked,setliked] = useState(false);
-  const location = useLocation();
-  const id = location.state?.id;
+    const [liked,setliked] = useState(false);
+    const [warned,setWarned] = useState(false);
+
   // console.log('location.state.id ', location.state.id)
   const features = ["swimming pool","gym","Tenis court","Elivator"];
   const featuresElem = features.map((item)=>{
@@ -68,20 +71,16 @@ const HousePreview = () => {
                       </div>
                   </div>
               </div>
-              <i className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
+              <i className="fa-solid fa-heart" onClick={()=>props.setliked(!props.liked)} style={{color:`${props.liked?"red":"#aaadb1"}`}}/>
               {/* <i className="fa-solid fa-arrows-turn-to-dots"/> */}
               <div className='compare-icon-container'>
-                  <i className="fa-solid fa-arrows-turn-to-dots" onClick={()=>{setCompared(!compared)}} style={{color:`${compared?'black':'#aaadb1'}`}}/>                    
-                  <div className="iLabel">
-                      <div className="iLabel-up-arrow"></div>
-                      <div className="iLabel-text ">
-                          <p>Compare</p>
-                      </div>
-                  </div>
-              </div>
-              
+                <Comparebtn id={props.id} warned={warned} setWarned={setWarned} />
+              </div>              
             </div>
           </div>
+          <div className={`compare-warning-msg ${warned?'active':''}`} >
+            <p>Compare item limit is 4, Remove an item to add new</p>
+        </div>
           <hr />
           <div className="housePreview-discription-houseDetailIcon">
             <div>
