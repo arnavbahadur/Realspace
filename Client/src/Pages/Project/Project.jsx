@@ -206,20 +206,20 @@ useEffect(() => {
                 <div class="row mb-3">
                   <div class="col-lg-6 col-md-6">
                     <p>
-                      <strong class="text-dark"> {content.location} </strong> Scheme
-                      No 78-II
+                      <strong class="text-dark">Address:</strong> 
+                      {content.location}
                     </p>
                     <p>
-                      <strong class="text-dark">City :</strong> Indore, MP
+                      <strong class="text-dark">City :</strong> {content.City}
                     </p>
                   </div>
                   <div class="col-lg-6 col-md-6">
                     <p>
-                      <strong class="text-dark">City :</strong> Vijay Nagar
+                      <strong class="text-dark">Area:</strong> {content.Area}
                     </p>
                     <p>
-                      <strong class="text-dark">Zip/Postal Code :</strong>{" "}
-                      452001
+                      <strong class="text-dark">Zip/Postal Code :</strong> {content.Postalcode}
+                      
                     </p>
                   </div>
                 </div>
@@ -384,7 +384,7 @@ useEffect(() => {
       <div className="video-map-container">
         <div className="video-container">
         <div className='video-videoSection video-iframe-section'>
-          <h3 className="video-h3">Property video</h3>
+          <h3 className="video-h3">Project Video</h3>
           <div className="housePreview-video housePreview-iframeContainer">
             {/* <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="house" />
             <div><p>Video Tour</p></div> */}
@@ -394,7 +394,7 @@ useEffect(() => {
         </div>
         <div className="map-container">
         <div className='map-mapSection map-iframe-section'>
-          <h3 className="map-h3">Map</h3>
+          <h3 className="map-h3">Project Location</h3>
           <div className="housePreview-map housePreview-iframeContainer">
             <iframe src={content.location_url} width="800" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
           </div>
