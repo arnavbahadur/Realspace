@@ -9,17 +9,17 @@ function Projectbox({currentContent}) {
   
 
 
-//   const [content,setContent]=useState([]);
-//   const projectapi = async () => {
-//     await axios.get('/projectapi').then((pro) => {
-//       setContent(pro.data);
-//       console.log(pro.data)
-//     });
-//   };
-//   const cureentContent = content.slice(0,3);
-// useEffect(() => {
-// projectapi();
-// }, []);
+  const [content,setContent]=useState([]);
+  const projectapi = async () => {
+    await axios.get('/projectapi').then((pro) => {
+      setContent(pro.data);
+      console.log(pro.data)
+    });
+  };
+  // const cureentContent = content.slice(0,3);
+useEffect(() => {
+projectapi();
+}, []);
 
 
 
@@ -29,8 +29,8 @@ function Projectbox({currentContent}) {
   <div className="section over-hide">
     <div className="container">
     {currentContent.map(item=>{
-     return   <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id}  />
-    {/* return   <Singleprojectbox content={item} /> */}
+    return   <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id}  />
+    // return   <Singleprojectbox content={item} />
     })}
    
      

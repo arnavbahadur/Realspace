@@ -17,7 +17,6 @@ import About from './Pages/About/Ourteam/About';
 import Morefloor from './Pages/Project/Morefloor';
 import CurrentProject from './Pages/Current/CurrentProject';
 import PreviousProject from './Pages/Previous/PreviousProject';
-
 import Dropapp from './Pages/Home/Dropapp.jsx';
 import HouseSale from './Pages/House/HouseSale';
 import HouseRent from './Pages/House/HouseRent';
@@ -35,14 +34,14 @@ function App() {
             <Route path="/project/:id" element={<Project/>}/>
             <Route path="/about" element={<About/>}/>
             {/* <Route path="/houseBox" element={<HouseBox/>}/> */}
-            <Route path="/housePreview" element={<HousePreview/>}/>
+            <Route path="/housePreview/:id" element={<HousePreview/>}/>
             <Route path="/faq" element={<Faq/>}/>
             <Route path="/projectbox" element={<Projectbox/>}/>
             <Route path="/appointment" element={<Appointment/>}/>
             <Route path="/mymodal" element={<MyModal/>}/>
             <Route path='/housesale' element={<HouseSale/>}/>     
             <Route path='/houserent' element={<HouseRent/>}/>     
-            <Route path="/mymodal" element={<MyModal/>}/>  
+            {/* <Route path="/mymodal" element={<MyModal/>}/>   */}
             <Route path="/viewmore" element={<Morefloor/>}/>   
             <Route path="/currentproject" element={<CurrentProject/>}/>   
             <Route path="/previousproject" element={<PreviousProject/>}/>   

@@ -10,6 +10,10 @@ const PropertySchema = new Schema ({
         type: String,
         required: true 
     },
+    Purpose: {
+        type: String,
+        required: true 
+    },
     location_url: {
         type: String,
         required: true 
@@ -40,6 +44,10 @@ const PropertySchema = new Schema ({
         required: true,
         default: 0
     },
+    Listingyear: {
+        type: Number,
+        required: true
+    },
     imageContainer: {
         type: String,
         required: true
@@ -55,6 +63,7 @@ const PropertySchema = new Schema ({
     Description: {
         type: String
     },
+
     Featured: {
         type: String
     },

@@ -17,7 +17,19 @@ const projectSchema = new Schema({
         type: String,
         required: true
     },
+    Rooms: {
+        type: String,
+        required: true
+    },
     Photos: [
+        {
+            imgUrl: {
+                type: String,
+                required: false
+            }
+        }
+    ],
+    Floorplan: [
         {
             imgUrl: {
                 type: String,
@@ -48,7 +60,35 @@ const projectSchema = new Schema({
     Featured: {
         type: String
     },
+     Parking: {
+        type: String,
+        required: true 
+    },
+     Floors: {
+        type: String,
+        required: true 
+    },
     location: {
+        type: String,
+        required: true 
+    },
+    Address: {
+        type: String,
+        required: true 
+    },
+    Area: {
+        type: String,
+        required: true 
+    },
+     City: {
+        type: String,
+        required: true 
+    },
+     Postalcode: {
+        type: String,
+        required: true 
+    },
+    Video_url: {
         type: String,
         required: true 
     },

@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
 import './HousePreview.css'
 import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn';
+import { useLocation } from 'react-router-dom';
+
 const HousePreview = () => {
+  const [compared,setCompared] = useState(false);
   const [liked,setliked] = useState(false);
+  const location = useLocation();
+  const id = location.state?.id;
+  // console.log('location.state.id ', location.state.id)
   const features = ["swimming pool","gym","Tenis court","Elivator"];
   const featuresElem = features.map((item)=>{
     return(
@@ -10,6 +16,7 @@ const HousePreview = () => {
     )
 
   })
+
   return (
     <div className='housePreivew-page'> 
     <CompareSideBtn/>
@@ -51,9 +58,28 @@ const HousePreview = () => {
               </p>
             </div>
             <div className='housePreview-discription-top-right'>
-              <i className="fa-solid fa-share"/>
+              {/* <i className="fa-solid fa-share"/> */}
+              <div className='compare-icon-container'>
+                  <i className="fa-solid fa-share" />                    
+                  <div className="iLabel">
+                      <div className="iLabel-up-arrow"></div>
+                      <div className="iLabel-text ">
+                          <p>Share</p>
+                      </div>
+                  </div>
+              </div>
               <i className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
-              <i className="fa-solid fa-arrows-turn-to-dots"/>
+              {/* <i className="fa-solid fa-arrows-turn-to-dots"/> */}
+              <div className='compare-icon-container'>
+                  <i className="fa-solid fa-arrows-turn-to-dots" onClick={()=>{setCompared(!compared)}} style={{color:`${compared?'black':'#aaadb1'}`}}/>                    
+                  <div className="iLabel">
+                      <div className="iLabel-up-arrow"></div>
+                      <div className="iLabel-text ">
+                          <p>Compare</p>
+                      </div>
+                  </div>
+              </div>
+              
             </div>
           </div>
           <hr />

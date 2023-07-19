@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
  .navbar{
     /* background-color: #0005; */
     /* background: transparent; */
@@ -28,12 +27,19 @@
     align-items: center;
     /* box-sizing: border-box; */
     width: 15%;
+    
     height:100%;
 }
-.nav-left img{
+
+.headerlogo{
+    max-width: 120px;
+    height: 95%;
+   margin-left: 10%;
+}
+/* .nav-left img{
     width: 100%;
     height: 78%;
-}
+} */
 .nav-center{
     display: flex;
     justify-content: space-between;

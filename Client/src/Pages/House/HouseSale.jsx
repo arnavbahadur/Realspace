@@ -39,7 +39,7 @@ const HouseSale = () => {
       </div>
       <div className="house-card-section">
         {currentContent.map(item=>{
-          return <HouseBox title={item.title} location={item.location} price={item.price} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
+          return <HouseBox title={item.title} location={item.location} Purpose={item.Purpose} price={item.price} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
         })}
       </div>
       <div className="house-pageNumber">
