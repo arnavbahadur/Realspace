@@ -16,7 +16,7 @@ const Comparebtn = (props) => {
                 localStorage.setItem("compareItem",JSON.stringify(temp));
             }
             let compareItem = JSON.parse(localStorage.getItem('compareItem'))
-            if(!props.compared && compareItem.itemsId.length === 4){
+            if(!compared && compareItem.itemsId.length === 4){
                 // warnRef.classlist.add('.active')
                 props.setWarned(true)
                 setTimeout(() => {
@@ -28,6 +28,7 @@ const Comparebtn = (props) => {
                 if(compared){
                     for(let i = 0; i < 4|| i < compareItem.itemsId.length;i++){      //to remove the item
                         compareItem.itemsId[i]===id?compareItem.itemsId.splice(i,1):console.log("compare id is not removed,some error is there");
+                        break;
                     }    
                     console.log("compareItem",compareItem.itemsId)
                 }
