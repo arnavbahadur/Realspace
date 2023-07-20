@@ -17,7 +17,7 @@
 }
 .housePreview-section-2{
     /* background-color: aliceblue; */
-    margin: 0 5vw
+    /* margin: 0 5vw */
 }
 .housePreview-top{
     /* margin: 10px 5vw; */
@@ -40,11 +40,12 @@
 .housePreview-discription{
     /* background-color: whitesmoke; */
     background-color: aliceblue;
-    margin: 0 50px;
+    /* margin: 0 50px; */
     padding: 10px ;
 }
 .housePreview-discription-top{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 10px;
@@ -53,6 +54,7 @@
 .housePreview-discription-top-right{
     padding-right: 20px;
     display: flex;
+    flex-wrap: wrap;
 }
 .housePreview-propertyid{
     margin: 20px 10px;
@@ -85,6 +87,7 @@
 .housePreview-discription-houseDetailIcon{
     margin: 10px 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
