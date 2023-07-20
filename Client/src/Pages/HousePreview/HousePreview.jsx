@@ -13,9 +13,13 @@ const HousePreview = (props) => {
   const propertyapi = async () => {
     await axios.get(`/propertyapi/${id}`).then((property) => {
       setContent(property.data);
-      console.log(property.data)
+      console.log("bhanu",property.Gallery)
+      console.log("aman",property.data)
     });
   };   
+
+console.log("hsfhsuf",content.Gallery)
+ 
 
 
 useEffect(() => {
@@ -84,8 +88,8 @@ propertyapi();
           <div className="housePreview-discription-top">
             <div className='housePreview-discription-top-left'>
               <p className="housePreview-propertyid">
-                <span style={{fontWeight:'bold'}}>Property Id :</span>
-                <span>{content._id}</span>
+                <span style={{fontWeight:'bold'}}>Rating of Property</span>
+                {/* <span>{content._id}</span> */}
                 <i className="fa-solid fa-copy"/>
               </p>
             </div>
@@ -145,11 +149,12 @@ propertyapi();
             <h3>Discription</h3>
             <p>{content.Description} </p>
           </div>
-          <div className="housediscription-textArea">
+          {/* <div className="housediscription-textArea">
             <h3>Additional details</h3>
-            <p>(content.Nearby.place)
+            <p>{content.Nearby}
             </p>
-          </div>
+          </div> */}
+          {/* addirtional detail are crearing error */}
           <div className="housediscription-features">
             <h3>Features</h3>
             <ul> {content.Feature}</ul>  
@@ -171,7 +176,11 @@ propertyapi();
             <iframe src={content.location_url} width="800" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
           </div>
         </div>
+
         {/* <Gallery gallery={content.Gallery}/> */}
+        
+        {/* <Gallery/> */}
+      
       </div>
       
     </div>

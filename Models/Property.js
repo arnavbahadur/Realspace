@@ -72,6 +72,7 @@ const PropertySchema = new Schema ({
             }
         }
     ],
+    
     Gallery: [
         {   
             imgUrl: {
