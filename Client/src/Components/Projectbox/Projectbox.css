@@ -90,11 +90,11 @@
   position: absolute;
   display: block;
   /* left: -60px; */
-  right: 5px;
-  top: -140px;
+  right: -3px;
+  top: -71px;
   
-  z-index: 5;
-  width: calc(49% + 150px);
+  z-index: 4;
+  max-width:  calc(54% + 160px);
   transform: translate3d(0, 0, 45px) perspective(100px);
   opacity: 1;
   pointer-events: auto;
@@ -121,11 +121,10 @@
 .img-3{
   position: absolute;
   display: block;
-  right: 8px;
- bottom: 10px;
-  z-index: -4;
-  width: calc(79% + 48px);
- 
+  /* right: -5px; */
+ bottom: 2px;
+  z-index: 5;
+ max-width: calc(54% + 160px);
   transform: translate3d(0, 0, 55px) perspective(100px) scale(1);
   opacity: 1;
   pointer-events: auto;

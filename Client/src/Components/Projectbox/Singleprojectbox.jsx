@@ -9,10 +9,7 @@ function Singleprojectbox(props) {
     <div onClick={()=>{
       navigate(`/project/${props.id}`)
     }}>
-       <div className="row full-height justify-content-center">
-
-        <div className="col-12 text-center align-self-center py-5">
-         
+      
             <div className="card-3d-wrap mx-auto">
               <div className="card-3d-wrapper">
                 <div className="card-front">
@@ -35,8 +32,7 @@ function Singleprojectbox(props) {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+    
   )
 }
 

@@ -4,6 +4,7 @@ import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn'
 import PageNum from '../../Components/PageNum/PageNum'
 import Projectbox from '../../Components/Projectbox/Projectbox'
 import axios from 'axios'
+import Singleprojectbox from '../../Components/Projectbox/Singleprojectbox'
 
 const CurrentProject = ({purpose}) => {
   const[currentPage,setCurrentPage]=useState(1);
@@ -36,8 +37,12 @@ const CurrentProject = ({purpose}) => {
       <div className="house-header">
         <HomeSectionsHeading purpose={purpose} title='House'/>
       </div>
-     
-      <Projectbox currentContent={currentContent}/>
+      <div className="house-card-section">
+        {currentContent.map(item=>{
+          return <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id} />
+        })}
+      </div>
+      {/* <Projectbox currentContent={currentContent}/> */}
       <div className="house-pageNumber">
         <PageNum setCurrentPage={setCurrentPage} currentPage={currentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
       </div>
