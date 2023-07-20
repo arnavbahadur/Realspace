@@ -1,7 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
 import HomeSectionsHeading from '../../../../Components/HomeSectionsHeading/HomeSectionsHeading'
-import HomeCardSection from '../../../../Components/HomePageCard/HomeCardSection'
 import CompareSideBtn from '../../../../Components/CompareSideBtn/CompareSideBtn'
 import PageNum from '../../../../Components/PageNum/PageNum'
 import Projectbox from '../../../../Components/Projectbox/Projectbox'

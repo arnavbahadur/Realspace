@@ -27,14 +27,11 @@ const HouseRent = (props) => {
             <HomeSectionsHeading title='Houses' purpose='For Rent' comment='Rent the houses with good enviroment'/>
         </div>
         <div className="home-houseRent-cardSection">
-        <div className="cardSection">
-         {cureentContent.map(item=>{
-          return <HouseBox title={item.title} location={item.location} price={item.price} location_url={item.location_url} img={item.img} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
-         })}
-         
-     
-
-      </div>
+          <div className="house-card-section">
+            {cureentContent.map(item=>{
+              return <HouseBox title={item.title} location={item.location} price={item.price} location_url={item.location_url} img={item.img} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
+            })}
+          </div>  
         </div>
       </div>
     </div>

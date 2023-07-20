@@ -1,11 +1,12 @@
-import React, { useContext, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import './HouseBox.css'
 import { NavLink, useNavigate } from 'react-router-dom';
 import Comparebtn from '../Comparebtn/Comparebtn';
 const HouseBox = (props) => {
     let id = 1 // id = props.id;
-   
-    const [compared,setCompared] = useState(false);
+   let [ok,setOk] = useState(false);
+   console.log("ok",ok)
+    // const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
     const [warned,setWarned] = useState(false);
     const navigate = useNavigate();
@@ -18,9 +19,9 @@ const HouseBox = (props) => {
             <div className="houseBox-top-tag-box">
                 {`${props.title} ,${props._id}`}
             </div>
-            <NavLink to={`/housepreview/${id}`} >
-                <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview`,{state:{id:id}})}}/>
-            </NavLink>
+            {/* <NavLink to={`/housepreview/${id}`} > */}
+                <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview/${id}`,{state:{ id :id,ok:ok }})}}/>
+            {/* </NavLink> */}
             <div className="houseBox-imgsection-textArea">
                 <p> { props.Purpose}</p>
             </div>
@@ -65,7 +66,7 @@ const HouseBox = (props) => {
                         <i className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
                     </div>
                     <div className='compare-icon-container'>                
-                        <Comparebtn id={props.id} warned={warned} setWarned={setWarned} />
+                        <Comparebtn id={id} warned={warned} setWarned={setWarned}  />
                     </div>
                 </div>                     
             </div>
