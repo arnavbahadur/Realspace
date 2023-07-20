@@ -9,9 +9,7 @@ const HousePreview = (props) => {
   console.log("location",location)  //location.state brings data passed in navigate hook
   console.log("location",location.state?.id)  //location.state brings data passed in navigate hook
   const id = location.state?.id;
-  // location.state.setOk ( true);
-  console.log("location.state.ok",location.state?.ok)  //location.state brings data passed in navigate hook
-  
+  // location.state.setOk ( true);  
   // let id = 1 // id = props.id;
   // const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
