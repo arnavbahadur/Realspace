@@ -43,7 +43,7 @@ const HouseRent = () => {
         })}
       </div>
       <div className="house-pageNumber">
-        <PageNum setCurrentPage={setCurrentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
+        <PageNum setCurrentPage={setCurrentPage} currentPage={currentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
       </div>
     </div>
   )

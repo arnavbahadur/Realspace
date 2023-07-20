@@ -6,10 +6,14 @@ import { useLocation } from 'react-router-dom';
 
 const HousePreview = (props) => {
   const location = useLocation()
+  console.log("location",location)  //location.state brings data passed in navigate hook
   console.log("location",location.state?.id)  //location.state brings data passed in navigate hook
   const id = location.state?.id;
+  // location.state.setOk ( true);
+  console.log("location.state.ok",location.state?.ok)  //location.state brings data passed in navigate hook
+  
   // let id = 1 // id = props.id;
-  const [compared,setCompared] = useState(false);
+  // const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
     const [warned,setWarned] = useState(false);
 
@@ -73,10 +77,10 @@ const HousePreview = (props) => {
                       </div>
                   </div>
               </div>
-              <i className="fa-solid fa-heart" onClick={()=>props.setliked(!props.liked)} style={{color:`${props.liked?"red":"#aaadb1"}`}}/>
+              <i className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
               {/* <i className="fa-solid fa-arrows-turn-to-dots"/> */}
               <div className='compare-icon-container'>
-                <Comparebtn id={props.id} warned={warned} setWarned={setWarned} />
+                <Comparebtn id={id} warned={warned} setWarned={setWarned} />
               </div>              
             </div>
           </div>

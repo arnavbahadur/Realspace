@@ -3,13 +3,14 @@ import HomeSectionsHeading from '../../../Components/HomeSectionsHeading/HomeSec
 // import HomeCardSection from '../../../Components/HomePageCard/HomeCardSection'
 import axios from "axios";
 import HouseBox from '../../../Components/HouseBox/HouseBox'; 
+import PageNum from '../../../Components/PageNum/PageNum';
 
 
 
 // house sekk wale me abhi ke lie mene rent se connect kia he kie isse change na kre plz
 const HouseSale = (props) => {
-  
-
+    const[currentPage,setCurrentPage]=useState(1);
+    const contentPerPage = 3;
     const [content,setContent]=useState([]);
     const callapi = async () => {
       await axios.get(`/propertyrentapi/`).then((res) => {
@@ -17,7 +18,11 @@ const HouseSale = (props) => {
         // console.log(res.data)
       });
     };
-    const currentContent = content.slice(0,3);
+    const lastIndex = currentPage * contentPerPage;
+    const startIndex = lastIndex - contentPerPage
+    const currentContent = content.slice(startIndex,lastIndex);
+    const totalContent = content.length;
+    // const currentContent = content.slice(0,6);
     useEffect(() => {
       callapi();
     }, []);
@@ -29,11 +34,14 @@ const HouseSale = (props) => {
             <HomeSectionsHeading title='Houses' purpose='For Sale' comment='comment'/>
         </div>
         <div className="home-houseSale-cardSection">
-        <div className="cardSection">
-         {currentContent.map(item=>{
-          return <HouseBox title={item.title} location={item.location} price={item.price} Purpose={item.Purpose} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
-         })}
-      </div>
+          <div className="house-card-section">
+            {currentContent.map(item=>{
+              return <HouseBox title={item.title} location={item.location} price={item.price} Purpose={item.Purpose} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
+            })}
+          </div>
+        </div>
+        <div className="house-pageNumber">
+          <PageNum setCurrentPage={setCurrentPage} currentPage={currentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
         </div>
       </div>
     </div>
