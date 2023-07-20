@@ -10,8 +10,7 @@ function Footer() {
       <div className="footer-box">
         <div className="single_footer">
         <h4>Realspace group</h4>
-          <ul>
-            
+          <ul> 
               <NavLink to={"/"}>
             <img src="./Images/logo.png" alt="realspace logo" className="footerlogo" />
             </NavLink>
@@ -89,7 +88,6 @@ function Footer() {
           </ul>
         </div>
       </div>
-      {/*- END COL */}
       <div className="footer-box">
         <div className="single_footer single_footer_address">
           <h4>Subscribe today</h4>
@@ -116,7 +114,6 @@ function Footer() {
             <li>
               <a href="mailto: realspacegroups@gmail.com">
               <img className="footergmail" src="/Images/gmail.png" alt="" />
-             
               </a>
             </li>
             <li>
@@ -132,22 +129,16 @@ function Footer() {
           </ul>
         </div>
       </div>
-      {/*- END COL */}
     </div>
-    {/*- END ROW */}
     <div className="bottom-right">
       <div className="col-lg-12 col-sm-12 col-xs-12">
         <p className="copyright">
           Copyright © 2023 <a href="#">Realspace group</a>.
         </p>
       </div>
-      {/*- END COL */}
     </div>
-    {/*- END ROW */}
   </div>
-  {/*- END CONTAINER */}
 </div>
-
   )
 }
 

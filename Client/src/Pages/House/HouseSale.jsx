@@ -6,7 +6,8 @@ import HouseBox from '../../Components/HouseBox/HouseBox'
 import axios from "axios";
 import './House.css'
 
-const HouseSale = () => {
+const HouseSale = (props) => {
+
     const[currentPage,setCurrentPage]=useState(1);
     const[content,setContent] = useState([])    //fetch data from api and
     const contentPerPage = 9;
@@ -43,7 +44,7 @@ const HouseSale = () => {
         })}
       </div>
       <div className="house-pageNumber">
-        <PageNum setCurrentPage={setCurrentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
+        <PageNum setCurrentPage={setCurrentPage} currentPage={currentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
       </div>
     </div>
   )

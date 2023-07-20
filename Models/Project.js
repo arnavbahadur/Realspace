@@ -17,10 +17,10 @@ const projectSchema = new Schema({
         type: String,
         required: true
     },
-    Rooms: {
-        type: String,
-        required: true
-    },
+    // Rooms: {
+    //     type: String,
+    //     required: true
+    // },
     Gallery: [
         {   
             imgUrl: {
@@ -74,10 +74,10 @@ const projectSchema = new Schema({
     Featured: {
         type: String
     },
-     Parking: {
-        type: String,
-        required: true 
-    },
+    //  Parking: {
+    //     type: String,
+    //     required: true 
+    // },
      Floors: {
         type: String,
         required: true 
@@ -98,14 +98,14 @@ const projectSchema = new Schema({
         type: String,
         required: true 
     },
-     Postalcode: {
-        type: String,
-        required: true 
-    },
-    Video_url: {
-        type: String,
-        required: true 
-    },
+    //  Postalcode: {
+    //     type: String,
+    //     required: true 
+    // },
+    // Video_url: {
+    //     type: String,
+    //     required: true 
+    // },
     location_url: {
         type: String,
         required: true 

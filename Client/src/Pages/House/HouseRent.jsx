@@ -32,7 +32,7 @@ const HouseRent = () => {
       }, []);
   return (
     <div>
-        <CompareSideBtn/>
+        <CompareSideBtn />
       {/* <div className="pic-filter">pic & filter</div> */}
       <div className="house-header">
         <HomeSectionsHeading purpose={`For Rent`} title='House'/>
@@ -43,7 +43,7 @@ const HouseRent = () => {
         })}
       </div>
       <div className="house-pageNumber">
-        <PageNum setCurrentPage={setCurrentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
+        <PageNum setCurrentPage={setCurrentPage} currentPage={currentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
       </div>
     </div>
   )

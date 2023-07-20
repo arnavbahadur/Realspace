@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import HomeSectionsHeading from '../../Components/HomeSectionsHeading/HomeSectionsHeading'
-import HomeCardSection from '../../Components/HomePageCard/HomeCardSection'
 import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn'
 import PageNum from '../../Components/PageNum/PageNum'
 import Projectbox from '../../Components/Projectbox/Projectbox'
@@ -9,11 +8,11 @@ import Singleprojectbox from '../../Components/Projectbox/Singleprojectbox'
 
 
 
-const PreviousProject = ({purpose}) => {
+const PreviousProject = (props) => {
   // const House = (props) => {
     const[currentPage,setCurrentPage]=useState(1);
     const[content,setContent] = useState([])    //fetch data from api and
-    const ContentPerPage = 9;
+    const contentPerPage = 9;
     
     // useEffect(()=>{
     //   fetch("https://jsonplaceholder.typicode.com/content").then()
@@ -25,8 +24,8 @@ const PreviousProject = ({purpose}) => {
       });
     };
 
-    const lastIndex = currentPage * ContentPerPage;
-    const startIndex = lastIndex - ContentPerPage
+    const lastIndex = currentPage * contentPerPage;
+    const startIndex = lastIndex - contentPerPage
     const currentContent = content.slice(startIndex,lastIndex);
     const totalContent = content.length;// content.length is actuall 100 is for test
  
@@ -37,7 +36,7 @@ const PreviousProject = ({purpose}) => {
     <div>
         <CompareSideBtn/>
       <div className="house-header">
-        <HomeSectionsHeading purpose={purpose} title='House'/>
+        <HomeSectionsHeading purpose={props.purpose} title='House'/>
       </div>
       {/* <Projectbox currentContent={currentContent}/> */}
       <div className="house-card-section">
@@ -46,7 +45,7 @@ const PreviousProject = ({purpose}) => {
         })}
       </div>
       <div className="house-pageNumber">
-        <PageNum setCurrentPage={setCurrentPage} totalContent={totalContent} ContentPerPage={ContentPerPage}/>
+        <PageNum setCurrentPage={setCurrentPage} currentPage={currentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
       </div>
     </div>
   )

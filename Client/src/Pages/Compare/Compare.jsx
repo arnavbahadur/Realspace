@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Compare.css'
 const Compare = () => {
+    const [content,setContent] = useState([]);
+    const items = localStorage.getItem('compareItem')
+    const callapi = async ()=>{
+        const response = await fetch('url',{state:{
+            body:items
+        }})
+        const result = await JSON.parse(response)
+    }
     const compareItemDetail =[
         {
             image:"https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",

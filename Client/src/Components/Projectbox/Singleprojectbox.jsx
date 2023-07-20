@@ -25,12 +25,12 @@ function Singleprojectbox(props) {
                         src="./Images/corporate-logo.png"
                         alt=""
                       />
+                      {/* yaha src me {props.Photos[1].imgUrl} dalna he */}
                     </div>
                     </NavLink>
               </div>
             </div>
-            
-     </div>
+          </div>
         </div>
     
   )

@@ -1,30 +1,27 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import './HouseBox.css'
 import { NavLink, useNavigate } from 'react-router-dom';
+import Comparebtn from '../Comparebtn/Comparebtn';
 const HouseBox = (props) => {
-    const navigate = useNavigate();
-    const likedRef = useRef();
-    const [compared,setCompared] = useState(false);
+    let id = 1 // id = props.id;
+   let [ok,setOk] = useState(false);
+   console.log("ok",ok)
+    // const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
-    // const canCompare = () =>{
-    //     if(JSON.parse(localStorage.compareItem))
-    // }
-    // console.log('house box' ,props);
-    const compareBtn = () =>{
-        // compare list length 
-        // compared?
-    }
-  return (
+    const [warned,setWarned] = useState(false);
+    const navigate = useNavigate();
+    
+    return (
     <div className='houseBox' >
       <div className="houseBox-body">
         <div className="houseBox-imgSection">
             {/* img */}
             <div className="houseBox-top-tag-box">
-                {props.title}
+                {`${props.title} ,${props._id}`}
             </div>
-            <NavLink to={`/housepreview/${props.id}`} >
-                <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview`,{state:{id:props.id}})}}/>
-            </NavLink>
+            {/* <NavLink to={`/housepreview/${id}`} > */}
+                <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview/${id}`,{state:{ id :id,ok:ok }})}}/>
+            {/* </NavLink> */}
             <div className="houseBox-imgsection-textArea">
                 <p> { props.Purpose}</p>
             </div>
@@ -61,26 +58,20 @@ const HouseBox = (props) => {
             </div>
             <div className="houseBox-bottomSection">
                 <div className="houseBox-bottomSection-left">
-                    <p>For {` sale/rent`}</p>
-                    <span className="houseBox-bottomSection-left-price">{props.price}</span>
+                    <p>Price </p>
+                    <span className="houseBox-bottomSection-left-price">{props.price} 💰</span>
                 </div>   
                 <div className="houseBox-bottomSection-right">
                     <div>
-                        <i ref={likedRef} className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
+                        <i className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
                     </div>
-                    <div className='compare-icon-container'>
-                        <i className="fa-solid fa-arrows-turn-to-dots" onClick={()=>{setCompared(!compared)}} style={{color:`${compared?'black':'#aaadb1'}`}}/>                    
-                        <div className="iLabel">
-                            <div className="iLabel-up-arrow"></div>
-                            <div className="iLabel-text ">
-                                <p>Compare</p>
-                            </div>
-                        </div>
+                    <div className='compare-icon-container'>                
+                        <Comparebtn id={id} warned={warned} setWarned={setWarned}  />
                     </div>
                 </div>                     
             </div>
         </div>
-        <div className="compare-warning-msg " >
+        <div className={`compare-warning-msg ${warned?'active':''}`} >
             <p>Compare item limit is 4, Remove an item to add new</p>
         </div>
       </div>
