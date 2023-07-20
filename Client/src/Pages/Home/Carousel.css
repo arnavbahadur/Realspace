@@ -1,5 +1,5 @@
 .carousel{
-    z-index: 1;
+    z-index: 1  ;
 }
 .hero-section-image{
     width: 100%;
@@ -9,8 +9,9 @@
 }
 
 .carousel-img{
-    height: 570px;;
+    height: 600px;;
     object-fit: cover;
+    /* opacity: 0.2; */
 }
 .hero-section-container{
     /* border: 2px solid black; */

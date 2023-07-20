@@ -34,11 +34,12 @@ if(localStorage.compareItem == undefined){
 
   return (
    <div className="app">
+    
        <Header/> 
          <Routes>
             <Route path="/" element={<Home/>}/> 
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/compare" element={<Compare/>}/>
+            <Route path="/compare/:id" element={<Compare/>}/>
             <Route path="/project/:id" element={<Project/>}/>
             <Route path="/about" element={<About/>}/>
             {/* <Route path="/houseBox" element={<HouseBox/>}/> */}

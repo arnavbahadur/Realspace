@@ -3,9 +3,6 @@ import React from 'react'
 export default function Singlefaq(props) {
   return (
     <div>
-       
-
-
              <div className="g-1-faq"> 
           <div className="accordion-item  ">
             <h2 className="accordion-header" id={props.headingOne}>

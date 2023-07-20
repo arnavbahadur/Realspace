@@ -4,7 +4,10 @@ import './Header.css'
 
 const Header = () => {
   return (
+    <div className="header">
     <div className='navbar'>
+      {/* <div className="bgimage">
+    </div> */}
       <div className="nav-left">
         <NavLink to='/'>
           <img className="headerlogo" src="./Images/logo.png" alt="logo" />
@@ -13,12 +16,15 @@ const Header = () => {
       <div className="nav-center">   
         <div className="nav-center-navigation-box">
         <NavLink to="/">
-          <p className='nav-center-navigation-box-text'>Home</p>
+          
+          <p className='nav-center-navigation-box-text'>
+            <i class="fa-solid fa-house"/> Home</p>
           </NavLink>
         </div>
         <div className="nav-center-navigation-box"  >
           <div>          
-              <p className='nav-center-navigation-box-text'>Projects <i class="fa-solid fa-angle-down"/></p>          
+              <p className='nav-center-navigation-box-text'>
+              <i class='fas fa-project-diagram'/> Projects <i class="fa-solid fa-angle-down"/></p>          
           </div>
           <div className="header-dropdown projectPage-dropdown ">
             <div className="header-dropdown-menu">
@@ -33,7 +39,8 @@ const Header = () => {
         </div>
         <div className="nav-center-navigation-box">
           <div>
-              <p className='nav-center-navigation-box-text'>House <i class="fa-solid fa-angle-down"/></p>
+              <p className='nav-center-navigation-box-text'>
+              <i class="fa-solid fa-house-chimney"/> House <i class="fa-solid fa-angle-down"/></p>
           </div>
           <div className="header-dropdown">
             <div className="header-dropdown-menu">
@@ -49,7 +56,8 @@ const Header = () => {
         <div className="nav-center-navigation-box">
           <div>
             {/* <NavLink to="/Contact"> */}
-              <p className='nav-center-navigation-box-text'>Contact <i class="fa-solid fa-angle-down"/></p>
+              <p className='nav-center-navigation-box-text'>
+              <i class="fa-solid fa-phone"/> Contact <i class="fa-solid fa-angle-down"/></p>
             {/* </NavLink>  */}
           </div>
           <div className="header-dropdown">
@@ -65,15 +73,18 @@ const Header = () => {
         </div>
         <div className="nav-center-navigation-box">
         <NavLink to="/About">
-          <p className='nav-center-navigation-box-text'>About</p>
+          <p className='nav-center-navigation-box-text'>
+            <i class="fa-solid fa-address-card"/> About</p>
           </NavLink>
         </div>
         <div className="nav-center-navigation-box">
         <NavLink to="/Faq">
-          <p className='nav-center-navigation-box-text'>FAQ</p>
+          <p className='nav-center-navigation-box-text'>
+          <i class="fa-solid fa-clipboard-question"/> FAQ</p>
           </NavLink>
         </div>
       </div>
+    </div>
     </div>
   )
 }

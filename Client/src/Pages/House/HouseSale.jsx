@@ -18,7 +18,7 @@ const HouseSale = (props) => {
         
         
     const callapi = async () => {
-            await axios.get(`/propertyrentapi/`).then((res) => {
+            await axios.get(`/propertyapi/`).then((res) => {
         setContent(res.data);
         // console.log(res.data)
       });
