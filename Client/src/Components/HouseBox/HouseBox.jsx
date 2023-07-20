@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './HouseBox.css'
-import { NavLink, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import Comparebtn from '../Comparebtn/Comparebtn';
 const HouseBox = (props) => {
     // const navigate = useNavigate();

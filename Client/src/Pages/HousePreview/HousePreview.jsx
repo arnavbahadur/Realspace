@@ -13,7 +13,7 @@ const HousePreview = (props) => {
   const propertyapi = async () => {
     await axios.get(`/propertyapi/${id}`).then((property) => {
       setContent(property.data);
-      console.log(property.data)
+      // console.log(property.data)
     });
   };   
 
@@ -23,9 +23,9 @@ propertyapi();
 }, []);
 
 
-  const location = useLocation()
-  console.log("location",location)  //location.state brings data passed in navigate hook
-  console.log("location",location.state?.id)  //location.state brings data passed in navigate hook
+  // const location = useLocation()
+  // console.log("location",location)  //location.state brings data passed in navigate hook
+  // console.log("location",location.state?.id)  //location.state brings data passed in navigate hook
 
 
   // const id = location.state?.id;          ye line bhanu me comment k he 
@@ -33,7 +33,7 @@ propertyapi();
 
 
   // location.state.setOk ( true);
-  console.log("location.state.ok",location.state?.ok)  //location.state brings data passed in navigate hook
+  // console.log("location.state.ok",location.state?.ok)  //location.state brings data passed in navigate hook
   
   // let id = 1 // id = props.id;
   // const [compared,setCompared] = useState(false);
@@ -48,7 +48,7 @@ propertyapi();
   //   )
 
   // })
-
+  console.log("naerby",content)
   return (
     <div className='housePreivew-page'> 
     <CompareSideBtn/>
@@ -100,7 +100,9 @@ propertyapi();
                       </div>
                   </div>
               </div>
-              <i className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
+              <div>
+                <i className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
+              </div>
               {/* <i className="fa-solid fa-arrows-turn-to-dots"/> */}
               <div className='compare-icon-container'>
                 <Comparebtn id={id} warned={warned} setWarned={setWarned} />
@@ -147,8 +149,12 @@ propertyapi();
           </div>
           <div className="housediscription-textArea">
             <h3>Additional details</h3>
-            <p>(content.Nearby.place)
-            </p>
+            {
+              // content.Nearby.map((item)=>{
+              //   return <p>{item.place}</p>
+              // })
+            }
+            {/* <p>{content.Nearby.place}</p> */}
           </div>
           <div className="housediscription-features">
             <h3>Features</h3>
