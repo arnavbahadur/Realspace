@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './HouseBox.css'
-import {  useNavigate } from 'react-router-dom';
+import {  NavLink, useNavigate } from 'react-router-dom';
 import Comparebtn from '../Comparebtn/Comparebtn';
 const HouseBox = (props) => {
     // const navigate = useNavigate();
@@ -16,7 +16,7 @@ const HouseBox = (props) => {
     
     return (
     <div className='houseBox' onClick={()=>{
-        navigate(`/property/${props.id}`)
+        navigate(`/housepreview/${props.id}`)
       }} >
       <div className="houseBox-body">
         <div className="houseBox-imgSection">
@@ -24,7 +24,7 @@ const HouseBox = (props) => {
             <div className="houseBox-top-tag-box">
                 {`${props.title}`}
             </div>
-            {/* <NavLink to={`/housepreview/${id}`} > */}
+            {/* <NavLink to={`/housepreview/`} > */}
                 <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview/${props.id}`,{state:{ id :props.id,ok:ok }})}}/>
             {/* </NavLink> */}
             <div className="houseBox-imgsection-textArea">
