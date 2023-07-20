@@ -95,11 +95,11 @@ function Footer() {
           <h4>Subscribe today</h4>
           <div className="signup_form">
             <form action="#" className="subscribe">
-              <input
-                type="text"
-                className="subscribe__input"
-                placeholder="Enter Email Address"
-              />
+            <NavLink to={"/Contact"}>
+              <button type="text"
+                className="subscribe__input"> Contact us</button>
+               </NavLink>
+              
               <button type="button" className="subscribe__btn">
                 <i className="fas fa-paper-plane" />
               </button>
