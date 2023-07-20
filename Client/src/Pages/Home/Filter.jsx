@@ -21,7 +21,8 @@ const Icon = () => {
     const [budjetvalue,setbudjetvalue ]= useState("Budget")
     const budjet=["Budget","2Lakh Rs - 3Lakh Rs","3Lakh Rs - 4Lakh Rs","4Lakh Rs - 5Lakh Rs","5Lakh Rs - 6Lakh Rs"];
     
-  
+   
+
     const [filtersearch,setfiltersearch]= useState("")
     useEffect(() => {
       setfiltersearch([Propertytype,locationvalue,budjetvalue]);
@@ -138,7 +139,7 @@ const navigate = useNavigate();
     </div>
             <div className="col-filter1"
              onClick={()=>{
-      navigate(`/Afterfilter`,{state:{filter : filtersearch }} )
+      navigate(`/Afterfilter/:${Propertytype}/:${locationvalue}/:${budjetvalue}` )
     }}>
            <button className="butt-color">Search</button>
             </div>

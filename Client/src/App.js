@@ -57,7 +57,7 @@ if(localStorage.compareItem == undefined){
             <Route path="/commercial" element={<Commercial/>}/>   
             <Route path="/residential" element={<Residential/>}/>   
             <Route path="/others" element={<Other/>}/>   
-            <Route path="/afterfilter" element={<Afterfilter/>}/>   
+            <Route path="/afterfilter/:propertytype/:location/:budget" element={<Afterfilter/>}/>   
            
             
             {/* <Route path="/login" element={<Adminlogin/>}></Route>   */}
