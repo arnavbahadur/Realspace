@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import './HousePreview.css'
 import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn';
 import Comparebtn from '../../Components/Comparebtn/Comparebtn';
+import { useLocation } from 'react-router-dom';
 
 const HousePreview = (props) => {
-
-  // const id = location.state?.id;
-  let id = 1 // id = props.id;
+  const location = useLocation()
+  console.log("location",location.state?.id)  //location.state brings data passed in navigate hook
+  const id = location.state?.id;
+  // let id = 1 // id = props.id;
   const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
     const [warned,setWarned] = useState(false);
