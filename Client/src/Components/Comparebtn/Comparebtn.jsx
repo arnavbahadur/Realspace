@@ -5,8 +5,8 @@ const Comparebtn = (props) => {
     let id = 1 // id = props.id;
     const { setCount } = useContext(CompareContext);
     const [compared,setCompared] = useState(false);
-    const compareBtn = (props) =>{
-        console.log("props" ,props)
+    const compareBtn = () =>{
+        console.log("props", props)
         try{
             
             if(localStorage.compareItem === undefined){
