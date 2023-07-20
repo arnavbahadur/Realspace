@@ -34,6 +34,7 @@ if(localStorage.compareItem == undefined){
 
   return (
    <div className="app">
+    
        <Header/> 
          <Routes>
             <Route path="/" element={<Home/>}/> 
