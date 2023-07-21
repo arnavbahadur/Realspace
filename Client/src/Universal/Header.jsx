@@ -40,7 +40,9 @@ const Header = () => {
 
       <div className="nav-left">
         <NavLink to='/'>
-          <img className="headerlogo" src="./Images/logo.png" alt="logo" />
+          <img className="headerlogo" src="./Images/Realspacelogosss.png" alt="logo" />
+          
+          <img className="headerlogo2" src="./Images/Realspacelogowhite.png" alt="logo" />
         </NavLink>
       </div>
 

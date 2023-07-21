@@ -14,12 +14,12 @@ const Icon = () => {
       return placeHolder;
     };
       const [Propertytype,setPropertytype ]= useState("All Property")
-    const value=["All Property","Flat","Plot","Psp"  ];
+    const value=["All Property","Flat","Plot","Office","Shop","Showroom","Industrial property","Warehouse","Duplex"," Bungalows","Row house"  ];
     const [locationvalue,setlocationvalue ]= useState("All Location")
     const location=["All Location","Vijay nagar","nipaniya","LIG" ,"Vijay nagar"   ];
     const [Propertyupdate,setPropertyupdate ]= useState(" Property type")
     const [budjetvalue,setbudjetvalue ]= useState("Budget")
-    const budjet=["Budget","2Lakh Rs - 3Lakh Rs","3Lakh Rs - 4Lakh Rs","4Lakh Rs - 5Lakh Rs","5Lakh Rs - 6Lakh Rs"];
+    const budjet=["Budget","10Lakh Rs - 30Lakh Rs","30Lakh Rs - 50Lakh Rs","50Lakh Rs - 70Lakh Rs","70Lakh Rs - 1Crore Rs"];
     
    
 
@@ -31,7 +31,13 @@ const Icon = () => {
 const navigate = useNavigate();
 
   const [open,setOpen]= useState(false);
+  const [open1,setOpen1]= useState(false);
+  const [open2,setOpen2]= useState(false);
   const [searchTerm,setSearchTerm] =useState('')
+  
+  const [searchTerm1,setSearchTerm1] =useState('')
+  
+  const [searchTerm2,setSearchTerm2] =useState('')
     return (
    
       <div className="filter">
@@ -75,27 +81,30 @@ const navigate = useNavigate();
          
           </div>
           </div>
+
+
+
           <div className="col-filter">
           <div className="row-filter">
             <p>Location</p>
-            <p onClick={()=>setOpen(!open)} className="pfilter-color">{locationvalue}  <Icon /></p>
+            <p onClick={()=>setOpen1(!open1)} className="pfilter-color">{locationvalue}  <Icon /></p>
         {/* <span className="bottom-filter">all types</span> */}
-         {open &&(
+         {open1 &&(
            <div className="dropdown-content">
             <form action="search">
               <input placeholder="search..." 
-              onChange={event => {setSearchTerm(event.target.value)}}
+              onChange={event => {setSearchTerm1(event.target.value)}}
               name="search_criteria"  type="text" />
             </form>
-             <div onClick={()=>setOpen(false)} >
+             <div onClick={()=>setOpen1(false)} >
 
   
     {/* for calling all Location with js */}   
     {location.filter((item)=>{
-   if(searchTerm==""){
+   if(searchTerm1==""){
     return item
 
-   }else if(item.toLowerCase().includes(searchTerm.toLowerCase())){
+   }else if(item.toLowerCase().includes(searchTerm1.toLowerCase())){
     return item
    }
   }).map(item =>{
@@ -106,25 +115,29 @@ const navigate = useNavigate();
   </div> )  } 
             </div>
             </div>
+
+
+
+
             <div className="col-filter">
             <div className="row-filter">
             <p>Price</p>
         
-              <p onClick={()=>setOpen(!open)} className="pfilter-color">{budjetvalue}  <Icon /></p>
+              <p onClick={()=>setOpen2(!open2)} className="pfilter-color">{budjetvalue}  <Icon /></p>
               {/* <span className="bottom-filter">all types</span> */}
-           {open &&( 
+           {open2 &&( 
             <div className="dropdown-content">
             <form action="search">
               <input placeholder="search..." 
-              onChange={event => {setSearchTerm(event.target.value)}}
+              onChange={event => {setSearchTerm2(event.target.value)}}
               name="search_criteria"  type="text" />
             </form>
-           <div onClick={()=>setOpen(false)} >
+           <div onClick={()=>setOpen2(false)} >
       {budjet.filter((item)=>{
-   if(searchTerm==""){
+   if(searchTerm2==""){
     return item
 
-   }else if(item.toLowerCase().includes(searchTerm.toLowerCase())){
+   }else if(item.toLowerCase().includes(searchTerm2.toLowerCase())){
     return item
    }
   }).map(item =>{
@@ -137,6 +150,9 @@ const navigate = useNavigate();
  
     </div>
     </div>
+
+
+
             <div className="col-filter1"
              onClick={()=>{
       navigate(`/Afterfilter/:${Propertytype}/:${locationvalue}/:${budjetvalue}` )

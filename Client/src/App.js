@@ -21,7 +21,7 @@ import HouseSale from './Pages/House/HouseSale';
 import HouseRent from './Pages/House/HouseRent';
 import Commercial from './Pages/Home/Featured/Commercial/Commercial';
 import Residential from './Pages/Home/Featured/Residential/Residential';
-import { Other } from './Pages/Home/Featured/Others/Other';
+import Other from './Pages/Home/Featured/Others/Other';
 import Login from './Admin/Pages/Login/Login';
 // import Adminlogin from './Adminpanel/Adminlogin/Adminlogin';
 import Afterfilter from './Pages/Home/Afterfilter/Afterfilter';
@@ -40,7 +40,7 @@ if(localStorage.compareItem == undefined){
          <Routes>
             <Route path="/" element={<Home/>}/> 
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/compare/id" element={<Compare/>}/>
+            <Route path="/compare" element={<Compare/>}/>
             <Route path="/project/:id" element={<Project/>}/>
             <Route path="/about" element={<About/>}/>
             {/* <Route path="/houseBox" element={<HouseBox/>}/> */}
@@ -58,7 +58,7 @@ if(localStorage.compareItem == undefined){
             <Route path="/commercial" element={<Commercial/>}/>   
             <Route path="/residential" element={<Residential/>}/>   
             <Route path="/others" element={<Other/>}/>   
-            <Route path="/afterfilter/:propertytype/:location/:budget" element={<Afterfilter/>}/>   
+            <Route path="/afterfilter/:Propertytype/:location/:budget" element={<Afterfilter/>}/>   
            
             
             {/* <Route path="/login" element={<Adminlogin/>}></Route>   */}
