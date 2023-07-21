@@ -1,7 +1,4 @@
 
-.home-page-header{
- 
-}
 .navbar {
   position: relative;
   display: flex;
@@ -13,6 +10,9 @@
   /* color: #000000; */
   color: whitesmoke;
   /* text-shadow: whitesmoke; */
+}
+.nav-center-navigation-box-text-p{
+  color: black;
 }
 .navbar{
   padding-top: 0rem;
@@ -141,4 +141,99 @@
   opacity: 1;
   transform: translateY(-10%);
   pointer-events: auto;
+}  
+
+
+
+
+
+@media  (min-width: 300px) and (max-width: 899px) {
+  
+  /* .header{
+      height: 80px;
+  } */
+  .on-mobile-cross{
+      display: none;
+  }
+  .handburg{
+      padding-left: 14vh;
+      height: 10px;
+      margin-left:20%;
+  }
+  .headerlogo{
+    padding-left: 1vh;
+    height: 90%;
+  }
+  .nav-center-navigation-box-text{
+    cursor: none;
+  }
+  .navbar-items-for-mobile{
+      display: flex;
+      border-radius: 3vh;
+      background-color: rgb(67, 65, 65);
+      /* height: 80vh; */
+      /* z-index: 3; */
+      font-size: 16px;
+      position: sticky;
+      width: min-content;
+      flex-wrap: wrap;
+      width: auto;
+      flex-direction: column;
+      padding: 2vh;
+      margin: 2vh;
+      margin-top: 0.5vh;
+      margin-bottom: 0.5vh;
+      color: white;
+  }
+  .nav-center-navigation-box{
+    padding: 1px;
+    margin: 2px;
+    padding-left: 1vh;
+  }
+  .header-dropdown{
+    /* display: none; */
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 10;
+    color: black;
+    background-color:rgb(235, 239, 239);
+    padding: 5px 20px;
+    min-width: 10%;
+    height: auto;
+    border-radius: 5px;
+    text-align: left;
+    transform: translateY(-30%);
+    transition: opacity,transform 250ms ease-in-out;
+    overflow: hidden;
+  }
+  .fa-bars-staggered:before, 
+  .fa-reorder:before, 
+  .fa-stream:before  {
+    content: "\f550";
+    padding: 18px;
+    justify-content: center;
+    align-items: center;
+}
+.fa-close:before, 
+.fa-multiply:before, 
+.fa-remove:before, 
+.fa-times:before, 
+.fa-xmark:before {
+  content: "\f00d";
+  padding: 18px;
+  justify-content: center;
+  align-items: center;
+}
+  .handburg{
+    height: 30px;
+    justify-content: center;
+  }
+  .navbar-items-for-mobile a{
+      text-decoration: none;
+      /* color: #000000; */
+      margin: 10px 0;
+      color: white;
+     
+  }
 }
