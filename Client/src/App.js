@@ -22,6 +22,7 @@ import HouseRent from './Pages/House/HouseRent';
 import Commercial from './Pages/Home/Featured/Commercial/Commercial';
 import Residential from './Pages/Home/Featured/Residential/Residential';
 import { Other } from './Pages/Home/Featured/Others/Other';
+import Login from './Admin/Pages/Login/Login';
 // import Adminlogin from './Adminpanel/Adminlogin/Adminlogin';
 function App() {
 if(localStorage.compareItem == undefined){
@@ -58,7 +59,7 @@ if(localStorage.compareItem == undefined){
             <Route path="/others" element={<Other/>}/>   
             {/* <Route path="/login" element={<Adminlogin/>}></Route> */}
             
-            <Route path="/login" element={<Adminlogin/>}></Route>  
+            <Route path="/login" element={<Login/>}></Route>  
         </Routes> 
         <Footer/>  
         {/* <Dropapp/> */}
