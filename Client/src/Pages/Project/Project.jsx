@@ -271,6 +271,7 @@ useEffect(() => {
         </div>
         </div>
       </div>
+    
       
       <Gallery gallery={content.Gallery}/>
       {/* {content.Gallery.map(item=>{

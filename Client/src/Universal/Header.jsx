@@ -1,12 +1,19 @@
-import React from 'react'
-import { NavLink }  from "react-router-dom";
+import React, { useEffect } from 'react'
+import { NavLink , useLocation}  from "react-router-dom";
 import './Header.css'
 
 const Header = () => {
-  
+  let location = useLocation();
+  useEffect(() =>{
+    console.log(location.pathname);
+  }, [location]);
+
   return (
     <div className="header">
-    <div className='navbar'>
+    {console.log("hello",location.pathname)}
+
+    {/* <div className={location.pathname==="/" ? 'navbar home-page-header': 'navbar'}> */}
+    <div className="navbar" style={location.pathname==='/'?{position:"absolute"}:{}}>
       {/* <div className="bgimage">
     </div> */}
       <div className="nav-left">
@@ -17,7 +24,6 @@ const Header = () => {
       <div className="nav-center">   
         <div className="nav-center-navigation-box">
         <NavLink to="/">
-          
           <p className='nav-center-navigation-box-text'>
             <i class="fa-solid fa-house"/> Home</p>
           </NavLink>

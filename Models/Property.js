@@ -14,6 +14,10 @@ const PropertySchema = new Schema ({
         type: String,
         required: true 
     },
+    property_url: {
+        type: String,
+        required: true 
+    },
     location_url: {
         type: String,
         required: true 
@@ -52,11 +56,31 @@ const PropertySchema = new Schema ({
         type: String,
         required: true
     },
+    Nearby: [
+        {
+            place: {
+                type: String,
+                required: true
+            }
+        }
+    ],
     Photos: [
         {
             imgUrl: {
                 type: String,
                 required: true
+            }
+        }
+    ],
+    
+    Gallery: [
+        {   
+            imgUrl: {
+                type: String,
+                required: false
+            },
+            imgname: {
+                type: String
             }
         }
     ],

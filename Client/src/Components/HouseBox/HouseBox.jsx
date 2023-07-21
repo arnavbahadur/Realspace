@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import './HouseBox.css'
-import { NavLink, useNavigate } from 'react-router-dom';
+import {  NavLink, useNavigate } from 'react-router-dom';
 import Comparebtn from '../Comparebtn/Comparebtn';
 const HouseBox = (props) => {
-    let id = 1 // id = props.id;
+    // const navigate = useNavigate();
+    console.log(props)
+    // let { id } = useParams();
+    // let id = 1 // id = props.id;
    let [ok,setOk] = useState(false);
    console.log("ok",ok)
     // const [compared,setCompared] = useState(false);
@@ -12,15 +15,17 @@ const HouseBox = (props) => {
     const navigate = useNavigate();
     
     return (
-    <div className='houseBox' >
+    <div className='houseBox' onClick={()=>{
+        navigate(`/housepreview/${props.id}`)
+      }} >
       <div className="houseBox-body">
         <div className="houseBox-imgSection">
             {/* img */}
             <div className="houseBox-top-tag-box">
-                {`${props.title} ,${props._id}`}
+                {`${props.title}`}
             </div>
-            {/* <NavLink to={`/housepreview/${id}`} > */}
-                <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview/${id}`,{state:{ id :id,ok:ok }})}}/>
+            {/* <NavLink to={`/housepreview/`} > */}
+                <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview/${props.id}`,{state:{ id :props.id,ok:ok }})}}/>
             {/* </NavLink> */}
             <div className="houseBox-imgsection-textArea">
                 <p> { props.Purpose}</p>
@@ -66,7 +71,7 @@ const HouseBox = (props) => {
                         <i className="fa-solid fa-heart" onClick={()=>setliked(!liked)} style={{color:`${liked?"red":"#aaadb1"}`}}/>
                     </div>
                     <div className='compare-icon-container'>                
-                        <Comparebtn id={id} warned={warned} setWarned={setWarned}  />
+                        <Comparebtn id={props.id} warned={warned} setWarned={setWarned}  />
                     </div>
                 </div>                     
             </div>

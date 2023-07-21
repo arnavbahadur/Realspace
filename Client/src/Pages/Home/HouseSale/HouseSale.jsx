@@ -13,16 +13,16 @@ const HouseSale = (props) => {
     const contentPerPage = 3;
     const [content,setContent]=useState([]);
     const callapi = async () => {
-      await axios.get(`/propertyrentapi/`).then((res) => {
+      await axios.get(`/propertyapi/`).then((res) => {
         setContent(res.data);
         // console.log(res.data)
       });
     };
     const lastIndex = currentPage * contentPerPage;
     const startIndex = lastIndex - contentPerPage
-    const currentContent = content.slice(startIndex,lastIndex);
+    // const currentContent = content.slice(startIndex,lastIndex);
     const totalContent = content.length;
-    // const currentContent = content.slice(0,6);
+    const currentContent = content.slice(0,6);
     useEffect(() => {
       callapi();
     }, []);
@@ -36,7 +36,7 @@ const HouseSale = (props) => {
         <div className="home-houseSale-cardSection">
           <div className="house-card-section">
             {currentContent.map(item=>{
-              return <HouseBox title={item.title} location={item.location} price={item.price} Purpose={item.Purpose} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
+              return <HouseBox title={item.title} id={item._id}  gallery={item.Gallery} location={item.location} price={item.price} Purpose={item.Purpose} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
             })}
           </div>
         </div>
@@ -50,3 +50,6 @@ const HouseSale = (props) => {
 
 
 export default HouseSale
+
+
+// gallery={item.Gallery}

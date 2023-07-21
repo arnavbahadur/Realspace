@@ -1,5 +1,7 @@
 
-
+.home-page-header{
+ 
+}
 .navbar {
   position: relative;
   display: flex;
@@ -7,17 +9,17 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.nav-center-navigation-box-text{
+  /* color: #000000; */
+  color: whitesmoke;
+  /* text-shadow: whitesmoke; */
+}
 .navbar{
   padding-top: 0rem;
   padding-bottom: 0rem;
-  /* background-color: #0005; */
-  /* background: transparent; */
-  /* min-height: 10vh; */
-  /* min-height: 30vh; */
   position: -webkit-sticky;
   /* position: sticky; */
-  position: absolute;
+ 
   /* position: fixed; */
   top: 0px;
   z-index: 10;
@@ -26,6 +28,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  /* opacity:1.0; */
   height: 72px;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +40,8 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: hsla(0, 1%, 53%, -0.438);
+  /* background-color: hsla(0, 1%, 53%, -0.438); */
+  background: rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 10px 0 rgba(1, 0, 0, 1.05);
   justify-content: space-between;
   

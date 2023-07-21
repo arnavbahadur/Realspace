@@ -24,6 +24,7 @@ import Residential from './Pages/Home/Featured/Residential/Residential';
 import { Other } from './Pages/Home/Featured/Others/Other';
 import Login from './Admin/Pages/Login/Login';
 // import Adminlogin from './Adminpanel/Adminlogin/Adminlogin';
+import Afterfilter from './Pages/Home/Afterfilter/Afterfilter';
 function App() {
 if(localStorage.compareItem == undefined){
   let temp = {
@@ -39,7 +40,7 @@ if(localStorage.compareItem == undefined){
          <Routes>
             <Route path="/" element={<Home/>}/> 
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/compare" element={<Compare/>}/>
+            <Route path="/compare/id" element={<Compare/>}/>
             <Route path="/project/:id" element={<Project/>}/>
             <Route path="/about" element={<About/>}/>
             {/* <Route path="/houseBox" element={<HouseBox/>}/> */}
@@ -57,9 +58,10 @@ if(localStorage.compareItem == undefined){
             <Route path="/commercial" element={<Commercial/>}/>   
             <Route path="/residential" element={<Residential/>}/>   
             <Route path="/others" element={<Other/>}/>   
-            {/* <Route path="/login" element={<Adminlogin/>}></Route> */}
+            <Route path="/afterfilter/:propertytype/:location/:budget" element={<Afterfilter/>}/>   
+           
             
-            <Route path="/login" element={<Login/>}></Route>  
+            {/* <Route path="/login" element={<Adminlogin/>}></Route>   */}
         </Routes> 
         <Footer/>  
         {/* <Dropapp/> */}

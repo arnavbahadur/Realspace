@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Filter.css'
+import { useNavigate , useParams} from 'react-router-dom';
 const Icon = () => {
     return (
       <svg height="20" width="20" viewBox="0 0 20 20">
@@ -16,20 +17,29 @@ const Icon = () => {
     const value=["All Property","Flat","Plot","Psp"  ];
     const [locationvalue,setlocationvalue ]= useState("All Location")
     const location=["All Location","Vijay nagar","nipaniya","LIG" ,"Vijay nagar"   ];
-    
+    const [Propertyupdate,setPropertyupdate ]= useState(" Property type")
     const [budjetvalue,setbudjetvalue ]= useState("Budget")
-    const budjet=["Budget","2000000 Rs - 3000000 Rs","3000000 Rs - 4000000 Rs","4000000 Rs - 5000000 Rs","5000000 Rs - 6000000 Rs"];
+    const budjet=["Budget","2Lakh Rs - 3Lakh Rs","3Lakh Rs - 4Lakh Rs","4Lakh Rs - 5Lakh Rs","5Lakh Rs - 6Lakh Rs"];
+    
+   
+
+    const [filtersearch,setfiltersearch]= useState("")
+    useEffect(() => {
+      setfiltersearch([Propertytype,locationvalue,budjetvalue]);
+      }, []);
+     
+const navigate = useNavigate();
 
   const [open,setOpen]= useState(false);
   const [searchTerm,setSearchTerm] =useState('')
-   
     return (
+   
       <div className="filter">
         <div className="dropdown-input">
          
           <div className="col-filter">
             <div className="row-filter">
-            <p>Property Type</p>
+            <p>{Propertyupdate}</p>
          
           <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}      <Icon /> </p>
          
@@ -45,7 +55,7 @@ const Icon = () => {
                </form>
                
              <div onClick={()=>setOpen(false)}  >
-
+    
     {/* for calling all property with js */}                                                    
   {value.filter((item)=>{
    if(searchTerm==""){
@@ -55,8 +65,9 @@ const Icon = () => {
     return item
    }
   }).map(item =>{
-    return(
-  <div className="dropdownnew" onClick={()=>setPropertytype(item)}>{item}</div> )
+    console.log(item);
+          return(
+  <div className="dropdownnew" onClick={()=>setPropertytype(item)} >{item}</div> )
  } )}
   </div>
   </div>)
@@ -126,7 +137,10 @@ const Icon = () => {
  
     </div>
     </div>
-            <div className="col-filter1">
+            <div className="col-filter1"
+             onClick={()=>{
+      navigate(`/Afterfilter/:${Propertytype}/:${locationvalue}/:${budjetvalue}` )
+    }}>
            <button className="butt-color">Search</button>
             </div>
              </div>
