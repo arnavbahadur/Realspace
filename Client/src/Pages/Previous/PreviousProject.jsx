@@ -35,9 +35,9 @@ const PreviousProject = (props) => {
     return (
     <div>
         <CompareSideBtn/>
-      <div className="house-header">
+      {/* <div className="house-header">
         <HomeSectionsHeading purpose={props.purpose} title='House'/>
-      </div>
+      </div> */}
       {/* <Projectbox currentContent={currentContent}/> */}
       <div className="house-card-section">
         {currentContent.map(item=>{

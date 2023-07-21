@@ -18,7 +18,9 @@ const Header = () => {
     </div> */}
       <div className="nav-left">
         <NavLink to='/'>
-          <img className="headerlogo" src="./Images/logo.png" alt="logo" />
+          <img className="headerlogo" src="./Images/Realspacelogosss.png" alt="logo" />
+          
+          <img className="headerlogo2" src="./Images/Realspacelogowhite.png" alt="logo" />
         </NavLink>
       </div>
       <div className="nav-center">   
@@ -36,10 +38,10 @@ const Header = () => {
           <div className="header-dropdown projectPage-dropdown ">
             <div className="header-dropdown-menu">
               <NavLink to="/currentproject">
-                <p className='nav-center-navigation-box-text'>Current</p>
+                <p className='nav-center-navigation-box-text-dropdown'>Current</p>
               </NavLink>
               <NavLink to="/previousproject">
-                <p className='nav-center-navigation-box-text'>Prevoius</p>
+                <p className='nav-center-navigation-box-text-dropdown'>Prevoius</p>
               </NavLink>    
             </div>
           </div>
@@ -52,10 +54,10 @@ const Header = () => {
           <div className="header-dropdown">
             <div className="header-dropdown-menu">
               <NavLink to="/housesale">
-                <p className='nav-center-navigation-box-text'>For Sale</p>
+                <p className='nav-center-navigation-box-text-dropdown'>For Sale</p>
               </NavLink>
               <NavLink to="/houserent">
-                <p className='nav-center-navigation-box-text'>For rent</p>
+                <p className='nav-center-navigation-box-text-dropdown'>For rent</p>
               </NavLink>
             </div>
           </div>
@@ -70,10 +72,10 @@ const Header = () => {
           <div className="header-dropdown">
             <div className="header-dropdown-menu">
               <NavLink to="/Contact">
-                <p className='nav-center-navigation-box-text'>Contact us</p>
+                <p className='nav-center-navigation-box-text-dropdown'>Contact us</p>
               </NavLink>
               <NavLink to="/Appointment">
-                <p className='nav-center-navigation-box-text'>Appointment</p>
+                <p className='nav-center-navigation-box-text-dropdown'>Appointment</p>
               </NavLink>
             </div>
           </div>

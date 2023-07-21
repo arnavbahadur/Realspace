@@ -34,9 +34,9 @@ const CurrentProject = ({purpose}) => {
   return (
     <div>
         <CompareSideBtn/>
-      <div className="house-header">
+      {/* <div className="house-header">
         <HomeSectionsHeading purpose={purpose} title='House'/>
-      </div>
+      </div> */}
       <div className="house-card-section">
         {currentContent.map(item=>{
           return <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id} />
