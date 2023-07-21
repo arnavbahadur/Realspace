@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import HomeSectionsHeading from '../../../Components/HomeSectionsHeading/HomeSectionsHeading'
 import axios from "axios";
 import HouseBox from '../../../Components/HouseBox/HouseBox';
-import { Navigate } from 'react-router-dom';
 
 
 const HouseRent = (props) => {
@@ -32,7 +31,7 @@ const HouseRent = (props) => {
         <div className="home-houseRent-cardSection">
           <div className="house-card-section">
             {cureentContent.map(item=>{
-              return <HouseBox title={item.title}  id={item._id} location={item.location} price={item.price} location_url={item.location_url} img={item.img} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
+              return <HouseBox title={item.title} gallery={item.Gallery} id={item._id} location={item.location} price={item.price} location_url={item.location_url} img={item.img} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
             })}
           </div>  
         </div>

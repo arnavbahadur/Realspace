@@ -22,6 +22,7 @@ import HouseRent from './Pages/House/HouseRent';
 import Commercial from './Pages/Home/Featured/Commercial/Commercial';
 import Residential from './Pages/Home/Featured/Residential/Residential';
 import { Other } from './Pages/Home/Featured/Others/Other';
+import Login from './Admin/Pages/Login/Login';
 // import Adminlogin from './Adminpanel/Adminlogin/Adminlogin';
 import Afterfilter from './Pages/Home/Afterfilter/Afterfilter';
 function App() {

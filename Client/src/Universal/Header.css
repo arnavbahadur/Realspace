@@ -1,5 +1,7 @@
 
-
+.home-page-header{
+ 
+}
 .navbar {
   position: relative;
   display: flex;
@@ -7,17 +9,17 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.nav-center-navigation-box-text{
+  /* color: #000000; */
+  color: whitesmoke;
+  /* text-shadow: whitesmoke; */
+}
 .navbar{
   padding-top: 0rem;
   padding-bottom: 0rem;
-  /* background-color: #0005; */
-  /* background: transparent; */
-  /* min-height: 10vh; */
-  /* min-height: 30vh; */
   position: -webkit-sticky;
   /* position: sticky; */
-  position: absolute;
+ 
   /* position: fixed; */
   top: 0px;
   z-index: 10;
