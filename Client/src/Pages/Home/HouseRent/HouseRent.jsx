@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import HomeSectionsHeading from '../../../Components/HomeSectionsHeading/HomeSectionsHeading'
 import axios from "axios";
 import HouseBox from '../../../Components/HouseBox/HouseBox';
-import { Navigate } from 'react-router-dom';
 
 
 const HouseRent = (props) => {
