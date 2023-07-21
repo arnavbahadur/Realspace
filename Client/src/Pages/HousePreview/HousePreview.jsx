@@ -33,7 +33,6 @@ propertyapi();
   // console.log("location",location.state?.id)  //location.state brings data passed in navigate hook
 
 
-  // const id = location.state?.id;          ye line bhanu me comment k he 
 
 
 
@@ -60,9 +59,9 @@ propertyapi();
     <CompareSideBtn/>
       <div className="housePreview-topSection">
           <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="house" />
-            <div className="filter">
-                {/* filterComponent */}
-            </div>
+          <div className="filter">
+              {/* filterComponent */}
+          </div>
       </div>
       <div className="housePreview-section-1 housePreview-section">        
         <div className="housePreview-top">
@@ -117,7 +116,7 @@ propertyapi();
           </div>
           <div className={`compare-warning-msg ${warned?'active':''}`} >
             <p>Compare item limit is 4, Remove an item to add new</p>
-        </div>
+          </div>
           <hr />
           <div className="housePreview-discription-houseDetailIcon">
             <div>
@@ -161,7 +160,6 @@ propertyapi();
               // })
             }
             {/* <p>{content.Nearby.place}</p> */}
-          </div>
           <div className="housediscription-features">
             <h3>Features</h3>
             <ul> {content.Feature}</ul>  
@@ -188,11 +186,9 @@ propertyapi();
         
         {/* <Gallery/> */}
       
-      </div>
-      
-      </div>
-    //   </div>
-    // </div>
+      </div>      
+    </div>
+  </div>
   )
 }
 
