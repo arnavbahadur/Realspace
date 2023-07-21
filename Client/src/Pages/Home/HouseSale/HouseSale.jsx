@@ -20,9 +20,9 @@ const HouseSale = (props) => {
     };
     const lastIndex = currentPage * contentPerPage;
     const startIndex = lastIndex - contentPerPage
-    const currentContent = content.slice(startIndex,lastIndex);
+    // const currentContent = content.slice(startIndex,lastIndex);
     const totalContent = content.length;
-    // const currentContent = content.slice(0,6);
+    const currentContent = content.slice(0,6);
     useEffect(() => {
       callapi();
     }, []);
