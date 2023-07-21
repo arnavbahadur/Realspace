@@ -14,12 +14,12 @@ const Icon = () => {
       return placeHolder;
     };
       const [Propertytype,setPropertytype ]= useState("All Property")
-    const value=["All Property","Flat","Plot","Psp"  ];
+    const value=["All Property","Flat","Plot","Psp","Office","Shop","Showroom"  ];
     const [locationvalue,setlocationvalue ]= useState("All Location")
     const location=["All Location","Vijay nagar","nipaniya","LIG" ,"Vijay nagar"   ];
     const [Propertyupdate,setPropertyupdate ]= useState(" Property type")
     const [budjetvalue,setbudjetvalue ]= useState("Budget")
-    const budjet=["Budget","2Lakh Rs - 3Lakh Rs","3Lakh Rs - 4Lakh Rs","4Lakh Rs - 5Lakh Rs","5Lakh Rs - 6Lakh Rs"];
+    const budjet=["Budget","10Lakh Rs - 30Lakh Rs","30Lakh Rs - 50Lakh Rs","50Lakh Rs - 70Lakh Rs","70Lakh Rs - 1Crore Rs"];
     
    
 
