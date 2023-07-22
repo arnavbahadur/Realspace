@@ -8,12 +8,12 @@ const Header = () => {
     console.log(location.pathname);
   }, [location]);
 
-  const [display, setDisplay] = useState(window.innerWidth > 899 ? true : false);
+  const [display, setDisplay] = useState(window.innerWidth > 950 ? true : false);
   const [menue, setmenue] = useState(false);
   const { pathname } = useLocation();
 
   // useEffect(() => {
-  //   setDisplay(window.innerWidth > 899 ? true : false);
+  //   setDisplay(window.innerWidth > 950 ? true : false);
   //   setmenue(false);
   // }, [pathname]);
   
@@ -21,7 +21,7 @@ const Header = () => {
     // setmenue(false);
 
     const changeWidth = () => {
-      setDisplay(window.innerWidth > 899 ? true : false);
+      setDisplay(window.innerWidth > 950 ? true : false);
     }
 
     window.addEventListener('resize', changeWidth)
@@ -36,7 +36,7 @@ const Header = () => {
     <div className="header">
     {console.log("hello",location.pathname)}
 
-    <div className="navbar" style={location.pathname==='/'&& window.innerWidth > 899 ?{position:"absolute"}:{}}>
+    <div className="navbar" style={location.pathname==='/'&& window.innerWidth > 950 ?{position:"absolute"}:{}}>
 
       <div className="nav-left">
         <NavLink to='/'>

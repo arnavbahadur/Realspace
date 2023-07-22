@@ -136,7 +136,7 @@ font-size: 20px;
   text-align: center;  
 }
 
-@media  (min-width: 300px) and (max-width: 899px) {
+@media  (min-width: 300px) and (max-width: 950px) {
 .groups{
    display: flex;
    flex-direction: column;
