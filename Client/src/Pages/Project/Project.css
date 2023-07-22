@@ -2,9 +2,21 @@
     height: 100%;
     padding: 0 60px;
     margin: 15px 60px;
+    padding-top: 10px;
     
 }
-
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.left-box{
+   
+    flex: 70%;
+}
+.right-box{
+   
+    flex: 30%;
+}
 /* .car{
     border-radius: 3vh;
 }
@@ -12,7 +24,7 @@
     border-radius: 3vh;
 } */
  .img-box {
-    width: 850px;
+    width: 900px;
     height: 498px;
     /* border-radius: 3vh; */
 } 
@@ -26,11 +38,42 @@
     border: 1px solid black;
     /* border-radius: 3vh; */
 }
-.col-lg-4 {
-    flex: 0 0 auto;
-    width: 28.333333%;
+
+.left-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
 }
 
+.right-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+/* .col-lg-4 {
+    flex: 0 0 auto;
+    width: 28.333333%;
+} */
+.row-about{
+    display: flex;
+    flex-wrap: wrap
+}
+.about-box{
+    flex: 0 0 auto;
+    width: 50%;
+}
 .card-img-top{
     height: 390px;
     width: 290px;
@@ -96,4 +139,52 @@ font-size: 30px;
     background-color: grey;
     opacity: 0.6;
     transition: 0.3s;
+}
+
+
+@media  (min-width: 300px) and (max-width: 950px){
+ .container-project{
+    padding: 2vh;
+    margin: 2vh;
+ }
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .samar-slider{
+        max-width: 150% ;
+    } 
+    .img-box{
+        width: 100%;
+        height: auto;
+    }
+    .card-body{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-body-about{
+        padding: 2vh;
+        margin: 2vh;
+    }
+    .about-box{
+        padding: 1vh;
+    }
+    .card-body-floor{
+        display: flex ;
+        padding: 2vh;
+        margin: 2vh;
+    }
+        @media (min-width: 300px) and (max-width:450px){
+        .card-body-floor{
+            display: flex;
+            flex-direction: column;
+           }
+        }
+    .row-floor{
+        width: fit-content;
+        padding: 1vh;
+    }
+    .floor-plan-box{
+        padding: 1vh;
+    }
 }
