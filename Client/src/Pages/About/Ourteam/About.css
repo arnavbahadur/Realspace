@@ -21,3 +21,8 @@
     color: #ffffff;
     background: linear-gradient(105deg, #6e99e6, #093c94);
 }
+.aboutbutton:focus{
+    /* color: blue; */
+    color: #ffffff;
+    background: linear-gradient(105deg, #6e99e6, #093c94);
+}
