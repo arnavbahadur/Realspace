@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import'./Afterfilter.css'
 import HouseBox from '../../../Components/HouseBox/HouseBox'
 import { useLocation, useParams  } from 'react-router-dom';
+import axios from 'axios';
 
-function Afterfilter() {
+function Afterfilter( props) {
    const flat=["ALL Flat","1RK ","1Bhk ","2Bhk ","3Bhk ","4Bhk ","5Bhk ","6Bhk ","7Bhk " ];
    const Plot=["ALL Size","1000 sqft ","2000 sqft","3000 sqft ","4000 sqft ","5000 sqft ","6000 sqft ","7000 sqft " ];
    const Office=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
@@ -15,7 +16,25 @@ function Afterfilter() {
    const Bungalows=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
    const Rowhouse=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
    const {Propertytype,location,budget}=useParams();
-  console.log( Propertytype,location,budget)
+//   console.log( Propertytype,location,budget)
+
+
+const [content,setContent]=useState([]);
+const callapi = async () => {
+  await axios.get(`/propertyapi/`).then((res) => {
+    setContent(res.data);
+    console.log(res.data)
+  });
+};
+
+useEffect(() => {
+  callapi();
+}, []);
+
+console.log(content)
+// total values in backend
+// title,location,property_url, propertytype,Nearby, Gallery,  Purpose,location_url, price, areaSqFt, hall, bedRoom, bathRoom,Listingyear,imageContainer,Photos,Description,Featured,addMoreDetails,Feature,Note,Rating,CurrentStatus
+
 
 
 
