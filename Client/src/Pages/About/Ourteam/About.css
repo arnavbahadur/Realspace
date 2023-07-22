@@ -1,0 +1,28 @@
+.about-all-button{
+    
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   justify-items: center;
+   margin-top: 3%;
+   color: aliceblue;
+   background-color: aliceblue;
+}
+.aboutbutton{
+     margin-right: 5%;
+     border: 2px solid;
+    border-radius: 8px;
+    height: 6vh;
+    /* width: 8%; */
+    padding: 8px;
+}
+.aboutbutton:hover{
+    /* color: blue; */
+    color: #ffffff;
+    background: linear-gradient(105deg, #6e99e6, #093c94);
+}
+.aboutbutton:focus{
+    /* color: blue; */
+    color: #ffffff;
+    background: linear-gradient(105deg, #6e99e6, #093c94);
+}

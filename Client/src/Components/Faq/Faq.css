@@ -136,6 +136,34 @@ font-size: 20px;
   text-align: center;  
 }
 
+@media  (min-width: 300px) and (max-width: 899px) {
+.groups{
+   display: flex;
+   flex-direction: column;
+}
+  .groups-bttn{
+   border-bottom: 2px solid whitesmoke;
+   text-align: left;
+  }
+  .accordion-header{
+   height: auto;
+  }
+  .accordion-button{
+   height: auto;
+   padding: 3px;
+  }
+  .accordion-button strong{
+   font-size: 16px;
+  }
+  .accordion-body{
+   font-size: 14px;
+   padding: 1vh;
+  }
+  
+}
+
+
+
 
  /* @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
