@@ -36,7 +36,7 @@ const Header = () => {
     <div className="header">
     {console.log("hello",location.pathname)}
 
-    <div className="navbar" style={location.pathname===''?{position:"absolute"}:{}}>
+    <div className="navbar" style={location.pathname==='/'?{position:"absolute"}:{}}>
 
       <div className="nav-left">
         <NavLink to='/'>
@@ -131,7 +131,7 @@ const Header = () => {
 
 {menue ?
         
-        <div className="navbar-items-for-mobile">
+        <div className="navbar-items-for-mobile" style={location.pathname==='/'?{padding:"10px"}:{}}>
           <div className="nav-center-navigation-box">
         <NavLink to="/">
           <p className='nav-center-navigation-box-text'>

@@ -155,9 +155,9 @@
 
 @media  (min-width: 300px) and (max-width: 899px) {
   
-  /* .header{
-      height: 80px;
-  } */
+  .navbar{
+    position: none;
+  }
   .on-mobile-cross{
       display: none;
   }
