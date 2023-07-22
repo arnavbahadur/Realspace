@@ -6,17 +6,17 @@ import axios from 'axios';
 import PageNum from '../../../Components/PageNum/PageNum';
 
 function Afterfilter( props) {
-  //  const flat=["ALL Flat","1RK ","1Bhk ","2Bhk ","3Bhk ","4Bhk ","5Bhk ","6Bhk ","7Bhk " ];
-  //  const Plot=["ALL Size","1000 sqft ","2000 sqft","3000 sqft ","4000 sqft ","5000 sqft ","6000 sqft ","7000 sqft " ];
-  //  const Office=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
-  //  const Shop=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
-  //  const Showroom=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
-  //  const Industrialproperty=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
-  //  const Warehouse=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
-  //  const Duplex=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
-  //  const Bungalows=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
-  //  const Rowhouse=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
- 
+   const flat=["ALL Flat","1RK ","1Bhk ","2Bhk ","3Bhk ","4Bhk ","5Bhk ","6Bhk ","7Bhk " ];
+   const Plot=["ALL Size","1000 sqft ","2000 sqft","3000 sqft ","4000 sqft ","5000 sqft ","6000 sqft ","7000 sqft " ];
+   const Office=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
+   const Shop=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
+   const Showroom=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
+   const Industrialproperty=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
+   const Warehouse=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
+   const Duplex=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
+   const Bungalows=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
+   const Rowhouse=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
+   const {Propertytype,location,budget}=useParams();
 //   console.log( Propertytype,location,budget)
 
 const[currentPage,setCurrentPage]=useState(1);
@@ -40,8 +40,6 @@ const totalContent=content.length;// posts.length is actuall 100 is for test
 useEffect(() => {
   callapi();
 }, []);
-
-
 
 console.log(content)
 // total values in backend

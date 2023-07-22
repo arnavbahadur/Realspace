@@ -36,11 +36,11 @@ const Header = () => {
     <div className="header">
     {console.log("hello",location.pathname)}
 
-    <div className="navbar" style={location.pathname==='/'?{position:"absolute"}:{}}>
+    <div className="navbar" style={location.pathname==='/'?{position:"absolute"}:{}}>           
 
       <div className="nav-left">
         <NavLink to='/'>
-          <img className="headerlogo" src="./Images/logo.png" alt="logo" />
+          <img className="headerlogo" src="./Images/whitestlogo.png" alt="logo" />
           
           {/* <img className="headerlogo2" src="./Images/Realspacelogowhite.png" alt="logo" /> */}
         </NavLink>
