@@ -162,7 +162,7 @@ propertyapi();
             {/* <p>{content.Nearby.place}</p> */}
           <div className="housediscription-features">
             <h3>Features</h3>
-            <ul> {content.Feature}</ul>  
+            <ul> {content.Featured}</ul>  
           </div>
         </div>
       </div>

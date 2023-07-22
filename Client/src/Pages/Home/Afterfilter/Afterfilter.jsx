@@ -6,11 +6,12 @@ import { useLocation, useParams  } from 'react-router-dom';
 function Afterfilter() {
    const flat=["2Bhk ","3Bhk ","4Bhk ","5Bhk ","6Bhk ","7Bhk " ];
    const plot=["1000 sqft ","2000 sqft","3000 sqft ","4000 sqft ","5000 sqft ","6000 sqft ","7000 sqft " ];
-   const location=useLocation()
-   const flatname=location.state.Propertytype;
+  //  const location=useLocation()
+  //  const flatname=location.state.Propertytype;
    console.log("location.state.key")
-  const {Propertytype,locationvalue,budjetvalue}=useParams();
-  console.log(Propertytype,locationvalue,budjetvalue)
+  const {propertytype,location,budget}=useParams();
+  // :propertytype/:location/:budget
+  console.log(propertytype,location,budget)
   return (
     <div className="main-after-filter">
       <div className="left-filter">
