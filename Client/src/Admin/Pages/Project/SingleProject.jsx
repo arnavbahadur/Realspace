@@ -1,13 +1,13 @@
 import React from 'react'
 import axios from 'axios';
-import EditEvents from './EditEvents';
+import EditProject from './EditProject';
 
-const Singleevent = (props) => {
-    const deleteevent=async ()=>{
-        await axios.get(`/event/deleteevent/${props.id}`).then((res) => { alert("Deleted Sucessfully") });
+const SingleProject = (props) => {
+    const deleteProject=async ()=>{
+        await axios.get(`/Project/deleteProject/${props.id}`).then((res) => { alert("Deleted Sucessfully") });
       }
-      const updateblgfeatured=async ()=>{
-        await axios.get(`/event/changefeaturedstatus/${props.id}`).then((res) => {  alert("Featured Sucessfully") });
+      const updateProjectfeatured=async ()=>{
+        await axios.get(`/Project/changefeaturedstatus/${props.id}`).then((res) => {  alert("Featured Sucessfully") });
       }
   return (
     <div>
@@ -26,13 +26,13 @@ const Singleevent = (props) => {
               <span>Number of speaker: {props.numberofspeaker}</span>
               <span>{props.registrationfee}₹</span>
             </div>
-            <i className="fa fa-trash event-delete-btn" aria-hidden="true"onClick={()=>{deleteevent()}}/>
-            <button  className='delete-btn' style={{color:props.featured==="True"?"red":"green"}} onClick={()=>{updateblgfeatured()}}>Featured <i class="fa-solid fa-jet-fighter-up"></i></button>
+            <i className="fa fa-trash event-delete-btn" aria-hidden="true"onClick={()=>{deleteProject()}}/>
+            <button  className='delete-btn' style={{color:props.featured==="True"?"red":"green"}} onClick={()=>{updateProjectfeatured()}}>Featured <i class="fa-solid fa-jet-fighter-up"></i></button>
           </div>
-          <EditEvents props={props}/>
+          <EditProject props={props}/>
         </div>
     </div>
   )
 }
 
-export default Singleevent
+export default SingleProject

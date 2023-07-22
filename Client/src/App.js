@@ -23,7 +23,7 @@ import Commercial from './Pages/Home/Featured/Commercial/Commercial';
 import Residential from './Pages/Home/Featured/Residential/Residential';
 import Other from './Pages/Home/Featured/Others/Other';
 import Login from './Admin/Pages/Login/Login';
-// import Adminlogin from './Adminpanel/Adminlogin/Adminlogin';
+// import login from './Admin/login/login';
 import Afterfilter from './Pages/Home/Afterfilter/Afterfilter';
 
 import PageNotFound from './Pages/404/PageNotFound';
@@ -61,10 +61,12 @@ if(localStorage.compareItem == undefined){
             <Route path="/residential" element={<Residential/>}/>   
             <Route path="/others" element={<Other/>}/>   
             <Route path="/afterfilter/:Propertytype/:location/:budget" element={<Afterfilter/>}/>   
-           {/* <Route path="/login" element={<Adminlogin/>}></Route>   */}
+           <Route path="/login" element={<Login/>}></Route>  
+           
         
            <Route path="*" element={<PageNotFound/>}/>   
         </Routes> 
+        {/* <Login/> */}
         <Footer/>  
         {/* <Dropapp/> */}
     </div>

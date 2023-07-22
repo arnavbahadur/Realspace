@@ -6,7 +6,7 @@ import { storage } from '../../../firebase';
 import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
 
 
-const EditEvents = ({props}) => {
+const EditProject= ({props}) => {
   const [FormData,setFormData]=useState({
     images:"",
     description:"",
@@ -51,8 +51,8 @@ const EditEvents = ({props}) => {
   }
   async function submit() {
     try {
-      await axios.post(`/event/updateevent/${props.id}`,FormData)
-      .then(()=>{alert("Event Updated successfully")})
+      await axios.post(`/Project/updateProject/${props.id}`,FormData)
+      .then(()=>{alert("Project Updated successfully")})
       .catch((err)=>{alert(err)})
     } catch (err) {
       alert(err);
@@ -94,12 +94,7 @@ const EditEvents = ({props}) => {
         images:props.images,
         description:props.description,
         title:props.title,
-        authername:props.authername,
-        date:props.date,
-        time:props.time,
-        location:props.location,
-        numberofspeaker:props.numberofspeaker,
-        registrationfee:props.registrationfee,
+  
       })
     },[]);
 
@@ -142,5 +137,5 @@ const EditEvents = ({props}) => {
   )
 }
 
-export default EditEvents
+export default EditProject
 

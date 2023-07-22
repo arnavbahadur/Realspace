@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Blog from '../Pages/Blog/Blog'
-import Event from '../Pages/Event/Event'
+import Property from '../Pages/Property/Property'
+import Project from '../Pages/Project/Project'
 import './adminbody.css'
 
 import axios from "axios"
@@ -45,8 +45,8 @@ export default function AdminBody() {
             <h1>Query</h1>
         </div>
         </div>
-        {admincontent==="blog"?<Blog/>:<></>}
-        {admincontent==="event"?<Event/>:<></>}
+        {admincontent==="blog"?<Property/>:<></>}
+        {admincontent==="event"?<Project/>:<></>}
         {admincontent==="query"?<ContactQuery/>:<></>}
     </div>
   )
