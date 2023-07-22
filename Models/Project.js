@@ -113,6 +113,7 @@ const projectSchema = new Schema({
     Note: {
         type: String
     },
+    
     CurrentStatus: {
         type: String,
         required: true
