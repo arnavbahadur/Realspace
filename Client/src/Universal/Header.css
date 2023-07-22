@@ -1,6 +1,6 @@
 
 .navbar {
-  position: relative;
+  /* position:absolute; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -97,7 +97,7 @@
 .nav-center-navigation-box-text:hover{
   color: rgb(4, 28, 207);
 }
-.nav-center-navigation-box-text-p:hover{
+.nav-center-navigation-box-text-dropdown:hover{
   color: rgb(4, 28, 207);
 }
 
@@ -156,7 +156,7 @@
 @media  (min-width: 300px) and (max-width: 899px) {
   
   .navbar{
-    position: none;
+    position: relative;
   }
   .on-mobile-cross{
       display: none;
@@ -180,7 +180,8 @@
       /* height: 80vh; */
       /* z-index: 3; */
       font-size: 16px;
-      position: sticky;
+      /* position: fixed; */
+      /* position: sticky; */
       width: min-content;
       flex-wrap: wrap;
       width: auto;

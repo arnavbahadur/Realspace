@@ -25,6 +25,8 @@ import Other from './Pages/Home/Featured/Others/Other';
 import Login from './Admin/Pages/Login/Login';
 // import Adminlogin from './Adminpanel/Adminlogin/Adminlogin';
 import Afterfilter from './Pages/Home/Afterfilter/Afterfilter';
+
+import PageNotFound from './Pages/404/PageNotFound';
 function App() {
 if(localStorage.compareItem == undefined){
   let temp = {
@@ -59,9 +61,9 @@ if(localStorage.compareItem == undefined){
             <Route path="/residential" element={<Residential/>}/>   
             <Route path="/others" element={<Other/>}/>   
             <Route path="/afterfilter/:Propertytype/:location/:budget" element={<Afterfilter/>}/>   
-           
-            
-            {/* <Route path="/login" element={<Adminlogin/>}></Route>   */}
+           {/* <Route path="/login" element={<Adminlogin/>}></Route>   */}
+        
+           <Route path="*" element={<PageNotFound/>}/>   
         </Routes> 
         <Footer/>  
         {/* <Dropapp/> */}
