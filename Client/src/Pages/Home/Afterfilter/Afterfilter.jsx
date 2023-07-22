@@ -44,8 +44,8 @@ useEffect(() => {
 
 
 console.log(content)
-// total values in backend
-// title,location,property_url, propertytype,Nearby, Gallery,  Purpose,location_url, price, areaSqFt, hall, bedRoom, bathRoom,Listingyear,imageContainer,Photos,Description,Featured,addMoreDetails,Feature,Note,Rating,CurrentStatus
+// total values in backend to be filtered
+// location, propertytype , Nearby, price, areaSqFt,
 
 
 
@@ -70,8 +70,7 @@ console.log(content)
   return (
     <div className="main-after-filter">
       <div className="left-filter">
-{/* <HouseBox/> */}
-<div className="house-card-section">
+         <div className="house-card-section">
             {currentContent.map(item=>{
               return <HouseBox title={item.title} gallery={item.Gallery} id={item._id} location={item.location} price={item.price} location_url={item.location_url} img={item.img} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
             })}
@@ -94,7 +93,7 @@ console.log(content)
       }      */}
 
 
-{/* for sub filtering flat */}
+{/* 
       {Propertytype===":Flat"?
       <>
          { flat.map((item) =>{
@@ -104,11 +103,11 @@ console.log(content)
   )
   } )}
   </>:<></>
-   }
+   } */}
 
 
   {/* for sub filtering Plot */}
-      {Propertytype===":Plot"?
+      {/* {Propertytype===":Plot"?
       <>
          { Plot.map((item) =>{
           console.log(item)
@@ -117,12 +116,12 @@ console.log(content)
   )
   } )}
   </>:<></>
-   }
+   } */}
 
 
    
 {/* for sub filtering Office */}
-     {Propertytype===":Office"?
+     {/* {Propertytype===":Office"?
       <>
          { Office.map((item) =>{
           console.log(item)
@@ -131,11 +130,11 @@ console.log(content)
   )
   } )}
   </>:<></>
-   }  
+   }   */}
 
 
    {/* for sub filtering shop */}
-     {Propertytype===":Shop"?
+     {/* {Propertytype===":Shop"?
       <>
          { Shop.map((item) =>{
           console.log(item)
@@ -144,10 +143,10 @@ console.log(content)
   )
   } )}
   </>:<></>
-   }     
+   }      */}
 
    {/* for sub filtering showroom */}
-   {Propertytype===":Showroom"?
+   {/* {Propertytype===":Showroom"?
       <>
          { Showroom.map((item) =>{
           console.log(item)
@@ -156,11 +155,11 @@ console.log(content)
   )
   } )}
   </>:<></>
-   }     
+   }      */}
 
 
    {/* for sub filtering Industrialproperty */}
-   {Propertytype===":Industrialproperty"?
+   {/* {Propertytype===":Industrialproperty"?
       <>
          { Industrialproperty.map((item) =>{
           console.log(item)
@@ -169,11 +168,11 @@ console.log(content)
   )
   } )}
   </>:<></>
-   }     
+   }      */}
 
 
    {/* for sub filtering Warehouse */}
-   {Propertytype===":Warehouse"?
+   {/* {Propertytype===":Warehouse"?
       <>
          { Warehouse.map((item) =>{
           console.log(item)
@@ -182,11 +181,11 @@ console.log(content)
   )
   } )}
   </>:<></>
-   }     
+   }      */}
 
 
    {/* for sub filtering Duplex */}
-   {Propertytype===":Duplex"?
+   {/* {Propertytype===":Duplex"?
       <>
          { Duplex.map((item) =>{
           console.log(item)
@@ -195,11 +194,11 @@ console.log(content)
   )
   } )}
   </>:<></>
-   }     
+   }      */}
 
 
    {/* for sub filtering Bungalows */}
-   {Propertytype===":Bungalows"?
+   {/* {Propertytype===":Bungalows"?
       <>
          { Bungalows.map((item) =>{
           console.log(item)
@@ -208,11 +207,11 @@ console.log(content)
   )
   } )}
   </>:<></>
-   }     
+   }      */}
 
 
    {/* for sub filtering Rowhouse */}
-   {Propertytype===":Rowhouse"?
+   {/* {Propertytype===":Rowhouse"?
       <>
          { Rowhouse.map((item) =>{
           console.log(item)
@@ -221,7 +220,7 @@ console.log(content)
   )
   } )}
   </>:<></>
-   }     
+   }      */}
 
       </div>
     </div>

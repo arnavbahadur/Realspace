@@ -7,8 +7,8 @@ const Project=require("../Models/Project")
 const Property=require("../Models/Property")
 
 // register
-
-router.post("/register", async (req, res) => {
+// router.route("/addproject").post((req, res) => {
+router.route("/register"), async (req, res) => {
   try {
     const { name,username,email,phone,password} = req.body;
     if( !username||!password){
@@ -60,7 +60,7 @@ router.post("/register", async (req, res) => {
     console.error(err);
     res.status(500).send("Registeration Unsuccessfully");
   }
-});
+};
 
 // // log in
 

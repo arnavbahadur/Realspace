@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import Singleevent from './Singleevent';
-import AddEvent from './AddEvent';
+import SingleProject from './SingleProject';
+import AddProject from './AddProject';
 import axios from 'axios';
-import './Event.css'
+import './Project.css'
 
-const Event = () => {
+const Project = () => {
   const[openform,setopenform]=useState(false);
   const [sign,setSign] =useState('plus');
 const signChange = (openform) => {
   // console.log("openform = " +openform+ " sign = " + sign);
   openform? setSign('plus') : setSign('xmark');
 }
-  const [events, setevents] = useState([]);
+  const [project, setproject] = useState([]);
 const apicall=async ()=>{
-    await axios.get("/event/allevents").then((res) => { setevents(res.data) });
+    await axios.get("/Project/allProject").then((res) => { setproject(res.data) });
   }
   useEffect(() => {
     apicall();
@@ -21,25 +21,25 @@ const apicall=async ()=>{
   return (
     <div>
       <div className="event-component">
-        <p>Events</p>
+        <p>Project</p>
         <div className="add-icon" id="add-icon-event" onClick={()=>{setopenform(!openform);signChange(openform)}}>
             {/* icon of add */}
             <i class={`fa-solid fa-${sign}`}/>
         </div>
-        {openform?<AddEvent />:<></>}
+        {openform?<AddProject />:<></>}
         
       </div>
       <div className="blogs">
         {/* <p>Evedfisdfiydnts</p> */}
-         {events.map((item) => {
-         return <Singleevent id={item._id} title={item.title} description={item.description} images={item.images} authername={item.authername} date={item.date} time={item.time} location={item.location} numberofspeaker={item.numberofspeaker} registrationfee={item.registrationfee}/>
+         {project.map((item) => {
+         return <SingleProject id={item._id} title={item.title} description={item.description} images={item.images} authername={item.authername} date={item.date} time={item.time} location={item.location} numberofspeaker={item.numberofspeaker} registrationfee={item.registrationfee}/>
         })}
       </div>
     </div>
   )
 }
 
-export default Event
+export default Project
 
 
 

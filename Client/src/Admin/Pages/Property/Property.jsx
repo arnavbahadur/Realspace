@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import './Blog.css'
-import Singleblog from './Singleblog'
-import AddBlog from './AddBlog';
+import './Property.css'
+import SingleProperty from './SingleProperty'
+import AddProperty from './AddProperty';
 import axios from "axios"
 
-const Blog = () => {
+const Property = () => {
 const [openform,setopenform]=useState(false);
 const [sign,setSign] =useState('plus');
 const signChange = () => {
@@ -13,9 +13,9 @@ const signChange = () => {
 }
 
 
-const [blogs, setblogs] = useState([]);
+const [property, setproperty] = useState([]);
 const apicall=async ()=>{
-    await axios.get("/blog/allblogs").then((res) => { setblogs(res.data) });
+    await axios.get("/property/allproperty").then((res) => { setproperty(res.data) });
   }
 
   useEffect(() => {
@@ -24,29 +24,29 @@ const apicall=async ()=>{
   return (
     <div>
       <div className="blog-component">
-        <p>Blogs</p>
+        <p>Property</p>
         <div className="add-icon" id='add-icon-blog' onClick={()=>{setopenform(!openform);signChange()}}>
             <i className={`fa-solid fa-${sign}`}/>
 
         </div>
 
-        {openform?<AddBlog />:<></>}
+        {openform?<AddProperty />:<></>}
         {/* <h1>add a Blog</h1> */}
         <div className="blogs">  
 
         </div>
       </div>
       <div className="blogs">
-        {/* <p>Blogs</p> */}
-         {blogs.map((item) => {
-         return <Singleblog id={item._id} title={item.title} description={item.description} images={item.images} authername={item.authername} date={item.date} featured={item.featured}/>
+      
+         {property.map((item) => {
+         return <SingleProperty id={item._id} title={item.title} description={item.description} images={item.images}  featured={item.featured}/>
         })}
       </div>
     </div>
   )
 }
 
-export default Blog
+export default Property
 
 
 
