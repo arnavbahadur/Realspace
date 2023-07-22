@@ -32,8 +32,8 @@ useEffect(() => {
 }, []);
 
 console.log(content)
-// total values in backend
-// title,location,property_url, propertytype,Nearby, Gallery,  Purpose,location_url, price, areaSqFt, hall, bedRoom, bathRoom,Listingyear,imageContainer,Photos,Description,Featured,addMoreDetails,Feature,Note,Rating,CurrentStatus
+// total values in backend to be filtered
+// location, propertytype , Nearby, price, areaSqFt,
 
 
 
@@ -58,7 +58,8 @@ console.log(content)
   return (
     <div className="main-after-filter">
       <div className="left-filter">
-<HouseBox/>
+         {/* <HouseBox/> */}
+         
       </div>
       <div className="right-filter">
        <div className="secondfilter">Filter</div>
