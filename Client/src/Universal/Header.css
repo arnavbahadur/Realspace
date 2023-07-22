@@ -97,6 +97,9 @@
 .nav-center-navigation-box-text:hover{
   color: rgb(4, 28, 207);
 }
+.nav-center-navigation-box-text:focus{
+  color: rgb(4, 28, 207);
+}
 .nav-center-navigation-box-text-p:hover{
   color: rgb(4, 28, 207);
 }
