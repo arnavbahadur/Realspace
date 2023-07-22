@@ -8,7 +8,7 @@ const Gallery = (props) => {
     <div>
         <div class="row">
         <div class="col-lg-9 col-md-9 section-title text-left mb-4">
-                     <h2>Cliffton Park</h2>
+                     <h2>Gallery</h2>
      </div>
          {props.gallery.map(item=>{
          return <div>  
