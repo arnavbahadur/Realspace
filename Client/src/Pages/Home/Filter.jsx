@@ -19,7 +19,7 @@ const Icon = () => {
     const location=["All Location","Vijay nagar","nipaniya","LIG" ,"Vijay nagar"   ];
     const [Propertyupdate,setPropertyupdate ]= useState(" Property type")
     const [budjetvalue,setbudjetvalue ]= useState("Budget")
-    const budjet=["Budget","10Lakh Rs - 30Lakh Rs","30Lakh Rs - 50Lakh Rs","50Lakh Rs - 70Lakh Rs","70Lakh Rs - 1Crore Rs"];
+    const budjet=["Budget","1 K Rs - 10 K Rs","10 K Rs - 30 K Rs","30 K Rs - 50 K Rs","50 K Rs - 1 Lakh Rs","10Lakh Rs - 30Lakh Rs","30Lakh Rs - 50Lakh Rs","50Lakh Rs - 70Lakh Rs","70Lakh Rs - 1Crore Rs"];
     
    
 

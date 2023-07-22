@@ -36,7 +36,7 @@ const Header = () => {
     <div className="header">
     {console.log("hello",location.pathname)}
 
-    <div className="navbar" style={location.pathname===''?{position:"absolute"}:{}}>
+    <div className="navbar" style={location.pathname==='/'?{position:"absolute"}:{}}>
 
       <div className="nav-left">
         <NavLink to='/'>
@@ -111,7 +111,7 @@ const Header = () => {
         <div className="nav-center-navigation-box">
         <NavLink to="/About">
           <p className='nav-center-navigation-box-text'>
-            <i class="fa-solid fa-address-card"/> About</p>
+            <i class="fa-solid fa-address-card"/> About Us</p>
           </NavLink>
         </div>
         
