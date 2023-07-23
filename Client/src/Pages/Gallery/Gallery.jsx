@@ -6,14 +6,14 @@ const Gallery = (props) => {
     console.log(props);
   return (
     <div>
-        <div class="row">
+        <div class="row-gallery">
         <div class="col-lg-9 col-md-9 section-title text-left mb-4">
                      <h2>Gallery</h2>
      </div>
          {props.gallery.map(item=>{
-         return <div>  
+         return <div className="gallery-page">  
                  <div class="gallery-box">
-                     <div class="col-lg-4 col-md-4">
+                     <div class="gallery-card">
                        <div className="gallery  gallery-container">
                              <a href="#">
                                  <div class="card-img">                          

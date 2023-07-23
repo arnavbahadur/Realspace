@@ -2,18 +2,18 @@ import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { v4 } from 'uuid';
-import { storage } from '../../../firebase';
-import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
-import './editblog.css'
+// import { storage } from '../../../firebase';
+// import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
+import './EditProperty.css'
 
-export default function EditBlog({props}) {
+export default function EditProperty({props}) {
 
   const [FormData,setFormData]=useState({
     images:"",
     description:"",
     title:"",
-    authername:"",
-    date:"",
+    // authername:"",
+    // date:"",
   });
   
   const [images,setimages]=useState([]);
@@ -50,8 +50,8 @@ export default function EditBlog({props}) {
 
   async function submit() {
     try {
-      await axios.post(`/blog/updateblog/${props.id}`,FormData)
-      .then(()=>{alert("Blog added successfully")})
+      await axios.post(`/Property/updateProperty/${props.id}`,FormData)
+      .then(()=>{alert("Propertyadded successfully")})
       .catch((err)=>{alert(err)})
     } catch (err) {
       alert(err);
@@ -61,26 +61,26 @@ export default function EditBlog({props}) {
   
   const changeimage=async ()=>{
     // console.log("change image");
-    try{
-    if(!checkimg()){
-        alert("Please Upload Valid image on 200KB");
-    }
-    else if(imageUpload!==null){
-        const imageRef=ref(storage,'files/'+v4()+imageUpload.name);
-        await uploadBytes(imageRef,imageUpload).then((snapshot)=>{
-          getDownloadURL(snapshot.ref).then((url)=>{
+    // try{
+    // if(!checkimg()){
+    //     alert("Please Upload Valid image on 200KB");
+    // }
+    // else if(imageUpload!==null){
+        // const imageRef=ref(storage,'files/'+v4()+imageUpload.name);
+        // await uploadBytes(imageRef,imageUpload).then((snapshot)=>{
+          // getDownloadURL(snapshot.ref).then((url)=>{
             // console.log(url); 
-             afterurl(url);
-          })
-        }) 
-    }
-    else{
-        console.log("nothing")
-    }
+            //  afterurl(url);
+          // })
+        // }) 
+    // }
+    // else{
+    //     console.log("nothing")
+    // }
    //  console.log(user);
-      } catch (err) {
-     console.error(err);
-       }
+    //   } catch (err) {
+    //  console.error(err);
+    //    }
     }
 
     useEffect(() => {
@@ -93,8 +93,6 @@ export default function EditBlog({props}) {
         images:props.images,
         description:props.description,
         title:props.title,
-        authername:props.authername,
-        date:props.date,
       })
     }, [])
 

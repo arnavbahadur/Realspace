@@ -65,6 +65,7 @@
  margin-left: 6%;
  justify-content: center;
  align-items: center;
+ padding-top: 3px;
 }
 
 /* .nav-left img{
@@ -97,7 +98,10 @@
 .nav-center-navigation-box-text:hover{
   color: rgb(4, 28, 207);
 }
-.nav-center-navigation-box-text-dropdown:hover{
+.nav-center-navigation-box-text:focus{
+  color: rgb(4, 28, 207);
+}
+.nav-center-navigation-box-text-p:hover{
   color: rgb(4, 28, 207);
 }
 

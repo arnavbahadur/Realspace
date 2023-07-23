@@ -1,9 +1,16 @@
+.gallery-page{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    display: flex;
+}
+
 .gallery-box{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex: 50%;
 }
 .gallery{
     height: max-content;
