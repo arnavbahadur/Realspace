@@ -16,8 +16,7 @@ const Gallery = (props) => {
         
                  <div class="gallery-box">           
                      <div class="gallery-card">
-                     <div className="col-la-4-col-md-4">
-                    
+                        {/* <div className="gallerybunch"> */}
                        <div className="gallery  gallery-container">
                              <a href="#">
                                  <div class="card-img">                          
@@ -29,7 +28,6 @@ const Gallery = (props) => {
                              </a>
                          </div>
                          </div>
-                         </div>
                      </div>
                  
              </div>
@@ -39,6 +37,7 @@ const Gallery = (props) => {
                      
              </div>
     </div>
+    
   )
 }
 
