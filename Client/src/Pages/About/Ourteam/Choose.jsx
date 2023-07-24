@@ -32,7 +32,7 @@ function Choose() {
               }}
             >
               {" "}
-              learn more
+              Learn More
             </button>
           </div>
         </div>
