@@ -9,12 +9,12 @@
    background-color: aliceblue;
 }
 .aboutbutton{
-     margin-right: 5%;
-     border: 2px solid;
+    margin-right: 5%;
+    border: 2px solid;
     border-radius: 8px;
-    height: 14vh;
-    /* width: 8%; */
-    padding: 8px;
+    height: auto;
+    width: auto;
+    padding: 6px;
 }
 .aboutbutton:hover{
     /* color: blue; */
