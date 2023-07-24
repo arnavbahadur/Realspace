@@ -1,16 +1,26 @@
-.gallery-page{
+/* .gallery-page{
     display: grid;
     grid-template-columns: auto auto auto;
     display: flex;
-}
+} */
 
+/* .gallery-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 50%;
+} */
 .gallery-box{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    /* align-items: center; */
-    flex: 50%;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    /* flex: 50%; */
 }
 .gallery{
     height: max-content;
@@ -22,8 +32,8 @@
     border-radius: 2vh;
 }
 .card-img img{ 
-    height: inherit;
-    width: inherit;
+    height: 50vh;
+    width: 50vh;
     border-radius: 2vh;
 }
 .gallery-name{
@@ -31,4 +41,9 @@
 }
 .gallery-name-title{
     text-align: center;
+}
+
+.gallerybunch{
+    display: grid;
+    grid-template-columns: auto auto auto; 
 }
