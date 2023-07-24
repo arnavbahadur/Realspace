@@ -5,6 +5,7 @@ import { NavLink }  from "react-router-dom";
 import axios from "axios";
 import CompareSideBtn from "../../Components/CompareSideBtn/CompareSideBtn";
 import { useParams} from "react-router-dom";
+import GalleryBunch from "../Gallery/GalleryBunch";
 
 
 const Project = ({Content}) => {
@@ -274,6 +275,7 @@ useEffect(() => {
     
       
       <Gallery gallery={content.Gallery}/>
+      {/* <GalleryBunch  gallery={content.Gallery} /> */}
       {/* {content.Gallery.map(item=>{
           return <Gallery imgUrl={item}  />
          })} */}
