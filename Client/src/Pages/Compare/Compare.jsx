@@ -59,7 +59,8 @@ const Compare = () => {
     //     },
 
     // ]
-    const titles =[ "Type","Location","Lot Size","Property Size","Property ID","Year Built","Bedrooms","Bathrooms","Garages","2 Stories","26' Ceilings","Bike Path","Central Cooling","Central Heating","Dual Sinks","Electric Range","Emergency Exit","Fire Alarm","Fire Place","Home Theater","Hurricane Shutters","Jog Path","Laundry Room","Lawn","Marble Floors","Next to busy way","Swimming Pool"];
+    const feature = ["Garages","parking","Bike Path","Emergency Exit","Fire Alarm","Fire Place","Jog Path","Lawn","Marble Floors","Swimming Pool","Elevators","CCTV Cameras","Generator backup","24*7 Security","Adequate water supply","Intercom Facility"]
+    const titles =[ "Type","Location","Builtup area","superBuiltup area","Property ID","Year Built","Bedrooms","Bathrooms"]; 
     const titlesEle = titles.map((item)=>{
         return(
             <div className="compareTitle"><p>{item}</p></div>
@@ -78,6 +79,29 @@ const Compare = () => {
             )
         // }
     })
+    const itemDetails = content.map((item)=>{
+      return(
+        <div className="compare-itemsContainer">
+          <div className="compare-itemDetails">
+            <div className="compareItemDetail"><p>{item.propertytype}</p></div>
+            <div className="compareItemDetail"><p>{item.location}</p></div>
+            <div className="compareItemDetail"><p>{`${item.builtup_area} single floor`}</p></div>
+            <div className="compareItemDetail"><p>{`${item.superBuiltup_area} 2 floor`}</p></div>
+            <div className="compareItemDetail"><p>{item._id}</p></div>
+            <div className="compareItemDetail"><p>{item.created_at}</p></div>
+            <div className="compareItemDetail"><p>{item.bedRoom}</p></div>
+            <div className="compareItemDetail"><p>{item.bathRoom}</p></div>
+            {
+              feature.map((title)=>{          
+                return item.Feature.includes(title)? <div className="compareItemDetail"><p><i class="fa-solid fa-check" style={{color:"green"}}/></p></div> :<div className="compareItemDetail"><p><i class="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
+              } )
+            }
+            <div className="compareItemDetail"><p><i class="fa-solid fa-check" style={{color:"green"}}/></p></div>
+            <div className="compareItemDetail"><p><i class="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
+          </div>
+        </div>     
+      )
+    })
   return (
     <div>
       <div className="compare-headSection">
@@ -92,7 +116,16 @@ const Compare = () => {
             <div className="copare-container-detailsSection">
                 <div className="compare-titles-container">
                     <div className="compare-titles">
-                        {titlesEle}                   
+                    {/* base properties for compare */}
+                        {titlesEle }   
+                          
+                        {
+                          feature.map((item)=>{
+                            return(
+                              <div className="compareTitle"><p>{item}</p></div>
+                          )
+                          })
+                        }                                           
                     </div>
                 </div>   
                 <div className="compare-itemsContainer">
@@ -105,10 +138,20 @@ const Compare = () => {
                 <div className="compare-itemsContainer">
                     <div className="compare-itemDetails">
                         <div className="compareItemDetail"><p>Details</p></div>
+                        <div className="compareItemDetail"><p><i class="fa-solid fa-check" style={{color:"green"}}/></p></div>
+                        <div className="compareItemDetail"><p><i class="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
+                    </div>
+                </div>
+                <div className="compare-itemsContainer">
+                    <div className="compare-itemDetails">
+                        <div className="compareItemDetail"><p>Details</p></div>
                         <div className="compareItemDetail"><p>Details</p></div>
                         <div className="compareItemDetail"><p>Details</p></div>
                     </div>
                 </div>    
+                {
+                  itemDetails
+                }
             </div>
             
         </div>

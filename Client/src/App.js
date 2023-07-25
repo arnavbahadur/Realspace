@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
 import { Route, Routes} from "react-router-dom";
 import Header from './Universal/Header';
@@ -22,13 +22,13 @@ import HouseRent from './Pages/House/HouseRent';
 import Commercial from './Pages/Home/Featured/Commercial/Commercial';
 import Residential from './Pages/Home/Featured/Residential/Residential';
 import Other from './Pages/Home/Featured/Others/Other';
-import Login from './Admin/Pages/Login/Login';
+// import Login from './Admin/Pages/Login/Login';
 // import Adminlogin from './Adminpanel/Adminlogin/Adminlogin';
 import Afterfilter from './Pages/Home/Afterfilter/Afterfilter';
 
 import PageNotFound from './Pages/404/PageNotFound';
 function App() {
-if(localStorage.compareItem == undefined){
+if(localStorage.compareItem === undefined){
   let temp = {
     itemsId : []
   }
@@ -60,7 +60,7 @@ if(localStorage.compareItem == undefined){
             <Route path="/commercial" element={<Commercial/>}/>   
             <Route path="/residential" element={<Residential/>}/>   
             <Route path="/others" element={<Other/>}/>   
-            <Route path="/afterfilter/:Propertytype/:location/:budget" element={<Afterfilter/>}/>   
+            {/* <Route path="/afterfilter/:Propertytype/:location/:budget" element={<Afterfilter/>}/>    */}
            {/* <Route path="/login" element={<Adminlogin/>}></Route>   */}
         
            <Route path="*" element={<PageNotFound/>}/>   

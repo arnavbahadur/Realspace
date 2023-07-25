@@ -18,7 +18,7 @@ const Comparebtn = (props) => {
             // console.log("compareItem.itemsId",compareItem.itemsId)
             // console.log("id : ",props.id)
             // console.log(compareItem.itemsId.includes(props.id))
-            setCompared(compareItem.itemsId.includes(props.id))
+            // setCompared(compareItem.itemsId.includes(props.id)) //
         } catch (error) {
             console.warn(error)
         }
