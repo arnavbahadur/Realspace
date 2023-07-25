@@ -35,8 +35,8 @@ const Team = () => {
       <div className="team_img">
         <img src="https://i.imgur.com/2Necikc.png" alt="Team_image"/>
       </div>
-      <h3>Garimesh Goyal </h3>
-      <p className="role">Support Lead</p>
+      <h3>Priya Raghuvanshi </h3>
+      <p className="role">Sell Lead</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p>
     </div>
   </div>
