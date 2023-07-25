@@ -3,13 +3,19 @@
     padding-block: 20px;
 }
 .compare-section2{
-    margin: 3vh 10vw;
+    margin: 3vh 5vw;
     /* width property below is not compelet */
     /* width: 1000px; */
+    display: block;
+    padding: 0 2rem;
+    max-width: 1440px;
+
 }
 .compare-container{
     background-color: white;
     background-color: aliceblue;
+    width: 1000px;
+    /* overflow: scroll; */
 }
 .compare-container-top{
     padding-block: 10px;
@@ -65,3 +71,6 @@
     color: green;
     font-size: 1.7rem;
 }
+/* @media screen (max-) {
+    
+} */

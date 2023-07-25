@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
 import { Route, Routes} from "react-router-dom";
 import Header from './Universal/Header';
@@ -28,7 +28,7 @@ import Afterfilter from './Pages/Home/Afterfilter/Afterfilter';
 
 import PageNotFound from './Pages/404/PageNotFound';
 function App() {
-if(localStorage.compareItem == undefined){
+if(localStorage.compareItem === undefined){
   let temp = {
     itemsId : []
   }
@@ -42,7 +42,7 @@ if(localStorage.compareItem == undefined){
          <Routes>
             <Route path="/" element={<Home/>}/> 
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/compare" element={<Compare/>}/>
+            <Route path="/compare/" element={<Compare/>}/>
             <Route path="/project/:id" element={<Project/>}/>
             <Route path="/about" element={<About/>}/>
             {/* <Route path="/houseBox" element={<HouseBox/>}/> */}
