@@ -75,7 +75,7 @@ function Choose() {
           </div>
           <div className="choose-text">
             <p>
-              We have made significant investments in technology to strengthen
+              We have made significant investments in technology to strength
               our sourcing channels and our business processes from lead
               generation and customer acquisition through the customer lifecycle
               management
