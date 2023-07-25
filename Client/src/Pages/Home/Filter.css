@@ -109,3 +109,16 @@ position: absolute;
   z-index: 15;
 }
 
+@media  (min-width: 300px) and (max-width: 725px){
+ .dropdown-input{
+  margin-left: 5vh;
+  width: 80%;
+ } 
+  .row-filter {
+    font-size: small;
+  }
+  .pfilter-color{
+    text-align: center;
+    justify-content: end;
+  }
+}

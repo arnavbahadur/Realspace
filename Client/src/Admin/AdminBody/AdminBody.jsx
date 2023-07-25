@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Blog from '../Pages/Blog/Blog'
-import Event from '../Pages/Event/Event'
+import Property from '../Pages/Property/Property'
+import Project from '../Pages/Project/Project'
 import './adminbody.css'
 
 import axios from "axios"
@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom"
 
 import ContactQuery from '../Pages/ContactQuery/ContactQuery';
 export default function AdminBody() {
-  const [admincontent, setadmincontent] = useState("blog");
+  const [admincontent, setadmincontent] = useState("project");
   const history = useNavigate();
 
   async function logout() {
@@ -33,20 +33,20 @@ export default function AdminBody() {
         <div className='admin-options'>
         <div onClick={()=>{setadmincontent("blog")}} className='single-admin-option' >
             <i className="fa-sharp fa-solid fa-pager fa-9x"></i>
-            <h1>Blogs</h1>
+            <h1>Project</h1>
         </div>
     
         <div onClick={()=>{setadmincontent("event")}} className='single-admin-option'>
         <i className="fa-solid fa-calendar-days fa-9x"></i>
-            <h1>Events</h1>
+            <h1>Property</h1>
         </div>
         <div onClick={()=>{setadmincontent("query")}} className='single-admin-option'>
         <i className="fa-solid fa-address-book fa-8x"></i>
             <h1>Query</h1>
         </div>
         </div>
-        {admincontent==="blog"?<Blog/>:<></>}
-        {admincontent==="event"?<Event/>:<></>}
+        {admincontent==="blog"?<Property/>:<></>}
+        {admincontent==="event"?<Project/>:<></>}
         {admincontent==="query"?<ContactQuery/>:<></>}
     </div>
   )

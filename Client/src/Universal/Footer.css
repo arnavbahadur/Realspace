@@ -257,3 +257,32 @@ button {
 .copyright a:hover {
   color: #ff3666;
 }
+
+
+@media  (min-width: 450px) and (max-width: 675px){
+
+  .row-realfoot{
+    /* display: grid; */
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+  }
+  .footer-box{
+    padding: 10px;
+    flex: 50%;
+  }
+}
+
+@media  (min-width: 300px) and (max-width: 449px){
+.row-realfoot{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.single_footer h4{
+  text-transform: none;
+} 
+.footer-box{
+  width: 70%;
+}
+
+}
