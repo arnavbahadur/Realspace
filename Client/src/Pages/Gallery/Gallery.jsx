@@ -29,7 +29,6 @@ const Gallery = (props) => {
                          </div>
                          </div>
                      </div>
-                 
              </div>
       
         
