@@ -185,3 +185,9 @@ gallery wale ka extra
                          </div>
                      </div>
                  </div>
+
+                 // "scripts": {
+  //   "start": "nodemon index.js",
+
+  //   
+  // },

@@ -11,9 +11,12 @@ const Gallery = (props) => {
                      <h2>Gallery</h2>
      </div>
          {props.gallery.map(item=>{
-         return <div className="gallery-page">  
-                 <div class="gallery-box">
+            
+         return   <div className="gallery-page"> 
+        
+                 <div class="gallery-box">           
                      <div class="gallery-card">
+                        {/* <div className="gallerybunch"> */}
                        <div className="gallery  gallery-container">
                              <a href="#">
                                  <div class="card-img">                          
@@ -24,8 +27,9 @@ const Gallery = (props) => {
                                  </div>    
                              </a>
                          </div>
+                         </div>
                      </div>
-                 </div> 
+                 
              </div>
       
         
@@ -33,6 +37,7 @@ const Gallery = (props) => {
                      
              </div>
     </div>
+    
   )
 }
 

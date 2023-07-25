@@ -41,7 +41,7 @@
   -ms-flex-align: center;
   align-items: center;
   /* background-color: hsla(0, 1%, 53%, -0.438); */
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(113, 156, 186);
   box-shadow: 1px 1px 10px 0 rgba(1, 0, 0, 1.05);
   justify-content: space-between;
   
@@ -77,8 +77,9 @@
   justify-content: center;
   justify-content: space-between;
   align-items: center;
-  margin-inline-end: 40px;
+  margin-inline-end: 10px;
   gap: 15px;
+  height: 12px;
 }
 .nav-right{
   /* login symbol and search btn css */
