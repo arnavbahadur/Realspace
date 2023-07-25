@@ -8,8 +8,9 @@ const Property=require("../Models/Property")
 
 // register
 // router.route("/addproject").post((req, res) => {
-router.route("/register"), async (req, res) => {
+router.post("/register", async (req, res) => {
   try {
+    console.log(req.body);
     const { name,username,email,phone,password} = req.body;
     if( !username||!password){
           return res.status(400).json({ errorMessage: "Please enter all required fields." });
@@ -33,6 +34,7 @@ router.route("/register"), async (req, res) => {
       email,
       phone,
       password:passwordHash,
+      created_at:new Date(),
     });
 
     const savedAdmin = await newAdmin.save();
@@ -60,12 +62,13 @@ router.route("/register"), async (req, res) => {
     console.error(err);
     res.status(500).send("Registeration Unsuccessfully");
   }
-};
+});
 
 // // log in
 
 router.post("/login", async (req, res) => {
   try {
+    console.log(req.body);
     const { username, password } = req.body;
     // validate
     if (!username || !password)
@@ -74,6 +77,8 @@ router.post("/login", async (req, res) => {
         .json({ errorMessage: "Please enter all required fields." });
 
     const existingUser = await Admin.findOne({ username });
+   
+   
     if (!existingUser)
       return res.status(401).json({ errorMessage: "Wrong email or password." });
 

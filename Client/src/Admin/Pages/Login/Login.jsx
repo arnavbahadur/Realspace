@@ -21,8 +21,9 @@ const Login = (props) =>  {
   async function login() {
     try {
       const { email, password } = user
-      await axios.post("/admin/login",user)
-      .then(()=>{props.setauthentic(true)})
+      await axios.post("/adminapi/login",{"username":user.email,"password":user.password})
+      // .then(()=>{props.setauthentic(true)})
+      .then((r)=>{console.log(r)})
       .catch((err)=>{alert(err)})
       // history("/mii-admin");
     } catch (err) {
