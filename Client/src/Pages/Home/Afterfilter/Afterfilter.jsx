@@ -16,8 +16,8 @@ function Afterfilter( props) {
    const Duplex=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
    const Bungalows=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
    const Rowhouse=["ALL Size","300 sqft ","400 sqft","500 sqft ","600 sqft ","700 sqft ","800 sqft ","900 sqft " ];
-   const {Propertytype,location,budget}=useParams();
-//   console.log( Propertytype,location,budget)
+ 
+  const { Propertytype,location,budget } = useParams
 
 const[currentPage,setCurrentPage]=useState(1);
   //fetch data from api and

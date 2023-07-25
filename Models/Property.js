@@ -92,25 +92,22 @@ const PropertySchema = new Schema ({
         type: String
     },
 
-    Featured: {
-        type: String
-    },
-    addMoreDetails:[
-        {
-            key: {
-                type: String
-            },
-            value: {
-                type: String
-            }
-        }
-    ],
+    // Feature: {
+    //     type: String
+    // },
+    // addMoreDetails:[
+    //     {
+    //         key: {
+    //             type: String
+    //         },
+    //         value: {
+    //             type: String
+    //         }
+    //     }
+    // ],
     Feature:  [
         {
             key: {
-                type: String
-            },
-            value: {
                 type: String
             }
         }
