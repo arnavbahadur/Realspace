@@ -38,7 +38,7 @@ const Feature = () => {
         <div className="cardfeature">
           <NavLink to="/others"> 
             <img className="imgfeature" src="./Images/others.jpg " />
-            <h3 className="h3feature">Others</h3>
+            <h3 className="h3feature">Additional.</h3>
             </NavLink>
             <p className="pfeature">View more</p>
             
