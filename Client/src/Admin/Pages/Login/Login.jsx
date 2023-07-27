@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Login.css'
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
+import AdminBody from '../../AdminBody/AdminBody'
 
 const Login = (props) =>  {
   const history = useNavigate()
@@ -9,7 +10,7 @@ const Login = (props) =>  {
       email:" ",
       password:" ",
   })
-
+  // props.setauthentic(true);
   const handleChange = e => {
       const { name, value } = e.target
       setUser({
@@ -19,8 +20,8 @@ const Login = (props) =>  {
   }
   async function login() {
     try {
-      // console.log(user)
-      const { email, password } = user
+      console.log("login page",user)
+      // const { email, password } = user
       await axios.post("/adminapi/login",{"username":user.email,"password":user.password})
       // .then(()=>{props.setauthentic(true)})
       .then((r)=>{console.log(r)})
@@ -38,7 +39,8 @@ const Login = (props) =>  {
              value={user.password}
               placeholder="Your Password"
                onChange={ handleChange }/>
-      <a className="submit" align="center" onClick={()=>{login()}}>Log in</a>        
+      <a className="submit" align="center" onClick={()=>{login()}}>Log in</a>   
+      {/* <AdminBody/> */}
     </div>
      
 
@@ -46,3 +48,5 @@ const Login = (props) =>  {
 }
 
 export default Login
+
+

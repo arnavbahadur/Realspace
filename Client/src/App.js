@@ -27,7 +27,7 @@ import Login from './Admin/Pages/Login/Login';
 import Afterfilter from './Pages/Home/Afterfilter/Afterfilter';
 
 import PageNotFound from './Pages/404/PageNotFound';
-import AdminBody from './Admin/AdminBody/AdminBody';
+// import AdminBody from './Admin/AdminBody/AdminBody';
 function App() {
 if(localStorage.compareItem === undefined){
   let temp = {
@@ -35,6 +35,7 @@ if(localStorage.compareItem === undefined){
   }
   localStorage.setItem("compareItem",JSON.stringify(temp));
 }
+
 
   return (
    <div className="app">

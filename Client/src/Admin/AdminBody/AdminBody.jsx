@@ -44,9 +44,9 @@ export default function AdminBody() {
             <h1>Query</h1>
         </div>
         </div>
-        {admincontent==="blog"?<Property/>:<></>}
-        {admincontent==="event"?<Project/>:<></>}
-        {admincontent==="query"?<ContactQuery/>:<></>}
+        {admincontent==="property"?<Property/>:<></>}
+        {admincontent==="project"?<Project/>:<></>}
+        {admincontent==="contactquery"?<ContactQuery/>:<></>}
     </div>
   )
 }
