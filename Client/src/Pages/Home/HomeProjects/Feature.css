@@ -73,7 +73,8 @@
 
 .cardbackfeature {
   position: relative;
-  width: 100%;
+  width: 95%;
+  min-width: 70px;
   height: 300px;
   border-radius: 14px;
   /* z-index: 11; */

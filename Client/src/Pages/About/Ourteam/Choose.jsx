@@ -19,7 +19,7 @@ function Choose() {
           </div>
           <div className="choose-text">
             <p>
-              IndiaFirst Life follows the ‘Customer First’ principle in all its
+             Realspace Group follows the ‘Customer First’ principle in all its
               business activities.
             </p>
             <button className="learnmore"
@@ -27,7 +27,7 @@ function Choose() {
                 setPopup(true);
                 setpopupcontain({
                   title: "CUSTOMER FIRST",
-                  content:"IndiaFirst Life follows the Customer First principle in all its business activities. We offer simple, easy to understand life insurance plans with real benefits at an affordable price. We are supported by dedicated/differentiated customer service. With death claims settlement ratio of 98.83% in Fiscal 2022.",
+                  content:"Realspace Group follows the Customer First principle in all its business activities. We offer luxury property with real benefits at an affordable price. We are supported by dedicated/differentiated customer service. We sold 100+ properties in Fiscal 2022.",
                 });
               }}
             >
@@ -75,7 +75,7 @@ function Choose() {
           </div>
           <div className="choose-text">
             <p>
-              We have made significant investments in technology to strengthen
+              We have made significant investments in technology to strength
               our sourcing channels and our business processes from lead
               generation and customer acquisition through the customer lifecycle
               management
@@ -85,7 +85,7 @@ function Choose() {
                 setPopup(true);
                 setpopupcontain({ 
                   title: "DIGITAL PLATFORM WITH A SEAMLESS EXPERIENCE", 
-                  content: "We have made significant investments in technology to strengthen our sourcing channels and our business processes from lead generation and customer acquisition through the customer lifecycle management, including payment of insurance claims, to improve the customer experience. In Fiscal 2020, 2021, 2022 and the three months ended June 30, 2022, 92.94%, 99.46%, 99.07% and 99.13% respectively, of the applications we received were logged in through tablets available with our personnel and staff at bancassurance branches using our assisted customer acquisition system ‘Simplify’. Further, we have increasingly automated the underwriting process to a great extent to optimize use of time and resources, and in Fiscal 2020, 2021, 2022 and the three months ended June 30, 2022, 32.40%, 43.80%, 55.98% and 64.75% of cases were decisioned through auto-underwriting," 
+                  content: "We have made significant investments in technology to strengthen our sourcing channels and our business processes from lead generation and customer acquisition through the customer lifecycle management, to improve the customer experience.  Keep the website design clean, intuitive, and easy to navigate. Use a consistent layout throughout the site with clear headings, menus, and buttons. Ensure that essential information is easily accessible, such as property listings, search filters,Responsive Design,Fast Loading speed,Detailed Property Information,Regular Updates and contact details." 
                 });
               }}
             >
