@@ -96,10 +96,9 @@
     padding: 3vh;
     margin: 3vh;
     top: 30px;
-    overflow: scroll;
 
   top: 30vh;
-   height: 50vh; 
+  height: 50vh; 
   width: 80%; 
   position: fixed;
   background-color: white;
@@ -205,3 +204,9 @@
  */
 
   /* end of popup */
+
+  @media  (min-width: 300px) {
+    .popup-inner{
+      overflow: scroll;
+    }
+  }
