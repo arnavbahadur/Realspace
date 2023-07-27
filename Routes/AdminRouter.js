@@ -106,7 +106,7 @@ router.post("/login", async (req, res) => {
         secure: true,
         sameSite: "none",
       })
-      .send();
+      .send("Succesfull");
   } catch (err) {
     console.error(err);
     res.status(500).send("Login Unsuccesfull");
