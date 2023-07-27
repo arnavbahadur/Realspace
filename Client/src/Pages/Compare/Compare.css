@@ -71,6 +71,8 @@
     color: green;
     font-size: 1.7rem;
 }
-/* @media screen (max-) {
-    
-} */
+@media (max-width: 1080px) {
+    .compare-section2{
+        overflow: scroll;
+    }   
+}

@@ -13,7 +13,7 @@ function CompareContextProvider(props) {
   
     },[]);
   return (
-    <CompareContext.Provider value={{Count,setCount }}>
+    <CompareContext.Provider value={{Count,setCount}}>
       {props.children}
     </CompareContext.Provider>
   );
