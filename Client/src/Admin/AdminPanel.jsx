@@ -7,7 +7,7 @@ export default function AdminPanel() {
 
     const [authentic, setauthentic] = useState(false);
       useEffect(() => {
-         axios.get("/admin/isauthenticated")
+         axios.get("/adminapi/isauthentic")
         .then((res)=>{setauthentic(res.data)});
       }, [])
       
@@ -19,3 +19,25 @@ export default function AdminPanel() {
     </div>
   )
 }
+
+
+
+
+
+
+
+  
+    
+
+
+
+    
+    
+   
+
+  
+
+    
+
+   
+ 

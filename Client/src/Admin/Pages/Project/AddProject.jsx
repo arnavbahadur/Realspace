@@ -2,8 +2,8 @@ import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { v4 } from 'uuid';
-import { storage } from '../../../firebase';
-import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
+// import { storage } from '../../../firebase';
+// import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
 
 
 const AddProject = () => {
@@ -57,34 +57,34 @@ const AddProject = () => {
   }
   
 
-  const changeimage=async ()=>{
-    // console.log("change image");
-    try{
-    if(!checkimg()){
-        alert("Please Upload Valid image on 200KB");
-    }
-    else if(imageUpload!==null){
-        const imageRef=ref(storage,'files/'+v4()+imageUpload.name);
-        await uploadBytes(imageRef,imageUpload).then((snapshot)=>{
-          getDownloadURL(snapshot.ref).then((url)=>{
-            // console.log(url); 
-             afterurl(url);
-          })
-        }) 
-    }
-    else{
-        console.log("nothing")
-    }
-   //  console.log(user);
-      } catch (err) {
-     console.error(err);
-       }
-    }
+  // const changeimage=async ()=>{
+  //   // console.log("change image");
+  //   try{
+  //   if(!checkimg()){
+  //       alert("Please Upload Valid image on 200KB");
+  //   }
+  //   else if(imageUpload!==null){
+  //       const imageRef=ref(storage,'files/'+v4()+imageUpload.name);
+  //       await uploadBytes(imageRef,imageUpload).then((snapshot)=>{
+  //         getDownloadURL(snapshot.ref).then((url)=>{
+  //           // console.log(url); 
+  //            afterurl(url);
+  //         })
+  //       }) 
+  //   }
+  //   else{
+  //       console.log("nothing")
+  //   }
+  //  //  console.log(user);
+  //     } catch (err) {
+  //    console.error(err);
+  //      }
+  //   }
 
-    useEffect(() => {
-      // console.log("img change")
-        changeimage();
-    }, [imageUpload])
+    // useEffect(() => {
+    //   // console.log("img change")
+    //     changeimage();
+    // }, [imageUpload])
 
 
   return (

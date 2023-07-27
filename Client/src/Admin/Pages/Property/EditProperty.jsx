@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import { v4 } from 'uuid';
+// import { v4 } from 'uuid';
 // import { storage } from '../../../firebase';
 // import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
 import './EditProperty.css'
@@ -11,9 +11,7 @@ export default function EditProperty({props}) {
   const [FormData,setFormData]=useState({
     images:"",
     description:"",
-    title:"",
-    // authername:"",
-    // date:"",
+    title:""
   });
   
   const [images,setimages]=useState([]);

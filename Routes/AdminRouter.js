@@ -7,7 +7,6 @@ const Project=require("../Models/Project")
 const Property=require("../Models/Property")
 
 // register
-// router.route("/addproject").post((req, res) => {
 router.post("/register", async (req, res) => {
   try {
     console.log(req.body);
@@ -64,7 +63,10 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// // log in
+
+
+
+// log in
 
 router.post("/login", async (req, res) => {
   try {
@@ -76,21 +78,17 @@ router.post("/login", async (req, res) => {
         .status(400)
         .json({ errorMessage: "Please enter all required fields." });
 
-    const existingUser = await Admin.findOne({ username });
-   
-   
+    const existingUser = await Admin.findOne({username});
     if (!existingUser)
+    // console.log("fill it")
       return res.status(401).json({ errorMessage: "Wrong email or password." });
-
-    const passwordCorrect = await bcrypt.compare(
-      password,
-      existingUser.password
-    );
+      // console.log(passwordCorrect);
+    const passwordCorrect = await bcrypt.compare(password,existingUser.password );
     if (!passwordCorrect)
-      return res.status(401).json({ errorMessage: "Wrong email or password." });
+      return res.status(402).json({ errorMessage: "Wrong email or password." });
 
     // sign the token
-
+   
     const token = jwt.sign(
       {
         user: existingUser._id,
@@ -106,12 +104,15 @@ router.post("/login", async (req, res) => {
         secure: true,
         sameSite: "none",
       })
-      .send();
+      .send("sucessful");
   } catch (err) {
     console.error(err);
     res.status(500).send("Login Unsuccesfull");
   }
 });
+
+
+
 
 router.get("/logout", (req, res) => {
   res
@@ -132,6 +133,20 @@ router.get("/isauthentic", (req, res) => {
     res.json(false);
   }
 });
+
+
+// router.get("/isauthentic", (req, res) => {
+//   // console.log(req.cookies)
+//   try {
+//     const token = req.cookies.token;
+//     // console.log(:+token)
+//     if (!token) return res.json(false);
+//     jwt.verify(token, process.env.JWT_SECRET);
+//     res.send(true);
+//   } catch (err) {
+//     res.json(false);
+//   }
+// });
 
 router.get("/getusername", async(req, res) => {
   try {
