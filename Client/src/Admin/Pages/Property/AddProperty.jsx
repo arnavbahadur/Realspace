@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import { v4 } from 'uuid';
-import { storage } from '../../../firebase';
-import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
+// import { v4 } from 'uuid';
+// import { storage } from '../../../firebase';
+// import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
 
 const AddProperty = () => {
   

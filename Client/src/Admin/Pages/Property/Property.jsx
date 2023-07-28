@@ -31,7 +31,7 @@ const apicall=async ()=>{
         </div>
 
         {openform?<AddProperty />:<></>}
-        {/* <h1>add a Blog</h1> */}
+
         <div className="blogs">  
 
         </div>
