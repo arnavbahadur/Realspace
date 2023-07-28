@@ -27,6 +27,7 @@ import Login from './Admin/Pages/Login/Login';
 import Afterfilter from './Pages/Home/Afterfilter/Afterfilter';
 
 import PageNotFound from './Pages/404/PageNotFound';
+import AdminBody from './Admin/AdminBody/AdminBody';
 function App() {
 if(localStorage.compareItem === undefined){
   let temp = {
@@ -34,6 +35,7 @@ if(localStorage.compareItem === undefined){
   }
   localStorage.setItem("compareItem",JSON.stringify(temp));
 }
+
 
   return (
    <div className="app">
@@ -61,13 +63,17 @@ if(localStorage.compareItem === undefined){
             <Route path="/residential" element={<Residential/>}/>   
             <Route path="/others" element={<Other/>}/>   
             <Route path="/afterfilter/:Propertytype/:location/:budget" element={<Afterfilter/>}/>   
-           <Route path="/login" element={<Login/>}></Route>  
+            <Route path="/login" element={<Login/>}></Route> 
+            <Route path="/adminbody" element={ <AdminBody/>}></Route> 
+           
+             
            
         
            <Route path="*" element={<PageNotFound/>}/>   
         </Routes> 
         {/* <Login/> */}
         <Footer/>  
+        
         {/* <Dropapp/> */}
     </div>
   );

@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login.css'
 import axios from "axios"
-
 import { useNavigate } from "react-router-dom"
+import AdminBody from '../../AdminBody/AdminBody'
 
 const Login = (props) =>  {
   const history = useNavigate()
   const [ user, setUser] = useState({
-      email:"",
-      password:"",
+      email:" ",
+      password:" ",
   })
-
+  // props.setauthentic(true);
   const handleChange = e => {
       const { name, value } = e.target
       setUser({
@@ -18,14 +18,24 @@ const Login = (props) =>  {
           [name]: value
       })
   }
+  
+  const [authentic, setauthentic] = useState(false);
+    // console.log("bhanu",authentic);
+      useEffect(() => {
+         axios.get("/adminapi/isauth")
+        .then((res)=>{setauthentic(res.data)});
+      }, [])
+
+
   async function login() {
     try {
-      const { email, password } = user
+      // console.log("login page",user)
+      // const { email, password } = user
       await axios.post("/adminapi/login",{"username":user.email,"password":user.password})
+      // await axios.post("/adminapi/login",user)
       // .then(()=>{props.setauthentic(true)})
-      .then((r)=>{console.log(r)})
+      .then((r)=>{history("/AdminBody")})
       .catch((err)=>{alert(err)})
-      // history("/mii-admin");
     } catch (err) {
       alert(err);
     }
@@ -39,14 +49,26 @@ const Login = (props) =>  {
              value={user.password}
               placeholder="Your Password"
                onChange={ handleChange }/>
-      <a className="submit" align="center" onClick={()=>{login()}}>Log in</a>
-      {/* <p className="forgot" align="center"><a href="#"/>Forgot Password?</p> */}
-            
-                
+      <a className="submit" align="center" onClick={()=>{login()}}>Log in</a>  
     </div>
      
+//      <div style={{padding:"10vh"}}>
+//      {authentic?<AdminBody/>:<Login setauthentic={setauthentic}/>}
+//  </div>
 
   )
 }
 
 export default Login
+
+
+
+
+
+
+
+
+
+
+
+  
