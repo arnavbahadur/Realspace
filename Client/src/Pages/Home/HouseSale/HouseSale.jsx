@@ -31,7 +31,11 @@ const HouseSale = (props) => {
     <div>
       <div className="home-houseSale-section">
         <div className="houseSale-sectionTop heading">
-            <HomeSectionsHeading title='Houses' purpose='For Sale' comment='comment'/>
+            <HomeSectionsHeading title='Houses'
+             purpose='For Sale'
+            //  comment='comment'
+
+             />
         </div>
         <div className="home-houseSale-cardSection">
           <div className="house-card-section">

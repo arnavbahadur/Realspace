@@ -27,7 +27,11 @@ const HouseRent = (props) => {
 
       <div className="home-houseRent-section">
         <div className="houseRent-sectionTop heading">
-            <HomeSectionsHeading title='Houses' purpose='For Rent' comment='Rent the houses with good enviroment'/>
+            <HomeSectionsHeading title='Houses'
+             purpose='For Rent' 
+            // comment='Rent the houses with good enviroment'
+
+            />
         </div>
         <div className="home-houseRent-cardSection">
           <div className="house-card-section">
