@@ -10,7 +10,7 @@ const Login = (props) =>  {
       email:" ",
       password:" ",
   })
-  // props.setauthentic(true);
+  
   const handleChange = e => {
       const { name, value } = e.target
       setUser({
@@ -19,12 +19,11 @@ const Login = (props) =>  {
       })
   }
   
-  const [authentic, setauthentic] = useState(false);
-    // console.log("bhanu",authentic);
-      useEffect(() => {
-         axios.get("/adminapi/isauth")
-        .then((res)=>{setauthentic(res.data)});
-      }, [])
+  // const [authentic, setauthentic] = useState(false);
+  //     useEffect(() => {
+  //        axios.get("/adminapi/isauth")
+  //       .then((res)=>{setauthentic(res.data)});
+  //     }, [])
 
 
   async function login() {
@@ -52,10 +51,6 @@ const Login = (props) =>  {
       <a className="submit" align="center" onClick={()=>{login()}}>Log in</a>  
     </div>
      
-//      <div style={{padding:"10vh"}}>
-//      {authentic?<AdminBody/>:<Login setauthentic={setauthentic}/>}
-//  </div>
-
   )
 }
 

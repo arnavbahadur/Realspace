@@ -7,7 +7,7 @@ export default function Partner() {
    
     <div className='single-event-main-container'>
     <div className='partner-text'>
-      Our Partners
+      Our Clients
     </div>
       <div className="single-event-section-4-container">
         <div className="single-event-memories">
@@ -26,9 +26,9 @@ export default function Partner() {
           <div className="partner-image-home">
             <img src="./Images/house-1.jpg" alt="Loading Error" />
           </div>
-          <div className="partner-image-home">
+          {/* <div className="partner-image-home">
             <img src="./Images/house-1.jpg" alt="Loading Error" />
-          </div>
+          </div> */}
         </div>
       </div>
 
