@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login.css'
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
@@ -18,13 +18,23 @@ const Login = (props) =>  {
           [name]: value
       })
   }
+  
+  const [authentic, setauthentic] = useState(false);
+    // console.log("bhanu",authentic);
+      useEffect(() => {
+         axios.get("/adminapi/isauth")
+        .then((res)=>{setauthentic(res.data)});
+      }, [])
+
+
   async function login() {
     try {
-      console.log("login page",user)
+      // console.log("login page",user)
       // const { email, password } = user
       await axios.post("/adminapi/login",{"username":user.email,"password":user.password})
+      // await axios.post("/adminapi/login",user)
       // .then(()=>{props.setauthentic(true)})
-      .then((r)=>{console.log(r)})
+      .then((r)=>{history("/AdminBody")})
       .catch((err)=>{alert(err)})
     } catch (err) {
       alert(err);
@@ -39,10 +49,12 @@ const Login = (props) =>  {
              value={user.password}
               placeholder="Your Password"
                onChange={ handleChange }/>
-      <a className="submit" align="center" onClick={()=>{login()}}>Log in</a>   
-      {/* <AdminBody/> */}
+      <a className="submit" align="center" onClick={()=>{login()}}>Log in</a>  
     </div>
      
+//      <div style={{padding:"10vh"}}>
+//      {authentic?<AdminBody/>:<Login setauthentic={setauthentic}/>}
+//  </div>
 
   )
 }
@@ -50,3 +62,13 @@ const Login = (props) =>  {
 export default Login
 
 
+
+
+
+
+
+
+
+
+
+  

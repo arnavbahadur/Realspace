@@ -139,7 +139,7 @@ router.get("/logout", (req, res) => {
 
 
 router.get("/isauth", (req, res) => {
-  console.log(" auth ",req.cookies)
+  // console.log(" auth ",req.cookies)
   try {
     const token = req.cookies.token;
     // console.log(:+token)
