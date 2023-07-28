@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Property from '../Pages/Property/Property'
-import Project from '../Pages/Project/Project'
+import Property from './Pages/Property/Property'
+import Project from './Pages/Project/Project'
 import './adminbody.css'
 
 import axios from "axios"

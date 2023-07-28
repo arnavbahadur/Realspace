@@ -10,7 +10,7 @@ export default function AdminPanel() {
          axios.get("/admin/isauthenticated")
         .then((res)=>{setauthentic(res.data)});
       }, [])
-      
+      console.log(authentic)
   return (
     <div style={{padding:"10vh"}}>
         {/* <Header/> */}

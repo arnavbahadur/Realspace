@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import './Login.css'
 import axios from "axios"
-
 import { useNavigate } from "react-router-dom"
 
 const Login = (props) =>  {
+
+  console.log(props)
   const history = useNavigate()
   const [ user, setUser] = useState({
       email:"",
@@ -20,10 +21,10 @@ const Login = (props) =>  {
   }
   async function login() {
     try {
-      const { email, password } = user
+      // const { email, password } = user
       await axios.post("/adminapi/login",{"username":user.email,"password":user.password})
-      // .then(()=>{props.setauthentic(true)})
-      .then((r)=>{console.log(r)})
+      // .then(()=>{setauthentic(true)})
+      .then((r)=>{ console.log("response",r.data)})
       .catch((err)=>{alert(err)})
       // history("/mii-admin");
     } catch (err) {
