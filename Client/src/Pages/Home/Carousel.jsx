@@ -11,21 +11,21 @@ function Carousel() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="./Images/house-1.jpg"
+              src="https://www.designsagar.com/wp-content/uploads/2019/10/beautiful-gradient-logo-designs-1.jpg"
               className="carousel-img d-block w-100 "
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
-              src="./Images/house-2.jpg"
+              src="https://static.vecteezy.com/system/resources/previews/008/123/821/original/real-estate-logo-house-logo-home-logo-sign-symbol-free-vector.jpg"
               className="carousel-img d-block w-100 "
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
-              src="./Images/house-3.jpg "
+              src="https://img.pikbest.com/png-images/home-icon-logo-design--golden-home-vector-logo-design--home-golden-icon-_1623095.png!w700wp "
               className="carousel-img d-block w-100 "
               height={"369px"}
               alt="..."
@@ -33,14 +33,14 @@ function Carousel() {
           </div>
           <div className="carousel-item">
             <img
-              src="./Images/house-4.jpg"
+              src="https://static.vecteezy.com/system/resources/previews/008/124/777/original/real-estate-logo-house-logo-home-logo-sign-symbol-free-vector.jpg"
               className="carousel-img d-block w-100 "
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
-              src="./Images/house-5.jpg"
+              src="https://img.freepik.com/premium-vector/real-estate-logo-house-logo-home-logo-sign-symbol_565585-829.jpg?w=360"
               className="carousel-img d-block w-100 "
               alt="..."
             />
