@@ -24,8 +24,9 @@ const HouseBox = (props) => {
             <div className="houseBox-top-tag-box">
                 {`${props.title}`}
             </div>
+            {/* props.Photos[0].imgUrl */}
             {/* <NavLink to={`/housepreview/`} > */}
-                <img src="./Images/house-1.jpg" alt="house" onClick={()=> {navigate(`/housepreview/${props.id}`)}}/>
+                <img src={props.Photos[0].imgUrl} alt="house ki image" onClick={()=> {navigate(`/housepreview/${props.id}`)}}/>
             {/* </NavLink> */}
             <div className="houseBox-imgsection-textArea">
                 <p> { props.Purpose}</p>

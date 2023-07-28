@@ -53,12 +53,13 @@ propertyapi();
 
   // })
   console.log("naerby",content)
+  console.log("photo",content.Photos)
   return (
   <div>
     <div className='housePreivew-page'> 
     <CompareSideBtn/>
       <div className="housePreview-topSection">
-          <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="house" />
+          <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=8" alt="house" />
           <div className="filter">
               {/* filterComponent */}
           </div>

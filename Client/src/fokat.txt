@@ -191,3 +191,29 @@ gallery wale ka extra
 
   //   
   // },
+
+
+
+
+  ************ COMPARE PAGE CODE ***************   
+                <div className="compare-itemsContainer">
+                    <div className="compare-itemDetails">
+                        <div className="compareItemDetail"><p>Details</p></div>
+                        <div className="compareItemDetail"><p><i class="fa-solid fa-check" style={{color:"green"}}/></p></div>
+                        <div className="compareItemDetail"><p><i class="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
+                    </div>
+                </div>     
+                <div className="compare-itemsContainer">
+                    <div className="compare-itemDetails">
+                        <div className="compareItemDetail"><p>Details</p></div>
+                        <div className="compareItemDetail"><p><i class="fa-solid fa-check" style={{color:"green"}}/></p></div>
+                        <div className="compareItemDetail"><p><i class="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
+                    </div>
+                </div>
+                <div className="compare-itemsContainer">
+                    <div className="compare-itemDetails">
+                        <div className="compareItemDetail"><p>Details</p></div>
+                        <div className="compareItemDetail"><p>Details</p></div>
+                        <div className="compareItemDetail"><p>Details</p></div>
+                    </div>
+                </div>  

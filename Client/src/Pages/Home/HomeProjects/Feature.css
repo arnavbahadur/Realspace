@@ -37,15 +37,17 @@
 }
 
 .h3feature {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 24px;
   margin: 20px 0 0 20px;
+  font-weight: 600;
+  
 
 }
 
 .pfeature {
   color: black;
-  font-weight: 400;
+  font-weight: 800;
   font-size: 16px;
   align-self: end;
   margin: 0 0 20px 20px;
@@ -97,7 +99,7 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: #ff0000;
+  background-color: #2d09bf;
   opacity: 1;
   filter: blur(12px);
   animation: blob-bounce 4s infinite ease;

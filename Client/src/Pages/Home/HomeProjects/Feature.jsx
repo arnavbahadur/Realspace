@@ -14,7 +14,7 @@ const Feature = () => {
   <div className="cardbackfeature">
  <div className="cardfeature">
   <NavLink to="/commercial">
-      <img className="imgfeature" src="./Images/comm.jpg " />
+      <img className="imgfeature" src="https://img.freepik.com/premium-photo/modern-corporate-architecture-can-be-seen-cityscape-office-buildings_410516-276.jpg?w=2000" />
       <h3 className="h3feature">Commercial</h3>
       </NavLink>
        <p className="pfeature">View more</p>
@@ -26,7 +26,7 @@ const Feature = () => {
 <div className="cardbackfeature">
     <div className="cardfeature">
     <NavLink to="/residential">
-      <img className="imgfeature" src="./Images/rese.jpg " />
+      <img className="imgfeature" src="https://img.freepik.com/free-photo/3d-electric-car-building_23-2148972401.jpg?w=2000" />
       <h3 className="h3feature">Residential</h3>
       </NavLink>
         <p className="pfeature">View more</p>
@@ -37,7 +37,7 @@ const Feature = () => {
     <div className="cardbackfeature">
         <div className="cardfeature">
           <NavLink to="/others"> 
-            <img className="imgfeature" src="./Images/others.jpg " />
+            <img className="imgfeature" src="https://st2.depositphotos.com/3767467/7104/i/950/depositphotos_71046753-stock-photo-city-park-with-modern-building.jpg " />
             <h3 className="h3feature">Additional.</h3>
             </NavLink>
             <p className="pfeature">View more</p>

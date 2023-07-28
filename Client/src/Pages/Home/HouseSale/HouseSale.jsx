@@ -31,12 +31,16 @@ const HouseSale = (props) => {
     <div>
       <div className="home-houseSale-section">
         <div className="houseSale-sectionTop heading">
-            <HomeSectionsHeading title='Houses' purpose='For Sale' comment='comment'/>
+            <HomeSectionsHeading title='Houses'
+             purpose='For Sale'
+            //  comment='comment'
+
+             />
         </div>
         <div className="home-houseSale-cardSection">
           <div className="house-card-section">
             {currentContent.map(item=>{
-              return <HouseBox title={item.title} id={item._id}  gallery={item.Gallery} location={item.location} price={item.price} Purpose={item.Purpose} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
+              return <HouseBox title={item.title} id={item._id}  gallery={item.Gallery} location={item.location} price={item.price} Purpose={item.Purpose}  Photos={item.Photos} location_url={item.location_url} img={item.img} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />
             })}
           </div>
         </div>

@@ -27,13 +27,17 @@ const HouseRent = (props) => {
 
       <div className="home-houseRent-section">
         <div className="houseRent-sectionTop heading">
-            <HomeSectionsHeading title='Houses' purpose='For Rent' comment='Rent the houses with good enviroment'/>
+            <HomeSectionsHeading title='Houses'
+             purpose='For Rent' 
+            // comment='Rent the houses with good enviroment'
+
+            />
         </div>
         <div className="home-houseRent-cardSection">
           <div className="house-card-section">
             {currentContent.map(item=>{
               console.log(item)
-              return <HouseBox title={item.title} gallery={item.Gallery} id={item._id} location={item.location} price={item.price} location_url={item.location_url} img={item.img} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  /> //original
+              return <HouseBox title={item.title} gallery={item.Gallery} id={item._id} location={item.location} price={item.price} location_url={item.location_url}  Photos={item.Photos} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  /> //original
               // return <HouseBox title={item.title} gallery={item.Gallery} id={id} location={item.location} price={item.price} location_url={item.location_url} img={item.img} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />  //for testing
               // return <HouseBox content={JSON.stringify(item)}  />
             })}
