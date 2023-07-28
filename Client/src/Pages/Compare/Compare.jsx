@@ -93,7 +93,8 @@ const Compare = () => {
             <div className="compareItemDetail"><p>{`${item.builtup_area} single floor`}</p></div>
             <div className="compareItemDetail"><p>{`${item.superBuiltup_area} 2 floor`}</p></div>
             <div className="compareItemDetail"><p>{item._id}</p></div>
-            <div className="compareItemDetail"><p>{item.created_at}</p></div>
+            <div className="compareItemDetail"><p>{new Date( item.created_at).getFullYear()}</p></div>
+            {/* <div className="compareItemDetail"><p>{item.created_at}</p></div> */}
             <div className="compareItemDetail"><p>{item.bedRoom}</p></div>
             <div className="compareItemDetail"><p>{item.bathRoom}</p></div>
             {

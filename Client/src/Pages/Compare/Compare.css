@@ -27,7 +27,8 @@
     /* min-height: 20vh; */
 }
 .compare-headings-section{
-    width: 20%;
+    min-width: 20%;
+
     padding: 5px 10px;
     text-align: left;
     font-weight: 500;
