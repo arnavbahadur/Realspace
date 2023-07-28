@@ -3,9 +3,9 @@ import './Faq.css';
 
 import  { useState } from "react";
 import General from './General';
-import Managing from './Managing';
-import Service from './Service';
-import Fee from './Fee';
+import BuyersCorner from './BuyersCorner';
+import NRIService from './NRIService';
+import SellerCorner from './SellerCorner';
 
 const Faq = () => {
   const [color, setColor] = useState(<General/>);
@@ -15,22 +15,22 @@ const Faq = () => {
 <div className="container-faq">
  <div className="faq-text">Frequently Asked Questions</div>
       <div className="groups">
-      <button className="groups-bttn"
+      <button className="groups-bttn" 
         type="button"
         onClick={() => setColor(<General/>)}
       >General</button>
-      <button className="groups-bttn"
+      <button className="groups-bttn" 
         type="button"
-        onClick={() => setColor(<Fee/>)}
-      >Fees and Charges</button>
-      <button className="groups-bttn"
+        onClick={() => setColor(<SellerCorner/>)}
+      >Seller Corner</button>
+      <button className="groups-bttn" 
+      type="button"
+        onClick={() => setColor(<BuyersCorner/>)}
+      >Buyer Corner</button>
+      <button className="groups-bttn" 
         type="button"
-        onClick={() => setColor(<Managing/>)}
-      >Managing your Account</button>
-      <button className="groups-bttn"
-        type="button"
-        onClick={() => setColor(<Service/>)}
-      >Services and Fulfillment by Flipkart</button>
+        onClick={() => setColor(<NRIService/>)}
+      > NRI Service </button>
      </div>
      {color}
    
