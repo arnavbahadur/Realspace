@@ -92,19 +92,6 @@ const PropertySchema = new Schema ({
         type: String
     },
 
-    // Feature: {
-    //     type: String
-    // },
-    // addMoreDetails:[
-    //     {
-    //         key: {
-    //             type: String
-    //         },
-    //         value: {
-    //             type: String
-    //         }
-    //     }
-    // ],
     Feature:  [
         {
             key: {
@@ -128,3 +115,19 @@ const PropertySchema = new Schema ({
 
 const Property = mongoose.model('Property', PropertySchema);
 module.exports = Property;
+
+
+
+    // Feature: {
+    //     type: String
+    // },
+    // addMoreDetails:[
+    //     {
+    //         key: {
+    //             type: String
+    //         },
+    //         value: {
+    //             type: String
+    //         }
+    //     }
+    // ],

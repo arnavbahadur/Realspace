@@ -1,7 +1,7 @@
 .container-faq{
    width: auto;
    height: auto;
-   border: 3px solid black;
+   /* border: 3px solid black; */
 }
 
 .faq-text{
@@ -16,7 +16,7 @@
 }
 
 .groups{
-   border: 2px solid black;
+   /* border: 2px solid black; */
    padding: 10px;
    margin: 10px;
    margin-left: 10px;
@@ -24,7 +24,9 @@
    flex-wrap: wrap;
    flex: 15px;
    justify-content: space-around;
-   background-color: black;
+   /* background-color: black; */
+   
+  background: linear-gradient(105deg, #6e99e6, #093c94);
     
 }
 .groups-bttn{
@@ -40,6 +42,7 @@
    /* height: 11px; */
    padding: 0.9vh;
   border-bottom: 2px solid ;
+  
  }
 
 

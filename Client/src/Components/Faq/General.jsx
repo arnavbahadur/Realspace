@@ -9,20 +9,24 @@ const General = () => {
           <h2>General</h2>
         <div className="accordion" id="accordionExample">
         <Singlefaq headingOne={"headingOne"} collapseOne={"collapseOne"}
-         title={"Why should I sell on Flipkart?"} 
-         content={"Flipkart is one of the most trusted and best E-commerce platforms. With over 50 crore customers across 27000+ pin codes, Flipkart is trusted by more than 500000 sellers online throughout India. By selling online on Flipkart, the sellers also get access to some of India’s largest shopping festivals, such as The Big Billion Days, The Big Diwali Sale, and whatnot! Flipkart.com provides a very low cost of doing business."}/>
+         title={"How can I build equity into my house?"} 
+         content={"You can build equity in three ways. First (and easiest) is from market appreciation. Second, when making your monthly mortgage payment, try to send a little bit more. This will go directly to the principal of the loan, rather than the interest. Be sure your lender knows to put the extra toward principal, and not the next month’s payment. Even an extra $50 per month can quickly build equity, as well as knock years off of your loan. The third way to build equity into your house is to make improvements. There are a variety of ways to remodel and make positive changes to the interior and exterior of your home. One of the best ways is to add square footage/living space."}/>
         <Singlefaq headingOne={"headingTwo"} collapseOne={"collapseTwo"} 
-        title={"How does selling on Flipkart.com work?"}
-         content={"Selling on Flipkart is a very easy process. All you have to do is list the products that you wish to sell on Flipkart.com. Once the order is placed, all that is required from your end is that you pack your product and deliver the product or use Fulfillment by Flipkart (FBF) and let Flipkart deliver the product for you. Once the product is dispatched, you will receive your payment within 7-10 days* from the date of dispatch."}/>
+        title={"What happens if I pre-purchase but do not utilize the Rental Agreement?"}
+         content={"We advise you to use the Rental Agreement Service from 99 acres as Legal Experts approve our templates. Moreover, the validity of Rental Agreement Service is up to 12 Months, which means that you can utilize the service anytime in the next 12 months as per your convenience ."}/>
         <Singlefaq headingOne={"headingThree"} collapseOne={"collapseThird"} 
-        title={"What is the minimum listing quantity to sell on Flipkart.com?"} 
-        content={"To sell online on Flipkart.com, all you require is at least 1 product to be listed. However, we recommend you to go for more than 1 product as Flipkart encompasses over 50 crore customers across 27000+ pin codes and the trust of 500000 sellers."}/>
+        title={"What is a Rental Agreement?"} 
+        content={"A rental agreement is a legal document that binds the owner of a property and tenant, while safeguarding the interest of both the parties. The landlord cited in the agreement should either be the owner of the property or a person having the power of attorney from the owner."}/>
         <Singlefaq headingOne={"headingFour"} collapseOne={"collapseFour"} 
-        title={"What products can I sell on Flipkart.com?"} 
+        title={"When can I apply for a home loan?"} 
         content={"Flipkart.com has more than 3000+ categories that you can opt from and sell online across 27000+ pin codes of India. Some of the popular categories are Clothes, Sarees, Electronics, Shoes, Jewelry, T-Shirts, Furniture, Art, Books, Watch, Mobiles, Camera, Bed, Groceries, Beauty Products, Plants, Kitchenware, and many more. However, certain categories require prior quality approval from the internal committee before going live."}/>
         <Singlefaq headingOne={"headingFive"} collapseOne={"collapseFive"}
         title={"What do I need to register to sell on Flipkart.com?"}
-         content={"A big yes. For selling your products on Flipkart.com, you don't require a website. You will have access to Flipkart Seller Hub after completing your registration where you can list your products and start selling. However, Flipkart.com charges a small amount of marketplace fee once your product is sold out."}/>
+         content={`Apply for a home loan once you have finalised the property to be purchased or constructed. Make sure you do the research about the type of loan you need and follow the checklist:-
+          How much deposit do you have?
+         What are the processing charges for the loan?
+         What is the interest rate
+         What's the best type of loan for you`}/>
         </div>
      </div>
     </div>

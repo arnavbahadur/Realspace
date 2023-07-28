@@ -1,27 +1,47 @@
-import React, { useState } from 'react'
-import Property from './Pages/Property/Property'
-import Project from './Pages/Project/Project'
-import './adminbody.css'
-
-import axios from "axios"
-import { useNavigate } from "react-router-dom"
-
-
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import Property from '../Pages/Property/Property'
+import Project from '../Pages/Project/Project'
+import './Adminbody.css'
 import ContactQuery from '../Pages/ContactQuery/ContactQuery';
-export default function AdminBody() {
+
+
+
+
+const AdminBody = (props) => {
+
+   const navigate=useNavigate()
+   const [authentic, setauthentic] = useState(false);
+    console.log("bhanu",authentic);
+      useEffect(() => {
+         axios.get("/adminapi/isauth")
+        .then((res)=>{setauthentic(res.data)
+        if(res.data===false){
+          navigate("/login")
+        }
+        });
+
+      }, [])
+
   const [admincontent, setadmincontent] = useState("project");
   const history = useNavigate();
 
-  async function logout() {
+        async function logout() {
     try {
       await axios.get("admin/logout").then((res)=>{alert("Logged out successfully")})
     } catch (err) {
       console.error(err);
     }
   }
+
   return (
-    <div >
-      <nav className="nav-bar">
+
+
+    // <div>AdminBody</div>
+        <div >
+        <h1>welcome admin</h1>
+      {/* <nav className="nav-bar">
        <div className="left-align">
          <h1 className="nav-link text-white" style={{fontSize:"30px"}}>Admin Panel</h1>
         </div>
@@ -45,9 +65,78 @@ export default function AdminBody() {
             <h1>Query</h1>
         </div>
         </div>
-        {admincontent==="blog"?<Property/>:<></>}
-        {admincontent==="event"?<Project/>:<></>}
-        {admincontent==="query"?<ContactQuery/>:<></>}
+        {admincontent==="property"?<Property/>:<></>}
+        {admincontent==="project"?<Project/>:<></>}
+        {admincontent==="contactquery"?<ContactQuery/>:<></>} */}
     </div>
+
+
   )
 }
+
+export default AdminBody
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react'
+// import Property from '../Pages/Property/Property'
+// import Project from '../Pages/Project/Project'
+// import './Adminbody.css'
+// import axios from "axios"
+// import { useNavigate } from "react-router-dom"
+
+
+// import ContactQuery from '../Pages/ContactQuery/ContactQuery';
+// export default function AdminBody() {
+//   const [admincontent, setadmincontent] = useState("project");
+//   const history = useNavigate();
+
+//   async function logout() {
+//     try {
+//       await axios.get("admin/logout").then((res)=>{alert("Logged out successfully")})
+//     } catch (err) {
+//       console.error(err);
+//     }
+//   }
+//   return (
+//     <div >
+//       <nav className="nav-bar">
+//        <div className="left-align">
+//          <h1 className="nav-link text-white" style={{fontSize:"30px"}}>Admin Panel</h1>
+//         </div>
+//          <div className="right-align">
+//            <button className="nav-link text-white" onClick={()=>{logout()}}>Log out <i className="fa fa-sign-out" aria-hidden="true"></i></button>
+//           </div>   
+//         </nav>
+
+//         <div className='admin-options'>
+//         <div onClick={()=>{setadmincontent("blog")}} className='single-admin-option' >
+//             <i className="fa-sharp fa-solid fa-pager fa-9x"></i>
+//             <h1>Project</h1>
+//         </div>
+    
+//         <div onClick={()=>{setadmincontent("event")}} className='single-admin-option'>
+//         <i className="fa-solid fa-calendar-days fa-9x"></i>
+//             <h1>Property</h1>
+//         </div>
+//         <div onClick={()=>{setadmincontent("query")}} className='single-admin-option'>
+//         <i className="fa-solid fa-address-book fa-8x"></i>
+//             <h1>Query</h1>
+//         </div>
+//         </div>
+//         {admincontent==="property"?<Property/>:<></>}
+//         {admincontent==="project"?<Project/>:<></>}
+//         {admincontent==="contactquery"?<ContactQuery/>:<></>}
+//     </div>
+//   )
+// }

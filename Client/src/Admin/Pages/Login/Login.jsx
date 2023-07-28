@@ -8,10 +8,10 @@ const Login = (props) =>  {
   console.log(props)
   const history = useNavigate()
   const [ user, setUser] = useState({
-      email:"",
-      password:"",
+      email:" ",
+      password:" ",
   })
-
+  
   const handleChange = e => {
       const { name, value } = e.target
       setUser({
@@ -19,14 +19,23 @@ const Login = (props) =>  {
           [name]: value
       })
   }
+  
+  // const [authentic, setauthentic] = useState(false);
+  //     useEffect(() => {
+  //        axios.get("/adminapi/isauth")
+  //       .then((res)=>{setauthentic(res.data)});
+  //     }, [])
+
+
   async function login() {
     try {
+      // console.log("login page",user)
       // const { email, password } = user
       await axios.post("/adminapi/login",{"username":user.email,"password":user.password})
-      // .then(()=>{setauthentic(true)})
-      .then((r)=>{ console.log("response",r.data)})
+      // await axios.post("/adminapi/login",user)
+      // .then(()=>{props.setauthentic(true)})
+      .then((r)=>{history("/AdminBody")})
       .catch((err)=>{alert(err)})
-      // history("/mii-admin");
     } catch (err) {
       alert(err);
     }
@@ -40,14 +49,22 @@ const Login = (props) =>  {
              value={user.password}
               placeholder="Your Password"
                onChange={ handleChange }/>
-      <a className="submit" align="center" onClick={()=>{login()}}>Log in</a>
-      {/* <p className="forgot" align="center"><a href="#"/>Forgot Password?</p> */}
-            
-                
+      <a className="submit" align="center" onClick={()=>{login()}}>Log in</a>  
     </div>
      
-
   )
 }
 
 export default Login
+
+
+
+
+
+
+
+
+
+
+
+  
