@@ -78,9 +78,11 @@
   font-size: 12px;
   text-transform: uppercase;
 }
-.team_member1 p{
+.paragraph1{
   flex-wrap: wrap;
   flex: 75%;
+}
+.paragraph1 p{
   display: flex;
   flex-wrap: wrap;
   flex: 75% 1;
@@ -88,9 +90,11 @@
   justify-content: center;
   align-items: center;
 }
-.team_member2 p{
+.paragraph2{
   flex-wrap: wrap;
   flex: 75%;
+}
+.paragraph2 p{
   display: flex;
   flex-wrap: wrap;
   flex: 75% 1;

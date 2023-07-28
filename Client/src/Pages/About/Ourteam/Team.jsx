@@ -16,8 +16,8 @@ const Team = () => {
         <img className="team_img" src="./Images/Aashish-Kaul.jpeg" alt="Team_image"/>
       <h3 className="team-heading">Aashish Kaul </h3>
       <h2 className="role">Managing Director</h2></div>
+      <div className="paragraph1">
       <p>Welcome to our real estate marketing company, where excellence meets innovation and dreams turn into reality. As the Managing Director of our esteemed organization, I am thrilled to introduce you to a world of boundless possibilities in the realm of real estate.
-
 With a profound passion for development and a vision that extends far beyond the horizon, I have spearheaded the creation of awe-inspiring townships that redefine modern living. Our portfolio boasts a plethora of successful townships that stand as testaments to our commitment to delivering exceptional living experiences to our customers.</p>
       <button className="learnmore"
               onClick={() => {
@@ -30,13 +30,14 @@ With a profound passion for development and a vision that extends far beyond the
             >
               {" "}
               Learn More
-            </button>
+            </button> </div>
     </div>
     <div className="team_member2">
       <div className="team-text2"> 
       <img className="team_img" src="https://i.imgur.com/2Necikc.png" alt="Team_image"/>
       <h3 className="team-heading">Sheetal Shukla</h3>
       <h2 className="role">Director</h2></div>
+      <div className="paragraph2">
       <p>we have successfully brought a fresh perspective to the real estate landscape, pushing the boundaries of creativity and innovation. Our townships are not just brick-and-mortar structures; they are meticulously crafted communities that prioritize sustainable living, modern amenities, and a harmonious blend of nature and urbanity.</p>
       <button className="learnmore"
               onClick={() => {
@@ -49,13 +50,14 @@ With a profound passion for development and a vision that extends far beyond the
             >
               {" "}
               Learn More
-            </button>
+            </button></div>
       </div>
     <div className="team_member1">
     <div className="team-text1">
         <img className="team_img" src="https://i.imgur.com/2Necikc.png" alt="Team_image"/>
       <h3 className="team-heading">Garimesh Goyal </h3>
       <h2 className="role">Support Lead</h2></div>
+      <div className="paragraph1">
       <p>Welcome to our Real Estate Marketing Company!
 
 At our Real Estate Marketing Company, we are passionate about revolutionizing the way properties are bought and sold. As the Support Lead, I take immense pride in leading a team of dedicated professionals who are committed to providing exceptional support and customer service to our clients and partners.</p>
@@ -70,13 +72,14 @@ At our Real Estate Marketing Company, we are passionate about revolutionizing th
             >
               {" "}
               Learn More
-            </button>
+            </button> </div>
     </div>
     <div className="team_member2">
       <div className="team-text2">
         <img className="team_img" src="./Images/priya.jpeg" alt="Team_image"/>
       <h3 className="team-heading">Priya Raghuvanshi </h3>
       <h2 className="role">Sell Lead</h2></div>
+      <div className="paragraph2">
       <p>I am Priya Raghuwanshi, a results-driven and accomplished Sales Leader with a proven track record in the dynamic realm of real estate marketing. With a deep passion for the industry and an unwavering commitment to excellence, I have consistently delivered exceptional results and surpassed targets throughout my career.</p>
       <button className="learnmore"
               onClick={() => {
@@ -89,7 +92,7 @@ At our Real Estate Marketing Company, we are passionate about revolutionizing th
             >
               {" "}
               Learn More
-            </button>
+            </button></div>
     </div>
   </div>
 </div>
