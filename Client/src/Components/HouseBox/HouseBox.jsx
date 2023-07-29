@@ -37,7 +37,7 @@ const HouseBox = (props) => {
                 <p> {`Home\\Villa`} in {props.location}</p>
             </div>
             <div className="houseBox-address">                
-                <p><span><i className="fa-solid fa-location-dot"/></span>{props.location_url}</p>
+                <p><span><i className="fa-solid fa-location-dot"/></span><link rel="stylesheet" href={props.location_url} />Location</p>
             </div>
             <div className="houseBox-areaMeasure">
                 <div className="houseBox-areaMeasure-container">
