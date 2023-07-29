@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './Login.css'
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
-import AdminBody from '../../AdminBody/AdminBody'
 
 const Login = (props) =>  {
+
+  console.log(props)
   const history = useNavigate()
   const [ user, setUser] = useState({
       email:" ",

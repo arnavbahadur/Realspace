@@ -24,7 +24,12 @@ const Compare = () => {
           i++;
         });
       };
-      const cureentContent = content.slice(0,3);
+      // const cureentContent = content.slice(0,4);
+      // const currentContent = content.find((item)=>{
+      //   // return items.includes(item._id)
+      //   return items.filters(item._id)
+      // });
+      // console.log("currentcontent",currentContent)
       useEffect(() => {
         callapi();
       }, []);
@@ -113,42 +118,21 @@ const Compare = () => {
                 <div className="compare-headings-section"></div>
                 {compareHead}
             </div>
-            <div className="copare-container-detailsSection">
-                <div className="compare-titles-container">
-                    <div className="compare-titles">
-                    {/* base properties for compare */}
-                        {titlesEle }   
-                          
-                        {
-                          feature.map((item)=>{
-                            return(
-                              <div className="compareTitle"><p>{item}</p></div>
-                          )
-                          })
-                        }                                           
-                    </div>
-                </div>   
-                <div className="compare-itemsContainer">
-                    <div className="compare-itemDetails">
-                        <div className="compareItemDetail"><p>Details</p></div>
-                        <div className="compareItemDetail"><p><i class="fa-solid fa-check" style={{color:"green"}}/></p></div>
-                        <div className="compareItemDetail"><p><i class="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
-                    </div>
-                </div>     
-                <div className="compare-itemsContainer">
-                    <div className="compare-itemDetails">
-                        <div className="compareItemDetail"><p>Details</p></div>
-                        <div className="compareItemDetail"><p><i class="fa-solid fa-check" style={{color:"green"}}/></p></div>
-                        <div className="compareItemDetail"><p><i class="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
-                    </div>
+            <div className="copare-container-detailsSection">  
+              <div className="compare-titles-container">
+                <div className="compare-titles">
+                  {/* base properties for compare */}
+                    {titlesEle }   
+                      
+                    {
+                      feature.map((item)=>{
+                        return(
+                          <div className="compareTitle"><p>{item}</p></div>
+                      )
+                      })
+                    }                                           
                 </div>
-                <div className="compare-itemsContainer">
-                    <div className="compare-itemDetails">
-                        <div className="compareItemDetail"><p>Details</p></div>
-                        <div className="compareItemDetail"><p>Details</p></div>
-                        <div className="compareItemDetail"><p>Details</p></div>
-                    </div>
-                </div>    
+              </div>
                 {
                   itemDetails
                 }
