@@ -21,6 +21,7 @@ const MyModal = ({ closeModal, children, handleCloseButton }) => {
        
         {children}
         {handleCloseButton}
+        
              </div>
 
     </>

@@ -21,12 +21,8 @@ const General = () => {
         title={"When can I apply for a home loan?"} 
         content={"Flipkart.com has more than 3000+ categories that you can opt from and sell online across 27000+ pin codes of India. Some of the popular categories are Clothes, Sarees, Electronics, Shoes, Jewelry, T-Shirts, Furniture, Art, Books, Watch, Mobiles, Camera, Bed, Groceries, Beauty Products, Plants, Kitchenware, and many more. However, certain categories require prior quality approval from the internal committee before going live."}/>
         <Singlefaq headingOne={"headingFive"} collapseOne={"collapseFive"}
-        title={"What do I need to register to sell on Flipkart.com?"}
-         content={`Apply for a home loan once you have finalised the property to be purchased or constructed. Make sure you do the research about the type of loan you need and follow the checklist:-
-          How much deposit do you have?
-         What are the processing charges for the loan?
-         What is the interest rate
-         What's the best type of loan for you`}/>
+        title={"What does  Realspace Group Company do?"}
+         content={`Realspace Group Company is a full-service real estate agency. We assist buyers, sellers, and renters in their real estate transactions. Our services include property listings, property evaluations, negotiations, and legal documentation.`}/>
         </div>
      </div>
     </div>
