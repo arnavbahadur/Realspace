@@ -17,13 +17,14 @@ const Compare = () => {
     //     propertyapi();
     // }, []);
     const callapi = async () => {
-        let i = 0;
-        await axios.get(`/propertyapi/`).then((res) => {
-          setContent(res.data);
-          console.log(res.data,i)
-          i++;
-        });
-      };
+      let i = 0;
+      await axios.get(`/propertyapi/`).then((res) => {
+        setContent(res.data);
+        console.log(res.data,i)
+        i++;
+      });
+    };
+      
       // const cureentContent = content.slice(0,4);
       // const currentContent = content.find((item)=>{
       //   // return items.includes(item._id)
@@ -34,6 +35,14 @@ const Compare = () => {
         callapi();
       }, []);
     
+    // let compareItems;
+    // if(items!=null) {
+    //   items.forEach((e)=>{
+    //     return  compareItems = content.filter((item)=>{
+    //       return item._id = e;
+    //     })
+    //   })
+    // } 
     // const compareItemDetail =[
     //     {
     //         image:"https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
@@ -76,7 +85,7 @@ const Compare = () => {
             return(
                 <div className="compare-headings-section">
                     {/* heading/ section */}
-                    <img src={item.Gallery[0].imgUrl} alt="house" />
+                    <img src={item.Photos[0].imgUrl} alt="house" />
                     {/* <p className="compare-item-name">{item.name}</p> */}
                     <p className="compare-item-sale/rent">{`For  ${item.Purpose}`}</p>
                     <p className="compare-item-amount">{item.price}</p>
@@ -93,7 +102,8 @@ const Compare = () => {
             <div className="compareItemDetail"><p>{`${item.builtup_area} single floor`}</p></div>
             <div className="compareItemDetail"><p>{`${item.superBuiltup_area} 2 floor`}</p></div>
             <div className="compareItemDetail"><p>{item._id}</p></div>
-            <div className="compareItemDetail"><p>{item.created_at}</p></div>
+            <div className="compareItemDetail"><p>{new Date( item.created_at).getFullYear()}</p></div>
+            {/* <div className="compareItemDetail"><p>{item.created_at}</p></div> */}
             <div className="compareItemDetail"><p>{item.bedRoom}</p></div>
             <div className="compareItemDetail"><p>{item.bathRoom}</p></div>
             {
