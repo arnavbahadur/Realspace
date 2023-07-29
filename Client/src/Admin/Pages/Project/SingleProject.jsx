@@ -4,10 +4,10 @@ import EditProject from './EditProject';
 
 const SingleProject = (props) => {
     const deleteProject=async ()=>{
-        await axios.get(`/Project/deleteProject/${props.id}`).then((res) => { alert("Deleted Sucessfully") });
+        await axios.get(`/Projectapi/deleteProject/${props.id}`).then((res) => { alert("Deleted Sucessfully") });
       }
       const updateProjectfeatured=async ()=>{
-        await axios.get(`/Project/changefeaturedstatus/${props.id}`).then((res) => {  alert("Featured Sucessfully") });
+        await axios.get(`/Projectapi/editproject/${props.id}`).then((res) => {  alert("Featured Sucessfully") });
       }
   return (
     <div>
@@ -23,8 +23,8 @@ const SingleProject = (props) => {
               <p>{props.location}</p>
             </div>
             <div className="event-row">
-              <span>Number of speaker: {props.numberofspeaker}</span>
-              <span>{props.registrationfee}₹</span>
+              {/* <span>Number of speaker: {props.numberofspeaker}</span> */}
+              <span>{props.price}₹</span>
             </div>
             <i className="fa fa-trash event-delete-btn" aria-hidden="true"onClick={()=>{deleteProject()}}/>
             <button  className='delete-btn' style={{color:props.featured==="True"?"red":"green"}} onClick={()=>{updateProjectfeatured()}}>Featured <i class="fa-solid fa-jet-fighter-up"></i></button>
@@ -36,3 +36,7 @@ const SingleProject = (props) => {
 }
 
 export default SingleProject
+
+
+// title,description,imageContainer,Gallery,addMoreDetails,Photos,Floorplan,Feature,Featured,Area,Floors,
+// location,Address,City,Postalcode,Parking,Video_url,location_url, Note,CurrentStatus

@@ -8,12 +8,11 @@ import ContactQuery from '../Pages/ContactQuery/ContactQuery';
 
 
 
-
 const AdminBody = (props) => {
 
    const navigate=useNavigate()
    const [authentic, setauthentic] = useState(false);
-    console.log("bhanu",authentic);
+    // console.log("bhanu",authentic);
       useEffect(() => {
          axios.get("/adminapi/isauth")
         .then((res)=>{setauthentic(res.data)
@@ -27,7 +26,7 @@ const AdminBody = (props) => {
   const [admincontent, setadmincontent] = useState("project");
   const history = useNavigate();
 
-        async function logout() {
+  async function logout() {
     try {
       await axios.get("admin/logout").then((res)=>{alert("Logged out successfully")})
     } catch (err) {
@@ -38,10 +37,9 @@ const AdminBody = (props) => {
   return (
 
 
-    // <div>AdminBody</div>
         <div >
-        <h1>welcome admin</h1>
-      {/* <nav className="nav-bar">
+        {/* <h1>welcome admin</h1> */}
+      <nav className="nav-bar">
        <div className="left-align">
          <h1 className="nav-link text-white" style={{fontSize:"30px"}}>Admin Panel</h1>
         </div>
@@ -51,23 +49,23 @@ const AdminBody = (props) => {
         </nav>
 
         <div className='admin-options'>
-        <div onClick={()=>{setadmincontent("blog")}} className='single-admin-option' >
-            <i className="fa-sharp fa-solid fa-pager fa-9x"></i>
+        <div onClick={()=>{setadmincontent("project")}} className='single-admin-option' >
+            <i className="fa-sharp fa-solid fa-pager fa-2x"></i>
             <h1>Project</h1>
         </div>
     
-        <div onClick={()=>{setadmincontent("event")}} className='single-admin-option'>
-        <i className="fa-solid fa-calendar-days fa-9x"></i>
+        <div onClick={()=>{setadmincontent("property")}} className='single-admin-option'>
+        <i className="fa-solid fa-calendar-days fa-2x"></i>
             <h1>Property</h1>
         </div>
-        <div onClick={()=>{setadmincontent("query")}} className='single-admin-option'>
-        <i className="fa-solid fa-address-book fa-8x"></i>
-            <h1>Query</h1>
+        <div onClick={()=>{setadmincontent("contact")}} className='single-admin-option'>
+        <i className="fa-solid fa-address-book fa-2x"></i>
+            <h1>Contact Us</h1>
         </div>
         </div>
         {admincontent==="property"?<Property/>:<></>}
         {admincontent==="project"?<Project/>:<></>}
-        {admincontent==="contactquery"?<ContactQuery/>:<></>} */}
+        {admincontent==="contactquery"?<ContactQuery/>:<></>}
     </div>
 
 
@@ -77,12 +75,18 @@ const AdminBody = (props) => {
 export default AdminBody
 
 
+// property==event
+// project==blog
+
+// property model
+// title,location,property_url, propertytype,Nearby, Gallery,  Purpose,location_url, price, areaSqFt,
+//  hall, bedRoom, bathRoom,Listingyear,imageContainer,Photos,Description
+//  ,addMoreDetails,Feature,Note,Rating,CurrentStatus
 
 
-
-
-
-
+// project model
+// title,description,imageContainer,Gallery,addMoreDetails,Photos,Floorplan,Feature,Featured,Area,Floors,
+// location,Address,City,Postalcode,Parking,Video_url,location_url, Note,CurrentStatus
 
 
 

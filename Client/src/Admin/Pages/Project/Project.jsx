@@ -13,7 +13,7 @@ const signChange = (openform) => {
 }
   const [project, setproject] = useState([]);
 const apicall=async ()=>{
-    await axios.get("/Project/allProject").then((res) => { setproject(res.data) });
+    await axios.get("/Projectapi/").then((res) => { setproject(res.data) });
   }
   useEffect(() => {
     apicall();
@@ -32,7 +32,8 @@ const apicall=async ()=>{
       <div className="blogs">
         {/* <p>Evedfisdfiydnts</p> */}
          {project.map((item) => {
-         return <SingleProject id={item._id} title={item.title} description={item.description} images={item.images} authername={item.authername} date={item.date} time={item.time} location={item.location} numberofspeaker={item.numberofspeaker} registrationfee={item.registrationfee}/>
+         return <SingleProject id={item._id} title={item.title} description={item.description} images={item.images} authername={item.authername} date={item.date} time={item.time} location={item.location}  featured={item.featured}   price={item.price} location_url={item.location_url}  Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt} 
+         />
         })}
       </div>
     </div>
@@ -42,6 +43,8 @@ const apicall=async ()=>{
 export default Project
 
 
+// title,description,imageContainer,Gallery,addMoreDetails,Photos,Floorplan,Feature,Featured,Area,Floors,
+// location,Address,City,Postalcode,Parking,Video_url,location_url, Note,CurrentStatus
 
 
 

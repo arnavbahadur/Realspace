@@ -47,7 +47,7 @@ const AddProperty = () => {
 
   async function submit() {
     try {
-      await axios.post("/Property/addProperty",FormData)
+      await axios.post("/Propertyapi/addProperty",FormData)
       .then(()=>{alert("Property added successfully")})
       .catch((err)=>{alert(err)})
     } catch (err) {
@@ -86,23 +86,25 @@ const AddProperty = () => {
     }, [imageUpload])
 
 
+
   return (
     <div>
-    <div className="add-area add_event_area" id='add_event_area'>
-            {/* html of Event to add */}        
+    <div className="add-area add_event_area" id='add_event_area'>     
            <p>Add new Property</p>
            <div>
-                <input type="text" id="" className='eventtitle' placeholder='Title'  onChange={ handleChange } name="title" value={FormData.title}/>
-                <textarea  id="" cols="30" rows="10"placeholder='Event discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
+                <input type="text" id="" className='eventtitle' placeholder='Title'         onChange={ handleChange } name="title" value={FormData.title}/>
+                <input type="text" id="" className='eventtitle' placeholder='location'      onChange={ handleChange } name="location" value={FormData.location}/>
+                <input type="text" id="" className='eventtitle' placeholder='property_url'  onChange={ handleChange } name="property_url" value={FormData.property_url}/>
+                <input type="text" id="" className='eventtitle' placeholder='price'         onChange={ handleChange } name="price" value={FormData.price}/>
+                <input type="text" id="" className='eventtitle' placeholder='area'          onChange={ handleChange } name="area" value={FormData.area}/>
+                <textarea  id="" cols="30" rows="10"placeholder='property discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
                 <div className="small-box-area" >
-                  <input type="date"  onChange={ handleChange } name="date" value={FormData.date} />
+                  <input type="date0"  onChange={ handleChange } name="dateofconst" value={FormData.date} />
                   {/* <label htmlFor="eventTime">Time : </label> */}
-                 
                 </div>
-                <div className="small-box-area">
+                {/* <div className="small-box-area">
                 <input type="text" onChange={ handleChange } name="authername" value={FormData.authername} placeholder='Author Name'/>
-                </div>
-                
+                </div> */}
                 <div className="img-upload">
                   <p>Upload image :</p>
                   <label htmlFor="event-img">
@@ -117,5 +119,9 @@ const AddProperty = () => {
     </div>
   )
 }
-
 export default AddProperty
+
+
+// title,location,property_url, propertytype,Nearby, Gallery,  Purpose,location_url, price, areaSqFt,
+//  hall, bedRoom, bathRoom,Listingyear,imageContainer,Photos,Description
+//  ,addMoreDetails,Feature,Note,Rating,CurrentStatus
