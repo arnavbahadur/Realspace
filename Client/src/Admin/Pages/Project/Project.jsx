@@ -29,7 +29,7 @@ const apicall=async ()=>{
         {openform?<AddProject />:<></>}
         
       </div>
-      <div className="blogs">
+      <div className="blogs" style={{display:"flex", flexWrap:"wrap"}}>
         {/* <p>Evedfisdfiydnts</p> */}
          {project.map((item) => {
          return <SingleProject id={item._id} title={item.title} description={item.description} images={item.images} authername={item.authername} date={item.date} time={item.time} location={item.location}  featured={item.featured}   price={item.price} location_url={item.location_url}  Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt} 

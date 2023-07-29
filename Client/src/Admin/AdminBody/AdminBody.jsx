@@ -41,10 +41,10 @@ const AdminBody = (props) => {
         {/* <h1>welcome admin</h1> */}
       <nav className="nav-bar">
        <div className="left-align">
-         <h1 className="nav-link text-white" style={{fontSize:"30px"}}>Admin Panel</h1>
+         <h1 className="nav-link text-black" style={{fontSize:"30px"}}>Admin Panel</h1>
         </div>
          <div className="right-align">
-           <button className="nav-link text-white" onClick={()=>{logout()}}>Log out <i className="fa fa-sign-out" aria-hidden="true"></i></button>
+           <button className="nav-link text-black" onClick={()=>{logout()}}>Log out <i className="fa fa-sign-out" aria-hidden="true"></i></button>
           </div>   
         </nav>
 

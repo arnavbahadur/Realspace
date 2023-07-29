@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react'
 import EditProperty from './EditProperty';
+import "./Property.css";
 
 export default function SingleProperty(props) {
   const deleteProperty=async ()=>{
