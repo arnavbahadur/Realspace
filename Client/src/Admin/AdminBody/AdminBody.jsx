@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Property from '../Pages/Property/Property'
 import Project from '../Pages/Project/Project'
-import './adminbody.css'
+import './Adminbody.css'
 import ContactQuery from '../Pages/ContactQuery/ContactQuery';
 
 
