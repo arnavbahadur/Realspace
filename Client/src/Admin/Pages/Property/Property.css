@@ -23,8 +23,8 @@
 /* add-area button css is in event.css */
 .blogs{
     padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 
 /* .blogs > p::before{
@@ -42,7 +42,7 @@
     margin: 10px 20px;
     /* padding: 20px ; */
      border-radius: 10px;
-    display: flex; 
+    /* display: flex;  */
     justify-content: space-between;
   
     
@@ -54,7 +54,7 @@
     /* margin-right: 15px;
     border-radius: 8px;
      */
-     display: flex;
+     /* display: flex; */
      position: relative;
      
 
