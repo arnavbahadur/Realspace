@@ -13,7 +13,7 @@ const SingleProject = (props) => {
     <div>
       <div className="event-box">
           <div className="event-img">
-            <img src={props.images} alt="event-img" />
+            <img src={props.images} alt="project--img" />
           </div>
           <div className="event-discription">
             <h3 className="title">{props.title}</h3>

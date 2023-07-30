@@ -106,7 +106,7 @@ const EditProject= ({props}) => {
     <div className="blog-img">
       <div className="img-upload">
         <p>Upload image :</p>
-        <input type="file" name="event-img" accept="image/png, image/gif, image/jpeg"  onChange={(event)=>{setImageUpload(event.target.files[0])}} />
+        <input type="file" name="project img" accept="image/png, image/gif, image/jpeg"  onChange={(event)=>{setImageUpload(event.target.files[0])}} />
       </div>
     </div>
     <div className="edit-content">
