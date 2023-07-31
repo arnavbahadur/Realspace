@@ -7,12 +7,12 @@
 }
 .single-admin-option{
     margin: 10px;
-    background-color: #999;
+    background-color: #dea8a8;
     padding: 20px 40px;
     border-radius: 8%;
 }
 .single-admin-option:hover{
-    background-color: #666;
+    background-color: #4f4dc5;
     cursor: pointer;
 }
 .single-admin-option h1{

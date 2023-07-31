@@ -51,7 +51,7 @@ const EditProject= ({props}) => {
   }
   async function submit() {
     try {
-      await axios.post(`/Project/updateProject/${props.id}`,FormData)
+      await axios.post(`/Projectapi/editproject/${props.id}`,FormData)
       .then(()=>{alert("Project Updated successfully")})
       .catch((err)=>{alert(err)})
     } catch (err) {
@@ -106,11 +106,11 @@ const EditProject= ({props}) => {
     <div className="blog-img">
       <div className="img-upload">
         <p>Upload image :</p>
-        <input type="file" name="event-img" accept="image/png, image/gif, image/jpeg"  onChange={(event)=>{setImageUpload(event.target.files[0])}} />
+        <input type="file" name="project img" accept="image/png, image/gif, image/jpeg"  onChange={(event)=>{setImageUpload(event.target.files[0])}} />
       </div>
     </div>
     <div className="edit-content">
-      <textarea cols={"30"} rows="10" placeholder='Event discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
+      <textarea cols={"30"} rows="10" placeholder='discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
     </div>
     <div className="edit-content">
     <input type="text" id="" className='eventtitle' placeholder='Title'  onChange={ handleChange } name="title" value={FormData.title}/>
@@ -120,12 +120,12 @@ const EditProject= ({props}) => {
       <input type="date"  onChange={ handleChange } name="date" value={FormData.date} />
       <input type="time" onChange={ handleChange } name="time" value={FormData.time}/>
     </div>
-    <div className="">
+    {/* <div className="">
     <input type="text" onChange={ handleChange } name="authername" value={FormData.authername} placeholder='Author Name'/>
-    </div>
+    </div> */}
     <div className="small-box-area">
-      <input type="number" onChange={ handleChange } name="numberofspeaker" value={FormData.numberofspeaker} placeholder='Number of Speaker'/>
-      <input type="number" onChange={ handleChange } name="registrationfee" value={FormData.registrationfee} placeholder='Registration Fee'/>
+      {/* <input type="number" onChange={ handleChange } name="numberofspeaker" value={FormData.numberofspeaker} placeholder='Number of Speaker'/> */}
+      <input type="number" onChange={ handleChange } name="pricr" value={FormData.price} placeholder='prize'/>
     </div>
       <div className="btn-section row-3">          
             <button className='delete-btn' onClick={()=>{submit()}}><i className="fa fa-pencil" aria-hidden="true"></i></button>

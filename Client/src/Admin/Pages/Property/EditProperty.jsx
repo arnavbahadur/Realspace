@@ -106,12 +106,12 @@ export default function EditProperty({props}) {
       </div>
     </div>
     <div className="edit-content">
-      <textarea cols={"90"} rows="10" placeholder='Event discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
+      <textarea cols={"90"} rows="10" placeholder='property discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
     </div>
     <div className="edit-content">
       <input type="text"  className='eventtitle' placeholder='Title'  onChange={ handleChange } name="title" value={FormData.title}/>
       <input type="date"  onChange={ handleChange } name="date" value={FormData.date} />
-      <input type="text" onChange={ handleChange } name="authername" value={FormData.authername} placeholder='Author Name'/>
+      {/* <input type="text" onChange={ handleChange } name="authername" value={FormData.authername} placeholder='Author Name'/> */}
       <div className="btn-section row-3">          
             <button className='delete-btn' onClick={()=>{submit()}}><i className="fa fa-pencil" aria-hidden="true"></i></button>
       </div> 

@@ -1,7 +1,7 @@
 import React, { useState ,  useEffect} from "react";
 import MyModal from "./ShowModal";
 // import HousePreview from "../HousePreview/HousePreview";
-import HouseBox from "../../Components/HouseBox/HouseBox";
+// import HouseBox from "../../Components/HouseBox/HouseBox";
 import './Popup.css'
 // import {Scrollbars} from 'react-custom-scrollbars';
 
@@ -23,8 +23,8 @@ const Modal = () => {
         
    
         <h2 className="latest-offer">Latest offers</h2>
-       <HouseBox/>
-       <HouseBox/>
+       {/* <HouseBox /> */}
+       {/* <HouseBox/> */}
        {/* <p>complete loan facility</p> */}
     </MyModal>
     

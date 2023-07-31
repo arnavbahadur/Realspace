@@ -3,7 +3,7 @@ import HomeSectionsHeading from '../../../Components/HomeSectionsHeading/HomeSec
 // import HomeCardSection from '../../../Components/HomePageCard/HomeCardSection'
 import axios from "axios";
 import HouseBox from '../../../Components/HouseBox/HouseBox'; 
-import PageNum from '../../../Components/PageNum/PageNum';
+// import PageNum from '../../../Components/PageNum/PageNum';
 
 
 
@@ -44,9 +44,9 @@ const HouseSale = (props) => {
             })}
           </div>
         </div>
-        <div className="house-pageNumber">
+        {/* <div className="house-pageNumber">
           <PageNum setCurrentPage={setCurrentPage} currentPage={currentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
-        </div>
+        </div> */}
       </div>
     </div>
   )

@@ -48,7 +48,7 @@ const AddProject = () => {
   }
   async function submit() {
     try {
-      await axios.post("/Project/addProject",FormData)
+      await axios.post("/Projectapi/addproject",FormData)
       .then(()=>{alert("Project added successfully")})
       .catch((err)=>{alert(err)})
     } catch (err) {
@@ -93,21 +93,19 @@ const AddProject = () => {
             {/* html of Event to add */}        
            <p>Add new project</p>
            <div>
-                <input type="text" id="" className='eventtitle' placeholder='Title'  onChange={ handleChange } name="title" value={FormData.title}/>
+                <input type="text" id="" className='title' placeholder='Title'  onChange={ handleChange } name="title" value={FormData.title}/>
                 <input type="text"  id="" placeholder='Location'  onChange={ handleChange } name="location" value={FormData.location} />
-                <textarea  id="" cols="30" rows="10"placeholder='Event discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
+                <textarea  id="" cols="30" rows="10"placeholder='project discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
                 <div className="small-box-area" >
                   <input type="date"  onChange={ handleChange } name="date" value={FormData.date} />
-                  {/* <label htmlFor="eventTime">Time : </label> */}
-                  <input type="time" onChange={ handleChange } name="time" value={FormData.time}/>
-                  {/* <input type="text" name="eventTime" id="" placeholder='Time'/> */}
+                  {/* <input type="time" onChange={ handleChange } name="time" value={FormData.time}/> */}
                 </div>
-                <div className="small-box-area">
+                {/* <div className="small-box-area">
                 <input type="text" onChange={ handleChange } name="authername" value={FormData.authername} placeholder='Author Name'/>
-                </div>
+                </div> */}
                 <div className="small-box-area">
-                  <input type="number" onChange={ handleChange } name="numberofspeaker" value={FormData.numberofspeaker} placeholder='Number of Speaker'/>
-                  <input type="number" onChange={ handleChange } name="registrationfee" value={FormData.registrationfee} placeholder='Registration Fee'/>
+                  {/* <input type="number" onChange={ handleChange } name="numberofspeaker" value={FormData.numberofspeaker} placeholder='Number of Speaker'/> */}
+                  <input type="number" onChange={ handleChange } name="price" value={FormData.price} placeholder='price'/>
                 </div>
                 <div className="img-upload">
                   <p>Upload image :</p>
@@ -125,3 +123,5 @@ const AddProject = () => {
 }
 
 export default AddProject
+// imageContainer,Gallery,addMoreDetails,Photos,Floorplan,Feature,Featured,Area,Floors,
+// location,Address,City,Postalcode,Parking,Video_url,location_url, Note,CurrentStatus

@@ -15,7 +15,7 @@ const signChange = () => {
 
 const [property, setproperty] = useState([]);
 const apicall=async ()=>{
-    await axios.get("/property/allproperty").then((res) => { setproperty(res.data) });
+    await axios.get("/propertyapi/").then((res) => { setproperty(res.data) });
   }
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const apicall=async ()=>{
       <div className="blogs">
       
          {property.map((item) => {
-         return <SingleProperty id={item._id} title={item.title} description={item.description} images={item.images}  featured={item.featured}/>
+         return <SingleProperty id={item._id} title={item.title} description={item.description}   featured={item.featured}  location={item.location} price={item.price} location_url={item.location_url}  Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt} />
         })}
       </div>
     </div>
@@ -49,8 +49,15 @@ const apicall=async ()=>{
 export default Property
 
 
+// Photos={item.Photos}
+// images={item.images}
+// gallery={item.Gallery} 
 
-
+// return <HouseBox title={item.title} gallery={item.Gallery} id={item._id} location={item.location} price={item.price} location_url={item.location_url}  Photos={item.Photos} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  /> 
+// property model
+// title,location,property_url, propertytype,Nearby, Gallery,  Purpose,location_url, price, areaSqFt,
+//  hall, bedRoom, bathRoom,Listingyear,imageContainer,Photos,Description
+//  ,addMoreDetails,Feature,Note,Rating,CurrentStatus
       
 
        
