@@ -37,7 +37,7 @@ const AdminBody = (props) => {
   return (
 
 
-        <div >
+        <div className='admin-full'>
         {/* <h1>welcome admin</h1> */}
       <nav className="nav-bar">
        <div className="left-align">

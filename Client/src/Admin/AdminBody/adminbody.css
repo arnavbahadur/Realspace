@@ -7,7 +7,7 @@
 }
 .single-admin-option{
     margin: 10px;
-    background-color: #dea8a8;
+    background-color: #a8bfde;
     padding: 20px 40px;
     border-radius: 8%;
 }
@@ -18,23 +18,27 @@
 .single-admin-option h1{
     font-size: 50px;
     font-weight: 600;
-    color: #fff;
+    color: #0a0a0a;
     text-align: center;
 }
 
 .nav-bar{
-   
+   /* background-color: #0a0a0a; */
     height: 4rem;
     padding: 20px 30px;
     display: flex;
     justify-content: space-between;
   
 }
+.admin-full{
+    background-color: #f8f8ff;
+}
 
 .nav-link{
     padding: 10px;
 }
 .left-align{
+    /* background-color: #0a0a0a; */
     display: flex;
     align-items: center;
 }

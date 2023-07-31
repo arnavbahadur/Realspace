@@ -91,35 +91,55 @@ const AddProject = () => {
     <div>
         <div className="add-area add_event_area" id='add_event_area'>
             {/* html of Event to add */}        
-           <p>Add new project</p>
+            <p>Add new project</p>
            <div>
-                <input type="text" id="" className='title' placeholder='Title'  onChange={ handleChange } name="title" value={FormData.title}/>
-                <input type="text"  id="" placeholder='Location'  onChange={ handleChange } name="location" value={FormData.location} />
-                <textarea  id="" cols="30" rows="10"placeholder='project discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
-                <div className="small-box-area" >
-                  <input type="date"  onChange={ handleChange } name="date" value={FormData.date} />
+                <input type="text" id="" className='eventtitle' placeholder='location'              onChange={ handleChange } name="location" value={FormData.location}/>
+                <input type="text" id="" className='eventtitle' placeholder='property_url'          onChange={ handleChange } name="property_url" value={FormData.property_url}/>
+                <input type="text" id="" className='eventtitle' placeholder='price'                 onChange={ handleChange } name="price" value={FormData.price}/>
+                <input type="text" id="" className='eventtitle' placeholder='Title'                 onChange={ handleChange } name="title" value={FormData.title}/>
+                <input type="text" id="" className='eventtitle' placeholder='area'                  onChange={ handleChange } name="area" value={FormData.areaSqFt}/>        
+                <input type="text" id="" className='eventtitle' placeholder='propertytype'          onChange={ handleChange } name="area" value={FormData.propertytype}/>
+                <input type="text" id="" className='eventtitle' placeholder='price'                 onChange={ handleChange } name="price" value={FormData.price}/>
+                <input type="text" id="" className='eventtitle' placeholder='Feature'               onChange={ handleChange } name="Feature" value={FormData.Feature}/>
+                <input type="text" id="" className='eventtitle' placeholder='Listingyear'           onChange={ handleChange } name="Listingyear" value={FormData.Listingyear}/>
+                <input type="text" id="" className='eventtitle' placeholder='location_url'          onChange={ handleChange } name="location_url" value={FormData.location_url}/>
+                <input type="text" id="" className='eventtitle' placeholder='Purpose'               onChange={ handleChange } name="Purpose" value={FormData.Purpose}/>
+                <input type="text" id="" className='eventtitle' placeholder='bedRoom'               onChange={ handleChange } name="bedRoom" value={FormData.bedRoom}/>
+                <input type="text" id="" className='eventtitle' placeholder='hall'                  onChange={ handleChange } name="hall" value={FormData.hall}/>
+                <input type="text" id="" className='eventtitle' placeholder='bathRoom'              onChange={ handleChange } name="bathRoom" value={FormData.bathRoom}/>
+                <input type="text" id="" className='eventtitle' placeholder='CurrentStatus'         onChange={ handleChange } name="CurrentStatus" value={FormData.CurrentStatus}/>
+                <input type="text" id="" className='eventtitle' placeholder='Rating'                onChange={ handleChange } name="Rating" value={FormData.Rating}/>
+                <input type="text" id="" className='eventtitle' placeholder='Note'                  onChange={ handleChange } name="Note" value={FormData.Note}/>
+                <textarea  id="" cols="10" rows="5"placeholder='property discription'               onChange={ handleChange } name="description" value={FormData.Description} required/>
+                <textarea  id="" cols="30" rows="5"placeholder='Nearby'  onChange={ handleChange } name="Nearby" value={FormData.Nearby} required/>
+                <textarea  id="" cols="30" rows="5"placeholder='addMoreDetails'  onChange={ handleChange } name="addMoreDetails" value={FormData.addMoreDetails} required/>
+
+                {/* <div className="small-box-area" > */}
+                  {/* <input type="date"  onChange={ handleChange } name="date" value={FormData.date} /> */}
                   {/* <input type="time" onChange={ handleChange } name="time" value={FormData.time}/> */}
-                </div>
+                {/* </div> */}
                 {/* <div className="small-box-area">
                 <input type="text" onChange={ handleChange } name="authername" value={FormData.authername} placeholder='Author Name'/>
                 </div> */}
-                <div className="small-box-area">
+                {/* <div className="small-box-area"> */}
                   {/* <input type="number" onChange={ handleChange } name="numberofspeaker" value={FormData.numberofspeaker} placeholder='Number of Speaker'/> */}
-                  <input type="number" onChange={ handleChange } name="price" value={FormData.price} placeholder='price'/>
-                </div>
-                <div className="img-upload">
+                  {/* <input type="number" onChange={ handleChange } name="price" value={FormData.price} placeholder='price'/> */}
+                {/* </div> */}
+                {/* <div className="img-upload">
                   <p>Upload image :</p>
                   <label htmlFor="event-img">
                     <i className="fa-solid fa-upload"/>
                   </label>
                   <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg"  onChange={(event)=>{setImageUpload(event.target.files[0])}} />
-                </div>
+                </div> */}
                 <button onClick={()=>{submit()}} id='blog-txt-add' >Add</button>
                 <button type="reset">Clear</button>
             </div>
         </div>
     </div>
   )
+
+
 }
 
 export default AddProject

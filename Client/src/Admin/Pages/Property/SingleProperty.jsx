@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React from 'react'
+import React, { useState } from 'react'
 import EditProperty from './EditProperty';
 import "./Property.css";
 
@@ -10,6 +10,23 @@ export default function SingleProperty(props) {
   // const updatePropertyfeatured=async ()=>{
   //   await axios.get(`/propertyapi/editproperty/${props.id}`).then((res) => {  alert("Featured Sucessfully") });
   // }
+
+  // const [FormData,setFormData]=useState({
+  //   images:"",
+  //   description:"",
+  //   title:""
+  // });
+
+  async function submit() {
+    try {
+      await axios.post(`/propertyapi/editproperty/${props.id}`,FormData)
+      .then(()=>{alert("Property Changed successfully")})
+      .catch((err)=>{alert(err)})
+    } catch (err) {
+      alert(err);
+    }
+  }
+  
   return (
     <>
       <div className="blog-box">
@@ -80,13 +97,16 @@ export default function SingleProperty(props) {
           <div className="row1">
             <h3 className="title">Gallery-{props.Gallery}</h3>
           </div>
-          <div className="btn-section row-3">          
-          <button className='delete-btn'onClick={()=>{deleteProperty()}}><i className="fa fa-trash fa-1x" aria-hidden="true"/></button>
+          <EditProperty props={props}/>
+        
+          <div className="btn-section row-3">    
+          {/* <button className='delete-btn' onClick={()=>{submit()}}><i className="fa fa-pencil" aria-hidden="true">Edit</i></button>       */}
+          <button className='delete-btn' onClick={()=>{deleteProperty()}}><i className="fa fa-trash fa-1x" aria-hidden="true">Delete</i></button>
             {/* <button  className='delete-btn' style={{color:props.featured==="True"?"red":"green"}} onClick={()=>{updatePropertyfeatured()}}>Featured <i class="fa-solid fa-jet-fighter-up"></i></button> */}
           </div> 
         </div>
       </div>
-      <EditProperty props={props}/>
+     
     </>
   )
 }

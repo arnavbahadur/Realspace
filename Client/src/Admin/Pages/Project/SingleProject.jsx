@@ -16,18 +16,72 @@ const SingleProject = (props) => {
             <img src={props.images} alt="project--img" />
           </div>
           <div className="event-discription">
-            <h3 className="title">{props.title}</h3>
-            <p className="event-txt">{props.descriptionn}</p>
-            <div className="event-row">
-              <div className='date-time'><span>{props.date}</span><span> {props.time}</span></div>
-              <p>{props.location}</p>
-            </div>
-            <div className="event-row">
-              {/* <span>Number of speaker: {props.numberofspeaker}</span> */}
-              <span>{props.price}₹</span>
-            </div>
+          <div className="row1">
+            <h3 className="title">Title-{props.title}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">Description-{props.Description}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">addMoreDetails-{props.addMoreDetails}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">property typr-{props.propertytype}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">price-{props.price}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">Feature-{props.Feature}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">Listingyear-{props.Listingyear}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">location-{props.location}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">location_url-{props.location_url}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">property video-{props.property_url}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">purpose-{props.Purpose}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">no of bed-{props.bedRoom}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">no of hall-{props.hall}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">no of bathroom-{props.bathRoom}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">area in sqfeet-{props.areaSqFt}</h3>
+          </div> 
+          <div className="row1">
+            <h3 className="title">nearby location-{props.Nearby}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">CurrentStatus-{props.CurrentStatus}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">Rating-{props.Rating}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">Note-{props.Note}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">photos-{props.Photos}</h3>
+          </div> 
+          <div className="row1">
+            <h3 className="title">Gallery-{props.Gallery}</h3>
+          </div>
+      
             <i className="fa fa-trash event-delete-btn" aria-hidden="true"onClick={()=>{deleteProject()}}/>
-            <button  className='delete-btn' style={{color:props.featured==="True"?"red":"green"}} onClick={()=>{updateProjectfeatured()}}>Featured <i class="fa-solid fa-jet-fighter-up"></i></button>
+            {/* <button  className='delete-btn' style={{color:props.featured==="True"?"red":"green"}} onClick={()=>{updateProjectfeatured()}}>Featured <i class="fa-solid fa-jet-fighter-up"></i></button> */}
           </div>
           <EditProject props={props}/>
         </div>
@@ -38,5 +92,5 @@ const SingleProject = (props) => {
 export default SingleProject
 
 
-// title,description,imageContainer,Gallery,addMoreDetails,Photos,Floorplan,Feature,Featured,Area,Floors,
+// ,imageContainer,Gallery,addMoreDetails,Photos,Floorplan,Feature,Featured,Area,Floors,
 // location,Address,City,Postalcode,Parking,Video_url,location_url, Note,CurrentStatus
