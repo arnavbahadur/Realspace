@@ -7,9 +7,9 @@ export default function SingleProperty(props) {
   const deleteProperty=async ()=>{
     await axios.get(`/Propertyapi/deleteproperty/${props.id}`).then((res) => {  alert("Deleted Sucessfully") });
   }
-  const updatePropertyfeatured=async ()=>{
-    await axios.get(`/propertyapi/editproperty/${props.id}`).then((res) => {  alert("Featured Sucessfully") });
-  }
+  // const updatePropertyfeatured=async ()=>{
+  //   await axios.get(`/propertyapi/editproperty/${props.id}`).then((res) => {  alert("Featured Sucessfully") });
+  // }
   return (
     <>
       <div className="blog-box">
@@ -18,36 +18,68 @@ export default function SingleProperty(props) {
         </div>
         <div className="blog-content">
           <div className="row1">
-            <h3 className="title">{props.title}</h3>
-            {/* <p className="blogtxt">{props.description}</p> */}
+            <h3 className="title">Title-{props.title}</h3>
           </div>
           <div className="row1">
-            <h3 className="title">{props.Gallery}</h3>
+            <h3 className="title">Description-{props.Description}</h3>
           </div>
           <div className="row1">
-            <h3 className="title">{props.location}</h3>
+            <h3 className="title">addMoreDetails-{props.addMoreDetails}</h3>
           </div>
           <div className="row1">
-            <h3 className="title">{props.price}</h3>
+            <h3 className="title">property typr-{props.propertytype}</h3>
           </div>
           <div className="row1">
-            <h3 className="title">{props.location_url}</h3>
+            <h3 className="title">price-{props.price}</h3>
           </div>
           <div className="row1">
-            <h3 className="title">{props.Photos}</h3>
+            <h3 className="title">Feature-{props.Feature}</h3>
           </div>
           <div className="row1">
-            <h3 className="title">{props.Purpose}</h3>
+            <h3 className="title">Listingyear-{props.Listingyear}</h3>
           </div>
           <div className="row1">
-            <h3 className="title">{props.bedRoom}</h3>
+            <h3 className="title">location-{props.location}</h3>
           </div>
           <div className="row1">
-            <h3 className="title">{props.bathRoom}</h3>
+            <h3 className="title">location_url-{props.location_url}</h3>
           </div>
           <div className="row1">
-            <h3 className="title">{props.reaSqFt}</h3>
-          </div>  
+            <h3 className="title">property video-{props.property_url}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">purpose-{props.Purpose}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">no of bed-{props.bedRoom}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">no of hall-{props.hall}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">no of bathroom-{props.bathRoom}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">area in sqfeet-{props.areaSqFt}</h3>
+          </div> 
+          <div className="row1">
+            <h3 className="title">nearby location-{props.Nearby}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">CurrentStatus-{props.CurrentStatus}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">Rating-{props.Rating}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">Note-{props.Note}</h3>
+          </div>
+          <div className="row1">
+            <h3 className="title">photos-{props.Photos}</h3>
+          </div> 
+          <div className="row1">
+            <h3 className="title">Gallery-{props.Gallery}</h3>
+          </div>
           <div className="btn-section row-3">          
           <button className='delete-btn'onClick={()=>{deleteProperty()}}><i className="fa fa-trash fa-1x" aria-hidden="true"/></button>
             {/* <button  className='delete-btn' style={{color:props.featured==="True"?"red":"green"}} onClick={()=>{updatePropertyfeatured()}}>Featured <i class="fa-solid fa-jet-fighter-up"></i></button> */}
@@ -60,7 +92,7 @@ export default function SingleProperty(props) {
 }
 
 
-
+// imageContainer 
 
 // {/* <div className='row-2'>
 //             <span className="publisher">{props.authername}</span> 

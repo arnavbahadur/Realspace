@@ -28,7 +28,7 @@ const AdminBody = (props) => {
 
   async function logout() {
     try {
-      await axios.get("admin/logout").then((res)=>{alert("Logged out successfully")})
+      await axios.get("adminapi/logout").then((res)=>{alert("Logged out successfully ")})
     } catch (err) {
       console.error(err);
     }
@@ -41,7 +41,7 @@ const AdminBody = (props) => {
         {/* <h1>welcome admin</h1> */}
       <nav className="nav-bar">
        <div className="left-align">
-         <h1 className="nav-link text-black" style={{fontSize:"30px"}}>Admin Panel</h1>
+         <h1 className="nav-link text-black" style={{fontSize:"25px"}}>Admin Panel</h1>
         </div>
          <div className="right-align">
            <button className="nav-link text-black" onClick={()=>{logout()}}>Log out <i className="fa fa-sign-out" aria-hidden="true"></i></button>
