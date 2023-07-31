@@ -30,6 +30,7 @@ app.use("/adminapi", require("./Routes/AdminRouter"));
 app.use("/propertyapi", require("./Routes/PropertyRouter"));
 // app.use("/propertysellapi", require("./Routes/PropertysellRouter"));
 app.use("/projectapi", require("./Routes/ProjectRouter"));
+app.use("/contactapi", require("./Routes/ContactRouter"));
 
 
 
