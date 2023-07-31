@@ -5,7 +5,7 @@ import './Header.css'
 const Header = () => {
   let location = useLocation();
   useEffect(() =>{
-    console.log(location.pathname);
+    // console.log(location.pathname);
   }, [location]);
 
   const [display, setDisplay] = useState(window.innerWidth > 899 ? true : false);
