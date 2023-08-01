@@ -2,6 +2,8 @@ const router = require("express").Router();
 const Contact=require("../Models/ContactModel")
 
 
+
+
 router.route("/addmsg").post((req, res) => {
     const { f_name,l_name,phone,email,requirement,budget,message} = req.body;
     const newmsg = new Contact({
@@ -18,6 +20,8 @@ router.route("/addmsg").post((req, res) => {
         .then(() => res.json("New Query Added Succesfully"))
         .catch((err) => res.status(400).json("Error: " + err));
   })
+
+
 
 
 

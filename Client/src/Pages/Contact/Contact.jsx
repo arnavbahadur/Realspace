@@ -28,7 +28,7 @@ const Contact = () => {
 
   async function submit() {
     try {
-      // console.log("hii")
+      console.log(contactData)
       await axios.post("/contactapi/addmsg",contactData)
       .then(()=>{alert("form added successfully")})
       .catch((err)=>{alert(err)})
@@ -44,7 +44,7 @@ const Contact = () => {
             <div className="container">
         <div className="contactInfo"> 
           <div>
-            <h2>Contact Info</h2>
+            <h2>Our Contact</h2>
             <ul className="info">
               <li>
                 <span><a href="https://goo.gl/maps/ZSXpMLWhskfLxKfD8"><img src="./Images/location.png" /></a></span>
@@ -59,7 +59,7 @@ const Contact = () => {
               </li>
               <li>
                 <span><img src="./Images/call.png" /></span>
-                <span>9174912843</span>
+                <span>9589533998</span>
               </li>
             </ul>
           </div>
@@ -76,13 +76,13 @@ const Contact = () => {
           <h2>Send a Message</h2>
           <div className="formBox">
            
-            <input type="text" id="" className='inputBox w50' placeholder='Name'  onChange={ handleChange } name="First name" value={contactData.f_name}/>       
-             <input type="text" id="" className='inputBox w50' placeholder='last Name'  onChange={ handleChange } name="lasr name" value={contactData.l_name}/>
+            <input type="text" id="" className='inputBox w50' placeholder='Name'  onChange={ handleChange } name="f_name" value={contactData.f_name}/>       
+             <input type="text" id="" className='inputBox w50' placeholder='last Name'  onChange={ handleChange } name="l_name" value={contactData.l_name}/>
              <input type="text" id="" className='inputBox w50' placeholder='email'  onChange={ handleChange } name="email" value={contactData.email}/>
-             <input type="text" id="" className='inputBox w50' placeholder='Contact'  onChange={ handleChange } name="contact" value={contactData.phone}/>
-             <input type="text" id="" className='inputBox w50' placeholder='Requirement'  onChange={ handleChange } name="Requirement" value={contactData.requirement}/>
+             <input type="text" id="" className='inputBox w50' placeholder='Contact'  onChange={ handleChange } name="phone" value={contactData.phone}/>
+             <input type="text" id="" className='inputBox w50' placeholder='Requirement'  onChange={ handleChange } name="requirement" value={contactData.requirement}/>
              <input type="text" id="" className='inputBox w50' placeholder='budget'  onChange={ handleChange } name="budget" value={contactData.budget}/>
-             <textarea  id=""  className='inputBox w50' cols="30" rows="5" placeholder='message'  onChange={ handleChange } name="message" value={contactData.message} required/>
+             <textarea  id=""  className='inputBox w100' cols="30" rows="5" placeholder='message'  onChange={ handleChange } name="message" value={contactData.message} required/>
             <button className="inputBox w100" onClick={()=>{submit()}} id='blog-txt-add' >Submit</button>
            
           </div>
