@@ -267,6 +267,7 @@ useEffect(() => {
         <div className='map-mapSection map-iframe-section'>
           <h3 className="map-h3">Project Location</h3>
           <div className="housePreview-map housePreview-iframeContainer">
+          {/* <a href={content.location_url}></a> */}
             <iframe src={content.location_url} width="800" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
           </div>
         </div>

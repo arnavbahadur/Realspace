@@ -93,7 +93,7 @@ const AddProperty = () => {
            <p>Add new Property</p>
            <div>
                 <input type="text" id="" className='eventtitle' placeholder='location'              onChange={ handleChange } name="location" value={FormData.location}/>
-                <input type="text" id="" className='eventtitle' placeholder='property_url'          onChange={ handleChange } name="property_url" value={FormData.property_url}/>
+                <input type="text" id="" className='eventtitle' placeholder='property_url of ifram'          onChange={ handleChange } name="property_url" value={FormData.property_url}/>
                 <input type="text" id="" className='eventtitle' placeholder='price'                 onChange={ handleChange } name="price" value={FormData.price}/>
                 <input type="text" id="" className='eventtitle' placeholder='Title'                 onChange={ handleChange } name="title" value={FormData.title}/>
                 <input type="text" id="" className='eventtitle' placeholder='area'                  onChange={ handleChange } name="area" value={FormData.areaSqFt}/>        
@@ -101,7 +101,7 @@ const AddProperty = () => {
                 <input type="text" id="" className='eventtitle' placeholder='price'                 onChange={ handleChange } name="price" value={FormData.price}/>
                 <input type="text" id="" className='eventtitle' placeholder='Feature'               onChange={ handleChange } name="Feature" value={FormData.Feature}/>
                 <input type="text" id="" className='eventtitle' placeholder='Listingyear'           onChange={ handleChange } name="Listingyear" value={FormData.Listingyear}/>
-                <input type="text" id="" className='eventtitle' placeholder='location_url'          onChange={ handleChange } name="location_url" value={FormData.location_url}/>
+                <input type="text" id="" className='eventtitle' placeholder='location_url of ifram'          onChange={ handleChange } name="location_url" value={FormData.location_url}/>
                 <input type="text" id="" className='eventtitle' placeholder='Purpose'               onChange={ handleChange } name="Purpose" value={FormData.Purpose}/>
                 <input type="text" id="" className='eventtitle' placeholder='bedRoom'               onChange={ handleChange } name="bedRoom" value={FormData.bedRoom}/>
                 <input type="text" id="" className='eventtitle' placeholder='hall'                  onChange={ handleChange } name="hall" value={FormData.hall}/>

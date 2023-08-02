@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Comparebtn from '../Comparebtn/Comparebtn';
 const HouseBox = (props) => {
     // const navigate = useNavigate();
-    console.log(props)
+    console.log("temo",props)
     // let { id } = useParams();
     // let id = 1 // id = props.id;
     // const [compared,setCompared] = useState(false);
@@ -26,7 +26,8 @@ const HouseBox = (props) => {
             </div>
             {/* props.Photos[0].imgUrl */}
             {/* <NavLink to={`/housepreview/`} > */}
-                <img src={props.Photos[0].imgUrl} alt="house ki image" onClick={()=> {navigate(`/housepreview/${props.id}`)}}/>
+                <img src={props?.Photos[0]?.imgUrl} alt="house ki image" onClick={()=> {navigate(`/housepreview/${props.id}`)}}/>
+                {/* <img src={props.Photos[0].imgUrl} alt="house ki image" onClick={()=> {navigate(`/housepreview/${props.id}`)}}/> */}
             {/* </NavLink> */}
             <div className="houseBox-imgsection-textArea">
                 <p> { props.Purpose}</p>
@@ -37,7 +38,8 @@ const HouseBox = (props) => {
                 <p> {`Home\\Villa`} in {props.location}</p>
             </div>
             <div className="houseBox-address">                
-                <p><span><i className="fa-solid fa-location-dot"/></span><link rel="stylesheet" href={props.location_url} />Location</p>
+                <a href={props.location_url}> <i className="fa-solid fa-location-dot"/>Location</a>
+                {/* <link rel="stylesheet" href={props.location_url} />Location */}
             </div>
             <div className="houseBox-areaMeasure">
                 <div className="houseBox-areaMeasure-container">
@@ -65,7 +67,7 @@ const HouseBox = (props) => {
             <div className="houseBox-bottomSection">
                 <div className="houseBox-bottomSection-left">
                     <p>Price </p>
-                    <span className="houseBox-bottomSection-left-price">{props.price} 💰</span>
+                    <span className="houseBox-bottomSection-left-price">{props.price}₹</span>
                 </div>   
                 <div className="houseBox-bottomSection-right">
                     <div>

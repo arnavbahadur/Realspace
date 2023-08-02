@@ -61,6 +61,7 @@ const AdminBody = (props) => {
         <div onClick={()=>{setadmincontent("contact")}} className='single-admin-option'>
         <i className="fa-solid fa-address-book fa-2x"></i>
             <h1>Contact Us</h1>
+            
         </div>
         </div>
         {admincontent==="property"?<Property/>:<></>}
