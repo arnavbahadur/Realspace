@@ -13,19 +13,19 @@ const HousePreview = (props) => {
   const propertyapi = async () => {
     await axios.get(`/propertyapi/${id}`).then((property) => {
       setContent(property.data);
-      console.log("bhanu",property.Gallery)
+      console.log("bhanu",property.Photos)
       console.log("aman",property.data)
       // console.log(property.data)
     });
   };   
 
-console.log("hsfhsuf",content.Gallery)
- 
+// console.log("hsfhsuf",content.Gallery)
+// console.log("bhanu",property.Gallery)
 
 
 useEffect(() => {
 propertyapi();
-}, []);
+}, [ ]);
 
 
   // const location = useLocation()
@@ -33,7 +33,7 @@ propertyapi();
   // console.log("location",location.state?.id)  //location.state brings data passed in navigate hook
 
 
-
+ 
 
 
   // location.state.setOk ( true);
@@ -52,16 +52,19 @@ propertyapi();
   //   )
 
   // })
-  console.log("naerby",content)
-  console.log("photo",content.Photos)
+  // console.log("naerby",content)
+  // console.log("photo",content.Photos)
   return (
   <div>
     <div className='housePreivew-page'> 
     <CompareSideBtn/>
       <div className="housePreview-topSection">
-          <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=8" alt="house" />
-          {/* <img src={props.photos} alt="house" /> */}
-          {/* <div className="filter"> */}
+      {/* {console.log("curr",content.Photos[0])} */}
+          {/* <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=8" alt="house" /> */}
+         {/* img bypass */}
+          <img src={content.Photos?content?.Photos[0]?.imgUrl:null} alt="houseimage" />
+        
+          {/* <div className="filter"> */} 
           {/* <img src={props.Photos[0].imgUrl} alt="house ki image" /> */}
               {/* filterComponent */}
           {/* </div> */}
