@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function SingleContact({props}) {
+export default function SingleAppointment({props}) {
   return (
     <div className='single-query-box'>
-    <div>Contact From Response</div>
+    <div>allapointment</div>
         <h2>Name: {props.f_name} {props.l_name}</h2> 
          <h2>Phone: {props.phone}</h2>
         <h2>Email: {props.email}</h2>

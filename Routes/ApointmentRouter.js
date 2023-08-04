@@ -1,6 +1,15 @@
 const router = require("express").Router();
 const Apointment=require("../Models/ApointmentModel")
 
+router.get("/allapointment", (req, res) => {
+    try {
+      Appointment.find()
+        .then((blg) => res.json(blg))
+        .catch((err) => res.status(400).json("Error: " + err));
+    } catch (err) {
+      res.status(200).send(err);
+    }
+  });
 
 
 router.route("/apointment").post((req, res) => {

@@ -63,3 +63,4 @@ router.get("/deleteproperty/:id", async (req, res) => {
 
 
 
+  //  Gallery,imageContainer,Photos,
