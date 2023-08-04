@@ -24,12 +24,12 @@ const apicall=async ()=>{
   return (
     <div>
       <div className="blog-component">
-        <p>Property</p>
+        <h2 className='propertyhead'>Property</h2>
         <div className="add-icon" id='add-icon-blog' onClick={()=>{setopenform(!openform);signChange()}}>
             <i className={`fa-solid fa-${sign}`}/>
 
         </div>
-
+       
         {openform?<AddProperty />:<></>}
 
         <div className="blogs">  

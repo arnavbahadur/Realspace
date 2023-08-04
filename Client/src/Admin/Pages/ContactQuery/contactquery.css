@@ -1,6 +1,6 @@
-.query-component h1{
+/* .query-component h1{
     font-size: 5rem;
-}
+} */
 .single-query-box{
     height: 1%;
       border: 2px solid black;
@@ -11,3 +11,10 @@
     /* justify-content: space-between; */
   padding: 20px;
 }
+
+
+/* .contactheading{ */
+  /* justify-content: center; */
+  /* align-items: end; */
+  /* background-color: blue; */
+/* } */
