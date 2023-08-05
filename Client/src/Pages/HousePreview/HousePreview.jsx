@@ -5,6 +5,7 @@ import Comparebtn from '../../Components/Comparebtn/Comparebtn';
 import { useLocation, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Gallery from '../Gallery/Gallery';
+import PriceShow from '../../Components/PriceShow/PriceShow';
 
 const HousePreview = (props) => {
 
@@ -82,7 +83,7 @@ propertyapi();
           <div className="housePreview-top-right">
             <p className="housePreview-price">
               <span>{content.Purpose}</span>
-              <span className='housePreview-price-amount'>{content.price}</span>
+              <span className='housePreview-price-amount'><PriceShow price = {content.price}/></span>
             </p>
           </div>          
         </div>        

@@ -77,3 +77,8 @@
         overflow: scroll;
     }   
 }
+@media (min-width: 300px){
+    .fa-xmark:before{
+        padding: 0;
+    }
+}

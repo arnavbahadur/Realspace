@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './Compare.css'
 import axios from 'axios';
+import PriceShow from '../../Components/PriceShow/PriceShow';
 const Compare = () => {
     const [content,setContent] = useState([]);
+    const [compareitem,setCompareitem] = useState([]);
     const items = JSON.parse( localStorage.getItem('compareItem'))
     console.log("items",items)
     // const propertyapi = async () => {
@@ -38,22 +40,23 @@ const Compare = () => {
     
     let compareItems;
     let a;
-    if(items!=null) {
-      a = items.itemsId.map((e)=>{
-        console.log('e',e);
-        return  compareItems = content.filter((item)=>{
-          return item._id = e;
-        })
-      })
-      console.log("a",a)
-      // compareItems = content.filter((item)=>{
-      //   items.itemsId.forEach(e=>{
+    // useEffect(()=>{
 
-      //   })
-      //   return item._id = e;
-      // })
+    //   if(items!=null) {
+    //     // a = items.itemsId.map((e)=>{
+    //     //   console.log('e',e);
+    //     //   return compareItems = content.filter((item)=>{
+    //     //     return item._id === e;
+    //     //   })
+    //     // })
+    //     console.log("a",a)
+    //     compareItems = content.filter((item)=>{
+    //       return items.itemsId.find(item._id)         
+    //     })
+    //     setCompareitem((previous )=>{ ...previous,compareItems})
+    //   } 
+    // },[content])
 
-    } 
     console.log("compareitem",compareItems)
     // const compareItemDetail =[
     //     {
@@ -100,7 +103,7 @@ const Compare = () => {
                     <img src={item.Photos[0].imgUrl} alt="house" />
                     {/* <p className="compare-item-name">{item.name}</p> */}
                     <p className="compare-item-sale/rent">{`For  ${item.Purpose}`}</p>
-                    <p className="compare-item-amount">{item.price}</p>
+                    <p className="compare-item-amount"><PriceShow price = {item.price}/></p>
                 </div>
             )
         // }
