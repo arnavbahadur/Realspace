@@ -3,7 +3,8 @@ import './Compare.css'
 import axios from 'axios';
 const Compare = () => {
     const [content,setContent] = useState([]);
-    const items = localStorage.getItem('compareItem')
+    const items = JSON.parse( localStorage.getItem('compareItem'))
+    console.log("items",items)
     // const propertyapi = async () => {
     //   await axios.get(`/propertyapi`).then((property) => {
     //     setContent(property.data);
@@ -11,7 +12,7 @@ const Compare = () => {
     //     // console.log(property.data)
     //   });
     // };   
-  
+
 
     // useEffect(() => {
     //     propertyapi();
@@ -36,13 +37,24 @@ const Compare = () => {
       }, []);
     
     let compareItems;
+    let a;
     if(items!=null) {
-      items.forEach((e)=>{
+      a = items.itemsId.map((e)=>{
+        console.log('e',e);
         return  compareItems = content.filter((item)=>{
           return item._id = e;
         })
       })
+      console.log("a",a)
+      // compareItems = content.filter((item)=>{
+      //   items.itemsId.forEach(e=>{
+
+      //   })
+      //   return item._id = e;
+      // })
+
     } 
+    console.log("compareitem",compareItems)
     // const compareItemDetail =[
     //     {
     //         image:"https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
