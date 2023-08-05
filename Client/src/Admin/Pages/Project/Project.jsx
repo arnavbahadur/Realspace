@@ -21,7 +21,7 @@ const apicall=async ()=>{
   return (
     <div>
       <div className="event-component">
-        <p>Project</p>
+        <h2>Project</h2>
         <div className="add-icon" id="add-icon-event" onClick={()=>{setopenform(!openform);signChange(openform)}}>
             {/* icon of add */}
             <i class={`fa-solid fa-${sign}`}/>

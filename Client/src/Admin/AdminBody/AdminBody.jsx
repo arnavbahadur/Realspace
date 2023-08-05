@@ -5,8 +5,7 @@ import Property from '../Pages/Property/Property'
 import Project from '../Pages/Project/Project'
 import './Adminbody.css'
 import ContactQuery from '../Pages/ContactQuery/ContactQuery';
-
-
+import Appointment from '../Pages/Appointment/Appointment';
 
 const AdminBody = (props) => {
 
@@ -37,8 +36,8 @@ const AdminBody = (props) => {
   return (
 
 
-        <div >
-        {/* <h1>welcome admin</h1> */}
+        <div className='admin-full'>
+     
       <nav className="nav-bar">
        <div className="left-align">
          <h1 className="nav-link text-black" style={{fontSize:"25px"}}>Admin Panel</h1>
@@ -50,22 +49,28 @@ const AdminBody = (props) => {
 
         <div className='admin-options'>
         <div onClick={()=>{setadmincontent("project")}} className='single-admin-option' >
-            <i className="fa-sharp fa-solid fa-pager fa-2x"></i>
+            <i ></i>
             <h1>Project</h1>
         </div>
     
         <div onClick={()=>{setadmincontent("property")}} className='single-admin-option'>
-        <i className="fa-solid fa-calendar-days fa-2x"></i>
+        <i ></i>
             <h1>Property</h1>
         </div>
-        <div onClick={()=>{setadmincontent("contact")}} className='single-admin-option'>
-        <i className="fa-solid fa-address-book fa-2x"></i>
+        <div onClick={()=>{setadmincontent("contactquery")}} className='single-admin-option'>
+        <i ></i>
             <h1>Contact Us</h1>
+            
+        </div>
+        <div onClick={()=>{setadmincontent("appointment")}} className='single-admin-option'>
+        <i ></i>
+            <h1>Appointment</h1>
         </div>
         </div>
         {admincontent==="property"?<Property/>:<></>}
         {admincontent==="project"?<Project/>:<></>}
         {admincontent==="contactquery"?<ContactQuery/>:<></>}
+        {admincontent==="appointment"?<Appointment/>:<></>}
     </div>
 
 

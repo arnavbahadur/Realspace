@@ -1,29 +1,65 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Contact.css'
 import Appointment from './Appointment/Appointment'
+import axios from 'axios';
 
 const Contact = () => {
+
+  const [contactData,setcontactData]=useState({
+    f_name:"",
+    l_name:"",
+    phone:"",
+    email:"",
+    requirement:"",
+    budget:"",
+    message:""
+  });
+
+  // const [contactData,setcontactData]=useState([]);
+
+  const handleChange = e => {
+    const { name, value } = e.target
+    setcontactData({
+        ...contactData,
+        [name]: value
+    })
+}
+
+
+  async function submit() {
+    try {
+      console.log(contactData)
+      await axios.post("/contactapi/addmsg",contactData)
+      .then(()=>{alert("form added successfully")})
+      .catch((err)=>{alert(err)})
+    } catch (err) {
+      alert(err);
+    }
+  }
+
+
+
   return (
     // <div>
             <div className="container">
         <div className="contactInfo"> 
           <div>
-            <h2>Contact Info</h2>
+            <h2>Our Contact</h2>
             <ul className="info">
               <li>
-                <span><img src="./Images/location.png" /></span>
-                <span>505 shreeji hights<br />
-                  Indore<br />
-                  11472</span>
+                <span><a href="https://goo.gl/maps/ZSXpMLWhskfLxKfD8"><img src="./Images/location.png" /></a></span>
+                <span>101, Shridhar Bhawan, <br />158, Gokul Nagar, <br />
+                Indore, Madhya Pradesh <br />
+                452001</span>
               </li>
               <li>
                 <span><img src="./Images/mail.png" /></span>
-                {/* <span>nassosanagn@gmail.com</span> */}
-                <span><a href="mailto: nassosanagn@gmail.com">parmarsinghbhanu@gmail.com</a></span>
+          
+                <span><a href="mailto: realspacegroups@gmail.com">realspacegroups@gmail.com</a></span>
               </li>
               <li>
                 <span><img src="./Images/call.png" /></span>
-                <span>9174912843</span>
+                <span>9589533998</span>
               </li>
             </ul>
           </div>
@@ -39,57 +75,15 @@ const Contact = () => {
         <div className="contactForm">
           <h2>Send a Message</h2>
           <div className="formBox">
-            <div className="inputBox w50">
-              <input type="text" name required />
-              <span>First Name</span>
-            </div>
-            <div className="inputBox w50">
-              <input type="text" required />
-              <span>Last Name</span>
-            </div>
-            <div className="inputBox w50">
-              <input type="email" required />
-              <span>Email Address</span>
-            </div>
-            <div className="inputBox w50">
-              <input type="text" required />
-              <span>Mobile Number</span>
-            </div>
-            <div className="inputBox w50">
-              <input type="email" required />
-              <span>Requirement</span>
-            </div>
-            <div className="inputBox w50">
-              <input type="email" required />
-              <span>Budget</span>
-            </div>
-            {/* <div className="inputBox w50">
-            <div className="nav-center-navigation-box"  >
-          <div>          
-              <p className='nav-center-navigation-box-text'>Budget <i class="fa-solid fa-angle-down"/></p>          
-          </div>
-          <div className="header-dropdown projectPage-dropdown ">
-            <div className="header-dropdown-menu">
-            
-               <p >2-3lakh</p>
-                <p >4-9lakh</p>
-                <p >10+lakh</p>
-             
-                
-            </div>
-          </div>
-        </div>
-        </div> */}
-
-
-
-            <div className="inputBox w100">
-              <textarea required defaultValue={""} />
-              <span>Write your message here...</span>
-            </div>
-            <div className="inputBox w100">
-              <input type="submit" defaultValue="Send" />
-            </div>
+           
+            <input type="text" id="" className='inputBox w50' placeholder='Name'  onChange={ handleChange } name="f_name" value={contactData.f_name}/>       
+             <input type="text" id="" className='inputBox w50' placeholder='last Name'  onChange={ handleChange } name="l_name" value={contactData.l_name}/>
+             <input type="text" id="" className='inputBox w50' placeholder='email'  onChange={ handleChange } name="email" value={contactData.email}/>
+             <input type="text" id="" className='inputBox w50' placeholder='Contact'  onChange={ handleChange } name="phone" value={contactData.phone}/>
+             <input type="text" id="" className='inputBox w50' placeholder='Requirement'  onChange={ handleChange } name="requirement" value={contactData.requirement}/>
+             <input type="text" id="" className='inputBox w50' placeholder='budget'  onChange={ handleChange } name="budget" value={contactData.budget}/>
+             <textarea  id=""  className='inputBox w100' cols="30" rows="5" placeholder='message'  onChange={ handleChange } name="message" value={contactData.message} required/>
+            <button className="inputBox w100" onClick={()=>{submit()}} id='blog-txt-add' >Submit</button>
            
           </div>
          

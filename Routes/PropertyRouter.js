@@ -60,3 +60,7 @@ router.get("/deleteproperty/:id", async (req, res) => {
   });
 
   module.exports = router;
+
+
+
+  //  Gallery,imageContainer,Photos,

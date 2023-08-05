@@ -48,7 +48,7 @@ export default function EditProperty({props}) {
 
   async function submit() {
     try {
-      await axios.post(`/Property/updateProperty/${props.id}`,FormData)
+      await axios.post(`/propertyapi/editproperty/${props.id}`,FormData)
       .then(()=>{alert("Propertyadded successfully")})
       .catch((err)=>{alert(err)})
     } catch (err) {
@@ -96,7 +96,8 @@ export default function EditProperty({props}) {
 
   return (
     <div className="edit-box">
-    <div className="blog-img">
+    
+    {/* <div className="blog-img">
       <div className="img-upload">
         <p>Upload image :</p>
         <label htmlFor="event-img">
@@ -104,18 +105,19 @@ export default function EditProperty({props}) {
         </label>
         <input type="file" name="event-img" accept="image/png, image/gif, image/jpeg"  onChange={(event)=>{setImageUpload(event.target.files[0])}} />
       </div>
-    </div>
-    <div className="edit-content">
+    </div> */}
+    {/* <div className="edit-content">
       <textarea cols={"90"} rows="10" placeholder='property discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
-    </div>
-    <div className="edit-content">
-      <input type="text"  className='eventtitle' placeholder='Title'  onChange={ handleChange } name="title" value={FormData.title}/>
-      <input type="date"  onChange={ handleChange } name="date" value={FormData.date} />
+    </div> */}
+    {/* <div className="edit-content"> */}
+      {/* <input type="text"  className='eventtitle' placeholder='Title'  onChange={ handleChange } name="title" value={FormData.title}/> */}
+      {/* <input type="date"  onChange={ handleChange } name="date" value={FormData.date} /> */}
       {/* <input type="text" onChange={ handleChange } name="authername" value={FormData.authername} placeholder='Author Name'/> */}
       <div className="btn-section row-3">          
             <button className='delete-btn' onClick={()=>{submit()}}><i className="fa fa-pencil" aria-hidden="true"></i></button>
+            
       </div> 
-    </div>
-  </div>
+    {/* </div> */}
+  // </div>
   )
 }

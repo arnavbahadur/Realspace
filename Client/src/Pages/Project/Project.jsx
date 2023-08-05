@@ -82,10 +82,9 @@ useEffect(() => {
                 <div
                   id="samarsliderz"
                   className="carousel slide"
-                  data-ride="carousel"
-                >
-                  <img className="img-box"  src="https://wallpapercave.com/wp/wp4110657.jpg" 
-                  alt="house" />            
+                  data-ride="carousel" >
+                    <img src={content.Photos?content?.Photos[0]?.imgUrl:null} alt="houseimage" />
+                  {/* <img className="img-box"  src="https://wallpapercave.com/wp/wp4110657.jpg" alt="house" />   */}
                 </div>
               </div>
             </div>
@@ -267,6 +266,7 @@ useEffect(() => {
         <div className='map-mapSection map-iframe-section'>
           <h3 className="map-h3">Project Location</h3>
           <div className="housePreview-map housePreview-iframeContainer">
+          {/* <a href={content.location_url}></a> */}
             <iframe src={content.location_url} width="800" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
           </div>
         </div>

@@ -13,19 +13,19 @@ const HousePreview = (props) => {
   const propertyapi = async () => {
     await axios.get(`/propertyapi/${id}`).then((property) => {
       setContent(property.data);
-      console.log("bhanu",property.Gallery)
+      console.log("bhanu",property.Photos)
       console.log("aman",property.data)
       // console.log(property.data)
     });
   };   
 
-console.log("hsfhsuf",content.Gallery)
- 
+// console.log("hsfhsuf",content.Gallery)
+// console.log("bhanu",property.Gallery)
 
 
 useEffect(() => {
 propertyapi();
-}, []);
+}, [ ]);
 
 
   // const location = useLocation()
@@ -33,7 +33,7 @@ propertyapi();
   // console.log("location",location.state?.id)  //location.state brings data passed in navigate hook
 
 
-
+ 
 
 
   // location.state.setOk ( true);
@@ -52,17 +52,22 @@ propertyapi();
   //   )
 
   // })
-  console.log("naerby",content)
-  console.log("photo",content.Photos)
+  // console.log("naerby",content)
+  // console.log("photo",content.Photos)
   return (
   <div>
     <div className='housePreivew-page'> 
     <CompareSideBtn/>
       <div className="housePreview-topSection">
-          <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=8" alt="house" />
-          <div className="filter">
+      {/* {console.log("curr",content.Photos[0])} */}
+          {/* <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=8" alt="house" /> */}
+         {/* img bypass */}
+          <img src={content.Photos?content?.Photos[0]?.imgUrl:null} alt="houseimage" />
+        
+          {/* <div className="filter"> */} 
+          {/* <img src={props.Photos[0].imgUrl} alt="house ki image" /> */}
               {/* filterComponent */}
-          </div>
+          {/* </div> */}
       </div>
       <div className="housePreview-section-1 housePreview-section">        
         <div className="housePreview-top">
@@ -179,7 +184,10 @@ propertyapi();
         <div className='housePreview-mapSection housePreview-iframe-section'>
           <h3>Map</h3>
           <div className="housePreview-map housePreview-iframeContainer">
+          <a href={content.location_url}></a>
+
             <iframe src={content.location_url} width="800" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
+            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.972176342529!2d77.06302747486147!3d23.389223802547146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c8f72daa4adb9%3A0x542891f8da95c6a4!2sParmar%20Krishi%20Farm%20fish%20%26%20goat%20farming!5e0!3m2!1sen!2sin!4v1690978189168!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
           </div>
         </div>
 

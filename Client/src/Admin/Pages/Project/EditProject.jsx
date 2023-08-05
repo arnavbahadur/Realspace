@@ -11,12 +11,7 @@ const EditProject= ({props}) => {
     images:"",
     description:"",
     title:"",
-    authername:"",
-    date:"",
-    time:"",
-    location:"",
-    numberofspeaker:"",
-    registrationfee:"",
+
   });
   const [images,setimages]=useState([]);
   const [imageUpload,setImageUpload]=useState(null);
@@ -102,31 +97,24 @@ const EditProject= ({props}) => {
   return (
         <div className="event-edit">
           <hr/>
-          <h1 style={{textAlign:"center"}}>Edit <i className="fa fa-pencil" aria-hidden="true"></i></h1>
-    <div className="blog-img">
-      <div className="img-upload">
+      
+    {/* <div className="blog-img"> */}
+      {/* <div className="img-upload">
         <p>Upload image :</p>
         <input type="file" name="project img" accept="image/png, image/gif, image/jpeg"  onChange={(event)=>{setImageUpload(event.target.files[0])}} />
-      </div>
-    </div>
-    <div className="edit-content">
-      <textarea cols={"30"} rows="10" placeholder='discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
-    </div>
-    <div className="edit-content">
-    <input type="text" id="" className='eventtitle' placeholder='Title'  onChange={ handleChange } name="title" value={FormData.title}/>
-    <input type="text"  id="" placeholder='Location'  onChange={ handleChange } name="location" value={FormData.location} />
-    {/* <textarea  id="" cols="30" rows="10"placeholder='Event discription'  onChange={ handleChange } name="description" value={FormData.description} required/> */}
-    <div className="small-box-area" >
-      <input type="date"  onChange={ handleChange } name="date" value={FormData.date} />
-      <input type="time" onChange={ handleChange } name="time" value={FormData.time}/>
-    </div>
-    {/* <div className="">
-    <input type="text" onChange={ handleChange } name="authername" value={FormData.authername} placeholder='Author Name'/>
+      </div> */}
+    {/* </div> */}
+    {/* <div className="edit-content">
+      <textarea cols={"30"} rows="5" placeholder='discription'  onChange={ handleChange } name="description" value={FormData.description} required/>
     </div> */}
-    <div className="small-box-area">
+    <div className="edit-content">
+    {/* <input type="text" id="" className='eventtitle' placeholder='Title'  onChange={ handleChange } name="title" value={FormData.title}/> */}
+    {/* <input type="text"  id="" placeholder='Location'  onChange={ handleChange } name="location" value={FormData.location} /> */}
+    {/* <textarea  id="" cols="30" rows="10"placeholder='Event discription'  onChange={ handleChange } name="description" value={FormData.description} required/> */}
+    {/* <div className="small-box-area"> */}
       {/* <input type="number" onChange={ handleChange } name="numberofspeaker" value={FormData.numberofspeaker} placeholder='Number of Speaker'/> */}
-      <input type="number" onChange={ handleChange } name="pricr" value={FormData.price} placeholder='prize'/>
-    </div>
+      {/* <input type="number" onChange={ handleChange } name="pricr" value={FormData.price} placeholder='prize'/> */}
+    {/* </div> */}
       <div className="btn-section row-3">          
             <button className='delete-btn' onClick={()=>{submit()}}><i className="fa fa-pencil" aria-hidden="true"></i></button>
       </div> 

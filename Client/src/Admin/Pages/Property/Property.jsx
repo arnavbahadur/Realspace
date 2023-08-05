@@ -24,12 +24,12 @@ const apicall=async ()=>{
   return (
     <div>
       <div className="blog-component">
-        <p>Property</p>
+        <h2 className='propertyhead'>Property</h2>
         <div className="add-icon" id='add-icon-blog' onClick={()=>{setopenform(!openform);signChange()}}>
             <i className={`fa-solid fa-${sign}`}/>
 
         </div>
-
+       
         {openform?<AddProperty />:<></>}
 
         <div className="blogs">  
@@ -39,7 +39,8 @@ const apicall=async ()=>{
       <div className="blogs">
       
          {property.map((item) => {
-         return <SingleProperty id={item._id} title={item.title} description={item.description}   featured={item.featured}  location={item.location} price={item.price} location_url={item.location_url}  Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt} />
+         return <SingleProperty id={item._id} title={item.title} description={item.description}   featured={item.featured}  location={item.location}
+          price={item.price} location_url={item.location_url} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt} />
         })}
       </div>
     </div>

@@ -75,8 +75,8 @@ const PropertySchema = new Schema ({
                 required: true
             }
         }
-    ],
-    
+    ], 
+   
     Gallery: [
         {   
             imgUrl: {
