@@ -275,6 +275,7 @@ useEffect(() => {
     
       
       <Gallery gallery={content.Gallery}/>
+      {/* GalleryBunch */}
       {/* <GalleryBunch  gallery={content.Gallery} /> */}
       {/* {content.Gallery.map(item=>{
           return <Gallery imgUrl={item}  />
