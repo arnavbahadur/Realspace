@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './Compare.css'
 import axios from 'axios';
+import PriceShow from '../../Components/PriceShow/PriceShow';
 const Compare = () => {
     const [content,setContent] = useState([]);
-    const items = localStorage.getItem('compareItem')
+    const [compareitem,setCompareitem] = useState([]);
+    const items = JSON.parse( localStorage.getItem('compareItem'))
+    console.log("items",items)
     // const propertyapi = async () => {
     //   await axios.get(`/propertyapi`).then((property) => {
     //     setContent(property.data);
@@ -11,7 +14,7 @@ const Compare = () => {
     //     // console.log(property.data)
     //   });
     // };   
-  
+
 
     // useEffect(() => {
     //     propertyapi();
@@ -35,14 +38,26 @@ const Compare = () => {
         callapi();
       }, []);
     
-    // let compareItems;
-    // if(items!=null) {
-    //   items.forEach((e)=>{
-    //     return  compareItems = content.filter((item)=>{
-    //       return item._id = e;
+    let compareItems;
+    let a;
+    // useEffect(()=>{
+
+    //   if(items!=null) {
+    //     // a = items.itemsId.map((e)=>{
+    //     //   console.log('e',e);
+    //     //   return compareItems = content.filter((item)=>{
+    //     //     return item._id === e;
+    //     //   })
+    //     // })
+    //     console.log("a",a)
+    //     compareItems = content.filter((item)=>{
+    //       return items.itemsId.find(item._id)         
     //     })
-    //   })
-    // } 
+    //     setCompareitem((previous )=>{ ...previous,compareItems})
+    //   } 
+    // },[content])
+
+    console.log("compareitem",compareItems)
     // const compareItemDetail =[
     //     {
     //         image:"https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
@@ -88,7 +103,7 @@ const Compare = () => {
                     <img src={item.Photos[0].imgUrl} alt="house" />
                     {/* <p className="compare-item-name">{item.name}</p> */}
                     <p className="compare-item-sale/rent">{`For  ${item.Purpose}`}</p>
-                    <p className="compare-item-amount">{item.price}</p>
+                    <p className="compare-item-amount"><PriceShow price = {item.price}/></p>
                 </div>
             )
         // }
