@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Property from '../Pages/Property/Property'
 import Project from '../Pages/Project/Project'
-import './adminbody.css'
+import './Adminbody.css'
 import ContactQuery from '../Pages/ContactQuery/ContactQuery';
 import Appointment from '../Pages/Appointment/Appointment';
+
 
 const AdminBody = (props) => {
 
@@ -66,6 +67,7 @@ const AdminBody = (props) => {
         <i ></i>
             <h1>Appointment</h1>
         </div>
+       
         </div>
         {admincontent==="property"?<Property/>:<></>}
         {admincontent==="project"?<Project/>:<></>}

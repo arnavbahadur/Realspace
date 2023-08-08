@@ -14,10 +14,6 @@ router.get("/allapointment", (req, res) => {
 
 
 
-  
-
-
-
 
 
 router.route("/apointment").post((req, res) => {

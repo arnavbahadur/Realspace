@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 import React, { useState } from 'react'
 import EditProperty from './EditProperty';
@@ -118,3 +119,34 @@ export default function SingleProperty(props) {
 //             <span className="publisher">{props.authername}</span> 
 //             <span className="date">{props.date}</span>
 //           </div> */}
+
+
+
+
+// import React, { useState } from 'react'
+// // import '../'
+// import { useNavigate } from 'react-router-dom';
+// const HouseBox = (props) => {
+
+//     const [liked,setliked] = useState(false);
+//     // const [liked,setliked] = useState(props.isLiked);
+//     const [warned,setWarned] = useState(false);
+//     const navigate = useNavigate();
+//     console.log(props.id)
+//     return (
+//     <div className='houseBox'>
+//       <div className="houseBox-body">
+//         <div className="houseBox-imgSection">
+//             <div className="houseBox-top-tag-box">
+//                 {`${props.title}`}
+//             </div>
+//                 {/* <img src={props?.Photos[0]?.imgUrl} alt="house ki image" onClick={()=> {navigate(`/housepreview/${props.id}`)}}/> */}
+//                 <img src={props.imgUrl} alt="house ki image" onClick={()=> {navigate(`/housepreview/${props.id}`)}}/>      
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
+
+// export default HouseBox
