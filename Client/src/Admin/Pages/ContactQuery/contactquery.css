@@ -18,3 +18,60 @@
   /* align-items: end; */
   /* background-color: blue; */
 /* } */
+
+
+
+
+
+
+
+
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.contactname{
+   width: 10rem;
+}
+
+
+.contactphone{
+  width: 10rem;
+  
+}
+
+.contactemail{
+  width: 25rem;
+}
+.contactreq{
+  width: 10rem;
+}
+
+.contactbudget{
+  width: 5rem;
+}
+
+.contactmsg{
+  width: 55%;
+}
+
+.contactdownload{
+  width: 10rem;
+}
+
+
