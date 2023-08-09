@@ -1,16 +1,14 @@
-import { Children } from "react";
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
-// import {Scrollbars} from 'react-custom-scrollbars';
 
-const MyModal = ({ closeModal, children, handleCloseButton }) => {
+const MyModal = ({ closeModal, handleCloseButton ,data}) => {
   useEffect(() => {
     document.body.style.overflowY = "hidden";
     return () => {
       document.body.style.overflowY = "scroll";
     };
   }, []);
-
+ console.log("bhanu",data);
   return ReactDOM.createPortal(
 
      <>
@@ -18,11 +16,14 @@ const MyModal = ({ closeModal, children, handleCloseButton }) => {
       <div className="modal-wrapper" onClick={closeModal}></div>
       
            <div className="modal-container">
-       
-        {children}
-        {handleCloseButton}
-        
+           <h2 className="latest-offer">Latest offers (scroll to close)</h2>
+       {data.map((item,i) => { 
+            console.log(item.Photos[0].imgUrl);
+          return   <img className="popup-photo" src= {item.Photos[0].imgUrl} key={i} alt="bhanubhand" />  
+         })}
+          {handleCloseButton}
              </div>
+             
 
     </>
      ,

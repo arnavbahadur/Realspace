@@ -1,12 +1,27 @@
 import React, { useState ,  useEffect} from "react";
 import MyModal from "./ShowModal";
-// import HousePreview from "../HousePreview/HousePreview";
-// import HouseBox from "../../Components/HouseBox/HouseBox";
 import './Popup.css'
-// import {Scrollbars} from 'react-custom-scrollbars';
+import axios from "axios";
 
 const Modal = () => {
+
   const [showModal, setShowModal] = useState(false);
+
+
+
+  //api call
+  const [Popup,setPopup]=useState([]);
+   const popupapi = async () => {
+     await axios.get(`/mypopupapi/mypopup`).then((pro) => {
+      setPopup(pro.data);
+      //  console.log("arnav",pro.data)
+     });
+   };   
+
+useEffect(() => {
+ popupapi();
+}, []);
+
 
   const closeModal = () => setShowModal(false);
 
@@ -16,30 +31,34 @@ const Modal = () => {
     </button>
   );
 
-  const mainModal = (
-   
-   
-    <MyModal  handleCloseButton={handleCloseButton}>
-        
-   
-        <h2 className="latest-offer">Latest offers</h2>
-       {/* <HouseBox /> */}
-       {/* <HouseBox/> */}
-       {/* <p>complete loan facility</p> */}
-    </MyModal>
+  const mainModal = (    
+    <MyModal  handleCloseButton={handleCloseButton} data={Popup} /> 
     
   );
+
+
+  //shows popup after some second
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowModal(true)
-  //  <HouseBox/>
-    }, 5000);
+
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
+
+
   return (
     <>
+    
        {showModal && mainModal}
-     
+       
+       { /* <h2 className="latest-offer">Latest offers</h2>       
+        {Popup.map((item) => { 
+            console.log(item.Photos[0].imgUrl);
+          return <img src= {item.Photos[0].imgUrl} alt="" />
+          
+         })} */}
+  
     </>
   );
 };

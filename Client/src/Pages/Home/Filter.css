@@ -38,12 +38,37 @@ position: absolute;
   
 }
 
-.pfilter-color{
   /* z-index: 5; */
-  letter-spacing: 1px;
-  /* text-shadow: 1px .5px; */
-  /* text-shadow: 1px 1px 2px rgb(61, 96, 114); */
+  /* letter-spacing: 1px; */
+  /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+  @media screen and (min-width: 601px) {
+    div.pfilter-color {
+      font-size: 100px;
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    div.pfilter-color,filter-text {
+      font-size: 1vm;
+    }
+  }
+
+/* .filter-text{
+  If the screen size is 601px wide or more, set the font-size of <div> to 80px
+@media screen and (min-width: 601px) {
+  div.example {
+    font-size: 1vw;
+  }
 }
+
+If the screen size is 600px wide or less, set the font-size of <div> to 30px
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}
+} */
 .col-filter1{
   /* z-index: 5; */
   

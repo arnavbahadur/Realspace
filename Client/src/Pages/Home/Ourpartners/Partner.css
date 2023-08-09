@@ -3,13 +3,23 @@
 /* Single-Event full page access */
 .single-event-main-container {
     background-color: #fdfdfd;
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     margin-top: 58px;
 }
-
+.partner-image-vertical{
+    padding-top: 5%;
+    margin-top: 14%;
+}
+.partner-image-shivam{
+    padding-top: 5%;
+}
+.partner-image-shivjay{
+    width: 23vh;
+    height: 22vh;
+}
 .partner-text{
     text-align: center;
     font-weight: bold;

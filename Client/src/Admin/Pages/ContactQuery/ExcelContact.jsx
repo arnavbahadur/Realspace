@@ -1,8 +1,10 @@
-
-// import { useRef } from "react";
+// import { useEffect, useRef, useState } from "react";
 // import { useDownloadExcel } from "react-export-table-to-excel";
 
 // export default function ExcelContact({props}) {
+//   const[userdata,setuserdata]=useState([]);
+//   useEffect(()=>{
+//   })
 //   const tableRef = useRef(null);
 
 //   const { onDownload } = useDownloadExcel({
@@ -45,8 +47,10 @@
 // }
 
 
+
+
 import React, {useRef} from 'react';
-import { DownloadTableExcel } from 'react-export-table-to-excel';
+// import { DownloadTableExcel } from 'react-export-table-to-excel';
 import "./Contactquery.css"
 const Excelexport = ({props}) => {
     const tableRef = useRef(null);
@@ -82,13 +86,13 @@ const Excelexport = ({props}) => {
                         <td  className='contactbudget'>{props.budget}</td>
                         <td  className='contactmsg'> {props.message}</td>
                         <td className='contactdownload'>
-                        <DownloadTableExcel
+                        {/* <DownloadTableExcel
                     filename={props.f_name}
                     sheet="users"
                     currentTableRef={tableRef.current}
                      >
                    <button> ✔️ </button>
-                </DownloadTableExcel>
+                </DownloadTableExcel> */}
                         </td>
                     </tr>
                   {/* </tbody> */}
