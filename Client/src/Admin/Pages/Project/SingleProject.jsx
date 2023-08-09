@@ -40,9 +40,9 @@ const SingleProject = (props) => {
           <div className="row1">
             <h3 className="title">location-{props.location}</h3>
           </div>
-          <div className="row1">
+          {/* <div className="row1">
             <h3 className="title">location_url-{props.location_url}</h3>
-          </div>
+          </div> */}
           <div className="row1">
             <h3 className="title">property video-{props.property_url}</h3>
           </div>
@@ -81,7 +81,7 @@ const SingleProject = (props) => {
           </div>
       
             <i className="fa fa-trash event-delete-btn" aria-hidden="true"onClick={()=>{deleteProject()}}/>
-            {/* <button  className='delete-btn' style={{color:props.featured==="True"?"red":"green"}} onClick={()=>{updateProjectfeatured()}}>Featured <i class="fa-solid fa-jet-fighter-up"></i></button> */}
+            <button  className='delete-btn' style={{color:props.featured==="True"?"red":"green"}} onClick={()=>{updateProjectfeatured()}}>Featured <i class="fa-solid fa-jet-fighter-up"></i></button>
           </div>
           <EditProject props={props}/>
         </div>
