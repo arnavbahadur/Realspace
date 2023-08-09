@@ -45,7 +45,7 @@ const navigate = useNavigate();
          
           <div className="col-filter">
             <div className="row-filter">
-            <p>{Propertyupdate}</p>
+            <p className="filter-text">{Propertyupdate}</p>
          
           <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}      <Icon /> </p>
          
@@ -86,7 +86,7 @@ const navigate = useNavigate();
 
           <div className="col-filter">
           <div className="row-filter">
-            <p>Location</p>
+            <p className="filter-text">Location</p>
             <p onClick={()=>setOpen1(!open1)} className="pfilter-color">{locationvalue}  <Icon /></p>
         {/* <span className="bottom-filter">all types</span> */}
          {open1 &&(
@@ -121,7 +121,7 @@ const navigate = useNavigate();
 
             <div className="col-filter">
             <div className="row-filter">
-            <p>Price</p>
+            <p className="filter-text">Price</p>
         
               <p onClick={()=>setOpen2(!open2)} className="pfilter-color">{budjetvalue}  <Icon /></p>
               {/* <span className="bottom-filter">all types</span> */}
