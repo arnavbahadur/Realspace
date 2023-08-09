@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import SingleAppointment from './SingleAppointment';
 import './Appointment.css'
 import Excelexport from './Excelappointment';
-import { DownloadTableExcel } from 'react-export-table-to-excel';
+// import { DownloadTableExcel } from 'react-export-table-to-excel';
 
 export default function Appointment() {
    const [Appoint, setAppoint] = useState([]);
