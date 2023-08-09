@@ -32,6 +32,7 @@ app.use("/propertyapi", require("./Routes/PropertyRouter"));
 app.use("/projectapi", require("./Routes/ProjectRouter"));
 app.use("/contactapi", require("./Routes/ContactRouter"));
 app.use("/apointmentapi", require("./Routes/ApointmentRouter"));
+app.use("/mypopupapi", require("./Routes/PopupRouter"));
 
 
 const path=require("path");

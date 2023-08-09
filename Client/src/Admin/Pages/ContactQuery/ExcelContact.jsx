@@ -50,8 +50,8 @@
 
 
 import React, {useRef} from 'react';
-import { DownloadTableExcel } from 'react-export-table-to-excel';
-import "./Contactquery.css"
+// import { DownloadTableExcel } from 'react-export-table-to-excel';
+import "./contactquery.css"
 const Excelexport = ({props}) => {
     const tableRef = useRef(null);
   return (
@@ -86,13 +86,13 @@ const Excelexport = ({props}) => {
                         <td  className='contactbudget'>{props.budget}</td>
                         <td  className='contactmsg'> {props.message}</td>
                         <td className='contactdownload'>
-                        <DownloadTableExcel
+                        {/* <DownloadTableExcel
                     filename={props.f_name}
                     sheet="users"
                     currentTableRef={tableRef.current}
                      >
                    <button> ✔️ </button>
-                </DownloadTableExcel>
+                </DownloadTableExcel> */}
                         </td>
                     </tr>
                   {/* </tbody> */}

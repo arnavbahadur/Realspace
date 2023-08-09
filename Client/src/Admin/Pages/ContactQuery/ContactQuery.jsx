@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react'
 import SingleContact from './SingleContact';
-import './Contactquery.css'
+import './contactquery.css'
 import ExcelContact from './ExcelContact';
-// import { useDownloadExcel } from "react-export-table-to-excel";
+import { useDownloadExcel } from "react-export-table-to-excel";
 
 
 export default function ContactQuery() {
