@@ -51,7 +51,7 @@
 
 import React, {useRef} from 'react';
 // import { DownloadTableExcel } from 'react-export-table-to-excel';
-import "./contactquery.css"
+import "./Contactquery.css"
 const Excelexport = ({props}) => {
     const tableRef = useRef(null);
   return (
