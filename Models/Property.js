@@ -27,7 +27,7 @@ const PropertySchema = new Schema ({
         required: true 
     },
     created_at: {
-        type: Date
+        type: String
     },
     price: {
         type: Number,
