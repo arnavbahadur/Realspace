@@ -38,22 +38,30 @@ const Compare = () => {
         callapi();
       }, []);
     
-    let compareItems;
+    let compareItems = {};
     let a;
+    const GetCompare = ()=>{
+        compareItems = content.filter((item)=>{
+          return items.itemsId.includes(item._id)         
+        })
+        console.log("compareitem",compareItems)
+
+    }
+    GetCompare()
     // useEffect(()=>{
 
     //   if(items!=null) {
-    //     // a = items.itemsId.map((e)=>{
-    //     //   console.log('e',e);
-    //     //   return compareItems = content.filter((item)=>{
-    //     //     return item._id === e;
-    //     //   })
-    //     // })
-    //     console.log("a",a)
+    // //     // a = items.itemsId.map((e)=>{
+    // //     //   console.log('e',e);
+    // //     //   return compareItems = content.filter((item)=>{
+    // //     //     return item._id === e;
+    // //     //   })
+    // //     // })
+    // //     console.log("a",a)
     //     compareItems = content.filter((item)=>{
-    //       return items.itemsId.find(item._id)         
+    //       return items.itemsId.includes(item._id)         
     //     })
-    //     setCompareitem((previous )=>{ ...previous,compareItems})
+    //     setCompareitem(compareItems)
     //   } 
     // },[content])
 
@@ -95,7 +103,7 @@ const Compare = () => {
             <div className="compareTitle"><p>{item}</p></div>
         )
     })
-    const compareHead = content.map((item)=>{
+    const compareHead = compareItems.map((item)=>{
         // if(item.image != null){
             return(
                 <div className="compare-headings-section">
@@ -108,7 +116,7 @@ const Compare = () => {
             )
         // }
     })
-    const itemDetails = content.map((item)=>{
+    const itemDetails = compareItems.map((item)=>{
       return(
         <div className="compare-itemsContainer">
           <div className="compare-itemDetails">
