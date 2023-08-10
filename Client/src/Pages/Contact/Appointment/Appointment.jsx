@@ -42,9 +42,10 @@ async function submit() {
             <ul className="info">
               <li>
                 <span><img src="./Images/location.png" /></span>
-                <span>101, Shridhar Bhawan, <br />158, Gokul Nagar, <br />
+                <a className="address-text" href="https://goo.gl/maps/ZSXpMLWhskfLxKfD8"> <span>101, Shridhar Bhawan, <br />158, Gokul Nagar, <br />
                 Indore, Madhya Pradesh <br />
                 452001</span>
+                </a>
               </li>
               <li>
                 <span><img src="./Images/mail.png" /></span>

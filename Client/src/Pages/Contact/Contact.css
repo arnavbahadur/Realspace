@@ -16,6 +16,9 @@ section
     background-color: #ADD8E6;
 
 }
+.address-text{
+    color: white;
+}
 section::before
 {
     content: '';

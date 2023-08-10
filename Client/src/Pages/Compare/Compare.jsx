@@ -66,47 +66,17 @@ const Compare = () => {
     // },[content])
 
     console.log("compareitem",compareItems)
-    // const compareItemDetail =[
-    //     {
-    //         image:"https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    //         features:['all the features'],
-    //         propretyId:"id1",
-    //         location:"loaction1",
-    //         name:"name1",
-    //         amount:"50,000",
-    //         forSale:true,
-    //     },
-    //     {
-    //         image:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    //         features:['all the features'],
-    //         propretyId:"id2",
-    //         location:"loaction2",
-    //         name:"name2",
-    //         amount:"40,000",
-    //         forSale:false,
-    //     },
-    //     {
-    //         image:"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    //         features:['all the features'],
-    //         propretyId:"id3",
-    //         location:"loaction3",
-    //         name:"name3",
-    //         amount:"56,000",
-    //         forSale:false,
-    //     },
-
-    // ]
     const feature = ["Garages","parking","Bike Path","Emergency Exit","Fire Alarm","Fire Place","Jog Path","Lawn","Marble Floors","Swimming Pool","Elevators","CCTV Cameras","Generator backup","24*7 Security","Adequate water supply","Intercom Facility"]
     const titles =[ "Type","Location","Builtup area","superBuiltup area","Property ID","Year Built","Bedrooms","Bathrooms"]; 
-    const titlesEle = titles.map((item)=>{
+    const titlesEle = titles.map((item,index)=>{
         return(
-            <div className="compareTitle"><p>{item}</p></div>
+            <div className="compareTitle" key={index}><p>{item}</p></div>
         )
     })
-    const compareHead = compareItems.map((item)=>{
+    const compareHead = compareItems.map((item,index)=>{
         // if(item.image != null){
             return(
-                <div className="compare-headings-section">
+                <div className="compare-headings-section" key={index}>
                     {/* heading/ section */}
                     <img src={item.Photos[0].imgUrl} alt="house" />
                     {/* <p className="compare-item-name">{item.name}</p> */}
@@ -116,9 +86,9 @@ const Compare = () => {
             )
         // }
     })
-    const itemDetails = compareItems.map((item)=>{
+    const itemDetails = compareItems.map((item,index)=>{
       return(
-        <div className="compare-itemsContainer">
+        <div className="compare-itemsContainer" key={index}> 
           <div className="compare-itemDetails">
             <div className="compareItemDetail"><p>{item.propertytype}</p></div>
             <div className="compareItemDetail"><p>{item.location}</p></div>
@@ -131,11 +101,11 @@ const Compare = () => {
             <div className="compareItemDetail"><p>{item.bathRoom}</p></div>
             {
               feature.map((title)=>{          
-                return item.Feature.includes(title)? <div className="compareItemDetail"><p><i class="fa-solid fa-check" style={{color:"green"}}/></p></div> :<div className="compareItemDetail"><p><i class="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
+                return item.Feature.includes(title)? <div className="compareItemDetail"><p><i className="fa-solid fa-check" style={{color:"green"}}/></p></div> :<div className="compareItemDetail"><p><i className="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
               } )
             }
-            <div className="compareItemDetail"><p><i class="fa-solid fa-check" style={{color:"green"}}/></p></div>
-            <div className="compareItemDetail"><p><i class="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
+            <div className="compareItemDetail"><p><i className="fa-solid fa-check" style={{color:"green"}}/></p></div>
+            <div className="compareItemDetail"><p><i className="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
           </div>
         </div>     
       )
@@ -151,7 +121,7 @@ const Compare = () => {
                 <div className="compare-headings-section"></div>
                 {compareHead}
             </div>
-            <div className="copare-container-detailsSection">  
+            <div className="compare-container-detailsSection">  
               <div className="compare-titles-container">
                 <div className="compare-titles">
                   {/* base properties for compare */}

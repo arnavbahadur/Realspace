@@ -18,7 +18,7 @@ const Header = () => {
   // }, [pathname]);
   
   useEffect(() => {
-    // setmenue(false);
+    setmenue(false);
 
     const changeWidth = () => {
       setDisplay(window.innerWidth > 899 ? true : false);
@@ -193,7 +193,7 @@ const Header = () => {
         
         <div className="nav-center-navigation-box">
         <NavLink to="/About">
-          <p className='nav-center-navigation-box-text'>
+          <p className='nav-center-navigation-box-text' >
             <i class="fa-solid fa-address-card"/> About</p>
           </NavLink>
         </div>

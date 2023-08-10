@@ -55,11 +55,12 @@ opacity: 90%;
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #0f0e0e; 
-    border-radius: 10px;
+    border-radius: 2px;
+    
+  background: linear-gradient(105deg, #0499FF, #59C6FD);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #0349f8; 
+    background: #1c0399; 
   }
