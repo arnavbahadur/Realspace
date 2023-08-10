@@ -6,7 +6,7 @@ import Project from '../Pages/Project/Project'
 import './Adminbody.css'
 import ContactQuery from '../Pages/ContactQuery/ContactQuery';
 import Appointment from '../Pages/Appointment/Appointment';
-
+import Popup from '../Pages/Popup/Popup';
 
 const AdminBody = (props) => {
 
@@ -67,12 +67,17 @@ const AdminBody = (props) => {
         <i ></i>
             <h1>Appointment</h1>
         </div>
+         <div onClick={()=>{setadmincontent("popup")}} className='single-admin-option'>
+        <i ></i>
+            <h1>Popup</h1>
+        </div>
        
         </div>
         {admincontent==="property"?<Property/>:<></>}
         {admincontent==="project"?<Project/>:<></>}
         {admincontent==="contactquery"?<ContactQuery/>:<></>}
         {admincontent==="appointment"?<Appointment/>:<></>}
+        {admincontent==="popup"?<Popup/>:<></>}
     </div>
 
 

@@ -66,17 +66,17 @@ function Footer() {
               </NavLink>
                </li>
             <li>
-            <NavLink to={"/faq"}>
+            <NavLink to={"/commercial"}>
               <a href="#"> Commericial Project</a>
               </NavLink>
                 </li>
             <li>
-            <NavLink to={"/faq"}>
+            <NavLink to={"/residential"}>
               <a href="#"> Residential Project</a>
               </NavLink>
             </li>
             <li>
-            <NavLink to={"/faq"}>
+            <NavLink to={"/others"}>
               <a href="#"> Other Project</a>
               </NavLink>
             </li>
