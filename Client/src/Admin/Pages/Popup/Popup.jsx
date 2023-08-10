@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import './Popup.css'
 function Popup() {
 
 
@@ -13,6 +13,20 @@ function Popup() {
       alert(err);
     }
   }
+
+
+  const [popup, setpopup] = useState([]);
+  const apicall=async ()=>{
+    await axios.get("/mypopupapi/mypopup").then((res) => { setpopup(res.data) });
+  }
+  useEffect(() => {
+    apicall();
+  }, [])
+
+
+
+
+  // console.log("bhaj",popup.data)
   return (
     <div>
        <div className="img-upload">
@@ -23,8 +37,11 @@ function Popup() {
                   <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
                   //  onChange={(event)=>{setImageUpload(event.target.files[0])}}
                     />
-                     <button onClick={()=>{submit()}} id='blog-txt-add' >Add popup</button>
+                     <button onClick={()=>{submit()}} id='blog-txt-add' className='popupbuton' >Add popup</button>
                 </div>
+
+                {popup.map((item) => {
+                 return  <img  className='popupimg' src={item.Photos[0].imgUrl} alt="foto" />  })}
     </div>
   )
 }

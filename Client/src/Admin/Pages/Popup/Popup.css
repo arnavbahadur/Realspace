@@ -1,0 +1,11 @@
+.popupbuton{
+    border: 2px solid black;
+    border-radius: 5px;
+    /* margin-top: 30px; */
+}
+
+.popupimg{
+    max-width: 30rem;
+    padding: 20px;
+    align-items: center;
+}
