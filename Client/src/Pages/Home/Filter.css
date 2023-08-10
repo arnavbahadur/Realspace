@@ -143,7 +143,7 @@ If the screen size is 600px wide or less, set the font-size of <div> to 30px
     font-size: small;
   }
   .pfilter-color{
-    text-align: center;
+    text-align: left;
     justify-content: end;
   }
 }

@@ -9,7 +9,7 @@ function Footer() {
     <div className="row-realfoot">
       <div className="footer-box">
         <div className="single_footer">
-        <h4>Realspace group</h4>
+        <h4 className="footer-heading" >Realspace group</h4>
           <ul> 
               <NavLink to={"/"}>
             <img src="./Images/logo.png" alt="realspace logo" className="footerlogo" />
@@ -20,7 +20,7 @@ function Footer() {
       {/*- END COL */}
       <div className="footer-box">
         <div className="single_footer">
-          <h4>Page Link</h4>
+          <h4 className="footer-heading" >Page Link</h4>
           <ul>
             <li>
             <NavLink to={"/About"}>
@@ -53,7 +53,7 @@ function Footer() {
       {/*- END COL */}
       <div className="footer-box">
         <div className="single_footer single_footer_address">
-          <h4>Services</h4>
+          <h4 className="footer-heading" >Services</h4>
           <ul>
             <li>
             <NavLink to={"/housesale"}>
@@ -90,7 +90,7 @@ function Footer() {
       </div>
       <div className="footer-box">
         <div className="single_footer single_footer_address">
-          <h4>Subscribe today</h4>
+          <h4 className="footer-heading" >Subscribe today</h4>
           <div className="signup_form">
             <form action="#" className="subscribe">
             <NavLink to={"/Contact"}>
