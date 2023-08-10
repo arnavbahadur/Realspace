@@ -34,7 +34,7 @@ const Header = () => {
 
   return (
     <div className="header">
-    {console.log("hello",location.pathname)}
+    {/* {console.log("hello",location.pathname)} */}
 
     <div className="navbar" style={location.pathname==='/'&& window.innerWidth > 899 ?{position:"absolute", background: "rgb(80 81 83 / 0%)" , boxShadow:"none"}:{}}>
 

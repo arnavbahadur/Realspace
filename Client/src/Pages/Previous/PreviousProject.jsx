@@ -20,7 +20,7 @@ const PreviousProject = (props) => {
     const callapi = async ()=>{
       await axios.get('/projectapi').then((pro)=>{
         setContent(pro.data);
-        console.log(pro.data)
+        // console.log(pro.data)
       });
     };
 

@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Comparebtn from '../Comparebtn/Comparebtn';
 const HouseBox = (props) => {
     // const navigate = useNavigate();
-    console.log("temo",props)
+    // console.log("temo",props)
     // let { id } = useParams();
     // let id = 1 // id = props.id;
     // const [compared,setCompared] = useState(false);
@@ -15,7 +15,7 @@ const HouseBox = (props) => {
     // const [liked,setliked] = useState(props.isLiked);
     const [warned,setWarned] = useState(false);
     const navigate = useNavigate();
-    console.log(props.id)
+    // console.log(props.id)
     return (
     <div className='houseBox'>
       <div className="houseBox-body">

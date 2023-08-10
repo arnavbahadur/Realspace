@@ -14,8 +14,8 @@ const HousePreview = (props) => {
   const propertyapi = async () => {
     await axios.get(`/propertyapi/${id}`).then((property) => {
       setContent(property.data);
-      console.log("bhanu",property.feature)
-      console.log("aman",property.data)
+      // console.log("bhanu",property.feature)
+      // console.log("aman",property.data)
       // console.log(property.data)
     });
   };   

@@ -59,14 +59,15 @@
 .single-event-memories{
     display: flex;
     flex-wrap: wrap;
-    /* margin: 2px; */
+    /* margin: 80px; */
+    /* padding: 50px; */
     justify-content: center;
 }
 
 .partner-image-home{
     width: 190px;
     height: 200px;
-    margin: 2px;
+    margin: 20px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }

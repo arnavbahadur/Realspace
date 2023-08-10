@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Filter.css'
 import { useNavigate , useParams} from 'react-router-dom';
+import axios from 'axios';
 const Icon = () => {
     return (
       <svg height="20" width="20" viewBox="0 0 20 20">
@@ -10,16 +11,45 @@ const Icon = () => {
   };
   
   const Dropdown = ({ placeHolder }) => {
+
+
+    const [Propertytype,setPropertytype ]= useState("All Property")
+    const[value,setvalue]=useState(["All Property","Flat","Plot","Office","Shop","Showroom","Industrial property","Warehouse","Duplex"," Bungalows","Row house"]);
+    const [locationvalue,setlocationvalue ]= useState("All Location")
+    const[location, setlocation]=useState(["All Location","Vijay nagar","nipaniya","LIG" ,"Vijay nagar" ]); 
+    const [Propertyupdate,setPropertyupdate ]= useState(" Property type")
+    const [budjetvalue,setbudjetvalue ]= useState("Budget")
+    const budjet=[" below 5 Lakh Rs","5Lakh Rs - 15Lakh Rs","15Lakh Rs - 40Lakh Rs","40Lakh Rs - 1cr Rs","1+cr Rs"];
+    
+
+
+    const [content,setContent]=useState([]);
+  const callapi = async () => {
+    await axios.get(`/propertyapi/`).then((res) => {
+      // setContent(res.data)
+      var propertydata=res.data;
+      const genlocation=new Set();
+      const genproperty=new Set();
+      propertydata.map((item)=>{
+        genlocation.add(item.location)
+        genproperty.add(item.propertytype)
+      })
+  //  console.log(genlocation)
+  setlocation(Array.from(genlocation))
+  setvalue(Array.from(genproperty))
+});
+ 
+  };
+
+  useEffect(() => {
+    callapi()
+    ;
+  }, [])
+
+
     const getDisplay = () => {
       return placeHolder;
     };
-    const [Propertytype,setPropertytype ]= useState("All Property")
-    const value=["All Property","Flat","Plot","Office","Shop","Showroom","Industrial property","Warehouse","Duplex"," Bungalows","Row house"  ];
-    const [locationvalue,setlocationvalue ]= useState("All Location")
-    const location=["All Location","Vijay nagar","nipaniya","LIG" ,"Vijay nagar"   ];
-    const [Propertyupdate,setPropertyupdate ]= useState(" Property type")
-    const [budjetvalue,setbudjetvalue ]= useState("Budget")
-    const budjet=["Budget","1 K Rs - 10 K Rs","10 K Rs - 30 K Rs","30 K Rs - 50 K Rs","50 K Rs - 1 Lakh Rs","10Lakh Rs - 30Lakh Rs","30Lakh Rs - 50Lakh Rs","50Lakh Rs - 70Lakh Rs","70Lakh Rs - 1Crore Rs"];
     
    
 
@@ -43,11 +73,11 @@ const navigate = useNavigate();
          
           <div className="col-filter">
             <div className="row-filter">
-            <p>{Propertyupdate}</p>
+            <p className="filter-text">{Propertyupdate}</p>
          
           <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}      <Icon /> </p>
          
-         {/* <i className="gg-search"/> */}
+      
    {
             open &&(
             <div className="dropdown-content">
@@ -84,7 +114,7 @@ const navigate = useNavigate();
 
           <div className="col-filter">
           <div className="row-filter">
-            <p>Location</p>
+            <p className="filter-text">Location</p>
             <p onClick={()=>setOpen1(!open1)} className="pfilter-color">{locationvalue}  <Icon /></p>
         {/* <span className="bottom-filter">all types</span> */}
          {open1 &&(
@@ -119,7 +149,7 @@ const navigate = useNavigate();
 
             <div className="col-filter">
             <div className="row-filter">
-            <p>Price</p>
+            <p className="filter-text">Price</p>
         
               <p onClick={()=>setOpen2(!open2)} className="pfilter-color">{budjetvalue}  <Icon /></p>
               {/* <span className="bottom-filter">all types</span> */}
@@ -158,4 +188,3 @@ const navigate = useNavigate();
     );
   };
 export default Dropdown
-
