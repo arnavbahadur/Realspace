@@ -29,10 +29,12 @@ const AdminBody = (props) => {
   async function logout() {
     try {
       await axios.get("adminapi/logout").then((res)=>{alert("Logged out successfully ")})
+      window.location.reload()
     } catch (err) {
       console.error(err);
     }
   }
+  
 
   return (
 

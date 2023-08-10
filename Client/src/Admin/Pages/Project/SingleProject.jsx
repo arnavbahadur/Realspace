@@ -5,6 +5,7 @@ import EditProject from './EditProject';
 const SingleProject = (props) => {
     const deleteProject=async ()=>{
         await axios.get(`/Projectapi/deleteProject/${props.id}`).then((res) => { alert("Deleted Sucessfully") });
+        window.location.reload()
       }
       const updateProjectfeatured=async ()=>{
         await axios.get(`/Projectapi/editproject/${props.id}`).then((res) => {  alert("Featured Sucessfully") });

@@ -7,6 +7,7 @@ import "./Property.css";
 export default function SingleProperty(props) {
   const deleteProperty=async ()=>{
     await axios.get(`/Propertyapi/deleteproperty/${props.id}`).then((res) => {  alert("Deleted Sucessfully") });
+    window.location.reload()
   }
   // const updatePropertyfeatured=async ()=>{
   //   await axios.get(`/propertyapi/editproperty/${props.id}`).then((res) => {  alert("Featured Sucessfully") });
