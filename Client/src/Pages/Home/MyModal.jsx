@@ -7,7 +7,6 @@ import './Popup.css'
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
-
   const closeModal = () => setShowModal(false);
 
   const handleCloseButton = (
@@ -16,9 +15,9 @@ const Modal = () => {
     </button>
   );
 
-  const mainModal = (
+  const mainModal = ( 
    
-   
+    <>
     <MyModal  handleCloseButton={handleCloseButton}>
         
    
@@ -26,8 +25,13 @@ const Modal = () => {
        {/* <HouseBox /> */}
        {/* <HouseBox/> */}
        {/* <p>complete loan facility</p> */}
+       {/* {
+        Popup.map((item)=>{
+
+        })
+       } */}
     </MyModal>
-    
+    </>
   );
   useEffect(() => {
     const timer = setTimeout(() => {

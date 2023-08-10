@@ -9,6 +9,7 @@ import Singleprojectbox from '../../Components/Projectbox/Singleprojectbox'
 
 
 const PreviousProject = (props) => {
+  
   // const House = (props) => {
     const[currentPage,setCurrentPage]=useState(1);
     const[content,setContent] = useState([])    //fetch data from api and
