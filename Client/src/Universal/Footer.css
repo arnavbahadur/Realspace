@@ -48,6 +48,9 @@ img {
  
 
 }
+.footer-heading{
+  font-size: 2vm;
+}
 .footer-box{
   width: 25%;
 }
@@ -259,7 +262,7 @@ button {
 }
 
 
-@media  (min-width: 450px) and (max-width: 675px){
+@media  (min-width: 350px) and (max-width: 675px){
 
   .row-realfoot{
     /* display: grid; */

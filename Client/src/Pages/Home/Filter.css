@@ -5,7 +5,7 @@
  /* border: 2px solid; */
  /* border-radius: 10px; */
  width: 70%;
-background-color: #cdcfde;
+background-color: #e7ecf6;
  /* justify-content: center ; */
 margin-left: 15%;
 margin-top: -3.5%;
@@ -143,7 +143,7 @@ If the screen size is 600px wide or less, set the font-size of <div> to 30px
     font-size: small;
   }
   .pfilter-color{
-    text-align: center;
+    text-align: left;
     justify-content: end;
   }
 }

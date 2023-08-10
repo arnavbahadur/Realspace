@@ -173,6 +173,11 @@
     .housePreview-discription-houseDetailIcon div{
         margin-top: 5px;
     }
+    .housePreview-discription-houseDetailIcon-icon{
+        color: green;
+        margin-right: 10px;
+        font-weight: 900;
+    }
     .housediscription-textArea{
         padding: 7px 0;
     }

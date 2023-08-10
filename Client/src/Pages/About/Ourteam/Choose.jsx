@@ -42,21 +42,18 @@ function Choose() {
             alt="def"
           />
           <div className="choose-heading">
-            <h3>MARQUEE INVESTORS</h3>
+            <h3> INVESTORS</h3>
           </div>
           <div className="choose-text">
             <p>
-              IndiaFirst Life has two large public-sector banks as shareholders,
-              Bank of Baroda (65% stake) and Union Bank of India (9% stake)
-              whose footprint and experience continue to fortify the value
-              proposition it offers to all stakeholders.
+            In our thriving real estate company, the foundation of our success lies in the diverse and accomplished backgrounds of our esteemed investors. We take immense pride in having a remarkable investor base primarily comprised of individuals who have excelled in the fields of medicine, engineering, and business.
             </p>
             <button className="learnmore"
               onClick={() => {
                 setPopup(true);
                 setpopupcontain({ 
-                  title: "MARQUEE INVESTORS", 
-                  content: "Marquee Investors IndiaFirst Life has two large public-sector banks as shareholders, Bank of Baroda (65.00% stake) and Union Bank of India (9.00% stake) whose footprint and experience continue to fortify the value proposition it offers to all stakeholders. IndiaFirst Life has two large public-sector banks as shareholders, Bank of Baroda (65.00% stake) and Union Bank of India (9.00% stake) whose footprint and experience continue to fortify the value proposition it offers to all stakeholders. Carmel Point Investments India Private Limited incorporated by Carmel Point Investments Limited, a private limited company incorporated under the laws of India and an affiliate of the Warburg Pincus Group United States also holds 26% stake in IndiaFirst Life. The company’s key differentiator is its simple, easy-to understand products that are fairly priced and efficiently serviced." 
+                  title: " INVESTORS", 
+                  content: "The presence of doctors among our investors signifies not only their astute financial acumen but also their commitment to enhancing the quality of life for others. Engineers, known for their analytical thinking and innovative problem-solving skills, bring a unique perspective to our real estate ventures. Their penchant for designing and constructing intricate systems resonates with our emphasis on crafting aesthetically pleasing and functionally superior properties.The presence of accomplished business professionals in our investor community adds a layer of strategic insight and financial prowess that propels our real estate endeavors to new heights. " 
                 });
               }}
             >
