@@ -36,7 +36,7 @@ const HouseBox = (props) => {
         </div>
         <div className="houseBox-descripstion-container">
             <div className="houseBox-name">
-                <p> {`Home\\Villa`} in {props.location}</p>
+                <p> {`Property`} in {props.location}</p>
             </div>
             <div className="houseBox-address">                
                 <a href={props.location_url}> <i className="fa-solid fa-location-dot"/>Location</a>
