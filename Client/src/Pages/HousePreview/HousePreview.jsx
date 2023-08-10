@@ -14,16 +14,17 @@ const HousePreview = (props) => {
   const propertyapi = async () => {
     await axios.get(`/propertyapi/${id}`).then((property) => {
       setContent(property.data);
-      console.log("bhanu",property.Photos)
+      console.log("bhanu",property.feature)
       console.log("aman",property.data)
       // console.log(property.data)
     });
   };   
 
-// console.log("hsfhsuf",content.Gallery)
-// console.log("bhanu",property.Gallery)
+  console.log('Feature',content.Feature)
 
-
+  {content.Feature && content.Feature.map((item)=>{
+    console.log(item.key)
+  })}
 useEffect(() => {
 propertyapi();
 }, [ ]);
@@ -74,16 +75,19 @@ propertyapi();
         <div className="housePreview-top">
           <div className="housePreview-top-left">
             <p className="housePreview-name">
-              {`Name in Place`}
+              {content.title} 
             </p>
             <p className="housePreview-location-name">
-              {content.location}
+              Location-{content.location}
             </p>
           </div>      
           <div className="housePreview-top-right">
             <p className="housePreview-price">
-              <span>{content.Purpose}</span>
-              <span className='housePreview-price-amount'><PriceShow price = {content.price}/></span>
+              {/* <span>{content.Purpose}</span> */}
+              <span>Price for {content.Purpose}</span>
+              <span className='housePreview-price-amount'>
+              <PriceShow price={content.price}/>
+              </span>
             </p>
           </div>          
         </div>        
@@ -96,9 +100,10 @@ propertyapi();
           <div className="housePreview-discription-top">
             <div className='housePreview-discription-top-left'>
               <p className="housePreview-propertyid">
-                <span style={{fontWeight:'bold'}}>Rating of Property</span>
-                {/* <span>{content._id}</span> */}
-                <i className="fa-solid fa-copy"/>
+                <span style={{fontWeight:'bold'}}>Rating </span>
+                {/* <span>{content._id}</span>of Property */}
+                {content.Rating} Star💫
+                {/* <i className="fa-solid fa-copy"/> */}
               </p>
             </div>
             <div className='housePreview-discription-top-right'>
@@ -148,7 +153,7 @@ propertyapi();
               </div>              
             </div>
             <div>
-              <p>Year</p>
+              <p>Year of construction</p>
               <div>
                 <i className="fa-solid fa-calendar-days"></i>
                 <span>{content.created_at}</span>
@@ -159,17 +164,25 @@ propertyapi();
             <h3>Discription</h3>
             <p>{content.Description} </p>
           </div>
-          {/* <div className="housediscription-textArea">
-            <h3>Additional details</h3>
-            {
-              // content.Nearby.map((item)=>{
-              //   return <p>{item.place}</p>
-              // })
-            }
-            {/* <p>{content.Nearby.place}</p> */}
+           {/* <div className="housediscription-textArea"> */}
+            {/* <h3>Additional details</h3> */}
+            {/* {
+                content.Nearby.map((item)=>{
+                 return <p>{item.place}</p>
+              })
+            } */}
+             {/* <p>{content.Nearby.place}</p>  */}
           <div className="housediscription-features">
-            <h3>Features</h3>
-            <ul> {content.Featured}</ul>  
+            <h3>Feature</h3>
+            <ul>
+              {content.Feature && content.Feature.map((item, index)=>{
+              return <li key={index}> {item.key}</li>  
+              })}
+             </ul>
+            {/* <ul> {content.Featured}</ul>   */}
+          </div>
+          <div className="housediscription-features">
+            <h3>Nearby Area</h3>
           </div>
         </div>
       </div>

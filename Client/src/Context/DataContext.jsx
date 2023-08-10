@@ -13,8 +13,8 @@ const initialState = {
     propertyData : [],
     isLoading : false,
     isError : false,
-    projectData : []
-    
+    projectData : [],
+    singleData : {}
 }
 
 const DataProvider = ({children})=>{
@@ -44,9 +44,18 @@ const DataProvider = ({children})=>{
     useEffect(() => {
         getData(API)
     }, [])
-    
+    const getSingleData = async(url)=>{
+        dispatch({type : "SET_SINGLE_LOADING"})
+        try {
+            const res = await axios.get(url)
+            const singleData = await res.data
+            dispatch({type : "SET_SINGLE_DATA", payload : singleData})
+        } catch (error) {
+            dispatch({type : "SET_SINGLE_ERROR"})
+        }
+    }
     return(
-        <DataContext.Provider value = {{...state}}>
+        <DataContext.Provider value = {{...state,getSingleData}}>
             {children}
         </DataContext.Provider>
     )
@@ -54,6 +63,14 @@ const DataProvider = ({children})=>{
 
 const useData = ()=>{
     return useContext(DataContext);
+}
+
+const useGetSingleData = (type,id)=>{
+    const {getSingleData} = useData();
+    useEffect(() => {
+      getSingleData()
+    }, [])
+    
 }
 
 export {DataProvider,DataContext,useData}

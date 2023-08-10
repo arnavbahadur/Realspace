@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import { DownloadTableExcel } from 'react-export-table-to-excel';
+// import { DownloadTableExcel } from 'react-export-table-to-excel';
 import "./Appointment.css"
 const Excelexport = ({props}) => {
     const tableRef = useRef(null);
@@ -33,13 +33,13 @@ const Excelexport = ({props}) => {
                         <td  className='tabledate'>{props.date}</td>
                         <td  className='tablemsg'> {props.message}</td>
                         <td className='tabledownload'>
-                        <DownloadTableExcel
+                        {/* <DownloadTableExcel
                     filename={props.f_name}
                     sheet="users"
                     currentTableRef={tableRef.current}
                      >
                    <button> ✔️ </button>
-                </DownloadTableExcel>
+                </DownloadTableExcel> */}
                         </td>
                     </tr>
                   {/* </tbody> */}

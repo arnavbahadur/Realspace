@@ -13,7 +13,7 @@ const Icon = () => {
     const getDisplay = () => {
       return placeHolder;
     };
-      const [Propertytype,setPropertytype ]= useState("All Property")
+    const [Propertytype,setPropertytype ]= useState("All Property")
     const value=["All Property","Flat","Plot","Office","Shop","Showroom","Industrial property","Warehouse","Duplex"," Bungalows","Row house"  ];
     const [locationvalue,setlocationvalue ]= useState("All Location")
     const location=["All Location","Vijay nagar","nipaniya","LIG" ,"Vijay nagar"   ];
@@ -23,7 +23,7 @@ const Icon = () => {
     
    
 
-    const [filtersearch,setfiltersearch]= useState("")
+    const [filtersearch ,setfiltersearch]= useState("")
     useEffect(() => {
       setfiltersearch([Propertytype,locationvalue,budjetvalue]);
       }, []);
@@ -34,9 +34,7 @@ const navigate = useNavigate();
   const [open1,setOpen1]= useState(false);
   const [open2,setOpen2]= useState(false);
   const [searchTerm,setSearchTerm] =useState('')
-  
   const [searchTerm1,setSearchTerm1] =useState('')
-  
   const [searchTerm2,setSearchTerm2] =useState('')
     return (
    
@@ -45,7 +43,7 @@ const navigate = useNavigate();
          
           <div className="col-filter">
             <div className="row-filter">
-            <p>{Propertyupdate}</p>
+            <p className="filter-text">{Propertyupdate}</p>
          
           <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}      <Icon /> </p>
          
@@ -86,7 +84,7 @@ const navigate = useNavigate();
 
           <div className="col-filter">
           <div className="row-filter">
-            <p>Location</p>
+            <p className="filter-text">Location</p>
             <p onClick={()=>setOpen1(!open1)} className="pfilter-color">{locationvalue}  <Icon /></p>
         {/* <span className="bottom-filter">all types</span> */}
          {open1 &&(
@@ -121,7 +119,7 @@ const navigate = useNavigate();
 
             <div className="col-filter">
             <div className="row-filter">
-            <p>Price</p>
+            <p className="filter-text">Price</p>
         
               <p onClick={()=>setOpen2(!open2)} className="pfilter-color">{budjetvalue}  <Icon /></p>
               {/* <span className="bottom-filter">all types</span> */}
@@ -152,11 +150,7 @@ const navigate = useNavigate();
     </div>
 
 
-
-            <div className="col-filter1"
-             onClick={()=>{
-      navigate(`/Afterfilter/:${Propertytype}/:${locationvalue}/:${budjetvalue}` )
-    }}>
+        <div className="col-filter1" onClick={()=>{ navigate(`/Afterfilter/:${Propertytype}/:${locationvalue}/:${budjetvalue}` ) }}>
            <button className="butt-color">Search</button>
             </div>
              </div>
