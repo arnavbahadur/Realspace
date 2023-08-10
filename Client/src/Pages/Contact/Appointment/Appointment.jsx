@@ -105,7 +105,7 @@ async function submit() {
             {/* <div className="inputBox w100">
               <input type="submit" defaultValue="Send" />
             </div> */}
-            <button className="inputBox w100" onClick={()=>{submit()}} id='blog-txt-add' >Submit</button>
+            <button className="inputBox1 w100" onClick={()=>{submit()}} id='blog-txt-add' >Submit</button>
           </div>
         </div>
       </div>
