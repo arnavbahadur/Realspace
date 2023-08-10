@@ -3,6 +3,7 @@
     justify-content: center;
     margin-left: 13%;
     background-color: aliceblue;
+    padding: 3%;
 }
 .overview-button{
     margin-right: 5%;
@@ -19,8 +20,8 @@
     background: linear-gradient(105deg, #6e99e6, #093c94);
 }
 .Overview-heading{
-    margin-top: 3%;
-    padding-top: 3%;
+    /* margin-top: 3%; */
+    /* padding-top: 3%; */
     text-align: center;
     
     color: rgb(2, 130, 249);

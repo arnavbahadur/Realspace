@@ -37,7 +37,7 @@
 }
 
 .h3feature {
-  color: rgb(0, 0, 0);
+  color: #ffffff;
   font-size: 24px;
   margin: 20px 0 0 20px;
   font-weight: 600;
@@ -46,7 +46,7 @@
 }
 
 .pfeature {
-  color: black;
+  color: white;
   font-weight: 800;
   font-size: 16px;
   align-self: end;
