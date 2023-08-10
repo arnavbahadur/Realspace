@@ -8,7 +8,7 @@ import './House.css'
 import { useData } from '../../Context/DataContext'
 
 const HouseSale = (props) => {
-  const {propertyData} = useData();
+    const {propertyData} = useData();
     const[currentPage,setCurrentPage]=useState(1);
     const contentPerPage = 9;
     
