@@ -20,10 +20,11 @@ const HousePreview = (props) => {
     });
   };   
 
-// console.log("hsfhsuf",content.Gallery)
-// console.log("bhanu",property.Gallery)
+  console.log('Feature',content.Feature)
 
-
+  {content.Feature && content.Feature.map((item)=>{
+    console.log(item.key)
+  })}
 useEffect(() => {
 propertyapi();
 }, [ ]);
@@ -82,10 +83,11 @@ propertyapi();
           </div>      
           <div className="housePreview-top-right">
             <p className="housePreview-price">
-              <span>{content.Purpose}</span>
+              {/* <span>{content.Purpose}</span> */}
+              <span>Price for {content.Purpose}</span>
               <span className='housePreview-price-amount'>
-              <PriceShow />
-              price -{content.price}</span>
+              <PriceShow price={content.price}/>
+              </span>
             </p>
           </div>          
         </div>        
@@ -172,9 +174,11 @@ propertyapi();
              {/* <p>{content.Nearby.place}</p>  */}
           <div className="housediscription-features">
             <h3>Feature</h3>
-            {/* {content.feature.map((item)=>{
-             return <ul> {item.Feature}</ul>  
-             })} */}
+            <ul>
+              {content.Feature && content.Feature.map((item, index)=>{
+              return <li key={index}> {item.key}</li>  
+              })}
+             </ul>
             {/* <ul> {content.Featured}</ul>   */}
           </div>
           <div className="housediscription-features">

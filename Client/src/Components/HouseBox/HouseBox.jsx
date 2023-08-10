@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import './HouseBox.css'
 import { useNavigate } from 'react-router-dom';
 import Comparebtn from '../Comparebtn/Comparebtn';
+import PriceShow from '../PriceShow/PriceShow';
 const HouseBox = (props) => {
     // const navigate = useNavigate();
     console.log("temo",props)
@@ -67,7 +68,7 @@ const HouseBox = (props) => {
             <div className="houseBox-bottomSection">
                 <div className="houseBox-bottomSection-left">
                     <p>Price </p>
-                    <span className="houseBox-bottomSection-left-price">{props.price}₹</span>
+                    <span className="houseBox-bottomSection-left-price"><PriceShow price = {props.price}/></span>
                 </div>   
                 <div className="houseBox-bottomSection-right">
                     <div>

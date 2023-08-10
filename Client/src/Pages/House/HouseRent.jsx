@@ -5,10 +5,13 @@ import PageNum from '../../Components/PageNum/PageNum'
 import HouseBox from '../../Components/HouseBox/HouseBox'
 import axios from "axios";
 import './House.css'
+import { useData } from '../../Context/DataContext'
 
 const HouseRent = () => {
+    const {propertyData} = useData();
+    // console.log(propertyData)
     const[currentPage,setCurrentPage]=useState(1);
-    const[content,setContent] = useState([])    //fetch data from api and
+    // const[content,setContent] = useState([])    //fetch data from api and
     const contentPerPage = 9;
     
     // useEffect(()=>{
@@ -16,20 +19,20 @@ const HouseRent = () => {
     // })
 
     
-    const callapi = async () => {
-      await axios.get(`/propertyapi/`).then((res) => {
-        setContent(res.data);
-        // console.log(res.data)
-      });
-    };
+    // const callapi = async () => {
+    //   await axios.get(`/propertyapi/`).then((res) => {
+    //     setContent(res.data);
+    //     // console.log(res.data)
+    //   });
+    // };
 
     const lastIndex = currentPage * contentPerPage;
     const startIndex = lastIndex - contentPerPage
-    const currentContent =  content.slice(startIndex,lastIndex);
-    const totalContent=content.length;// posts.length is actuall 100 is for test
-      useEffect(() => {
-        callapi();
-      }, []);
+    const currentContent =  propertyData.slice(startIndex,lastIndex);
+    const totalContent=propertyData.length;// posts.length is actuall 100 is for test
+      // useEffect(() => {
+      //   callapi();
+      // }, []);
   return (
     <div>
         <CompareSideBtn />
