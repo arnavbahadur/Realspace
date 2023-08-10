@@ -13,11 +13,19 @@ const DataReducer = (state,action)=>{
                 isLoading : true,
             }        
         case "SET_DATA" :
+            const rentFeatured = action.payload.property.filter((item)=>{
+                return (item.purpose === 'rent' )
+            })
+            const saleFeatured = action.payload.property.filter((item)=>{
+                return (item.purpose === 'sale' )
+            })
             return {
                 ...state,
                 propertyData : action.payload.property,
                 projectData : action.payload.project,
                 isLoading : false,
+                rentFeatured : rentFeatured,
+                saleFeatured : saleFeatured,
             }
         default:
             return{

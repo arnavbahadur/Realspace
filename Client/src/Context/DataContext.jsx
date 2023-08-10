@@ -14,7 +14,11 @@ const initialState = {
     isLoading : false,
     isError : false,
     projectData : [],
-    singleData : {}
+    saleFeatured :[],
+    rentFeatured : [],
+    // singleData : {},
+    // houseSale : [],
+    // house
 }
 
 const DataProvider = ({children})=>{

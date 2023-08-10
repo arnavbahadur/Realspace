@@ -6,7 +6,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Gallery from '../Gallery/Gallery';
 import PriceShow from '../../Components/PriceShow/PriceShow';
-
+import { BsArrowsFullscreen } from "react-icons/bs";
 const HousePreview = (props) => {
 
   let { id } = useParams();
@@ -22,49 +22,24 @@ const HousePreview = (props) => {
 
   console.log('Feature',content.Feature)
 
-  {content.Feature && content.Feature.map((item)=>{
-    console.log(item.key)
-  })}
 useEffect(() => {
 propertyapi();
 }, [ ]);
 
 
-  // const location = useLocation()
-  // console.log("location",location)  //location.state brings data passed in navigate hook
-  // console.log("location",location.state?.id)  //location.state brings data passed in navigate hook
-
-
- 
-
-
-  // location.state.setOk ( true);
-  // console.log("location.state.ok",location.state?.ok)  //location.state brings data passed in navigate hook
-  
-  // let id = 1 // id = props.id;
-  // const [compared,setCompared] = useState(false);
     const [liked,setliked] = useState(false);
     const [warned,setWarned] = useState(false);
 
-  // console.log('location.state.id ', location.state.id)
-  // const features = ["swimming pool","gym","Tenis court","Elivator"];
-  // const featuresElem = features.map((item)=>{
-  //   return(
-  //     <li>{item}</li>
-  //   )
-
-  // })
-  // console.log("naerby",content)
-  // console.log("photo",content.Photos)
+  
   return (
   <div>
     <div className='housePreivew-page'> 
     <CompareSideBtn/>
       <div className="housePreview-topSection">
       {/* {console.log("curr",content.Photos[0])} */}
-          {/* <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=8" alt="house" /> */}
+          <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=8" alt="house" />
          {/* img bypass */}
-          <img src={content.Photos?content?.Photos[0]?.imgUrl:null} alt="houseimage" />
+          {/* <img src={content.Photos?content?.Photos[0]?.imgUrl:null} alt="houseimage" /> */}
         
           {/* <div className="filter"> */} 
           {/* <img src={props.Photos[0].imgUrl} alt="house ki image" /> */}
@@ -100,9 +75,9 @@ propertyapi();
           <div className="housePreview-discription-top">
             <div className='housePreview-discription-top-left'>
               <p className="housePreview-propertyid">
-                <span style={{fontWeight:'bold'}}>Rating </span>
-                {/* <span>{content._id}</span>of Property */}
-                {content.Rating} Star💫
+                <span>id : </span>
+                <span>{content._id}</span>
+                {/* {content.Rating} Star💫 */}
                 {/* <i className="fa-solid fa-copy"/> */}
               </p>
             </div>
@@ -148,7 +123,8 @@ propertyapi();
             <div>
               <p>Area</p>
               <div>
-                <i className="fa-regular fa-square"/>
+                {/* <i className="fa-regular fa-square"/> */}
+                <BsArrowsFullscreen className='housePreview-discription-houseDetailIcon-icon'/>
                 <span>{content.areaSqFt}</span>
               </div>              
             </div>
@@ -179,10 +155,14 @@ propertyapi();
               return <li key={index}> {item.key}</li>  
               })}
              </ul>
-            {/* <ul> {content.Featured}</ul>   */}
           </div>
           <div className="housediscription-features">
             <h3>Nearby Area</h3>
+            <ul>
+              {content.Nearby && content.Nearby.map((item, index)=>{
+              return <li key={index}> {item.place}</li>  
+              })}
+             </ul>
           </div>
         </div>
       </div>
