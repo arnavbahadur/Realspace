@@ -22,7 +22,7 @@ function Singleprojectbox(props) {
                     </div>
                     <div className="img-wrap img-3">
                       <img
-                        src="./Images/corporate-logo.png"
+                        src={props.Photos[1].imgUrl}
                         alt=""
                       />
                       {/* yaha src me {props.Photos[1].imgUrl} dalna he */}

@@ -22,10 +22,11 @@ body {
 
 .un {
 width: 76%;
-color: rgb(38, 50, 56);
+color: rgb(35, 50, 56);
 font-weight: 700;
 font-size: 14px;
 letter-spacing: 1px;
+/* background: rgba(254, 254, 254, 0.04); */
 background: rgba(136, 126, 126, 0.04);
 padding: 10px 20px;
 border: none;
@@ -50,6 +51,7 @@ color: rgb(38, 50, 56);
 font-weight: 700;
 font-size: 14px;
 letter-spacing: 1px;
+/* background: rgba(0, 0, 0, 0.04); */
 background: rgba(136, 126, 126, 0.04);
 padding: 10px 20px;
 border: none;
@@ -105,3 +107,19 @@ font-family: 'Ubuntu', sans-serif;
 }
     
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
