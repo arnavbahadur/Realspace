@@ -64,7 +64,7 @@ const Project = ({Content}) => {
    const projectapi = async () => {
      await axios.get(`/projectapi/${id}`).then((pro) => {
        setContent(pro.data);
-       console.log(pro.data)
+      //  console.log(pro.data)
      });
    };   
 

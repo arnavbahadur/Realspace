@@ -217,3 +217,28 @@ gallery wale ka extra
                         <div className="compareItemDetail"><p>Details</p></div>
                     </div>
                 </div>  
+
+
+
+
+
+
+  filter
+ import { createRoot } from "react-dom/client";
+
+const App = () => {
+  const countries = ["United States", "Argentina", "Canada", "France"];
+
+  const filteredCountries = countries.filter(
+    (country) => country[0].toLowerCase() === "a"
+  );
+
+  return filteredCountries.map((country) => (
+     <div key={country}>{country}</div>
+  ));
+};
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(<App />);
