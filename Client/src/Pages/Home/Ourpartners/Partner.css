@@ -59,7 +59,8 @@
 .single-event-memories{
     display: flex;
     flex-wrap: wrap;
-    /* margin: 2px; */
+    /* margin: 80px; */
+    /* padding: 50px; */
     justify-content: center;
 }
 

@@ -8,7 +8,8 @@ const MyModal = ({ closeModal, handleCloseButton ,data}) => {
       document.body.style.overflowY = "scroll";
     };
   }, []);
- console.log("bhanu",data);
+//  console.log("bhanu",data);
+ {/* console.log(item.Photos[0].imgUrl); */}
   return ReactDOM.createPortal(
 
      <>
@@ -18,7 +19,7 @@ const MyModal = ({ closeModal, handleCloseButton ,data}) => {
            <div className="modal-container">
            <h2 className="latest-offer">Latest offers (scroll to close)</h2>
        {data.map((item,i) => { 
-            console.log(item.Photos[0].imgUrl);
+           
           return   <img className="popup-photo" src= {item.Photos[0].imgUrl} key={i} alt="bhanubhand" />  
          })}
           {handleCloseButton}
