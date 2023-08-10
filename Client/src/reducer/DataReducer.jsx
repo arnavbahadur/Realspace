@@ -15,7 +15,7 @@ const DataReducer = (state,action)=>{
         case "SET_DATA" :
             return {
                 ...state,
-                propertyData : action.payload.property,
+                propertyData : action.payload.property,         
                 projectData : action.payload.project,
                 isLoading : false,
             }
