@@ -61,11 +61,10 @@ const PropertySchema = new Schema ({
     //     required: true
     // },
     Nearby: [
-        {
-            place: {
+        {           
                 type: String,
                 required: true
-            }
+
         }
     ],
     
@@ -91,9 +90,8 @@ const PropertySchema = new Schema ({
 
     Feature:  [
         {
-            key: {
-                type: String
-            }
+                type: String,
+                required:true
         }
     ],
     Note: {

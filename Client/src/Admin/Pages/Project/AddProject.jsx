@@ -2,21 +2,55 @@ import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { v4 } from 'uuid';
-// import { storage } from '../../../firebase';
-// import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
+import { storage } from '../../../firebase';
+import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
 
 
 const AddProject = () => {
 
 
+  const fileListRef=ref(storage,'project/');
+  const [imageUpload,setImageUpload]=useState(null);
   const [FormData,setFormData]=useState({
     images:"",
     description:"",
     title:"",
+    imageContainer:"",
+    // Gallery:"",
+    addMoreDetails:"",
+    Photos:"",
+    Floorplan:"",
+    Feature:"",
+    Featured:"",
+    Area:"",
+    Floors:"",
+    location:"",
+    Address:"",
+    City:"",
+    Postalcode:"",
+     Parking:"",
+     Video_url:"",
+     location_url:"",
+      Note:"",
+      CurrentStatus:""
   
   });
+
+
+
+
+  const afterurl=async(url)=>{
+    setFormData({
+      ...FormData,
+      images: url
+  })
+    alert("Image was Succesfully Updated");
+  }
+
+
+  
   const [images,setimages]=useState([]);
-  const [imageUpload,setImageUpload]=useState(null);
+  
   
   const checkimg=()=>{
     // console.log(imageUpload);
@@ -31,14 +65,7 @@ const AddProject = () => {
     return true;
 }
 
-  const afterurl=async(url)=>{
-    setFormData({
-      ...FormData,
-      images: url
-  })
-    alert("Image was Succesfully Updated");
-  }
-
+ 
   const handleChange = e => {
       const { name, value } = e.target
       setFormData({
