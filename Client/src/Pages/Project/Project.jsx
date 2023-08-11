@@ -83,7 +83,9 @@ useEffect(() => {
                   id="samarsliderz"
                   className="carousel slide"
                   data-ride="carousel" >
+                    {/* <img src={content.Photos?content?.Photos[0]?.imgUrl:null} alt="houseimage" /> */}
                     <img src={content.Photos?content?.Photos[0]?.imgUrl:null} alt="houseimage" />
+
                   {/* <img className="img-box"  src="https://wallpapercave.com/wp/wp4110657.jpg" alt="house" />   */}
                 </div>
               </div>
@@ -275,6 +277,9 @@ useEffect(() => {
     
       
       <Gallery gallery={content.Gallery}/>
+
+
+
       {/* GalleryBunch */}
       {/* <GalleryBunch  gallery={content.Gallery} /> */}
       {/* {content.Gallery.map(item=>{

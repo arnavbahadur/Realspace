@@ -30,13 +30,14 @@ const Contact = () => {
     try {
       console.log(contactData)
       await axios.post("/contactapi/addmsg",contactData)
-      .then(()=>{alert("form added successfully")})
+      .then(()=>{alert("Your response is recorded We will contact you sortly")})
       .catch((err)=>{alert(err)})
     } catch (err) {
       alert(err);
     }
   }
 
+  
 
 
   return (

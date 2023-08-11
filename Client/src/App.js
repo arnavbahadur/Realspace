@@ -70,7 +70,7 @@ if(localStorage.compareItem === undefined){
         
            <Route path="*" element={<PageNotFound/>}/>   
         </Routes> 
-        <MyModal/>
+        {/* <MyModal/> */}
         {/* <Login/> */}
         <Footer/>  
         
