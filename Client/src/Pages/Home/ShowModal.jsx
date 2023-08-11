@@ -20,7 +20,7 @@ const MyModal = ({ closeModal, handleCloseButton ,data}) => {
            <h2 className="latest-offer">Latest offers (scroll to close)</h2>
        {data.map((item,i) => { 
            
-          return   <img className="popup-photo" src= {item.Photos[0].imgUrl} key={i} alt="bhanubhand" />  
+          return   <img className="popup-photo" src= {item?.imgUrl} key={i} alt="bhanubhand" />  
          })}
           {handleCloseButton}
              </div>

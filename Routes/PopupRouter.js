@@ -15,10 +15,10 @@ router.get("/mypopup", (req, res) => {
 
   router.route("/addpopup").post((req, res) => {
     //Retrieve data for post
-    const { Photos} = req.body;
+    const { imgUrl} = req.body;
     //Create a new Post and save it to DB
     // console.log(req.body);
-    const newPopup = new Popup({ Photos});
+    const newPopup = new Popup({ imgUrl});
     // Save the new post
     newPopup
         .save()

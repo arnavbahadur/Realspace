@@ -1,41 +1,64 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-// import { v4 } from 'uuid';
-// import { storage } from '../../../firebase';
-// import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
+import { v4 } from 'uuid';
+import { storage } from '../../../firebase';
+import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
 
 const AddProperty = () => {
-  
-  const [FormData,setFormData]=useState({
-    images:"",
-    description:"",
-    title:"",
-  });
-  
-  // const [images,setimages]=useState([]);
+
+  const fileListRef=ref(storage,'property/');
+
   const [imageUpload,setImageUpload]=useState(null);
   
-  const checkimg=()=>{
-    // console.log(imageUpload);
-    if(imageUpload.size>200000){
-      return false;
-    }
-    const fileExtension = imageUpload.name.split(".").at(-1);
-    const allowedFileTypes = ["jpg", "png","gif","jpeg"];
-    if (!allowedFileTypes.includes(fileExtension)) {
-        return false;
-    }  
-    return true;
-}
+  const [FormData,setFormData]=useState({
+    title:"",
+    description:"",
+    location:"",
+    property_url:"",
+    created_at:"",
+   propertytype:"",
+   houseboximgUrl:"",
+    // Gallery:"",
+      Nearby:"",
+       Feature:"",
+    Purpose:"",
+    location_url:"",
+   price:"",
+  areaSqFt:"",
+   hall:"",
+  bedRoom:"",
+   bathRoom:"",
+   addMoreDetails:"",
+   Note:"",
+   Rating:"",
+   CurrentStatus:""
+  });
+  
 
+  // const [images,setimages]=useState([]);
   const afterurl=async(url)=>{
-    setFormData({
-      ...FormData,
-      images: url
-  })
-    alert("Image was Succesfully Updated");
-  }  
+  setFormData({
+    ...FormData,
+    houseboximgUrl: url
+})
+  alert("Image was Succesfully Updated");
+}
+  
+//   const checking=()=>{
+//     // console.log(imageUpload);
+//     if(imageUpload.size>200000){
+//       return false;
+//     }
+//     const fileExtension = imageUpload.name.split(".").at(-1);
+//     const allowedFileTypes = ["jpg", "png","gif","jpeg"];
+//     if (!allowedFileTypes.includes(fileExtension)) {
+//         return false;
+//     }  
+//     return true;
+// }
+
+   
  
   const handleChange = e => {
       const { name, value } = e.target
@@ -45,6 +68,42 @@ const AddProperty = () => {
       })
   }
 
+  
+  // if(!checkimg()){
+    //     alert("Please Upload Valid image on 200KB");
+    // }
+    // else
+
+  const uploadimage=async ()=>{
+    console.log("change image");
+    try{
+     if(imageUpload!==null){
+        const imageRef=ref(storage,'property/'+v4()+imageUpload.name);
+        await uploadBytes(imageRef,imageUpload).then((snapshot)=>{
+          getDownloadURL(snapshot.ref).then((url)=>{
+            console.log(url); 
+             afterurl(url);
+          })
+        }) 
+    }
+    else{
+        console.log("nothing")
+    }
+   //  console.log(user);
+      } catch (err) {
+     console.error(err);
+       }
+    }
+
+
+
+    useEffect(() => {
+      console.log("img change")
+        uploadimage();
+    }, [imageUpload])
+
+
+    
   async function submit() {
     try {
       await axios.post("/propertyapi/addproperty",FormData)
@@ -55,37 +114,6 @@ const AddProperty = () => {
     }
   }
   
-  
-  const changeimage=async ()=>{
-    // console.log("change image");
-    try{
-    // if(!checkimg()){
-    //     alert("Please Upload Valid image on 200KB");
-    // }
-    // else if(imageUpload!==null){
-        // const imageRef=ref(storage,'files/'+v4()+imageUpload.name);
-        // await uploadBytes(imageRef,imageUpload).then((snapshot)=>{
-          // getDownloadURL(snapshot.ref).then((url)=>{
-            // console.log(url); 
-            //  afterurl(url);
-          // })
-        // }) 
-    // }
-    // else{
-    //     console.log("nothing")
-    // }
-   //  console.log(user);
-      } catch (err) {
-     console.error(err);
-       }
-    }
-
-    useEffect(() => {
-      // console.log("img change")
-        changeimage();
-    }, [imageUpload])
-
-
 
   return (
     <div>
@@ -96,11 +124,10 @@ const AddProperty = () => {
                 <input type="text" id="" className='eventtitle' placeholder='property_url of ifram'          onChange={ handleChange } name="property_url" value={FormData.property_url}/>
                 <input type="text" id="" className='eventtitle' placeholder='price'                 onChange={ handleChange } name="price" value={FormData.price}/>
                 <input type="text" id="" className='eventtitle' placeholder='Title'                 onChange={ handleChange } name="title" value={FormData.title}/>
-                <input type="text" id="" className='eventtitle' placeholder='area'                  onChange={ handleChange } name="area" value={FormData.areaSqFt}/>        
-                <input type="text" id="" className='eventtitle' placeholder='propertytype'          onChange={ handleChange } name="area" value={FormData.propertytype}/>
-                <input type="text" id="" className='eventtitle' placeholder='price'                 onChange={ handleChange } name="price" value={FormData.price}/>
-                <input type="text" id="" className='eventtitle' placeholder='Feature'               onChange={ handleChange } name="Feature" value={FormData.Feature}/>
-                <input type="text" id="" className='eventtitle' placeholder='Listingyear'           onChange={ handleChange } name="Listingyear" value={FormData.Listingyear}/>
+                <input type="text" id="" className='eventtitle' placeholder='area'                  onChange={ handleChange } name="areaSqFt" value={FormData.areaSqFt}/>        
+                <input type="text" id="" className='eventtitle' placeholder='propertytype'          onChange={ handleChange } name="propertytype" value={FormData.propertytype}/>
+                {/* <input type="text" id="" className='eventtitle' placeholder='price'                 onChange={ handleChange } name="price" value={FormData.price}/> */}
+                <input type="text" id="" className='eventtitle' placeholder='created_at'           onChange={ handleChange } name="created_at" value={FormData.created_at}/>
                 <input type="text" id="" className='eventtitle' placeholder='location_url of ifram'          onChange={ handleChange } name="location_url" value={FormData.location_url}/>
                 <input type="text" id="" className='eventtitle' placeholder='Purpose'               onChange={ handleChange } name="Purpose" value={FormData.Purpose}/>
                 <input type="text" id="" className='eventtitle' placeholder='bedRoom'               onChange={ handleChange } name="bedRoom" value={FormData.bedRoom}/>
@@ -110,14 +137,18 @@ const AddProperty = () => {
                 <input type="text" id="" className='eventtitle' placeholder='Rating'                onChange={ handleChange } name="Rating" value={FormData.Rating}/>
                 <input type="text" id="" className='eventtitle' placeholder='Note'                  onChange={ handleChange } name="Note" value={FormData.Note}/>
                 <textarea  id="" cols="10" rows="5"placeholder='property discription'               onChange={ handleChange } name="description" value={FormData.Description} required/>
-                <textarea  id="" cols="30" rows="5"placeholder='Nearby'  onChange={ handleChange } name="Nearby" value={FormData.Nearby} required/>
+                <textarea  id="" cols="30" rows="5"placeholder='Nearby place'  onChange={ handleChange } name="Nearby" value={FormData.Nearby} required/>
+                {/* <input type="text" id="" className='eventtitle' placeholder='Feature'               onChange={ handleChange } name="Feature" value={FormData.Feature}/> */}
+                <textarea  id="" cols="30" rows="5"placeholder='Feature'  onChange={ handleChange } name="Feature" value={FormData.Feature} required/>
                 <textarea  id="" cols="30" rows="5"placeholder='addMoreDetails'  onChange={ handleChange } name="addMoreDetails" value={FormData.addMoreDetails} required/>
                 <div className="img-upload">
                   <p>Upload image :</p>
                   <label htmlFor="event-img">
                     <i className="fa-solid fa-upload"/>
                   </label>
-                  <input type="file" name="event-img" accept="image/png, image/gif, image/jpeg"  onChange={(property)=>{setImageUpload(property.target.files[0])}} />
+                  <input type="file" name="event-img" accept="image/png, image/gif, image/jpeg" 
+                   onChange={(property)=>{setImageUpload(property.target.files[0])}}
+                    />
                 </div>
                 <button onClick={()=>{submit()}} id='blog-txt-add' >Add</button>
                 <button type="reset">Clear</button>
@@ -135,3 +166,19 @@ export default AddProperty
 // title,location,property_url, propertytype,Nearby, Gallery,  Purpose,location_url, price, areaSqFt,
 //  hall, bedRoom, bathRoom,Listingyear,imageContainer,Photos,Description
 //  ,addMoreDetails,Feature,Note,Rating,CurrentStatus
+
+
+
+
+
+
+ 
+  
+ 
+
+
+ 
+  
+
+  
+    

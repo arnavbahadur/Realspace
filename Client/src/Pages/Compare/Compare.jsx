@@ -78,7 +78,8 @@ const Compare = () => {
             return(
                 <div className="compare-headings-section" key={index}>
                     {/* heading/ section */}
-                    <img src={item.Photos[0].imgUrl} alt="house" />
+                    {/* <img src={item.Photos[0].imgUrl} alt="house" /> */}
+                    <img src={item.houseboximgUrl} alt="house" />
                     {/* <p className="compare-item-name">{item.name}</p> */}
                     <p className="compare-item-sale/rent">{`For  ${item.Purpose}`}</p>
                     <p className="compare-item-amount"><PriceShow price = {item.price}/></p>
@@ -99,7 +100,7 @@ const Compare = () => {
             {/* <div className="compareItemDetail"><p>{item.created_at}</p></div> */}
             <div className="compareItemDetail"><p>{item.bedRoom}</p></div>
             <div className="compareItemDetail"><p>{item.bathRoom}</p></div>
-            {
+            { 
               feature.map((title)=>{          
                 return item.Feature.includes(title)? <div className="compareItemDetail"><p><i className="fa-solid fa-check" style={{color:"green"}}/></p></div> :<div className="compareItemDetail"><p><i className="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
               } )

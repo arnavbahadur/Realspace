@@ -56,10 +56,10 @@ const PropertySchema = new Schema ({
     //     type: Number,
     //     required: true
     // },
-    imageContainer: {
-        type: String,
-        required: true
-    },
+    // imageContainer: {
+    //     type: String,
+    //     required: true
+    // },
     Nearby: [
         {
             place: {
@@ -68,26 +68,23 @@ const PropertySchema = new Schema ({
             }
         }
     ],
-    Photos: [
-        {
-            imgUrl: {
-                type: String,
-                required: true
-            }
-        }
-    ], 
-   
-    Gallery: [
-        {   
-            imgUrl: {
-                type: String,
-                required: false
+    
+   houseboximgUrl: {
+          type: String,
+        required: true
             },
-            imgname: {
-                type: String
-            }
-        }
-    ],
+   
+    // Gallery: [
+    //     {   
+    //         imgUrl: {
+    //             type: String,
+    //             required: false
+    //         },
+    //         imgname: {
+    //             type: String
+    //         }
+    //     }
+    // ],
     Description: {
         type: String
     },

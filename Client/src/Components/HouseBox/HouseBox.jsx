@@ -17,6 +17,7 @@ const HouseBox = (props) => {
     const [warned,setWarned] = useState(false);
     const navigate = useNavigate();
     // console.log(props.id)
+    console.log("admin",props)
     return (
     <div className='houseBox'>
       <div className="houseBox-body">
@@ -27,7 +28,7 @@ const HouseBox = (props) => {
             </div>
             {/* props.Photos[0].imgUrl */}
             {/* <NavLink to={`/housepreview/`} > */}
-                <img src={props?.Photos[0]?.imgUrl} alt="house ki image" onClick={()=> {navigate(`/housepreview/${props.id}`)}}/>
+                <img src={props.houseboximgUrl} alt="house ki image" onClick={()=> {navigate(`/housepreview/${props.id}`)}}/>
                 {/* <img src={props.Photos[0].imgUrl} alt="house ki image" onClick={()=> {navigate(`/housepreview/${props.id}`)}}/> */}
             {/* </NavLink> */}
             <div className="houseBox-imgsection-textArea">
