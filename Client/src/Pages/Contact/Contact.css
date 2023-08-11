@@ -166,16 +166,22 @@ section::before
 {
     position: relative;
     margin-bottom: 35px;
+    border: none;
+    border-bottom: 2px solid #c9c3c3;
 }
 
-.container .contactForm .formBox .inputBox.w50
+.container .contactForm .formBox .inputBox .w50
 {
     width: 47%;
+    border: none;
+    border-bottom: 2px solid #c9c3c3;
 }
 
-.container .contactForm .formBox .inputBox.w100
+.container .contactForm .formBox .inputBox .w100
 {
     width: 100%;
+    border: none;
+    border-bottom: 2px solid #c9c3c3;
 }
 
 .container .contactForm .formBox .inputBox input,
@@ -222,7 +228,18 @@ section::before
 } 
 
 /* Css for the submit button */
-.container .contactForm .formBox .inputBox input[type="submit"]         
+.inputBox1{
+    /* border: 2px solid grey; */
+    padding: 2vh;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 2vh;
+    background-color: #0d9480;
+    color: white;
+}
+
+
+.container .contactForm .formBox .inputBox1 input[type="submit"]         
 {
     position: relative;
     cursor: pointer;
@@ -232,10 +249,11 @@ section::before
     border: none;
     max-width: 150px;
     padding: 12px;
+    border-bottom: 2px solid red;
 
 }
 
-.container .contactForm .formBox .inputBox input[type="submit"]:hover{
+.container .contactForm .formBox .inputBox1 input[type="submit"]:hover{
     background: #0d9480;
 }
 

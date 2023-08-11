@@ -77,14 +77,14 @@ const Contact = () => {
           <h2>Send a Message</h2>
           <div className="formBox">
            
-            <input type="text" id="" className='inputBox w50' placeholder='First Name'  onChange={ handleChange } name="f_name" value={contactData.f_name}/>       
+             <input type="text" id="" className='inputBox w50' placeholder='First Name'  onChange={ handleChange } name="f_name" value={contactData.f_name}/>       
              <input type="text" id="" className='inputBox w50' placeholder='Last Name'  onChange={ handleChange } name="l_name" value={contactData.l_name}/>
              <input type="text" id="" className='inputBox w50' placeholder='Email'  onChange={ handleChange } name="email" value={contactData.email}/>
              <input type="text" id="" className='inputBox w50' placeholder='Contact'  onChange={ handleChange } name="phone" value={contactData.phone}/>
              <input type="text" id="" className='inputBox w50' placeholder='Requirement'  onChange={ handleChange } name="requirement" value={contactData.requirement}/>
              <input type="text" id="" className='inputBox w50' placeholder='Budget'  onChange={ handleChange } name="budget" value={contactData.budget}/>
              <textarea  id=""  className='inputBox w100' cols="30" rows="5" placeholder='Message'  onChange={ handleChange } name="message" value={contactData.message} required/>
-            <button className="inputBox w100" onClick={()=>{submit()}} id='blog-txt-add' >Submit</button>
+            <button className="inputBox1 w100" onClick={()=>{submit()}} id='blog-txt-add' >Submit</button>
            
           </div>
          

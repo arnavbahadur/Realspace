@@ -54,7 +54,7 @@ if(localStorage.compareItem === undefined){
             {/* <Route path="/mymodal" element={<MyModal/>}/> */}
             <Route path='/housesale' element={<HouseSale/>}/>     
             <Route path='/houserent' element={<HouseRent/>}/>     
-            {/* <Route path="/mymodal" element={<MyModal/>}/>   */}
+            <Route path="/mymodal" element={<MyModal/>}/>  
             <Route path="/viewmore" element={<Morefloor/>}/>   
             <Route path="/currentproject" element={<CurrentProject/>}/>   
             <Route path="/previousproject" element={<PreviousProject/>}/>   
@@ -70,7 +70,7 @@ if(localStorage.compareItem === undefined){
         
            <Route path="*" element={<PageNotFound/>}/>   
         </Routes> 
-        {/* <MyModal/> */}
+        <MyModal/>
         {/* <Login/> */}
         <Footer/>  
         
