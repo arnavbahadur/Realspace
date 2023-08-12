@@ -8,16 +8,13 @@ import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
 
 const AddProject = () => {
 
-  const [images,setimages]=useState([]);
-  const fileListRef=ref(storage,'project/');
-  const [imageUpload,setImageUpload]=useState(null);
+
   const [FormData,setFormData]=useState({
-    
     description:"",
     title:"",
     projectsingleimg:"",
     // Gallery:"",  commented
-    // Photos:"",->projectboximg
+    projectboximg:"",
     addMoreDetails:"",
     // Floorplan:"",
     Feature:"",
@@ -27,17 +24,14 @@ const AddProject = () => {
     Address:"",
     City:"",
     Postalcode:"",
-     Parking:"",
-     Video_url:"",
-     location_url:"",
-      CurrentStatus:"",
-      created_at:"",
-      Rooms:"",
-      reranumber:""
-  
+    Parking:"",
+    Video_url:"",
+    location_url:"",
+    CurrentStatus:"",
+    created_at:"",
+    Rooms:"",
+    reranumber:""
   });
-
-
 
 
   const afterurl=async(url)=>{
@@ -59,10 +53,9 @@ const AddProject = () => {
 
  
   
-  
   const check=()=>{
     // console.log(imageUpload);
-    if(imageUpload.size>200000){
+    if(imageUpload.size>400000){
       return false;
     }
     const fileExtension = imageUpload.name.split(".").at(-1);
@@ -75,17 +68,19 @@ const AddProject = () => {
 
 
 
- 
+const [images,setimages]=useState([]);
+const fileListRef=ref(storage,'project/');
+const [imageUpload,setImageUpload]=useState(null);
   
  
-// if(!check()){
-//   alert("Please Upload Valid image on 200KB");
-// }
-// else 
-  const uploadimage=async ()=>{
+ 
+   const uploadimage=async ()=>{
     // console.log("change image");
     try{
-   if(imageUpload!==null){
+      if(!check()){
+          alert("Please Upload Valid image of 400KB");
+        }
+   else if(imageUpload!==null){
         const imageRef=ref(storage,'project/'+v4()+imageUpload.name);
         await uploadBytes(imageRef,imageUpload).then((snapshot)=>{
           getDownloadURL(snapshot.ref).then((url)=>{
@@ -97,7 +92,6 @@ const AddProject = () => {
     else{
         console.log("nothing")
     }
-   //  console.log(user);
       } catch (err) {
      console.error(err);
        }
@@ -105,12 +99,42 @@ const AddProject = () => {
 
 
   useEffect(() => {
-    console.log("img change")
+    // console.log("img change")
       uploadimage();
   }, [imageUpload])
     
 
 
+  // for card image
+  const [projectimg,setprojectimages]=useState([]);
+  const cardimage=async ()=>{
+    // console.log("change image");
+    try{
+      if(!check()){
+          alert("Please Upload Valid image of 400KB");
+        }
+   else if(imageUpload!==null){
+        const imageRef=ref(storage,'project/'+v4()+imageUpload.name);
+        await uploadBytes(imageRef,imageUpload).then((snapshot)=>{
+          getDownloadURL(snapshot.ref).then((url)=>{
+            console.log(url); 
+             afterurl(url);
+          })
+        }) 
+    }
+    else{
+        console.log("nothing")
+    }
+      } catch (err) {
+     console.error(err);
+       }
+    }
+
+
+  useEffect(() => {
+    // console.log("img change")
+      cardimage();
+  }, [projectimg])
 
   async function submit() {
     try {
@@ -152,18 +176,85 @@ const AddProject = () => {
                 <textarea  id="" cols="10" rows="5"placeholder='property discription'               onChange={ handleChange } name="description" value={FormData.Description} required/>
                 <textarea  id="" cols="30" rows="5"placeholder='Nearby'  onChange={ handleChange } name="Nearby" value={FormData.Nearby} required/>
                 <textarea  id="" cols="30" rows="5"placeholder='addMoreDetails'  onChange={ handleChange } name="addMoreDetails" value={FormData.addMoreDetails} required/>
-
-              
-              
                
                 <div className="img-upload">
-                  <p>Upload image :[projectsingleimg]</p>
+                  <p>Upload project single img</p>
                   <label htmlFor="event-img">
                     <i className="fa-solid fa-upload"/>
                   </label>
                   <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
-                   onChange={(projectbox)=>{setImageUpload(projectbox.target.files[0])}} />
+                   onChange={(e)=>{setImageUpload(e.target.files[0])}} />
                 </div>
+
+                <div className="img-upload">
+                  <p>Upload project box img</p>
+                  <label htmlFor="event-img">
+                    <i className="fa-solid fa-upload"/>
+                  </label>
+                  <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
+                   onChange={(projectboximg)=>{setprojectimages(projectboximg.target.files)}} />
+                    <label htmlFor="event-img">
+                    <i className="fa-solid fa-upload"/>
+                  </label>
+                  <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
+                   onChange={(projectboximg)=>{setprojectimages(projectboximg.target.files)}} />
+                </div>
+
+{/* 
+                <div className="img-upload">
+                  <p>Upload flour plan img</p>
+                  <label htmlFor="event-img">
+                    <i className="fa-solid fa-upload"/>
+                  </label>
+                  <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
+                   onChange={(Floorplan)=>{setImageUpload(Floorplan.target.files[0])}} />
+                    <label htmlFor="event-img">
+                    <i className="fa-solid fa-upload"/>
+                  </label>
+                  <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
+                   onChange={(Floorplan)=>{setImageUpload(Floorplan.target.files[0])}} />
+                    <label htmlFor="event-img">
+                    <i className="fa-solid fa-upload"/>
+                  </label>
+                  <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
+                   onChange={(Floorplan)=>{setImageUpload(Floorplan.target.files[0])}} />
+                    <label htmlFor="event-img">
+                    <i className="fa-solid fa-upload"/>
+                  </label>
+                  <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
+                   onChange={(Floorplan)=>{setImageUpload(Floorplan.target.files[0])}} />
+                </div>
+
+
+
+
+                
+                <div className="img-upload">
+                  <p>Upload galery img</p>
+                  <label htmlFor="event-img">
+                    <i className="fa-solid fa-upload"/>
+                  </label>
+                  <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
+                   onChange={(Floorplan)=>{setImageUpload(Floorplan.target.files[0])}} />
+                    <label htmlFor="event-img">
+                    <i className="fa-solid fa-upload"/>
+                  </label>
+                  <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
+                   onChange={(Floorplan)=>{setImageUpload(Floorplan.target.files[0])}} />
+                    <label htmlFor="event-img">
+                    <i className="fa-solid fa-upload"/>
+                  </label>
+                  <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
+                   onChange={(Floorplan)=>{setImageUpload(Floorplan.target.files[0])}} />
+                    <label htmlFor="event-img">
+                    <i className="fa-solid fa-upload"/>
+                  </label>
+                  <input type="file" name="event-img"  accept="image/png, image/gif, image/jpeg" 
+                   onChange={(Floorplan)=>{setImageUpload(Floorplan.target.files[0])}} />
+                </div> */}
+
+
+
                 <button onClick={()=>{submit()}} id='blog-txt-add' >Add</button>
                 <button type="reset">Clear</button>
             </div>
@@ -175,5 +266,4 @@ const AddProject = () => {
 }
 
 export default AddProject
-// imageContainer,Gallery,addMoreDetails,Photos,Floorplan,Feature,Featured,Area,Floors,
-// location,Address,City,Postalcode,Parking,Video_url,location_url, Note,CurrentStatus
+

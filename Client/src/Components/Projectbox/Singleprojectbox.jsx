@@ -16,13 +16,13 @@ function Singleprojectbox(props) {
                 <NavLink to={`/project`}>
                     <div className="img-wrap img-1">
                       <img
-                        // src={props.Photos[0].imgUrl}
+                        src={props.Photos[0].imgUrl}
                         alt=""
                       />
                     </div>
                     <div className="img-wrap img-3">
                       <img
-                        // src={props.Photos[1]?.imgUrl}
+                        src={props.Photos[1]?.imgUrl}
                         alt=""
                       />
                       {/* yaha src me {props.Photos[1].imgUrl} dalna he */}

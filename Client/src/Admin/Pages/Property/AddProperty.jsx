@@ -7,9 +7,7 @@ import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
 
 const AddProperty = () => {
 
-  const fileListRef=ref(storage,'property/');
 
-  const [imageUpload,setImageUpload]=useState(null);
   
   const [FormData,setFormData]=useState({
     title:"",
@@ -36,7 +34,7 @@ const AddProperty = () => {
   });
   
 
-  // const [images,setimages]=useState([]);
+  const [images,setimages]=useState([]);
   const afterurl=async(url)=>{
   setFormData({
     ...FormData,
@@ -50,7 +48,7 @@ const AddProperty = () => {
 //     if(imageUpload.size>200000){
 //       return false;
 //     }
-//     const fileExtension = imageUpload.name.split(".").at(-1);
+// //     const fileExtension = imageUpload.name.split(".").at(-1);
 //     const allowedFileTypes = ["jpg", "png","gif","jpeg"];
 //     if (!allowedFileTypes.includes(fileExtension)) {
 //         return false;
@@ -68,6 +66,9 @@ const AddProperty = () => {
       })
   }
 
+  const fileListRef=ref(storage,'property/');
+
+  const [imageUpload,setImageUpload]=useState(null);
   
   // if(!checkimg()){
     //     alert("Please Upload Valid image on 200KB");
@@ -75,7 +76,7 @@ const AddProperty = () => {
     // else
 
   const uploadimage=async ()=>{
-    console.log("change image");
+    // console.log("change image");
     try{
      if(imageUpload!==null){
         const imageRef=ref(storage,'property/'+v4()+imageUpload.name);
@@ -120,9 +121,9 @@ const AddProperty = () => {
     <div className="add-area add_event_area" id='add_event_area'>     
            <p>Add new Property</p>
            <div>
-                <input type="text" id="" className='eventtitle' placeholder='location'              onChange={ handleChange } name="location" value={FormData.location}/>
+                <input type="text" id="" className='eventtitle' placeholder='location'                       onChange={ handleChange } name="location" value={FormData.location}/>
                 <input type="text" id="" className='eventtitle' placeholder='property_url of ifram'          onChange={ handleChange } name="property_url" value={FormData.property_url}/>
-                <input type="text" id="" className='eventtitle' placeholder='price'                 onChange={ handleChange } name="price" value={FormData.price}/>
+                <input type="text" id="" className='eventtitle' placeholder='price'                    onChange={ handleChange } name="price" value={FormData.price}/>
                 <input type="text" id="" className='eventtitle' placeholder='Title'                 onChange={ handleChange } name="title" value={FormData.title}/>
                 <input type="text" id="" className='eventtitle' placeholder='area'                  onChange={ handleChange } name="areaSqFt" value={FormData.areaSqFt}/>        
                 <input type="text" id="" className='eventtitle' placeholder='propertytype'          onChange={ handleChange } name="propertytype" value={FormData.propertytype}/>

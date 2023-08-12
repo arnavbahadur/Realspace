@@ -33,14 +33,15 @@ const projectSchema = new Schema({
     //         }
     //     }
     // ],
-    // projectboximg: [
-    //     {   
-    //         imgUrl: {
-    //             type: String,
-    //             required: false
-    //         }
-    //     }
-    // ],
+    projectboximg: [
+        {   
+            imgUrl: {
+                type: String,
+                required: false
+            }
+        }
+    ],
+  
     // Floorplan: [
     //     {
     //         imgUrl: {
