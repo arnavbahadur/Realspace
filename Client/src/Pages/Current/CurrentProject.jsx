@@ -18,12 +18,12 @@ const CurrentProject = ({purpose}) => {
   const startIndex = lastIndex - contentPerPage
   const currentContent = content.slice(startIndex,lastIndex);
   const totalContent = content.length;// content.length is actuall 100 is for test
-  console.log('currentContent in currentProject ',currentContent)
+  // console.log('currentContent in currentProject ',currentContent)
 
   const callapi = async ()=>{
     await axios.get('/projectapi').then((pro)=>{
       setContent(pro.data);
-      console.log(pro.data)
+      // console.log(pro.data)
     });
   };
 
@@ -39,7 +39,7 @@ const CurrentProject = ({purpose}) => {
       </div> */}
       <div className="house-card-section">
         {currentContent.map(item=>{
-          return <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id} />
+          return <Singleprojectbox title={item.title} projectboximg={item.projectboximg} id={item._id} />
         })}
       </div>
       {/* <Projectbox currentContent={currentContent}/> */}

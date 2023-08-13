@@ -11,77 +11,78 @@ const projectSchema = new Schema({
         required: true
     },
     created_at: {
-        type: Date
+        type: Date,
+        required: true
     },
-    imageContainer: {
+    projectsingleimg: {
         type: String,
         required: true
     },
-    // Rooms: {
-    //     type: String,
-    //     required: true
-    // },
+    Rooms: {
+        type: String,
+    
+    },
     Gallery: [
         {   
-            imgUrl: {
+            // imgUrl: {
                 type: String,
                 required: false
-            },
-            imgname: {
-                type: String
-            }
+            // }
+            // imgname: {
+            //     type: String
+            // }
         }
     ],
-    Photos: [
+    projectboximg: [
         {   
-            imgUrl: {
+            // imgUrl: {
                 type: String,
                 required: false
-            }
+            // }
         }
     ],
+  
+    // projectboximg: [
+    //     {   
+            
+    //             type: String,
+    //             required: false
+            
+    //     }
+    // ],
     Floorplan: [
         {
-            imgUrl: {
+            // imgUrl: {
                 type: String,
                 required: false
-            },
-            imgname: {
-                type: String
-            }
+            // },
+            // imgname: {
+            //     type: String
+            // }
         }
     ],
     addMoreDetails: [
-        {
-            key: {
+        { 
                 type: String
-            },
-            value: {
-                type: String
-            }
+
         }
     ],
     Feature: [
-        {
-            key: {
-                type: String
-            },
-            value: {
-                type: String
-            }
+        {  
+                type: String   
         }
     ],
-    Featured: {
-        type: String
+   
+     Parking: {
+        type: String,
+        required: true 
     },
-    //  Parking: {
-    //     type: String,
-    //     required: true 
-    // },
+
      Floors: {
         type: String,
         required: true 
     },
+
     location: {
         type: String,
         required: true 
@@ -92,32 +93,33 @@ const projectSchema = new Schema({
     },
     Area: {
         type: String,
-        required: true 
+        // required: true 
     },
      City: {
         type: String,
         required: true 
     },
-    //  Postalcode: {
-    //     type: String,
-    //     required: true 
-    // },
-    // Video_url: {
-    //     type: String,
-    //     required: true 
-    // },
-    location_url: {
+     Postalcode: {
         type: String,
         required: true 
     },
-    Note: {
-        type: String
+    Video_url: {
+        type: String,
+        required: true 
+    },
+    location_url: {
+        type: String,
+        required: true 
     },
     
     CurrentStatus: {
         type: String,
         required: true
+    },
+    reranumber:{
+        type: String,
     }
+
 });
 
 const Project = mongoose.model('project', projectSchema);

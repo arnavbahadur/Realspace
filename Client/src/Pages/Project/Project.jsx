@@ -18,8 +18,8 @@ const Project = ({Content}) => {
 // to bypass the erroe i have put the data which will automatically change as it get a new id
    const [content,setContent]=useState({
     "_id": "64b684475dc905ac06d46dde",
-    "title": "mahanvhjjjjjjjjjjjjjjj",
-    "description": "afjjjjjjjtaa na jata ",
+    "title": "m",
+    "description": "a ",
     "created_at": "2023-07-18T12:23:35.567Z",
     "imageContainer": "bharathjkg mata",
     "Rooms": "xvsdsdf",
@@ -83,7 +83,9 @@ useEffect(() => {
                   id="samarsliderz"
                   className="carousel slide"
                   data-ride="carousel" >
-                    <img src={content.Photos?content?.Photos[0]?.imgUrl:null} alt="houseimage" />
+                    {/* <img src={content.Photos?content?.Photos[0]?.imgUrl:null} alt="houseimage" /> */}
+                    <img src={content.projectsingleimg} alt="houseimage" />
+
                   {/* <img className="img-box"  src="https://wallpapercave.com/wp/wp4110657.jpg" alt="house" />   */}
                 </div>
               </div>
@@ -221,7 +223,7 @@ useEffect(() => {
                     <div className="floor-plan">
                       <a href="#">
                         <div className="card-img">
-                          <img className="card-img-top" src= {content.Floorplan[0].imgUrl} alt="Card image cap" />
+                          <img className="card-img-top" src= {content.Floorplan[0]} alt="Card image cap" />
                         </div>
                         <div className="card-body-floor">
                           <h5 className="card-title mb-2">Block A</h5>
@@ -235,7 +237,7 @@ useEffect(() => {
                     <div className="floor-plan">
                       <a href="#">
                         <div className="card-img">
-                          <img className="card-img-top" src={content.Floorplan[1].imgUrl} alt="Card image cap" />
+                          <img className="card-img-top" src={content.Floorplan[1]} alt="Card image cap" />
                         </div>
                         <div className="card-body-floor">
                           <h5 className="card-title mb-2">Block B</h5>
@@ -275,6 +277,9 @@ useEffect(() => {
     
       
       <Gallery gallery={content.Gallery}/>
+
+
+
       {/* GalleryBunch */}
       {/* <GalleryBunch  gallery={content.Gallery} /> */}
       {/* {content.Gallery.map(item=>{

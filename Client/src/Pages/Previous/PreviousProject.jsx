@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import HomeSectionsHeading from '../../Components/HomeSectionsHeading/HomeSectionsHeading'
+// import HomeSectionsHeading from '../../Components/HomeSectionsHeading/HomeSectionsHeading'
 import CompareSideBtn from '../../Components/CompareSideBtn/CompareSideBtn'
 import PageNum from '../../Components/PageNum/PageNum'
-import Projectbox from '../../Components/Projectbox/Projectbox'
+// import Projectbox from '../../Components/Projectbox/Projectbox'
 import axios from 'axios'
 import Singleprojectbox from '../../Components/Projectbox/Singleprojectbox'
 
@@ -42,7 +42,7 @@ const PreviousProject = (props) => {
       {/* <Projectbox currentContent={currentContent}/> */}
       <div className="house-card-section">
         {currentContent.map(item=>{
-          return <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id} />
+          return <Singleprojectbox title={item.title} projectboximg={item.projectboximg} id={item._id} />
         })}
       </div>
       <div className="house-pageNumber">

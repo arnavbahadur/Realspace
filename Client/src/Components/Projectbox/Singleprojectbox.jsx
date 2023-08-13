@@ -5,10 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 function Singleprojectbox(props) {
   const navigate = useNavigate();
+  // console.log("admin",props.projectboximg)
   return (
     <div onClick={()=>{
       navigate(`/project/${props.id}`)
-    }}>
+    }}>   
+    {/* {console.log("boximg",props.projectboximg[0])} */}
       
             <div className="card-3d-wrap mx-auto">
               <div className="card-3d-wrapper">
@@ -16,13 +18,13 @@ function Singleprojectbox(props) {
                 <NavLink to={`/project`}>
                     <div className="img-wrap img-1">
                       <img
-                        src={props.Photos[0].imgUrl}
+                        src={props.projectboximg[0]}
                         alt=""
                       />
                     </div>
                     <div className="img-wrap img-3">
                       <img
-                        src={props.Photos[1].imgUrl}
+                        src={props.projectboximg[1]}
                         alt=""
                       />
                       {/* yaha src me {props.Photos[1].imgUrl} dalna he */}

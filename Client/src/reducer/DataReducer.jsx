@@ -1,5 +1,5 @@
 const DataReducer = (state,action)=>{
-    console.log(action)
+    // console.log(action)
     switch (action.type) {
         case "SET_ERROR":
             return{

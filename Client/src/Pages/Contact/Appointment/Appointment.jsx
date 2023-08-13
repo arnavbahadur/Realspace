@@ -26,7 +26,7 @@ async function submit() {
   try {
     console.log(apointment)
     await axios.post("/apointmentapi/apointment",apointment)
-    .then(()=>{alert("form added successfully")})
+    .then(()=>{alert("Your response is recorded We will contact you sortly")})
     .catch((err)=>{alert(err)})
   } catch (err) {
     alert(err);
