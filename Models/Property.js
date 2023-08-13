@@ -73,17 +73,28 @@ const PropertySchema = new Schema ({
         required: true
             },
    
-    Gallery: [
-        {   
-            imgUrl: {
-                type: String,
-                required: false
-            },
-            imgname: {
-                type: String
-            }
-        }
-    ],
+            Gallery: [
+                {   
+                    // imgUrl: {
+                        type: String,
+                        required: false
+                    // }
+                    // imgname: {
+                    //     type: String
+                    // }
+                }
+            ],
+    // Gallery: [
+    //     {   
+    //         imgUrl: {
+    //             type: String,
+    //             required: false
+    //         },
+    //         imgname: {
+    //             type: String
+    //         }
+    //     }
+    // ],
     Description: {
         type: String
     },
