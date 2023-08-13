@@ -3,7 +3,7 @@ import "./Gallery.css";
 
 const Gallery = (props) => {
     
-    // console.log(props);
+    console.log("are".props);
   return (
     <div>
         <div class="row-gallery">
@@ -12,7 +12,6 @@ const Gallery = (props) => {
     
            </div>
               {props.gallery.map(item=>{
-              
                 return   <div className="gallery-page">
                  <div class="gallery-box"> 
                          <a href="#">

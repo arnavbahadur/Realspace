@@ -17,6 +17,7 @@ const HousePreview = (props) => {
       // console.log("bhanu",property.feature)
       // console.log("aman",property.data)
       // console.log(property.data)
+        // console.log("GILERY",content.Gallery)
     });
   };   
 
@@ -152,7 +153,7 @@ propertyapi();
             <h3>Feature</h3>
             <ul>
               {content.Feature && content.Feature.map((item, index)=>{
-              return <li key={index}> {item.key}</li>  
+              return <li key={index}> {item}</li>  
               })}
              </ul>
           </div>
@@ -160,7 +161,7 @@ propertyapi();
             <h3>Nearby Area</h3>
             <ul>
               {content.Nearby && content.Nearby.map((item, index)=>{
-              return <li key={index}> {item.place}</li>  
+              return <li key={index}> {item}</li>  
               })}
              </ul>
           </div>
@@ -184,7 +185,8 @@ propertyapi();
             {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.972176342529!2d77.06302747486147!3d23.389223802547146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c8f72daa4adb9%3A0x542891f8da95c6a4!2sParmar%20Krishi%20Farm%20fish%20%26%20goat%20farming!5e0!3m2!1sen!2sin!4v1690978189168!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
           </div>
         </div>
-
+        
+        <Gallery gallery={content.Gallery}/>
         {/* <Gallery gallery={content.Gallery}/> */}
         
         {/* <Gallery/> */}
