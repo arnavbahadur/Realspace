@@ -4,22 +4,23 @@ import { useState } from 'react'
 import { v4 } from 'uuid';
 import { storage } from '../../../firebase';
 import {getDownloadURL, listAll, ref, uploadBytes} from 'firebase/storage';
+import Addmultiimg from './Addmultiimg';
 
 const AddProperty = () => {
 
 
   
   const [FormData,setFormData]=useState({
-    title:"",
-    description:"",
-    location:"",
-    property_url:"",
-    created_at:"",
+   title:"",
+   description:"",
+   location:"",
+   property_url:"",
+   created_at:"",
    propertytype:"",
    houseboximgUrl:"",
-    // Gallery:"",
-      Nearby:"",
-       Feature:"",
+   Gallery:[],
+   Nearby:"",
+   Feature:"",
    Purpose:"",
    location_url:"",
    price:"",
@@ -142,8 +143,8 @@ const AddProperty = () => {
                 {/* <input type="text" id="" className='eventtitle' placeholder='Feature'               onChange={ handleChange } name="Feature" value={FormData.Feature}/> */}
                 <textarea  id="" cols="30" rows="5"placeholder='Feature'  onChange={ handleChange } name="Feature" value={FormData.Feature} required/>
                 <textarea  id="" cols="30" rows="5"placeholder='addMoreDetails'  onChange={ handleChange } name="addMoreDetails" value={FormData.addMoreDetails} required/>
+                <p>Upload image :</p>
                 <div className="img-upload">
-                  <p>Upload image :</p>
                   <label htmlFor="event-img">
                     <i className="fa-solid fa-upload"/>
                   </label>
@@ -151,6 +152,10 @@ const AddProperty = () => {
                    onChange={(property)=>{setImageUpload(property.target.files[0])}}
                     />
                 </div>
+                <p>upload Gallery images</p>
+                {/* <Addmultipleimg /> */}
+                 <Addmultiimg formarray={FormData.Gallery}/>
+
                 <button onClick={()=>{submit()}} id='blog-txt-add' >Add</button>
                 <button type="reset">Clear</button>
             </div>

@@ -11,9 +11,11 @@ function Projectbox({currentContent}) {
   const projectapi = async () => {
     await axios.get('/projectapi').then((pro) => {
       setContent(pro.data);
-      console.log(pro.data)
+      // console.log(pro.data)
     });
   };
+
+  // console.log("adminsjs",content.projectsingleimg)
   // const cureentContent = content.slice(0,3);
 useEffect(() => {
 projectapi();
@@ -23,7 +25,8 @@ projectapi();
   <div className="section over-hide">
     <div className="container">
     {currentContent.map(item=>{
-    return   <Singleprojectbox title={item.title} Photos={item.Photos} id={item._id}  />
+     
+    return   <Singleprojectbox title={item.title} projectboximg={item.projectboximg} id={item._id}  />
     // return   <Singleprojectbox content={item} />
     })}  
     </div>

@@ -12,11 +12,12 @@ const Gallery = (props) => {
     
            </div>
               {props.gallery.map(item=>{
+              
                 return   <div className="gallery-page">
                  <div class="gallery-box"> 
                          <a href="#">
                               <div class="card-img">                          
-                                 <img src={item.imgUrl} alt="img" />                         
+                                 <img src={item} alt="img" />                         
                               </div>
                               <div class="gallery-name">     
                                   <h5 class="gallery-name-title">{item.imgname}</h5>         

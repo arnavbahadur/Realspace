@@ -31,11 +31,11 @@ const DataProvider = ({children})=>{
             //get property data 
             const res1 = await axios.get(url.property)
             const property = await res1.data
-            console.log(res1)
+            // console.log(res1)
             //get project data 
             const res2 = await axios.get(url.project)
             const project = await res2.data
-            console.log(res2)
+            // console.log(res2)
             // set property ,project
             dispatch({type:"SET_DATA",payload:{project,property}})
         } catch (error) {
@@ -43,7 +43,7 @@ const DataProvider = ({children})=>{
         }
         
     }
-    console.log(state.projectData)
+    // console.log(state.projectData)
 
     useEffect(() => {
         getData(API)

@@ -22,37 +22,45 @@ const projectSchema = new Schema({
         type: String,
     
     },
-    // Gallery: [
-    //     {   
-    //         imgUrl: {
-    //             type: String,
-    //             required: false
-    //         },
-    //         imgname: {
-    //             type: String
-    //         }
-    //     }
-    // ],
-    projectboximg: [
+    Gallery: [
         {   
-            imgUrl: {
+            // imgUrl: {
                 type: String,
                 required: false
-            }
+            // }
+            // imgname: {
+            //     type: String
+            // }
+        }
+    ],
+    projectboximg: [
+        {   
+            // imgUrl: {
+                type: String,
+                required: false
+            // }
         }
     ],
   
-    // Floorplan: [
-    //     {
-    //         imgUrl: {
+    // projectboximg: [
+    //     {   
+            
     //             type: String,
     //             required: false
-    //         },
-    //         imgname: {
-    //             type: String
-    //         }
+            
     //     }
     // ],
+    Floorplan: [
+        {
+            // imgUrl: {
+                type: String,
+                required: false
+            // },
+            // imgname: {
+            //     type: String
+            // }
+        }
+    ],
     addMoreDetails: [
         { 
                 type: String
