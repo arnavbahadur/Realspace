@@ -37,6 +37,10 @@ export const storage=getStorage(app)
 
 
 
+
+
+
+
 // copied
 
 
@@ -50,6 +54,3 @@ export const storage=getStorage(app)
 //   const cityList = citySnapshot.docs.map(doc => doc.data());
 //   return cityList;
 // }
-
-
-
