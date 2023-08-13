@@ -21,7 +21,7 @@ const HousePreview = (props) => {
     });
   };   
 
-  console.log('Feature',content.Feature)
+  console.log(content)
 
 useEffect(() => {
 propertyapi();
