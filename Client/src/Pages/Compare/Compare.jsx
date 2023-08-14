@@ -48,17 +48,17 @@ const Compare = () => {
 
     }
     GetCompare()
+    // list of all, only feature array of compare items
     const OnlyFeaturesLIST = compareItems.map((item)=>{
       return item.Feature.map(elem=>{
         console.log(elem)
         return elem
       })
     })
-    console.log("OnlyFeaturesLIST",OnlyFeaturesLIST)
+    // list of all(unique) features of compare items
     let feature
-      feature = [...new Set(OnlyFeaturesLIST)]
+      feature = [...new Set(OnlyFeaturesLIST.flat())]
     
-      console.log("feature list",feature)
     // useEffect(()=>{
 
     //   if(items!=null) {
