@@ -137,14 +137,5 @@ export default Project
     //         <i className="fa fa-trash  event-delete-btn" aria-hidden="true"/>
     //       </div>
     //     </div> */}
-    //   {/* </div> */}
-
-
-
-
-
-  
-     
-           
-         
+    //   {/* </div> */}   
         
