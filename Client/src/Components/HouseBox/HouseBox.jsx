@@ -100,6 +100,8 @@ export default HouseBox
 
 
 
+
+
 // // new code with props as object of object of complete data props{content:{datakey:dataValue}}
 
 
