@@ -41,7 +41,7 @@ useEffect(() => {
   callapi();
 }, []);
 
-console.log(content)
+// console.log(content)
 // total values in backend to be filtered
 // location, propertytype , Nearby, price, areaSqFt,
 

@@ -16,6 +16,7 @@ const initialState = {
     projectData : [],
     saleFeatured :[],
     rentFeatured : [],
+    compared : [],
     // singleData : {},
     // houseSale : [],
     // house

@@ -13,7 +13,7 @@ const HouseRent = (props) => {
       setContent(res.data);
     });
   };
-  console.log("aman",content)
+  // console.log("aman",content)
   
   // const currentContent = content.slice(startIndex,lastIndex);
   const currentContent = content.slice(0,3);
@@ -37,7 +37,7 @@ const HouseRent = (props) => {
             {currentContent.map(item=>{
               {/* console.log(item) */}
               {/* return<HouseBox data={item}/> */}
-              return <HouseBox title={item.title} gallery={item.Gallery} id={item._id} location={item.location} price={item.price} location_url={item.location_url}  houseboximgUrl={item.houseboximgUrl} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  /> //original
+              return <HouseBox key={item._id} title={item.title} gallery={item.Gallery} id={item._id} location={item.location} price={item.price} location_url={item.location_url}  houseboximgUrl={item.houseboximgUrl} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  /> //original
               // return <HouseBox title={item.title} gallery={item.Gallery} id={id} location={item.location} price={item.price} location_url={item.location_url} img={item.img} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />  //for testing
               // return <HouseBox content={JSON.stringify(item)}  />
             })}

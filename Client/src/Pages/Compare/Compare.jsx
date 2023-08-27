@@ -48,6 +48,17 @@ const Compare = () => {
 
     }
     GetCompare()
+    // list of all, only feature array of compare items
+    const OnlyFeaturesLIST = compareItems.map((item)=>{
+      return item.Feature.map(elem=>{
+        console.log(elem)
+        return elem
+      })
+    })
+    // list of all(unique) features of compare items
+    let feature
+      feature = [...new Set(OnlyFeaturesLIST.flat())]
+    
     // useEffect(()=>{
 
     //   if(items!=null) {
@@ -66,7 +77,7 @@ const Compare = () => {
     // },[content])
 
     console.log("compareitem",compareItems)
-    const feature = ["Garages","parking","Bike Path","Emergency Exit","Fire Alarm","Fire Place","Jog Path","Lawn","Marble Floors","Swimming Pool","Elevators","CCTV Cameras","Generator backup","24*7 Security","Adequate water supply","Intercom Facility"]
+    // const feature = ["Garages","parking","Bike Path","Emergency Exit","Fire Alarm","Fire Place","Jog Path","Lawn","Marble Floors","Swimming Pool","Elevators","CCTV Cameras","Generator backup","24*7 Security","Adequate water supply","Intercom Facility"]
     const titles =[ "Type","Location","Builtup area","superBuiltup area","Property ID","Year Built","Bedrooms","Bathrooms"]; 
     const titlesEle = titles.map((item,index)=>{
         return(
@@ -101,12 +112,13 @@ const Compare = () => {
             <div className="compareItemDetail"><p>{item.bedRoom}</p></div>
             <div className="compareItemDetail"><p>{item.bathRoom}</p></div>
             { 
-              feature.map((title)=>{          
-                return item.Feature.includes(title)? <div className="compareItemDetail"><p><i className="fa-solid fa-check" style={{color:"green"}}/></p></div> :<div className="compareItemDetail"><p><i className="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
+              feature.map((e,index)=>{        
+                console.log(item.Feature,e,item.Feature.includes(e))  
+                return item.Feature.includes(e)? <div key={index} className="compareItemDetail"><p><i className="fa-solid fa-check" style={{color:"green"}}/></p></div> :<div className="compareItemDetail"><p><i className="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
               } )
             }
-            <div className="compareItemDetail"><p><i className="fa-solid fa-check" style={{color:"green"}}/></p></div>
-            <div className="compareItemDetail"><p><i className="fa-solid fa-xmark" style={{color:"red"}}/></p></div>
+            {/* <div className="compareItemDetail"><p><i className="fa-solid fa-check" style={{color:"green"}}/></p></div>
+            <div className="compareItemDetail"><p><i className="fa-solid fa-xmark" style={{color:"red"}}/></p></div> */}
           </div>
         </div>     
       )

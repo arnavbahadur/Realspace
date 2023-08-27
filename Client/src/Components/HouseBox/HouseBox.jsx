@@ -17,7 +17,7 @@ const HouseBox = (props) => {
     const [warned,setWarned] = useState(false);
     const navigate = useNavigate();
     // console.log(props.id)
-    console.log("admin",props)
+    // console.log("admin",props)
     return (
     <div className='houseBox'>
       <div className="houseBox-body">
