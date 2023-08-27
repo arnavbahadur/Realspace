@@ -28,12 +28,12 @@ function Overview() {
     <h3 className="about-heading">Contact Us:</h3>
     <p>We invite you to explore our website and discover the vast array of properties available. Should you have any questions or need assistance, don't hesitate to reach out to our friendly team. We look forward to being a part of your real estate journey and helping you achieve your property goals.</p>
     
+    
+
+    <p>Thank you for choosing Realspace Group , where your real estate dreams come to life!</p>
     <NavLink to="/contact">
     <button className="overview-button">Contact Us</button>
     </NavLink>
-
-    <p>Thank you for choosing Realspace Group , where your real estate dreams come to life!</p>
-    
     </div>
   )
 }

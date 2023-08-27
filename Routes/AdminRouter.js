@@ -50,13 +50,11 @@ router.post("/register", async (req, res) => {
 
    // send the token in a HTTP-only cookie
 
-    res
-      .cookie("token", token, {
+    res.cookie("token", token, {
         httpOnly: true,
         secure: true,
         sameSite: "none",
-      })
-      .send("Successfully Registered");
+      }).send("Successfully Registered");
 
   } catch (err) {
     console.error(err);

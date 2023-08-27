@@ -22,6 +22,11 @@ const projectSchema = new Schema({
         type: String,
     
     },
+    projectcardcolor: {
+        type: String,
+        require:true
+    
+    },
     Gallery: [
         {   
             // imgUrl: {
