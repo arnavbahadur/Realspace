@@ -111,7 +111,7 @@ const AddProperty = () => {
       await axios.post("/propertyapi/addproperty",FormData)
       .then(()=>{alert("Property added successfully")})
       .catch((err)=>{alert(err)})
-      window.location.reload()
+      
     } catch (err) {
       alert(err);
     }
