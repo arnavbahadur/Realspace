@@ -45,7 +45,8 @@ if(localStorage.compareItem === undefined){
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/compare/" element={<Compare/>}/>
             <Route path="/project/:id" element={<Project/>}/>
-            <Route path="/about" element={<About/>}/>
+            {/* <Route path="/afterfilter/:Propertytype/:location/:budget" element={<Afterfilter/>}/>   */}
+            <Route path="/afterfilter/:id" element={<Afterfilter/>}/>  
             {/* <Route path="/houseBox" element={<HouseBox/>}/> */}
             <Route path="/housePreview/:id" element={<HousePreview/>}/>
             <Route path="/faq" element={<Faq/>}/>
@@ -61,8 +62,8 @@ if(localStorage.compareItem === undefined){
             <Route path="/commercial" element={<Commercial/>}/>   
             <Route path="/residential" element={<Residential/>}/>   
             <Route path="/others" element={<Other/>}/>   
-            <Route path="/afterfilter/:Propertytype/:location/:budget" element={<Afterfilter/>}/>   
             <Route path="/login" element={<Login/>}></Route> 
+            <Route path="/about" element={<About/>}/>
             <Route path="/adminbody" element={ <AdminBody/>}></Route> 
            
              

@@ -35,8 +35,6 @@ const HouseRent = (props) => {
         <div className="home-houseRent-cardSection">
           <div className="house-card-section">
             {currentContent.map(item=>{
-              {/* console.log(item) */}
-              {/* return<HouseBox data={item}/> */}
               return <HouseBox key={item._id} title={item.title} gallery={item.Gallery} id={item._id} location={item.location} price={item.price} location_url={item.location_url}  houseboximgUrl={item.houseboximgUrl} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  /> //original
               // return <HouseBox title={item.title} gallery={item.Gallery} id={id} location={item.location} price={item.price} location_url={item.location_url} img={item.img} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt}  />  //for testing
               // return <HouseBox content={JSON.stringify(item)}  />

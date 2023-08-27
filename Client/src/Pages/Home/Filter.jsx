@@ -16,42 +16,37 @@ const Icon = () => {
     const [Propertytype,setPropertytype ]= useState("All Property")
     const [locationvalue,setlocationvalue ]= useState("All Location")
     // const [budjetvalue,setbudjetvalue ]= useState("Budget")
-    const [price,setprice]=useState("Budget")
+    const [price,setprice]=useState("Price Range")
     const [Propertyupdate,setPropertyupdate ]= useState(" Property type")
-
     const[value,setvalue]=useState(["All Property","Flat","Plot","Office","Shop","Showroom","Industrial property","Warehouse","Duplex"," Bungalows","Row house"]);
     const[location, setlocation]=useState(["All Location","Vijay nagar","nipaniya","LIG" ,"Vijay nagar" ]); 
     const budjet=[" below 5 Lakh Rs","5Lakh Rs - 15Lakh Rs","15Lakh Rs - 40Lakh Rs","40Lakh Rs - 1cr Rs","1+cr Rs"];
   
 
-    // console.log(Propertytype)
-    // console.log(value)
-    // console.log(locationvalue)
-    // console.log(location)
-    // console.log(budjet)
-
     // const [content,setContent]=useState([]);
-  const callapi = async () => {
+    let { id } = useParams();
+   const callapi = async () => {
     await axios.get(`/propertyapi/`).then((res) => {
       // setContent(res.data)
       var propertydata=res.data;
       const genlocation=new Set();
       const genproperty=new Set();
       const genprice=new Set();
-      propertydata.map((item)=>{
+        propertydata.map((item)=>{
         genlocation.add(item.location)
         genproperty.add(item.propertytype)
         genprice.add(item.price)
       })
   //  console.log(genlocation)
-  setlocation(Array.from(genlocation))
-  setvalue(Array.from(genproperty))
+     setlocation(Array.from(genlocation))
+     setvalue(Array.from(genproperty))
+    //  setprice(Array.from(genprice))
     });
  };
 
   useEffect(() => {
     callapi();
-  }, [])
+   }, [])
 
 
     const getDisplay = () => {
@@ -67,6 +62,33 @@ const Icon = () => {
      
 const navigate = useNavigate();
 
+
+  const onsearch=()=>{
+    console.log(searchTerm,searchTerm1,searchTerm2)
+    var lprice=0
+    var uprice=9999999999
+
+    if(searchTerm2===" below 5 Lakh Rs"){
+      lprice=0
+      uprice=500000
+    }
+    if(searchTerm2==="5Lakh Rs - 15Lakh Rs"){
+      lprice=500000
+      uprice=1500000
+    }
+    if(searchTerm2==="40Lakh Rs - 1cr Rs"){
+      lprice=4000000
+      uprice=10000000
+    }
+    else{
+      lprice=10000000
+    }
+
+    navigate(`/Afterfilter/${searchTerm}&${searchTerm1}&${lprice}&${uprice}`)
+
+
+  }
+
   const [open,setOpen]= useState(false);
   const [open1,setOpen1]= useState(false);
   const [open2,setOpen2]= useState(false);
@@ -74,35 +96,37 @@ const navigate = useNavigate();
   const [searchTerm1,setSearchTerm1] =useState('')
   const [searchTerm2,setSearchTerm2] =useState('')
 
+
+
+
+
+
     return (
    
       <div className="filter">
         <div className="dropdown-input">
           <div className="col-filter">
             <div className="row-filter">
-            <p className="filter-text">{Propertyupdate}</p>
-           <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}<Icon /> </p>
-            { open &&(
-            <div className="dropdown-content">
-                 <form action="search">
-                 <input placeholder="search..." 
-                  onChange={event => {setSearchTerm(event.target.value)}}
-                  name="search_criteria"  id="inputsize" type="text" />
-                  </form>
-             <div onClick={()=>setOpen(false)}  >
-    
-    {/* for calling all property with js */}                                                    
+             <p className="filter-text">{Propertyupdate}</p>
+               <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}<Icon /> </p>
+                { open &&( <div className="dropdown-content">
+                  {/* <form action="search"> */}
+                   <input placeholder="search..." 
+                    onChange={event => {console.log(event.target.value)}}
+                   name="search_criteria"  id="inputsize" type="text" />
+                  {/* </form> */}
+                 <div onClick={()=>setOpen(false)}  >
+                                         
            {value.filter((item)=>{
-            if(searchTerm==""){
+            if(searchTerm===""){
             return item
         }
         else if(item.toLowerCase().includes(searchTerm.toLowerCase())){
         return item
           }
            }).map(item =>{
-          {/* console.log(item); */}
           return(
-           <div className="dropdownnew" onClick={()=>setPropertytype(item)} >{item}</div> )
+           <div className="dropdownnew" onClick={()=>{setPropertytype(item);setSearchTerm(item)}} >{item}</div> )
            } )}
            </div>
         </div>)
@@ -119,27 +143,24 @@ const navigate = useNavigate();
         {/* <span className="bottom-filter">all types</span> */}
          {open1 &&(
            <div className="dropdown-content">
-            <form action="search">
+            {/* <form action="search"> */}
               <input placeholder="search..." 
               onChange={event => {setSearchTerm1(event.target.value)}}
               name="search_criteria"  type="text" />
-            </form>
+            {/* </form> */}
              <div onClick={()=>setOpen1(false)} >
 
   
-    {/* for calling all Location with js */}   
               {location.filter((item)=>{
-              if(searchTerm1==""){
+              if(searchTerm1===""){
                return item
            
               }else if(item.toLowerCase().includes(searchTerm1.toLowerCase())){
                return item
               }
-             }).map(item =>{
-               return(
-             <div  className="dropdownnew" onClick={()=>setlocationvalue(item)}>{item}</div> )
-            } )}
-             </div> 
+             }).map(item =>{ return(
+             <div  className="dropdownnew" onClick={()=>{setlocationvalue(item);setSearchTerm1(item)}}>{item}</div> ) } )}
+                 </div> 
                </div> )  } 
             </div>
             </div>
@@ -152,25 +173,23 @@ const navigate = useNavigate();
             <p className="filter-text">Price</p>
         
               <p onClick={()=>setOpen2(!open2)} className="pfilter-color">{price}  <Icon /></p>
-              {/* <span className="bottom-filter">all types</span> */}
            {open2 &&( 
             <div className="dropdown-content">
-            <form action="search">
+            {/* <form action="search"> */}
               <input placeholder="search..." 
               onChange={event => {setSearchTerm2(event.target.value)}}
               name="search_criteria"  type="text" />
-            </form>
+            {/* </form> */}
            <div onClick={()=>setOpen2(false)} >
       {budjet.filter((item)=>{
-   if(searchTerm2==""){
+   if(searchTerm2===""){
     return item
-
    }else if(item.toLowerCase().includes(searchTerm2.toLowerCase())){
     return item
    }
   }).map(item =>{
     return(
-  <div  className="dropdownnew" onClick={()=>setprice(item)}>{item}</div> )
+  <div  className="dropdownnew" onClick={()=>{setprice(item);setSearchTerm2(item)}}>{item}</div> )
  } )} 
   </div>
   </div> )}
@@ -179,7 +198,9 @@ const navigate = useNavigate();
     </div>
 
 
-        <div className="col-filter1" onClick={()=>{ navigate(`/Afterfilter/:${Propertytype}/:${locationvalue}/:${price}` ) }}>
+        {/* <div className="col-filter1" onClick={()=>{ navigate(`/Afterfilter/:${Propertytype}/:${locationvalue}/:${price}` ) }}> */}
+        <div className="col-filter1" onClick={()=>{ onsearch() }}>
+                                   
            <button className="butt-color">Search</button>
             </div>
              </div>
