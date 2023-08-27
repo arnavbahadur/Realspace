@@ -84,17 +84,7 @@ const PropertySchema = new Schema ({
                     // }
                 }
             ],
-    // Gallery: [
-    //     {   
-    //         imgUrl: {
-    //             type: String,
-    //             required: false
-    //         },
-    //         imgname: {
-    //             type: String
-    //         }
-    //     }
-    // ],
+  
     Description: {
         type: String
     },
@@ -108,11 +98,11 @@ const PropertySchema = new Schema ({
     Note: {
         type: String
     },
-    Rating: {
-        type: Number,
-        default: 5,
-        min: [1, `Rating can't be less than 1`]
-    },
+    // Rating: {
+    //     type: Number,
+    //     default: 5,
+    //     min: [1, `Rating can't be less than 1`]
+    // },
     CurrentStatus: {
         type: String,
         required: true

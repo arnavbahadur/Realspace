@@ -98,6 +98,7 @@ useEffect(() => {
       </div>
        <div className="right-filter">
      <div className="secondfilter">Filter</div>
+     
     </div>
     </div>
   )
@@ -149,7 +150,7 @@ export default Afterfilter
 
 
 
-// <div className="right-filter">
+// < className="right-filter">
 //        <div className="secondfilter">Filter</div>
       
 //       {/* {DisplayMessage()} */}
@@ -292,4 +293,4 @@ export default Afterfilter
 //   </>:<></>
 //    }      */}
 
-//       </div>
+      
