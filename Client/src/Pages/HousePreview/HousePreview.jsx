@@ -20,13 +20,12 @@ const HousePreview = (props) => {
         // console.log("GILERY",content.Gallery)
     });
   };   
-
-  console.log(content)
-  console.log("arnav",content.Description)
+  // console.log(content)
+  // console.log("arnav",content.description)
 
 useEffect(() => {
 propertyapi();
-}, [ ]);
+}, []);
 
 
     const [liked,setliked] = useState(false);
@@ -77,8 +76,8 @@ propertyapi();
           <div className="housePreview-discription-top">
             <div className='housePreview-discription-top-left'>
               <p className="housePreview-propertyid">
-                <span>id : </span>
-                <span>{content._id}</span>
+                <span>dateofpossesion: </span>
+                <span>{content.dateofpossesion}</span>
                 {/* {content.Rating} Star💫 */}
                 {/* <i className="fa-solid fa-copy"/> */}
               </p>
@@ -138,9 +137,42 @@ propertyapi();
               </div>              
             </div>
           </div>
+  
+          <div className="housePreview-discription-houseDetailIcon">
+            <div>
+              <p>Balcony</p>
+              <div>
+                <span>{content.balcony}</span>
+              </div>              
+            </div>
+            <div>
+              <p>Total Floor</p>
+              <div>
+                <span>{content.totalfloor}</span>
+              </div>              
+             </div>
+              <div>
+              <p>Stage</p>
+              <div>
+                <span>{content.constructionstage}</span>
+              </div>              
+            </div>
+            <div>
+              <p>what to show</p>
+              <div>
+                <span>what to show</span>
+              </div>              
+            </div>
+          </div>
+
           <div className="housediscription-textArea">
             <h3>Discription</h3>
-            <p>{content.Description} </p>
+            {/* <p>{content.Description} </p> */}
+            {/* <ul>
+              {content.description && content.description.map((item, index)=>{
+              return <li key={index}> {item}</li>  
+              })}
+             </ul> */}
           </div>
            {/* <div className="housediscription-textArea"> */}
             {/* <h3>Additional details</h3> */}
@@ -188,9 +220,6 @@ propertyapi();
         </div>
         
         <Gallery gallery={content.Gallery}/>
-        {/* <Gallery gallery={content.Gallery}/> */}
-        
-        {/* <Gallery/> */}
       
       </div>      
     </div>

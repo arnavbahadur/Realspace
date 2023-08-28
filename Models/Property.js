@@ -52,6 +52,24 @@ const PropertySchema = new Schema ({
         required: true,
         default: 0
     },
+    balcony:{
+        type:String,
+        require:true
+    },
+    totalfloor:{
+        type:String,
+        require:true
+    },
+    constructionstage:{
+        type:String,
+        require:true
+    },
+    dateofpossesion:{
+        type:String,
+        require:true
+    },
+
+    
     // Listingyear: {
     //     type: Number,
     //     required: true
