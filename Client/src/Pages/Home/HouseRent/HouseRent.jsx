@@ -2,21 +2,37 @@ import React, { useEffect, useState } from 'react'
 import HomeSectionsHeading from '../../../Components/HomeSectionsHeading/HomeSectionsHeading'
 import axios from "axios";
 import HouseBox from '../../../Components/HouseBox/HouseBox';
+import { useParams } from 'react-router-dom';
 
 
 const HouseRent = (props) => {
   // const id = [1,2,3]
-
+  let { id } = useParams();
   const [content,setContent]=useState([]);
   const callapi = async () => {
+    var type="rent"
+    // var i=0;
+    // for(;i<id.length;i++){
+    //   if(id[i]==="&"){
+    //     break
+    //   }
+    //      type+=id[i]
+    //  }
+
+
     await axios.get(`/propertyapi/`).then((res) => {
-      setContent(res.data);
+      setContent(res.data.filter(item=>item.Purpose ===type));
+      // console.log("rent",res.data)
     });
   };
   
-  // console.log("aman",content)
   
+
+
+
+  // console.log("aman",content)
   // const currentContent = content.slice(startIndex,lastIndex);
+
   const currentContent = content.slice(0,3);
   useEffect(() => {
     callapi();
@@ -53,6 +69,7 @@ export default HouseRent
 
 
   // item that are left to connect
+
 
   //  "hall":"5", 
   //  "imageContainer":"img not found",

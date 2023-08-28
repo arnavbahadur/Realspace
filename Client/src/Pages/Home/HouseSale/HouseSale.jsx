@@ -12,9 +12,13 @@ const HouseSale = (props) => {
     const[currentPage,setCurrentPage]=useState(1);
     const contentPerPage = 3;
     const [content,setContent]=useState([]);
+
+
+
     const callapi = async () => {
+      var type="sell"
       await axios.get(`/propertyapi/`).then((res) => {
-        setContent(res.data);
+        setContent(res.data.filter(item=>item.Purpose===type));
         // console.log(res.data)
       });
     };

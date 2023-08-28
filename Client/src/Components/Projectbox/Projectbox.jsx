@@ -15,7 +15,7 @@ function Projectbox({currentContent}) {
     });
   };
 
-  // console.log("adminsjs",content.projectsingleimg)
+  // console.log("adminsjs",content)
   // const cureentContent = content.slice(0,3);
 useEffect(() => {
 projectapi();

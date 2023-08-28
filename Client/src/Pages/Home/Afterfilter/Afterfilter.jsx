@@ -22,7 +22,7 @@ const callapi = async () => {
   var place=""
   var lprice=0
   var uprice=0
-  console.log(id)
+  // console.log(id)
   var i=0;
    for(;i<id.length;i++){
     if(id[i]==="&"){

@@ -76,8 +76,8 @@ propertyapi();
           <div className="housePreview-discription-top">
             <div className='housePreview-discription-top-left'>
               <p className="housePreview-propertyid">
-                <span>dateofpossesion: </span>
-                <span>{content.dateofpossesion}</span>
+                <span>We wish you ha conguralatin for new propery </span>
+                {/* <span>{content.dateofpossesion}</span> */}
                 {/* {content.Rating} Star💫 */}
                 {/* <i className="fa-solid fa-copy"/> */}
               </p>
@@ -158,22 +158,21 @@ propertyapi();
               </div>              
             </div>
             <div>
-              <p>what to show</p>
+              <p>Dateofpossesion</p>
               <div>
-                <span>what to show</span>
+                <span>{content.dateofpossesion}</span>
               </div>              
             </div>
           </div>
 
           <div className="housediscription-textArea">
             <h3>Discription</h3>
-            {/* <p>{content.Description} </p> */}
-            {/* <ul>
-              {content.description && content.description.map((item, index)=>{
-              return <li key={index}> {item}</li>  
-              })}
-             </ul> */}
+            <p>{content.Description} </p>
           </div>
+          {/* <div className="housediscription-textArea">
+            <h3>Additionals</h3>
+            <p>{content.Description} </p>
+          </div> */}
            {/* <div className="housediscription-textArea"> */}
             {/* <h3>Additional details</h3> */}
             {/* {

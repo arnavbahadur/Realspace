@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function Singleprojectbox(props) {
   const navigate = useNavigate();
-  // console.log("admin",props.projectboximg)
+  // console.log("admin",props)
   return (
     <div onClick={()=>{
       navigate(`/project/${props.id}`)

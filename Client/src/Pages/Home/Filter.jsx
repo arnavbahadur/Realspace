@@ -112,11 +112,11 @@ const navigate = useNavigate();
              <p className="filter-text">{Propertyupdate}</p>
                <p onClick={()=>setOpen(!open)} className="pfilter-color">{Propertytype}<Icon /> </p>
                 { open &&( <div className="dropdown-content">
-                  {/* <form action="search"> */}
+                  <form action="search">
                    <input placeholder="search..." 
                     onChange={event => {console.log(event.target.value)}}
                    name="search_criteria"  id="inputsize" type="text" />
-                  {/* </form> */}
+                  </form>
                  <div onClick={()=>setOpen(false)}  >
                                          
            {value.filter((item)=>{
@@ -145,11 +145,11 @@ const navigate = useNavigate();
         {/* <span className="bottom-filter">all types</span> */}
          {open1 &&(
            <div className="dropdown-content">
-            {/* <form action="search"> */}
+            <form action="search">
               <input placeholder="search..." 
               onChange={event => {setSearchTerm1(event.target.value)}}
               name="search_criteria"  type="text" />
-            {/* </form> */}
+            </form>
              <div onClick={()=>setOpen1(false)} >
 
   
@@ -177,11 +177,11 @@ const navigate = useNavigate();
               <p onClick={()=>setOpen2(!open2)} className="pfilter-color">{price}  <Icon /></p>
            {open2 &&( 
             <div className="dropdown-content">
-            {/* <form action="search"> */}
+            <form action="search">
               <input placeholder="search..." 
               onChange={event => {setSearchTerm2(event.target.value)}}
               name="search_criteria"  type="text" />
-            {/* </form> */}
+            </form>
            <div onClick={()=>setOpen2(false)} >
       {budjet.filter((item)=>{
    if(searchTerm2===""){

@@ -4,6 +4,7 @@ import CompareSideBtn from '../../../../Components/CompareSideBtn/CompareSideBtn
 import PageNum from '../../../../Components/PageNum/PageNum'
 import axios from 'axios'
 import Singleprojectbox from '../../../../Components/Projectbox/Singleprojectbox'
+import { useData } from '../../../../Context/DataContext'
 
 const Commercial = ({purpose}) => {
   const[currentPage,setCurrentPage]=useState(1);
@@ -19,14 +20,17 @@ const Commercial = ({purpose}) => {
   const totalContent = content.length;// content.length is actuall 100 is for test
   console.log('currentContent in currentProject ',currentContent)
 
+
+    //  const{projectData}=useData();
+    //  const data = projectData.filter(item=>item.projecttype==="commersial")
+
+
   const callapi = async ()=>{
     await axios.get('/projectapi').then((pro)=>{
-      setContent(pro.data);
-      console.log(pro.data)
+      setContent(pro.data.filter(item=>item.projecttype==="commersial"));
+      // console.log(pro.data)
     });
   };
-
-
   useEffect(()=>{
     callapi();
   },[])

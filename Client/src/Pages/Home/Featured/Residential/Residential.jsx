@@ -4,6 +4,7 @@ import CompareSideBtn from '../../../../Components/CompareSideBtn/CompareSideBtn
 import PageNum from '../../../../Components/PageNum/PageNum'
 import axios from 'axios'
 import Singleprojectbox from '../../../../Components/Projectbox/Singleprojectbox'
+import { useData } from '../../../../Context/DataContext'
 
 const Residential = ({purpose}) => {
   const[currentPage,setCurrentPage]=useState(1);
@@ -18,18 +19,20 @@ const Residential = ({purpose}) => {
   const currentContent = content.slice(startIndex,lastIndex);
   const totalContent = content.length;// content.length is actuall 100 is for test
   console.log('currentContent in currentProject ',currentContent)
+  
 
-  const callapi = async ()=>{
-    await axios.get('/projectapi').then((pro)=>{
-      setContent(pro.data);
-      console.log(pro.data)
-    });
-  };
+  const{projectData}=useData();
 
-
-  useEffect(()=>{
-    callapi();
-  },[])
+    
+  // const callapi = async ()=>{
+  //   await axios.get('/projectapi').then((pro)=>{
+  //     setContent(pro.data);
+  //     console.log(pro.data)
+  //   });
+  // };
+  // useEffect(()=>{
+  //   callapi();
+  // },[])
   return (
     <div>
         <CompareSideBtn/>
