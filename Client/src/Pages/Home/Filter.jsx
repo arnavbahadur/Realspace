@@ -64,7 +64,7 @@ const navigate = useNavigate();
 
 
   const onsearch=()=>{
-    console.log(searchTerm,searchTerm1,searchTerm2)
+    // console.log(searchTerm,searchTerm1,searchTerm2)
     var lprice=0
     var uprice=9999999999
 
@@ -80,8 +80,10 @@ const navigate = useNavigate();
       lprice=4000000
       uprice=10000000
     }
-    else{
+    if(searchTerm2==="1+cr Rs"){
+
       lprice=10000000
+      uprice=999999999999
     }
 
     navigate(`/Afterfilter/${searchTerm}&${searchTerm1}&${lprice}&${uprice}`)

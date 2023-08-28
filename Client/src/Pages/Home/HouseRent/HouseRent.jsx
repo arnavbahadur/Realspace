@@ -13,6 +13,7 @@ const HouseRent = (props) => {
       setContent(res.data);
     });
   };
+  
   // console.log("aman",content)
   
   // const currentContent = content.slice(startIndex,lastIndex);

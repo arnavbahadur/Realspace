@@ -10,6 +10,10 @@ const projectSchema = new Schema({
         type: String,
         required: true
     },
+    projecttype: {
+        type: String,
+        required: true
+    },
     created_at: {
         type: Date,
         required: true
@@ -35,21 +39,10 @@ const projectSchema = new Schema({
     ],
     projectboximg: [
         {   
-            // imgUrl: {
                 type: String,
                 required: false
-            // }
         }
     ],
-  
-    // projectboximg: [
-    //     {   
-            
-    //             type: String,
-    //             required: false
-            
-    //     }
-    // ],
     Floorplan: [
         {
             // imgUrl: {
@@ -63,13 +56,14 @@ const projectSchema = new Schema({
     ],
     addMoreDetails: [
         { 
-                type: String
-
+                type: String,
+                required: true 
         }
     ],
     Feature: [
         {  
-                type: String   
+                type: String, 
+                required:true   
         }
     ],
    
@@ -93,7 +87,7 @@ const projectSchema = new Schema({
     },
     Area: {
         type: String,
-        // required: true 
+        required: true 
     },
      City: {
         type: String,
