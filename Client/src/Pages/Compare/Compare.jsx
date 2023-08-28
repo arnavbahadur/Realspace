@@ -1,24 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import {useNavigate} from "react-router-dom"
 import './Compare.css'
 import axios from 'axios';
 import PriceShow from '../../Components/PriceShow/PriceShow';
+
 const Compare = () => {
     const [content,setContent] = useState([]);
+    const navigate = useNavigate()
+
     const [compareitem,setCompareitem] = useState([]);
     const items = JSON.parse( localStorage.getItem('compareItem'))
     console.log("items",items)
-    // const propertyapi = async () => {
-    //   await axios.get(`/propertyapi`).then((property) => {
-    //     setContent(property.data);
-    //     console.log("bhanu",property.data)
-    //     // console.log(property.data)
-    //   });
-    // };   
-
-
-    // useEffect(() => {
-    //     propertyapi();
-    // }, []);
     const callapi = async () => {
       let i = 0;
       await axios.get(`/propertyapi/`).then((res) => {
@@ -27,13 +19,6 @@ const Compare = () => {
         i++;
       });
     };
-      
-      // const cureentContent = content.slice(0,4);
-      // const currentContent = content.find((item)=>{
-      //   // return items.includes(item._id)
-      //   return items.filters(item._id)
-      // });
-      // console.log("currentcontent",currentContent)
       useEffect(() => {
         callapi();
       }, []);
@@ -58,26 +43,8 @@ const Compare = () => {
     // list of all(unique) features of compare items
     let feature
       feature = [...new Set(OnlyFeaturesLIST.flat())]
-    
-    // useEffect(()=>{
-
-    //   if(items!=null) {
-    // //     // a = items.itemsId.map((e)=>{
-    // //     //   console.log('e',e);
-    // //     //   return compareItems = content.filter((item)=>{
-    // //     //     return item._id === e;
-    // //     //   })
-    // //     // })
-    // //     console.log("a",a)
-    //     compareItems = content.filter((item)=>{
-    //       return items.itemsId.includes(item._id)         
-    //     })
-    //     setCompareitem(compareItems)
-    //   } 
-    // },[content])
 
     console.log("compareitem",compareItems)
-    // const feature = ["Garages","parking","Bike Path","Emergency Exit","Fire Alarm","Fire Place","Jog Path","Lawn","Marble Floors","Swimming Pool","Elevators","CCTV Cameras","Generator backup","24*7 Security","Adequate water supply","Intercom Facility"]
     const titles =[ "Type","Location","Builtup area","superBuiltup area","Property ID","Year Built","Bedrooms","Bathrooms"]; 
     const titlesEle = titles.map((item,index)=>{
         return(
@@ -123,10 +90,20 @@ const Compare = () => {
         </div>     
       )
     })
+
+    const handleClick = ()=>{
+      // localStorage.removeItem()
+      navigate("/")
+      localStorage.removeItem("compareItem")
+      console.log("localStorage")
+    }
   return (
     <div>
       <div className="compare-headSection">
         <h2>Compare</h2>
+        <div>
+        <button onClick={handleClick}>Clear Compare</button>
+        </div>
       </div>
       <div className="compare-section2">
         <div className="compare-container">

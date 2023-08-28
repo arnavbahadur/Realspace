@@ -12,7 +12,7 @@ const AddProperty = () => {
   
   const [FormData,setFormData]=useState({
    title:"",
-   description:"",
+   Description:"",
    location:"",
    property_url:"",
    created_at:"",
@@ -109,9 +109,12 @@ const AddProperty = () => {
   async function submit() {
     try {
       await axios.post("/propertyapi/addproperty",FormData)
+    //   Nearby = Nearby.map(item=>{
+    //     Nearby= item.split(',')
+    //     return Nearby 
+    // })
       .then(()=>{alert("Property added successfully")})
       .catch((err)=>{alert(err)})
-      
     } catch (err) {
       alert(err);
     }
@@ -139,7 +142,7 @@ const AddProperty = () => {
                 <input type="text" id="" className='eventtitle' placeholder='CurrentStatus'         onChange={ handleChange } name="CurrentStatus" value={FormData.CurrentStatus}/>
                 <input type="text" id="" className='eventtitle' placeholder='Rating'                onChange={ handleChange } name="Rating" value={FormData.Rating}/>
                 <input type="text" id="" className='eventtitle' placeholder='Note'                  onChange={ handleChange } name="Note" value={FormData.Note}/>
-                <textarea  id="" cols="10" rows="5"placeholder='property discription'               onChange={ handleChange } name="description" value={FormData.Description} required/>
+                <textarea  id="" cols="10" rows="5"placeholder='property Discription'               onChange={ handleChange } name="Description" value={FormData.Description} required/>
                 <textarea  id="" cols="30" rows="5"placeholder='Nearby place'  onChange={ handleChange } name="Nearby" value={FormData.Nearby} required/>
                 {/* <input type="text" id="" className='eventtitle' placeholder='Feature'               onChange={ handleChange } name="Feature" value={FormData.Feature}/> */}
                 <textarea  id="" cols="30" rows="5"placeholder='Feature'  onChange={ handleChange } name="Feature" value={FormData.Feature} required/>
