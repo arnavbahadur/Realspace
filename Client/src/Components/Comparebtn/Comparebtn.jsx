@@ -7,7 +7,7 @@ const Comparebtn = (props) => {
     const [compared,setCompared] = useState(false);
     // const [compared,setCompared] = useState(props.isCompare);    //
     if(localStorage.compareItem === undefined){
-        let temp = {
+        let temp = { 
         itemsId : []
         }
         localStorage.setItem("compareItem",JSON.stringify(temp));

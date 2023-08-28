@@ -22,6 +22,7 @@ const HousePreview = (props) => {
   };   
 
   console.log(content)
+  console.log("arnav",content.Description)
 
 useEffect(() => {
 propertyapi();
