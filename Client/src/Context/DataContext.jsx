@@ -10,9 +10,11 @@ const API ={
 } 
 
 const initialState = {
-    propertyData : [],
     isLoading : false,
     isError : false,
+    propertyData : [],
+    saleProperty : [],
+    rentProperty : [],
     projectData : [],
     saleFeatured :[],
     rentFeatured : [],
@@ -49,6 +51,9 @@ const DataProvider = ({children})=>{
     useEffect(() => {
         getData(API)
     }, [])
+    useEffect(()=>{
+        dispatch({type : "SORT_DATA"})
+    },[state.propertyData])
     const getSingleData = async(url)=>{
         dispatch({type : "SET_SINGLE_LOADING"})
         try {

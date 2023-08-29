@@ -1,42 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import HomeSectionsHeading from '../../../Components/HomeSectionsHeading/HomeSectionsHeading'
-import axios from "axios";
 import HouseBox from '../../../Components/HouseBox/HouseBox';
-import { useParams } from 'react-router-dom';
+import { useData } from '../../../Context/DataContext';
 
 
 const HouseRent = (props) => {
-  // const id = [1,2,3]
-  let { id } = useParams();
-  const [content,setContent]=useState([]);
-  const callapi = async () => {
-    var type="rent"
-    // var i=0;
-    // for(;i<id.length;i++){
-    //   if(id[i]==="&"){
-    //     break
-    //   }
-    //      type+=id[i]
-    //  }
+  const { rentProperty } = useData();
 
-
-    await axios.get(`/propertyapi/`).then((res) => {
-      setContent(res.data.filter(item=>item.Purpose ===type));
-      // console.log("rent",res.data)
-    });
-  };
-  
-  
-
-
-
-  // console.log("aman",content)
-  // const currentContent = content.slice(startIndex,lastIndex);
-
-  const currentContent = content.slice(0,3);
-  useEffect(() => {
-    callapi();
-  }, [])
+  const currentContent = rentProperty.slice(0,3);
   
   return (
     <div >

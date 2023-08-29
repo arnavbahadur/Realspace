@@ -9,32 +9,15 @@ import { useData } from '../../Context/DataContext'
 
 
 const HouseSale = (props) => {
+  const {saleProperty} = useData();
   const[currentPage,setCurrentPage]=useState(1);
   const contentPerPage = 9;
-  
-  // useEffect(()=>{
-    //   fetch("https://jsonplaceholder.typicode.com/posts").then()
-    // })
-    
-    
-    // const callapi = async () => {
-      //         await axios.get(`/propertyapi/`).then((res) => {
-        //     setContent(res.data);
-        //     // console.log(res.data)
-        //   });
-        // };
-        // useEffect(() => {
-        //   callapi();
-        // }, []);
-        
-        const {propertyData} = useData();
-        const data = propertyData.filter(item=>item.Purpose==="sell")
 
 
     const lastIndex = currentPage * contentPerPage;
     const startIndex = lastIndex - contentPerPage
-    const currentContent =  data.slice(startIndex,lastIndex);
-    const totalContent=data.length;// posts.length is actuall 100 is for test
+    const currentContent =  saleProperty.slice(startIndex,lastIndex);
+    const totalContent=saleProperty.length;// posts.length is actuall 100 is for test
   return (
     <div>
         <CompareSideBtn/>

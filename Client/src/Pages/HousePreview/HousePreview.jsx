@@ -166,7 +166,7 @@ propertyapi();
           </div>
 
           <div className="housediscription-textArea">
-            <h3>Discription</h3>
+            <h3>Description</h3>
             <p>{content.Description} </p>
           </div>
           {/* <div className="housediscription-textArea">
