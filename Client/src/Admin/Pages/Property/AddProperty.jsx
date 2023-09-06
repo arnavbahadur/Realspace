@@ -147,7 +147,7 @@ const AddProperty = () => {
                 <input type="text" id="" className='eventtitle' placeholder='hall'                  onChange={ handleChange } name="hall" value={FormData.hall}/>
                 <input type="text" id="" className='eventtitle' placeholder='bathRoom'              onChange={ handleChange } name="bathRoom" value={FormData.bathRoom}/>
                 <input type="text" id="" className='eventtitle' placeholder='CurrentStatus'         onChange={ handleChange } name="CurrentStatus" value={FormData.CurrentStatus}/>
-                <input type="text" id="" className='eventtitle' placeholder='Note'                  onChange={ handleChange } name="Note" value={FormData.Note}/>
+                {/* <input type="text" id="" className='eventtitle' placeholder='Note'                  onChange={ handleChange } name="Note" value={FormData.Note}/> */}
                 {/* <input type="text" id="" className='eventtitle' placeholder='price'                 onChange={ handleChange } name="price" value={FormData.price}/> */}
                 {/* <input type="text" id="" className='eventtitle' placeholder='Rating'                onChange={ handleChange } name="Rating" value={FormData.Rating}/> */}
                 {/* <input type="text" id="" className='eventtitle' placeholder='Feature'               onChange={ handleChange } name="Feature" value={FormData.Feature}/> */}

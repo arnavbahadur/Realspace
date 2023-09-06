@@ -26,7 +26,6 @@ mongoose.connect(process.env.MDB_CONNECT)
 
   
 
-
 app.use("/adminapi", require("./Routes/AdminRouter"));
 app.use("/propertyapi", require("./Routes/PropertyRouter"));
 app.use("/projectapi", require("./Routes/ProjectRouter"));

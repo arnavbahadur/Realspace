@@ -1,26 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import HomeSectionsHeading from '../../../Components/HomeSectionsHeading/HomeSectionsHeading'
-import axios from "axios";
 import HouseBox from '../../../Components/HouseBox/HouseBox';
+import { useData } from '../../../Context/DataContext';
 
 
 const HouseRent = (props) => {
-  // const id = [1,2,3]
+  const { rentProperty } = useData();
 
-  const [content,setContent]=useState([]);
-  const callapi = async () => {
-    await axios.get(`/propertyapi/`).then((res) => {
-      setContent(res.data);
-    });
-  };
-  
-  // console.log("aman",content)
-  
-  // const currentContent = content.slice(startIndex,lastIndex);
-  const currentContent = content.slice(0,3);
-  useEffect(() => {
-    callapi();
-  }, [])
+  const currentContent = rentProperty.slice(0,3);
   
   return (
     <div >
@@ -53,6 +40,7 @@ export default HouseRent
 
 
   // item that are left to connect
+
 
   //  "hall":"5", 
   //  "imageContainer":"img not found",

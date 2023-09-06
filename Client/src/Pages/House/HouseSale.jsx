@@ -7,30 +7,17 @@ import axios from "axios";
 import './House.css'
 import { useData } from '../../Context/DataContext'
 
+
 const HouseSale = (props) => {
-    const {propertyData} = useData();
-    const[currentPage,setCurrentPage]=useState(1);
-    const contentPerPage = 9;
-    
-    // useEffect(()=>{
-        //   fetch("https://jsonplaceholder.typicode.com/posts").then()
-        // })
-        
-        
-    // const callapi = async () => {
-    //         await axios.get(`/propertyapi/`).then((res) => {
-    //     setContent(res.data);
-    //     // console.log(res.data)
-    //   });
-    // };
+  const {saleProperty} = useData();
+  const[currentPage,setCurrentPage]=useState(1);
+  const contentPerPage = 9;
+
 
     const lastIndex = currentPage * contentPerPage;
     const startIndex = lastIndex - contentPerPage
-    const currentContent =  propertyData.slice(startIndex,lastIndex);
-    const totalContent=propertyData.length;// posts.length is actuall 100 is for test
-      // useEffect(() => {
-      //   callapi();
-      // }, []);
+    const currentContent =  saleProperty.slice(startIndex,lastIndex);
+    const totalContent=saleProperty.length;// posts.length is actuall 100 is for test
   return (
     <div>
         <CompareSideBtn/>

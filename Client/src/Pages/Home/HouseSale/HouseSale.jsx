@@ -3,29 +3,21 @@ import HomeSectionsHeading from '../../../Components/HomeSectionsHeading/HomeSec
 // import HomeCardSection from '../../../Components/HomePageCard/HomeCardSection'
 import axios from "axios";
 import HouseBox from '../../../Components/HouseBox/HouseBox'; 
+import { useData } from '../../../Context/DataContext';
 // import PageNum from '../../../Components/PageNum/PageNum';
 
 
 
 // house sekk wale me abhi ke lie mene rent se connect kia he kie isse change na kre plz
 const HouseSale = (props) => {
-    const[currentPage,setCurrentPage]=useState(1);
-    const contentPerPage = 3;
-    const [content,setContent]=useState([]);
-    const callapi = async () => {
-      await axios.get(`/propertyapi/`).then((res) => {
-        setContent(res.data);
-        // console.log(res.data)
-      });
-    };
-    const lastIndex = currentPage * contentPerPage;
-    const startIndex = lastIndex - contentPerPage
-    // const currentContent = content.slice(startIndex,lastIndex);
-    const totalContent = content.length;
-    const currentContent = content.slice(0,6);
-    useEffect(() => {
-      callapi();
-    }, []);
+    const {saleProperty} = useData();
+    // const[currentPage,setCurrentPage]=useState(1);
+    // const contentPerPage = 3;
+   
+    // const lastIndex = currentPage * contentPerPage;
+    // const startIndex = lastIndex - contentPerPage
+    // const totalContent = saleProperty.length;
+    const currentContent = saleProperty.slice(0,6);
 
   return (
     <div>
@@ -45,7 +37,7 @@ const HouseSale = (props) => {
           </div>
         </div>
         {/* <div className="house-pageNumber">
-          <PageNum setCurrentPage={setCurrentPage} currentPage={currentPage} totalContent={totalContent} contentPerPage={contentPerPage}/>
+          <PageNum setCurrentPage={setCurrentPage} currentPage={currentPage} totalContent={totalContent} salePropertyPerPage={contentPerPage}/>
         </div> */}
       </div>
     </div>

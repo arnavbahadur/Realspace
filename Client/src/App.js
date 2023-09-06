@@ -64,10 +64,7 @@ if(localStorage.compareItem === undefined){
             <Route path="/login" element={<Login/>}></Route> 
             <Route path="/about" element={<About/>}/>
             <Route path="/adminbody" element={ <AdminBody/>}></Route> 
-           
-             
-           
-        
+       
            <Route path="*" element={<PageNotFound/>}/>   
         </Routes> 
         {/* <MyModal/> */}
