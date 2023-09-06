@@ -9,12 +9,11 @@ const Modal = () => {
 
 
 
-  //api call
+  
   const [Popup,setPopup]=useState([]);
    const popupapi = async () => {
      await axios.get(`/mypopupapi/mypopup`).then((pro) => {
       setPopup(pro.data);
-      //  console.log("arnav",pro.data)
      });
    };   
 
@@ -37,7 +36,7 @@ useEffect(() => {
   );
 
 
-  //shows popup after some second
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowModal(true)
@@ -51,14 +50,6 @@ useEffect(() => {
     <>
     
        {showModal && mainModal}
-       
-       { /* <h2 className="latest-offer">Latest offers</h2>       
-        {Popup.map((item) => { 
-            console.log(item.Photos[0].imgUrl);
-          return <img src= {item.Photos[0].imgUrl} alt="" />
-          
-         })} */}
-  
     </>
   );
 };

@@ -8,8 +8,6 @@ const MyModal = ({ closeModal, handleCloseButton ,data}) => {
       document.body.style.overflowY = "scroll";
     };
   }, []);
-//  console.log("bhanu",data);
- {/* console.log(item.Photos[0].imgUrl); */}
   return ReactDOM.createPortal(
 
      <>
