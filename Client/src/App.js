@@ -11,7 +11,7 @@ import Faq from './Components/Faq/Faq';
 import Home from './Pages/Home/Home';
 import Projectbox from './Components/Projectbox/Projectbox';
 import Appointment from './Pages/Contact/Appointment/Appointment';
-import MyModal from './Pages/Home/MyModal';
+// import MyModal from './Pages/Home/MyModal';
 import Project from './Pages/Project/Project';
 import About from './Pages/About/Ourteam/About';
 import Morefloor from './Pages/Project/Morefloor';
@@ -52,7 +52,7 @@ if(localStorage.compareItem === undefined){
             <Route path="/faq" element={<Faq/>}/>
             <Route path="/projectbox" element={<Projectbox/>}/>
             <Route path="/appointment" element={<Appointment/>}/>
-            <Route path="/mymodal" element={<MyModal/>}/>
+            {/*<Route path="/mymodal" element={<MyModal/>}/>*/}
             <Route path='/housesale' element={<HouseSale/>}/>     
             <Route path='/houserent' element={<HouseRent/>}/>     
             <Route path="/viewmore" element={<Morefloor/>}/>   
