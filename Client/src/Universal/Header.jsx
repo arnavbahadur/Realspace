@@ -36,7 +36,7 @@ const Header = () => {
     <div className="header">
     {/* {console.log("hello",location.pathname)} */}
 
-    <div className="navbar" style={location.pathname==='/'&& window.innerWidth > 899 ?{position:"absolute", background: "rgb(80 81 83 / 0%)" , boxShadow:"none"}:{}}>
+    <div className="navbar"  style={location.pathname==='/'&& window.innerWidth > 899 ?{position:"absolute", background: "rgb(80 81 83 / 0%)" , boxShadow:"none"}:{}}>
 
       <div className="nav-left">
         <NavLink to='/'>
@@ -125,14 +125,16 @@ const Header = () => {
   { setmenue(!menue) }}>
 {!menue ? 
 <i class="fa-solid fa-bars-staggered fa-2x"></i> 
- : <i class="fa-solid fa-xmark fa-2x"></i>}
+ :<i class="fa-solid fa-x fa-xl fa-beat" style={{color: "#dadde2;"}}></i>}
 </div>}
 </div>
 
+
 {menue ? 
         
-<div className="navbar-items-for-mobile" style={location.pathname==='/'?{ /*position:"relative"*/}:{}} >
-          <div className="nav-center-navigation-box">
+<div className="navbar-items-for-mobile" style={location.pathname==='/Faq'?{position: "fixed"}:{}} >
+
+<div className="nav-center-navigation-box">
         <NavLink to="/">
           <p className='nav-center-navigation-box-text'>
             <i class="fa-solid fa-house"/> Home</p>
