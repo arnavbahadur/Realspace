@@ -1,5 +1,4 @@
 const DataReducer = (state,action)=>{
-    // console.log(action)
     switch (action.type) {
         case "SET_ERROR":
             return{
@@ -31,7 +30,6 @@ const DataReducer = (state,action)=>{
             let newPropertyDataList = [...state.propertyData]
             let saleProperty = newPropertyDataList.filter(item=>item.Purpose==="sell")
             let rentProperty = newPropertyDataList.filter(item=>item.Purpose==="rent")
-            console.log(rentProperty)
             return{
                 ...state,
                 saleProperty,
