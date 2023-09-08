@@ -125,6 +125,8 @@
 }
 .housediscription-features ul{
     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
 .housediscription-features ul li{
     padding: 7px 10px;

@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {useNavigate} from "react-router-dom"
 import './Compare.css'
 import axios from 'axios';
 import PriceShow from '../../Components/PriceShow/PriceShow';
+import CompareContext from '../../CompareContext';
 
 const Compare = () => {
+  const {ItemsId} = useContext(CompareContext)
     const [content,setContent] = useState([]);
     const navigate = useNavigate()
 
@@ -94,7 +96,11 @@ const Compare = () => {
     const handleClick = ()=>{
       // localStorage.removeItem()
       navigate("/")
-      localStorage.removeItem("compareItem")
+      let temp = {
+        itemsId : []
+      }
+      localStorage.setItem("compareItem",JSON.stringify(temp));
+      // localStorage.removeItem("compareItem")
       console.log("localStorage")
     }
   return (
