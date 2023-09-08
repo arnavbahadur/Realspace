@@ -31,7 +31,7 @@ import AdminBody from './Admin/AdminBody/AdminBody';
 function App() {
 if(localStorage.compareItem === undefined){
   let temp = {
-    itemsId : []
+    ItemsId : []
   }
   localStorage.setItem("compareItem",JSON.stringify(temp));
 }

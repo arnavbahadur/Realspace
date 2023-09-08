@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useReducer, useState } from "react";
 import { CompareActionTypes } from "./types/types";
 import reducer from './reducer/CompareReducer'
+import { json } from "react-router-dom";
 
 const CompareContext = createContext();
 
@@ -11,6 +12,14 @@ const initialState = {
 function CompareContextProvider({children}) {
     const[Count,setCount] = useState(0);
     const [state, dispatch] = useReducer(reducer, initialState);
+
+    useEffect(()=>{
+      if(localStorage.getItem("compareItem") !== undefined){
+        const data = localStorage.getItem("compareItem")
+        dispatch({type : CompareActionTypes.SetCompareItem, payload : JSON.parse(data)})
+      }
+    },[])
+
 
     // add item to compare list
     const handleAdd = (itemid)=>{

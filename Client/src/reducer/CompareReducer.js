@@ -3,6 +3,11 @@ import {CompareActionTypes} from '../types/types'
 
 const CompareReducer = (state,action)=>{
     switch (action.type) {
+        case CompareActionTypes.SetCompareItem:
+            const {ItemsId} = action.payload 
+            return{
+                ItemsId : [...ItemsId]
+            }
         case CompareActionTypes.AddCompareItem:
             return{
                 ItemsId : [...state.ItemsId,action.payload]

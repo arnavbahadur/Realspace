@@ -6,7 +6,7 @@ import PriceShow from '../../Components/PriceShow/PriceShow';
 import CompareContext from '../../CompareContext';
 
 const Compare = () => {
-  const {ItemsId} = useContext(CompareContext)
+  const {ItemsId, handleAllRemove} = useContext(CompareContext)
     const [content,setContent] = useState([]);
     const navigate = useNavigate()
 
@@ -29,7 +29,7 @@ const Compare = () => {
     let a;
     const GetCompare = ()=>{
         compareItems = content.filter((item)=>{
-          return items.itemsId.includes(item._id)         
+          return items.ItemsId.includes(item._id)         
         })
         console.log("compareitem",compareItems)
 
@@ -96,12 +96,7 @@ const Compare = () => {
     const handleClick = ()=>{
       // localStorage.removeItem()
       navigate("/")
-      let temp = {
-        itemsId : []
-      }
-      localStorage.setItem("compareItem",JSON.stringify(temp));
-      // localStorage.removeItem("compareItem")
-      console.log("localStorage")
+      handleAllRemove()
     }
   return (
     <div>
