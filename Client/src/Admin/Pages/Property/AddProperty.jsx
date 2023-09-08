@@ -35,27 +35,6 @@ const AddProperty = () => {
     dateofpossesion: "",
   });
 
-  const [images, setimages] = useState([]);
-  const afterurl = async (url) => {
-    setFormData({
-      ...FormData,
-      houseboximgUrl: url,
-    });
-    alert("Image was Succesfully Updated");
-  };
-
-  //   const checking=()=>{
-  //     // console.log(imageUpload);
-  //     if(imageUpload.size>200000){
-  //       return false;
-  //     }
-  // //     const fileExtension = imageUpload.name.split(".").at(-1);
-  //     const allowedFileTypes = ["jpg", "png","gif","jpeg"];
-  //     if (!allowedFileTypes.includes(fileExtension)) {
-  //         return false;
-  //     }
-  //     return true;
-  // }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -75,6 +54,7 @@ const AddProperty = () => {
     }
   };
 
+
   // const handleChange = e => {
   //     const { name, value } = e.target
   //     setFormData({
@@ -83,23 +63,47 @@ const AddProperty = () => {
   //     })
   // }
 
+  const [images, setimages] = useState([]);
+
+  const afterurl = async (url) => {
+    setFormData({
+      ...FormData,
+      houseboximgUrl: url,
+    });
+    alert("Image was Succesfully Updated");
+  };
+
+    const checking=()=>{
+      if(imageUpload.size>400000){
+        return false;
+      }
+      const fileExtension = imageUpload.name.split(".").at(-1);
+      const allowedFileTypes = ["jpg", "png","gif","jpeg"];
+      if (!allowedFileTypes.includes(fileExtension)) {
+          return false;
+      }
+      return true;
+  }
+
+
+
+
   const fileListRef = ref(storage, "property/");
 
   const [imageUpload, setImageUpload] = useState(null);
 
-  // if(!checkimg()){
-  //     alert("Please Upload Valid image on 200KB");
-  // }
-  // else
+  
 
   const uploadimage = async () => {
-    // console.log("change image");
     try {
-      if (imageUpload !== null) {
+      if(!checking()){
+      alert("Please Upload Valid image on 400KB");
+  }
+  else if (imageUpload !== null) {
         const imageRef = ref(storage, "property/" + v4() + imageUpload.name);
         await uploadBytes(imageRef, imageUpload).then((snapshot) => {
           getDownloadURL(snapshot.ref).then((url) => {
-            console.log(url);
+            // console.log(url);
             afterurl(url);
           });
         });
@@ -220,11 +224,7 @@ const AddProperty = () => {
           {/* <Addmultipleimg /> */}
           <Addmultiimg formarray={FormData.Gallery} />
 
-          <button
-            onClick={() => {
-              submit();
-            }}
-            id="blog-txt-add"
+          <button onClick={() => { submit(); }} id="blog-txt-add"
           >
             Add
           </button>

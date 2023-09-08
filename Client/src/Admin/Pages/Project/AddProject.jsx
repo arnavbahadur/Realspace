@@ -56,7 +56,6 @@ const AddProject = () => {
  
   
   const check=()=>{
-    // console.log(imageUpload);
     if(imageUpload.size>400000){
       return false;
     }
