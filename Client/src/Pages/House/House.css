@@ -3,3 +3,11 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+@media  (min-width: 300px) and (max-width: 899px) {
+   .house-header{
+   padding-top: 70px;
+   }
+   .house-card-section{
+    padding-top: 15px;
+   }
+}

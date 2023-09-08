@@ -91,7 +91,7 @@ const PropertySchema = new Schema ({
         required: true
             },
    
-            Gallery: [
+    Gallery: [
                 {   
                     // imgUrl: {
                         type: String,

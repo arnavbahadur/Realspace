@@ -4,7 +4,7 @@
     flex-direction: row;
    justify-content: center;
    justify-items: center;
-   margin-top: 3%;
+   margin-top: 2%;
    color: aliceblue;
  
 }
@@ -25,4 +25,12 @@
     /* color: blue; */
     color: #ffffff;
     background: linear-gradient(105deg, #6e99e6, #093c94);
+}
+
+
+@media  (min-width: 300px) and (max-width: 899px) {
+
+    .about-all-button{
+        padding: 70px;
+    }
 }

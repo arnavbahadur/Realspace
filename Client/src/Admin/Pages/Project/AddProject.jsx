@@ -18,7 +18,7 @@ const AddProject = () => {
     Gallery:[],  
     projectboximg:[],
     addMoreDetails:"",
-     Floorplan:[],
+    Floorplan:[],
     Feature:"",
     Area:"",
     Floors:"",

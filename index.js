@@ -24,7 +24,7 @@ mongoose.connect(process.env.MDB_CONNECT)
 .catch((err)=>{console.log("Error in connection",err)});
 
 
-
+  
 
 app.use("/adminapi", require("./Routes/AdminRouter"));
 app.use("/propertyapi", require("./Routes/PropertyRouter"));

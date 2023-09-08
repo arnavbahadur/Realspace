@@ -20,7 +20,7 @@ const Icon = () => {
     const [Propertyupdate,setPropertyupdate ]= useState(" Property type")
     const[value,setvalue]=useState(["All Property","Flat","Plot","Office","Shop","Showroom","Industrial property","Warehouse","Duplex"," Bungalows","Row house"]);
     const[location, setlocation]=useState(["All Location","Vijay nagar","nipaniya","LIG" ,"Vijay nagar" ]); 
-    const budjet=[" below 5 Lakh Rs","5Lakh Rs - 15Lakh Rs","15Lakh Rs - 40Lakh Rs","40Lakh Rs - 1cr Rs","1+cr Rs"];
+    const budjet=["below 40 Lakh Rs","41 Lakh Rs - 60 Lakh Rs","61 Lakh Rs - 80 lakh Rs","81 Lakh Rs - 1 cr Rs","1+cr Rs"];
   
 
     // const [content,setContent]=useState([]);
@@ -68,16 +68,20 @@ const navigate = useNavigate();
     var lprice=0
     var uprice=9999999999
 
-    if(searchTerm2===" below 5 Lakh Rs"){
+    if(searchTerm2===" below 40 Lakh Rs"){
       lprice=0
-      uprice=500000
+      uprice=4000000
     }
-    if(searchTerm2==="5Lakh Rs - 15Lakh Rs"){
-      lprice=500000
-      uprice=1500000
-    }
-    if(searchTerm2==="40Lakh Rs - 1cr Rs"){
+    if(searchTerm2==="41 Lakh Rs - 60 Lakh Rs"){
       lprice=4000000
+      uprice=6000000
+    }
+    if(searchTerm2==="61 Lakh Rs - 80 lakh Rs"){
+      lprice=6100000
+      uprice=8000000
+    }
+    if(searchTerm2==="81 Lakh Rs - 1 cr Rs"){
+      lprice=8100000
       uprice=10000000
     }
     if(searchTerm2==="1+cr Rs"){

@@ -31,15 +31,10 @@ const DataProvider = ({children})=>{
 
         dispatch({type : "LOADING"})
         try {
-            //get property data 
             const res1 = await axios.get(url.property)
             const property = await res1.data
-            // console.log(res1)
-            //get project data 
             const res2 = await axios.get(url.project)
             const project = await res2.data
-            // console.log(res2)
-            // set property ,project
             dispatch({type:"SET_DATA",payload:{project,property}})
         } catch (error) {
             dispatch({type : "SET_ERROR"})
