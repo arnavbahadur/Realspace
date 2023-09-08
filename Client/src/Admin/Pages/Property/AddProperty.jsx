@@ -63,15 +63,39 @@ const AddProperty = () => {
 //     return true;
 // }
 
-   
+
  
-  const handleChange = e => {
-      const { name, value } = e.target
-      setFormData({
-          ...FormData,
-          [name]: value
-      })
+
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  
+  if (name === "Feature") {
+    const featureArray = value.split(',');
+    
+    setFormData({
+      ...FormData,
+      [name]: featureArray, 
+    });
+  } else {
+    setFormData({
+      ...FormData,
+      [name]: value,
+    });
   }
+};
+  
+
+ 
+  // const handleChange = e => {
+  //     const { name, value } = e.target
+  //     setFormData({
+  //         ...FormData,
+  //         [name]: value
+  //     })
+  // }
+
+
+
 
   const fileListRef=ref(storage,'property/');
 
