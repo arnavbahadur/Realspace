@@ -92,3 +92,8 @@
         padding: 0;
     }
 }
+@media  (min-width: 300px) and (max-width: 899px) {
+    .compare-headSection{
+        padding-top: 90px;
+    }
+}

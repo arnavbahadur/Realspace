@@ -84,7 +84,7 @@ useEffect(() => {
                   className="carousel slide"
                   data-ride="carousel" >
                     {/* <img src={content.Photos?content?.Photos[0]?.imgUrl:null} alt="houseimage" /> */}
-                    <img src={content.projectsingleimg} alt="houseimage" />
+                    <img className="img-box-project" src={content.projectsingleimg} alt="houseimage" />
 
                   {/* <img className="img-box"  src="https://wallpapercave.com/wp/wp4110657.jpg" alt="house" />   */}
                 </div>

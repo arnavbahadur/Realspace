@@ -25,3 +25,8 @@
         height: 228px;
     }
 }
+@media  (min-width: 300px) and (max-width: 899px) {
+    .section-main{
+        padding-top: 12%;
+    }
+}
