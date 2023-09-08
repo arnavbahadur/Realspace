@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./HousePreview.css";
 import CompareSideBtn from "../../Components/CompareSideBtn/CompareSideBtn";
 import Comparebtn from "../../Components/Comparebtn/Comparebtn";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import Gallery from "../Gallery/Gallery";
 import PriceShow from "../../Components/PriceShow/PriceShow";
 import { BsArrowsFullscreen } from "react-icons/bs";
 import List from "../../Components/List/List";
-
 
 const HousePreview = (props) => {
   let { id } = useParams();
