@@ -15,7 +15,9 @@ const signChange = () => {
 
 const [property, setproperty] = useState([]);
 const apicall=async ()=>{
-    await axios.get("/propertyapi/").then((res) => { setproperty(res.data) });
+    await axios.get("/propertyapi/")
+    .then((res) => { setproperty(res.data) });
+    
   }
 
   useEffect(() => {
@@ -38,10 +40,10 @@ const apicall=async ()=>{
       </div>
       <div className="blogs">
          {/* for temporary single property is commented so dont touch it please */}
-         {/* {property.map((item) => {
-         return <SingleProperty id={item._id} title={item.title} description={item.description}   featured={item.featured}  location={item.location}
+         {property.map((item) => {
+         return <SingleProperty id={item._id} title={item.title} houseboximgUrl={item.houseboximgUrl} description={item.description}   featured={item.featured}  location={item.location}
           price={item.price} location_url={item.location_url} Purpose={item.Purpose} bedRoom={item.bedRoom} bathRoom={item.bathRoom} areaSqFt={item.areaSqFt} />
-        })} */}
+        })}
       </div>
     </div>
   )

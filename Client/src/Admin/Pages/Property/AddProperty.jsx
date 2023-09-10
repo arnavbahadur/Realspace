@@ -133,6 +133,7 @@ const AddProperty = () => {
         // })
         .then(() => {
           alert("Property added successfully");
+          window.location.reload()
         })
         .catch((err) => {
           alert(err);
