@@ -165,46 +165,10 @@ const AddProperty = () => {
           <input type="text" id="" className="eventtitle"  placeholder="hall"  onChange={handleChange}   name="hall"  value={FormData.hall} />
           <input type="text" id="" className="eventtitle"  placeholder="bathRoom"  onChange={handleChange}   name="bathRoom"  value={FormData.bathRoom} />
           <input type="text" id="" className="eventtitle"  placeholder="CurrentStatus"  onChange={handleChange}   name="CurrentStatus"  value={FormData.CurrentStatus} />
-          <textarea
-            id=""
-            cols="10"
-            rows="5"
-            placeholder="property Discription"
-            onChange={handleChange}
-            name="Description"
-            value={FormData.Description}
-            required
-          />
-          <textarea
-            id=""
-            cols="30"
-            rows="5"
-            placeholder="Nearby place"
-            onChange={handleChange}
-            name="Nearby"
-            value={FormData.Nearby}
-            required
-          />
-          <textarea
-            id=""
-            cols="30"
-            rows="5"
-            placeholder="Feature"
-            onChange={handleChange}
-            name="Feature"
-            value={FormData.Feature}
-            required
-          />
-          <textarea
-            id=""
-            cols="30"
-            rows="5"
-            placeholder="addMoreDetails"
-            onChange={handleChange}
-            name="addMoreDetails"
-            value={FormData.addMoreDetails}
-            required
-          />
+          <textarea id="" cols="10"  rows="5"              placeholder="property Discription"  onChange={handleChange}  name="Description"  value={FormData.Description}  required />
+          <textarea id="" cols="30"  rows="5"              placeholder="Nearby place"  onChange={handleChange}  name="Nearby"  value={FormData.Nearby}  required />
+          <textarea id="" cols="30"  rows="5"              placeholder="Feature"  onChange={handleChange}  name="Feature"  value={FormData.Feature}  required />
+          <textarea id="" cols="30"  rows="5"              placeholder="addMoreDetails"  onChange={handleChange}  name="addMoreDetails"  value={FormData.addMoreDetails}  required />
           <p>Upload image :</p>
           <div className="img-upload">
             <label htmlFor="event-img">
