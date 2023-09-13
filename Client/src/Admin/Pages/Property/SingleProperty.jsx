@@ -8,9 +8,10 @@ export default function SingleProperty(props) {
     await axios.get(`/Propertyapi/deleteproperty/${props.id}`).then((res) => {  alert("Deleted Sucessfully") });
     window.location.reload()
   }
-  // const updatePropertyfeatured=async ()=>{
-  //   await axios.get(`/propertyapi/editproperty/${props.id}`).then((res) => {  alert("Featured Sucessfully") });
-  // }
+
+  const updatePropertyfeatured=async ()=>{
+    await axios.get(`/propertyapi/editproperty/${props.id}`).then((res) => {  alert("Featured Sucessfully") });
+  }
 
   // const [FormData,setFormData]=useState({
   //   images:"",
@@ -101,7 +102,7 @@ export default function SingleProperty(props) {
           {/* <EditProperty props={props}/> */}
         
           <div className="btn-section row-3">    
-          {/* <button className='delete-btn' onClick={()=>{submit()}}><i className="fa fa-pencil" aria-hidden="true">Edit</i></button>       */}
+          <button className='delete-btn' onClick={()=>{submit()}}><i className="fa fa-pencil" aria-hidden="true">Edit</i></button>      
           <button className='delete-btn' onClick={()=>{deleteProperty()}}><i className="fa fa-trash fa-1x" aria-hidden="true">Delete</i></button>
             {/* <button  className='delete-btn' style={{color:props.featured==="True"?"red":"green"}} onClick={()=>{updatePropertyfeatured()}}>Featured <i class="fa-solid fa-jet-fighter-up"></i></button> */}
           </div> 

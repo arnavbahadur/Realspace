@@ -124,7 +124,6 @@ const AddProperty = () => {
   async function submit() {
     try {
       // const Feature =Feature.split(',');
-
       await axios
         .post("/propertyapi/addproperty", FormData)
         //   Nearby = Nearby.map(item=>{
@@ -187,12 +186,7 @@ const AddProperty = () => {
           <h4>upload Gallery images</h4>
           <p>select multiple image for gallery one by one</p>
           {/* <Addmultipleimg /> */}
-          <Addmultiimg formarray={FormData.Gallery} />
-
-          <button onClick={() => { submit(); }} id="blog-txt-add"
-          >
-            Add
-          </button>
+          <Addmultiimg formarray={FormData.Gallery} /> <button onClick={() => { submit(); }} id="blog-txt-add"> Add </button>
           <button type="reset">Clear</button>
         </div>
       </div>
