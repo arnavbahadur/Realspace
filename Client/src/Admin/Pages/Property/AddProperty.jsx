@@ -117,7 +117,7 @@ const AddProperty = () => {
   };
 
   useEffect(() => {
-    console.log("img change");
+    // console.log("img change");
     uploadimage();
   }, [imageUpload]);
 

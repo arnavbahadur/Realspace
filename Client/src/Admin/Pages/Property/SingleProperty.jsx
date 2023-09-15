@@ -116,12 +116,12 @@ export default function SingleProperty(props) {
 
 // imageContainer 
 
+
+
 // {/* <div className='row-2'>
 //             <span className="publisher">{props.authername}</span> 
 //             <span className="date">{props.date}</span>
 //           </div> */}
-
-
 
 
 // import React, { useState } from 'react'
