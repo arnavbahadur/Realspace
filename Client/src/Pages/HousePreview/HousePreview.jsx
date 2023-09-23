@@ -70,7 +70,8 @@ const HousePreview = (props) => {
             <div className="housePreview-discription-top">
               <div className="housePreview-discription-top-left">
                 <p className="housePreview-propertyid">
-                  <span>We wish you ha conguralatin for new propery </span>
+                  <span>We wish you congratulations on your new property.💙
+ </span>
                   {/* <span>{content.dateofpossesion}</span> */}
                   {/* {content.Rating} Star💫 */}
                   {/* <i className="fa-solid fa-copy"/> */}

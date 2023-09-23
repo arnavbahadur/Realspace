@@ -27,7 +27,7 @@ const Home = (props) => {
     <Filter/>
     <Feature/>
     {/* <Featured/> */}
-    {/* <MyModal/> */}
+    <MyModal/>
     <HouseSale/>
     <HouseRent/>
     <Ourpartners/>
