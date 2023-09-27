@@ -50,9 +50,10 @@ router.get("/deleteproperty/:id", async (req, res) => {
 
   router.post("/editproperty/:id", async (req, res) => {
     const PropertyId= req.params.id;
+    // console.log("Edit Property",req.body)
     try {
-        const { title,description, created_at , balcony, totalfloor,constructionstage, dateofpossesion, propertytype,  houseboximgUrl,Gallery,property_url,Nearby,addMoreDetails,  Purpose,Feature,location,location_url, Note,CurrentStatus} = req.body;
-        let Propertysaved=await Property.findOneAndUpdate({_id:PropertyId},{title,description,property_url,Nearby,  balcony, totalfloor,constructionstage, dateofpossesion,houseboximgUrl, Gallery, propertytype , created_at, Purpose,addMoreDetails, Feature,location,location_url, Note,CurrentStatus});
+        const { title,location,property_url, created_at, balcony, totalfloor,constructionstage, dateofpossesion,propertytype, Feature,Nearby, houseboximgUrl,Gallery,  Purpose,location_url, price, areaSqFt, hall, bedRoom, bathRoom,Description,addMoreDetails,Note,Rating,CurrentStatus} = req.body;
+        let Propertysaved=await Property.findOneAndUpdate({_id:PropertyId},{ title,location,property_url, created_at, balcony, totalfloor,constructionstage, dateofpossesion,propertytype, Feature,Nearby, houseboximgUrl,Gallery,  Purpose,location_url, price, areaSqFt, hall, bedRoom, bathRoom,Description,addMoreDetails,Note,Rating,CurrentStatus});
         res.status(200).send(Propertysaved);
     } catch (err) {
       res.status(200).send(err);
