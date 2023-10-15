@@ -2,10 +2,12 @@ import React,{useState,useEffect} from "react";
 import "./Project.css";
 import Gallery from "../Gallery/Gallery";
 import { NavLink }  from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import CompareSideBtn from "../../Components/CompareSideBtn/CompareSideBtn";
 import { useParams} from "react-router-dom";
 import GalleryBunch from "../Gallery/GalleryBunch";
+import List from "../../Components/List/List";
 
 
 const Project = ({Content}) => {
@@ -14,24 +16,24 @@ const Project = ({Content}) => {
 //    function handleChange(e) {
 //       setChecked(e.target.checked);
 //    }
-
+const navigate = useNavigate();
 // to bypass the erroe i have put the data which will automatically change as it get a new id
    const [content,setContent]=useState({
-    "_id": "64b684475dc905ac06d46dde",
+    "_id": "",
     "title": "m",
     "description": "a ",
     "created_at": "2023-07-18T12:23:35.567Z",
     "imageContainer": "bharathjkg mata",
     "Rooms": "xvsdsdf",
     "Photos": [
-        {
-            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDAwyRWo5hmiqv3TvuIptNcDrfulFlamWdguolqMTrCXqme39w56lCBNHviD9irxJwiuw&usqp=CAU",
-            "_id": "64b684475dc905ac06d46ddf"
-        },
-        {
-            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXynVMaQc0zP51HkZhebM97xrFeyLWxaXQGzj5GnzGQwBZ_d0wZm5Hqbh3S2iI3fWnVs&usqp=CAU",
-            "_id": "64b684475dc905ac06d46de0"
-        }
+        // {
+        //     "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDAwyRWo5hmiqv3TvuIptNcDrfulFlamWdguolqMTrCXqme39w56lCBNHviD9irxJwiuw&usqp=CAU",
+        //     "_id": "64b684475dc905ac06d46ddf"
+        // },
+        // {
+        //     "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXynVMaQc0zP51HkZhebM97xrFeyLWxaXQGzj5GnzGQwBZ_d0wZm5Hqbh3S2iI3fWnVs&usqp=CAU",
+        //     "_id": "64b684475dc905ac06d46de0"
+        // }
     ],
     "Floorplan": [
         {
@@ -95,6 +97,7 @@ useEffect(() => {
                 <h5 className="card-title mb-3"> {content.title}</h5>
                 <p>{content.description} </p>
                 <h5 className="card-title mb-3">{content.Note}</h5>
+                <h5 className="card-title mb-3"> Current Status</h5>
                 <p className="mb-0">
                 {content.CurrentStatus}
                 </p>
@@ -103,32 +106,19 @@ useEffect(() => {
 
             <div className="left-card">
               <div className="card-body">
-                <h5 className="card-title mb-3">Features</h5>
+                <h5 className="card-title mb-3">Feature</h5>
                 <div className="row">
                   <div className="col-lg-4 col-md-4">
                     <ul className="sidebar-card-list">
                       <li>
                         <a href="#">
-                          Grand Entrance Gate
+                        <List listItem={content.Feature} />
+                    
                         </a>
                       </li>
                     </ul>
                   </div>
-                  <div className="col-lg-4 col-md-4">
-                    <ul className="sidebar-card-list">
-                      <li>
-                        <a href="#">
-                          Gazebo
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                           
-                          Senior Citizen Area
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -183,7 +173,7 @@ useEffect(() => {
                         width={"50px"}
                         height={"50px"}
                       />
-                      <strong>Rooms</strong>
+                      <strong>Rooms/Offices</strong>
                       <p className="mb-0"> {content.Rooms} Bedrooms</p>
                     </div>
                   </div>
@@ -248,8 +238,9 @@ useEffect(() => {
                 </div>
               </div>
 
-              <div className="view-more-floor"> 
-              <NavLink to="/Viewmore" >View More</NavLink> 
+              <div className="view-more-floor"  onClick={()=> {navigate(`/Viewmore/${content._id}`)}}> 
+              view more
+              {/* <NavLink to='/Viewmore/${content.id}' >View More</NavLink>  */}
               </div>
             </div>
           </div>

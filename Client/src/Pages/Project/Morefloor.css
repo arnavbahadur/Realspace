@@ -4,6 +4,13 @@
     margin-top: 4vh;
     margin-bottom: 4vh;
     box-shadow: 2px 2px 2px 2px rgb(194, 188, 188);
+  
+}
+.floorrow{
+      display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .floor h2{
     padding: 1vh;
@@ -16,18 +23,26 @@ text-align: center;
 .floor-many{
     display: flex;
     align-content: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: row;
+    width: fit-content;
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
 }
 .floor-img img{
     width: 35vh;
     height: 55vh;
+    
+    
+    
 }
 
+/* .plan{
+    display: flex;
+    flex-direction: row;
+} */
 
-
-@media  (min-width: 300px) and (max-width: 899px) {
+/* @media  (min-width: 300px) and (max-width: 899px) {
     .floor{
         padding-top: 90px;
     }
-}
+} */
