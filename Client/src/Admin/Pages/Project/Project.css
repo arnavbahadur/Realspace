@@ -67,14 +67,26 @@ p>i{
     /* flex-direction: column; */
 }
 
-.event-box{
+/* .event-box{
     position: relative;
     width: 20rem;
     border: 2px solid black;
     margin: 20px 30px;
     border-radius: 10px;
     padding-bottom: 50px;
-}
+} */
+
+.event-box{
+    height: 1%;
+    border: 2px solid black;
+  margin: 10px 20px;
+  /* padding: 20px ; */
+   border-radius: 10px;
+  /* display: flex;  */
+  justify-content: space-between;
+
+  
+} 
 
 .event-img>img{
     border-radius: 8px;

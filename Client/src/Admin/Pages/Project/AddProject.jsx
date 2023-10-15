@@ -133,7 +133,7 @@ const [imageUpload,setImageUpload]=useState(null);
                 <input type="text" id="" className='eventtitle' placeholder='Feature'               onChange={ handleChange } name="Feature" value={FormData.Feature}/>
                 <input type="text" id="" className='eventtitle' placeholder='Listingyear'           onChange={ handleChange } name="Listingyear" value={FormData.Listingyear}/>
                 <input type="text" id="" className='eventtitle' placeholder='location_url'          onChange={ handleChange } name="location_url" value={FormData.location_url}/>
-                <input type="text" id="" className='eventtitle' placeholder='Purpose'               onChange={ handleChange } name="Purpose" value={FormData.Purpose}/>
+                {/* <input type="text" id="" className='eventtitle' placeholder='Purpose'               onChange={ handleChange } name="Purpose" value={FormData.Purpose}/> */}
                 <input type="text" id="" className='eventtitle' placeholder='Rooms'                 onChange={ handleChange } name="Rooms" value={FormData.Rooms}/>
                 <input type="text" id="" className='eventtitle' placeholder='Address'               onChange={ handleChange } name="Address" value={FormData.Address}/>
                 <input type="text" id="" className='eventtitle' placeholder='City'                  onChange={ handleChange } name="City" value={FormData.City}/>
@@ -144,7 +144,7 @@ const [imageUpload,setImageUpload]=useState(null);
                 <input type="text" id="" className='eventtitle' placeholder='reranumber'            onChange={ handleChange } name="reranumber" value={FormData.reranumber}/>
                 <input type="text" id="" className='eventtitle' placeholder='created_at'            onChange={ handleChange } name="created_at" value={FormData.created_at}/>
                 <textarea  id="" cols="10" rows="5"placeholder='property discription'               onChange={ handleChange } name="description" value={FormData.description} required/>
-                <textarea  id="" cols="30" rows="5"placeholder='Nearby'  onChange={ handleChange } name="Nearby" value={FormData.Nearby} required/>
+                {/* <textarea  id="" cols="30" rows="5"placeholder='Nearby'  onChange={ handleChange } name="Nearby" value={FormData.Nearby} required/> */}
                 <textarea  id="" cols="30" rows="5"placeholder='addMoreDetails'  onChange={ handleChange } name="addMoreDetails" value={FormData.addMoreDetails} required/>
                 <p>Upload project single img</p>
                 <div className="img-upload">
