@@ -4,18 +4,22 @@ import './index.css';
 import App from './App'; 
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import  { CompareContextProvider } from './CompareContext';
+import  { CompareContextProvider } from './Context/CompareContext';
 import { DataProvider } from './Context/DataContext';
+import { Provider } from 'react-redux';
+import store from './redux/store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <DataProvider>
+    <Provider store={store}>
     <CompareContextProvider>
      <React.StrictMode>
        <App />
      </React.StrictMode>
      </CompareContextProvider>
+     </Provider>
   </DataProvider>
   </BrowserRouter>
 );

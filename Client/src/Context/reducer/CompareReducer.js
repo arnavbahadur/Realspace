@@ -1,4 +1,4 @@
-import {CompareActionTypes} from '../types/types'
+import {CompareActionTypes} from '../../types/types'
 
 
 const CompareReducer = (state,action)=>{

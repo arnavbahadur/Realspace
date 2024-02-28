@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom"
 import './Compare.css'
 import axios from 'axios';
 import PriceShow from '../../Components/PriceShow/PriceShow';
-import CompareContext from '../../CompareContext';
+import CompareContext from '../../Context/CompareContext';
 
 const Compare = () => {
   const {ItemsId, handleAllRemove} = useContext(CompareContext)

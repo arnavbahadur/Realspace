@@ -1,6 +1,6 @@
 import React ,{ createContext, useContext, useEffect, useReducer } from "react"
 import axios from "axios"
-import reducer from '../reducer/DataReducer'
+import reducer from './reducer/DataReducer'
 
 const DataContext = createContext()
 

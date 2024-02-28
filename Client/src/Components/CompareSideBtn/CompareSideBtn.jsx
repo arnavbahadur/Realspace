@@ -1,7 +1,7 @@
 import React, { useContext} from 'react'
 import "./CompareSideBtn.css"
 import { NavLink } from 'react-router-dom'
-import CompareContext from '../../CompareContext';
+import CompareContext from '../../Context/CompareContext';
 
 
 //  let a =   JSON.parse(localStorage.getItem("compareItem"))

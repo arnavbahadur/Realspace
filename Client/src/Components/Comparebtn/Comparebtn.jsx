@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import CompareContext from "../../CompareContext";
+import CompareContext from "../../Context/CompareContext";
 
 const Comparebtn = (props) => {
   // let id = 1 // id = props.id;

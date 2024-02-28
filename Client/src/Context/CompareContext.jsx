@@ -1,7 +1,6 @@
 import React, { createContext, useEffect, useReducer, useState } from "react";
-import { CompareActionTypes } from "./types/types";
+import { CompareActionTypes } from "../types/types.js";
 import reducer from './reducer/CompareReducer'
-import { json } from "react-router-dom";
 
 const CompareContext = createContext();
 
