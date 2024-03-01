@@ -156,8 +156,8 @@ function Afterfilter(props) {
           />
         </div>
       </div>
-      <aside className="w-[30%] bg-gray-400 shadow-lg my-5 mr-3 rounded-lg">
-        <div className="w-full sticky top-[100px]">
+      <aside className="w-[30%]  my-5 mr-3 rounded-lg">
+        <div className="w-full rounded-2xl bg-gray-400 shadow-xl top-[10px]">
           <SideFilter />
         </div>
       </aside>

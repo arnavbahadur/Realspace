@@ -20,9 +20,9 @@ const FilterPriceComponent = ({  onFilterChange }) => {
   };
 
   useEffect(() => {
-      dispatch(setFilterQuery({ key: "price", value: { min: selectedMinPrice, max: selectedMaxPrice } }));
+      dispatch(setFilterQuery({ key: "range", value: { min: selectedMinPrice, max: selectedMaxPrice } }));
   },[selectedMaxPrice,selectedMinPrice]);
-
+console.log(range)
   return (
     <div className="w-full p-4 border border-gray-300 rounded-md bg-white">
       <h2 className="text-lg font-semibold mb-4">Filter by Price Range</h2>
@@ -54,10 +54,10 @@ const FilterPriceComponent = ({  onFilterChange }) => {
       <div className="flex items-center ">
         <input
           type="range"
-          name="minPrice"
+          name="maxPrice"
           min={minPrice}
           max={maxPrice}
-          value={selectedMinPrice}
+          value={selectedMaxPrice}
           onChange={handlePriceChange}
           className="w-full h-3 appearance-none rounded-full bg-gray-300 cursor-pointer focus:outline-none"
         />

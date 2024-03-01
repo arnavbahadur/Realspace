@@ -104,10 +104,9 @@ const filterSlice = createSlice({
       }
       if (BHK.length > 0 && BHK[0] !== "") {
         filteredData = filteredData.filter((item) => {
-          return convertIntoBHK(BHK)===item.bedroom?true:false;
+          return BHK.includes(convertIntoBHK(item));
         });
       }
-      console.log(filteredData);
       state.filteredData = filteredData;
     },
     setFilterQuery: (state, action) => {
@@ -115,7 +114,6 @@ const filterSlice = createSlice({
     },
     setUniqueValues: (state, action) => {
       state.uniqueValues = action.payload;
-      console.log(action.payload);
       const price = action.payload?.price;
       if (price?.length > 0){
         state.filterQuery.price.maxPrice = Math.max(...price);

@@ -16,7 +16,7 @@ const getUniqueValueOFPropertyFields = (arr = []) => {
       genproperty.add(item.propertytype);
       genprice.add(item.price);
       genPurpose.add(item.Purpose);
-      genBHK.add(convertIntoBHK(item,true))
+      genBHK.add(convertIntoBHK(item))
     });
     //  console.log(genlocation)
     return {
@@ -32,16 +32,12 @@ const getUniqueValueOFPropertyFields = (arr = []) => {
   return null;
 };
 
-const convertIntoBHK = (value,intoBHK=false) => {
+const convertIntoBHK = (value) => {
   try {
-    if(intoBHK){
         let resultStr = value?.bedRoom;      
         resultStr += ' BHK'
         return resultStr;
-    }
-    else{
-        return Number(value[0][0])
-    }
+   
   } catch (error) {
       console.log(error)
   }
