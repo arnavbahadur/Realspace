@@ -104,7 +104,7 @@ const filterSlice = createSlice({
       }
       if (BHK.length > 0 && BHK[0] !== "") {
         filteredData = filteredData.filter((item) => {
-          return convertIntoBHK(BHK)===item.bedroom?true:false;
+          return BHK.includes(convertIntoBHK(item));
         });
       }
       state.filteredData = filteredData;
