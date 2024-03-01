@@ -23,7 +23,7 @@ const SideFilter = () => {
     
   },[propertyData,])
   return (
-    <div w-full>
+    <div className="w-full overflow-y-auto">
       <div className="mx-auto max-w-7xl px-2 py-10 lg:px-10">
         {/* Top */}
         <div className="flex flex-col items-start justify-between">
