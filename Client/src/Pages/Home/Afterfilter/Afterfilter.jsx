@@ -5,15 +5,28 @@ import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 import PageNum from "../../../Components/PageNum/PageNum";
 import SideFilter from "../../../Components/SideFilter/SideFilter";
+import { useData } from "../../../Context/DataContext";
+import { getUniqueValueOFPropertyFields } from "../../../Action";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  setFilterQuery,
+  setFilteredData,
+  setUniqueValues,
+} from "../../../redux/slices/filter.slice";
+import { filterKeys } from "../../../types/types";
 
 function Afterfilter(props) {
   // const { Propertytype,location,budget } = useParams();
+  const { propertyData } = useData();
+  const dispatch = useDispatch();
 
   const [currentPage, setCurrentPage] = useState(1);
   const contentPerPage = 9;
   let { id } = useParams();
   const [content, setContent] = useState([]);
 
+  const filteredData = useSelector((state) => state.filter.filteredData);
+  const filterQuery = useSelector((state) => state.filter.filterQuery);
   // const[allproperty,setallproperty]=useState([]);
 
   const callapi = async () => {
@@ -58,6 +71,17 @@ function Afterfilter(props) {
     }
     lprice = parseInt(lprice);
     uprice = parseInt(uprice);
+    dispatch(
+      setFilterQuery({
+        key: "all",
+        value: {
+          propertyType: type,
+          location: place,
+          min: lprice,
+          max: uprice,
+        },
+      })
+    );
     await axios.get(`/propertyapi/`).then((res) => {
       console.log("now", type, place, lprice, uprice);
       setContent(
@@ -82,15 +106,32 @@ function Afterfilter(props) {
     callapi();
   }, []);
 
+  useEffect(() => {
+    (async () => {
+      const uniqueValue = await getUniqueValueOFPropertyFields(propertyData);
+      console.log(uniqueValue);
+      dispatch(setUniqueValues(uniqueValue));
+      // let maxValue = Math.max(uniqueValue?.price)
+      // let minValue = Math.min(uniqueValue?.price)
+      // console.log(maxValue,minValue)
+      // dispatch(setFilterQuery({key:filterKeys.maxPrice,value:maxValue}))
+    })();
+  }, [propertyData]);
+
+  useEffect(() => {
+    dispatch(setFilteredData(propertyData));
+  }, [propertyData, filterQuery]);
+  
   // console.log(content)
 
   return (
     <div className="main-after-filter">
       <div className="left-filter">
         <div className="house-card-section">
-          {currentContent.map((item) => {
+          {filteredData.map((item) => {
             return (
               <HouseBox
+              key={item._id}
                 id={item._id}
                 title={item.title}
                 gallery={item.Gallery}
@@ -121,7 +162,6 @@ function Afterfilter(props) {
         </div>
       </aside>
     </div>
-    
   );
 }
 

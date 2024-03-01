@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Filter.css";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { setFilterQuery } from "../../redux/slices/filter.slice";
+import { filterKeys } from "../../types/types";
 const Icon = () => {
   return (
     <svg height="20" width="20" viewBox="0 0 20 20">
@@ -11,6 +14,7 @@ const Icon = () => {
 };
 
 const Dropdown = ({ placeHolder }) => {
+  const dispatch = useDispatch();
   const [Propertytype, setPropertytype] = useState("All Property");
   const [locationvalue, setlocationvalue] = useState("All Location");
   // const [budgetvalue,setbudgetvalue ]= useState("Budget")
@@ -62,6 +66,9 @@ const Dropdown = ({ placeHolder }) => {
       setlocation(Array.from(genlocation));
       setvalue(Array.from(genproperty));
       //  setprice(Array.from(genprice))
+      const arrOfPrice = Array.from(genprice);
+      // dispatch(setFilterQuery({key:filterKeys.maxPrice,value:Math.max(arrOfPrice)}))
+      // dispatch(setFilterQuery({key:filterKeys.minPrice,value:Math.min(arrOfPrice)}))
     });
   };
 
@@ -76,6 +83,7 @@ const Dropdown = ({ placeHolder }) => {
   const [filtersearch, setfiltersearch] = useState("");
   useEffect(() => {
     setfiltersearch([Propertytype, locationvalue, price]);
+
   }, []);
 
   const navigate = useNavigate();
@@ -105,7 +113,13 @@ const Dropdown = ({ placeHolder }) => {
       lprice = 10000000;
       uprice = 999999999999;
     }
-
+    dispatch(setFilterQuery({key:"all",value:{
+      propertyType:searchTerm,
+      location:searchTerm1,
+      max:uprice,
+      min:lprice,
+      purpose:"sales"
+    }}))
     navigate(`/Afterfilter/${searchTerm}&${searchTerm1}&${lprice}&${uprice}`);
   };
 

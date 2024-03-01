@@ -1,15 +1,16 @@
 const propertyTypes = [
-  "All Property",
-  "Flat",
-  "Plot",
-  "Office",
-  "Shop",
-  "Showroom",
-  "Industrial property",
-  "Warehouse",
-  "Duplex",
-  " Bungalows",
-  "Row house",
+  {value:"All Property" ,label:"All Property"},
+  {value:"flat" ,label:"Flat"},
+  {value:"plot" ,label:"Plot"},
+  {value:"office" ,label:"Office"},
+  {value:"shop" ,label:"Shop"},
+  {value:"showroom" ,label:"Showroom"},
+  {value:"industrial property" ,label:"Industrial property"},
+  {value:"warehouse" ,label:"Warehouse"},
+  {value:"duplex" ,label:"Duplex"},
+  {value:"bungalow" ,label:"Bungalow"},
+  {value:"row house" ,label:"Row house"},
+  {value:"other" ,label:"Other"},
 ];
 
 const budget = [
@@ -21,11 +22,11 @@ const budget = [
 ];
 
 const location = [
-  "All Location",
-  "Vijay nagar",
-  "nipaniya",
-  "LIG",
-  "Vijay nagar",
+  {value:"all Location" ,label:"All Location"},
+  {value:"Vijay nagar" ,label:"Vijay nagar"},
+  {value:"nipaniya" ,label:"nipaniya"},
+  {value:"LIG" ,label:"LIG"},
+  {value:"Vijay nagar" ,label:"Vijay nagar"},
 ];
 
 export { propertyTypes, budget, location };
